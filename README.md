@@ -15,9 +15,11 @@ The pyramids are the canonical example. Khufu's Great Pyramid is the first named
 
 ## What is here
 
-The next layer is now populated: [three worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility and archaeological discrimination. They contain eighteen atomic research steps, nine additional source records and six reproducible calculations. These are completed desk investigations, not newly performed experiments or monument sampling.
+The next layer is populated: [four worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility, archaeological discrimination and variation analysis. They contain twenty-five atomic research steps, ten additional source records and ten reproducible calculations. These are completed desk investigations and synthetic/conditional demonstrations, not newly performed experiments or monument sampling.
 
 Start with [the canonical investigation records](corpus/worked-investigations.json), [calculation inputs](corpus/calculation-inputs.json) and [the numerical adapter](scripts/worked-calculations.mjs). The build publishes every calculation, its assumptions and the retained composer's quantity-dimension checks. Source access limits are visible on individual source pages. Proposed controls and unmeasured rates retain their scope.
+
+[Vary the factors. Find the bottleneck.](https://aaron-alderman.github.io/pyramid-material-history/studies/W04/) demonstrates conditional factorial contrasts, an interaction diagnostic, a depth–flux sensitivity grid, bottleneck transfer and whole-project cost leverage. Assigned responses and stage times are visibly synthetic; there are no fitted granite effects, reconstructed ancient productivity, statistical significance claims or historical promotion.
 
 The corpus contains nine operation families, seventeen domain stations, twenty-six candidate bridges, seven pyramid investigations, negative constraints, retained unknowns and source references. The operation families provide the scoped MECE partition. Disciplines remain overlapping annotations.
 

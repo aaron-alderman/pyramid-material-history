@@ -325,6 +325,15 @@
       "access": "Indexed reference entry",
       "reviewed": "2026-10-29",
       "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-nist-doe",
+      "label": "Confounding and experimental design — NIST",
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri3343.htm",
+      "citation": "NIST/SEMATECH e-Handbook of Statistical Methods, 5.3.3.4.3 Confounding (also called aliasing)",
+      "supports": "Explains that confounded design terms cannot be estimated separately. Method reference; supplies no granite responses or productivity measurements.",
+      "access": "Public handbook section and related indexed factorial/blocking guidance",
+      "reviewed": "2026-10-29"
     }
   ],
   "sourceReport": {

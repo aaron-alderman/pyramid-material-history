@@ -15,7 +15,7 @@ test('retained implementations keep their exact source identities',()=>{
   for(const r of read('data/reuse-lock.json').sources)assert.equal(hash(fs.readFileSync(path.join(root,r.path))),r.retainedHash,r.path);
 });
 test('every decomposed corpus object preserves the twelve-coordinate kernel',()=>{
-  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,144);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
+  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,157);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
   for(const o of model.objects)assert.deepEqual(Object.keys(o.kernel).sort(),[...profiles.kernel.coordinates].sort(),o.id);assert.equal(model.conjunctiveInputs,true);
 });
 test('joint inputs alternatives and the pyramid case remain distinct',()=>{
@@ -23,7 +23,7 @@ test('joint inputs alternatives and the pyramid case remain distinct',()=>{
   assert.equal(atlas.workedCase.id,'pyramids-material-history');assert.equal(atlas.workedCase.subcases[0].id,'granite-alkali-history');assert.equal(new Set(atlas.operations.map(x=>x.exclusiveOutput)).size,9);
 });
 test('all native page compositions and lowerings replay through the retained mechanisms',()=>{
-  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,131);
+  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,133);
   for(const r of receipt.uiEvidence){const p=built('data/ui/'+(r.route.replaceAll('/','-')||'home')+'.json');assert.equal(verifyUiSurfaceComposition(p.composition).passed,true,r.route);assert.equal(verifyNativeSurfaceCompositionLowering(p).passed,true,r.route);assert.equal(p.adoption.nativeEscapes.length,0);assert.equal(p.adoption.mappings.length,p.facts.filter(f=>f.p==='isa'&&f.o==='DomNode').length);}
 });
 test('renderer leakage and changed native realization fail closed',()=>{
@@ -51,11 +51,11 @@ test('publication carries no new runtime lane or empirical admission claim',()=>
 });
 test('worked investigations retain atomic outputs conjunctive inputs and resolved evidence',()=>{
   const work=read('corpus/worked-investigations.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
-  assert.equal(work.studies.length,3);assert.equal(work.studies.flatMap(s=>s.steps).length,18);
+  assert.equal(work.studies.length,4);assert.equal(work.studies.flatMap(s=>s.steps).length,25);
   for(const s of work.studies)for(const step of s.steps){assert.ok(atlas.operations.some(o=>o.id===step.operation));assert.ok(step.output);assert.ok(step.paragraphs.every(p=>p.trim().length>0));assert.deepEqual(objects.find(o=>o.id===step.id).inputs,step.inputs);for(const id of [...step.inputs,...step.evidenceRefs])assert.ok(ids.has(id),step.id+' unresolved '+id);}
   assert.equal(work.studies[2].steps.find(s=>s.matrix).matrix.length,5);
   for(const s of work.studies){const html=fs.readFileSync(path.join(site,'studies',s.id,'index.html'),'utf8');for(const step of s.steps)assert.ok(html.includes('id="'+step.id+'"'));assert.ok(!html.includes('Not supplied'));}
-  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:3,steps:18,calculations:6,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
+  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:4,steps:25,calculations:10,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
 });
 test('worked arithmetic conserves formula mass and exposes rate and detection assumptions',()=>{
   const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input),c=id=>output.calculations.find(c=>c.id===id);
@@ -75,4 +75,20 @@ test('retained composer checks real quantity dimensions and rejects a corrupted 
   const report=built('data/worked-quantity-composition.json'),process=read('data/scientific-derivation-process.json');assert.equal(report.results.length,2);for(const result of report.results)assert.equal(result.candidates.length,1);
   const graph=structuredClone(report.graph);graph.transformations[1].dimensionDelta.amount=0;
   const response=await executeProcess(process.program,{model:process,request:{graph,query:{source:'quartz-molar-flux',target:'quartz-recession-speed',maxDepth:1}}},{compute:{},ports:{}});assert.equal(response.result.candidates.length,0);
+});
+test('factorial demonstration separates conditional effects and rejects missing or aliased cells',()=>{
+  const p=read('corpus/calculation-inputs.json'),calcs=calculateWorkedCases(p).calculations,f=calcs.find(c=>c.id==='C07');
+  assert.deepEqual(f.rows.map(r=>r[1]),[1,7,4,7,6,11]);assert.ok(f.scope.includes('SYNTHETIC'));
+  const additive=structuredClone(p);additive.variation.factorialCells.find(c=>c.heat===1&&c.alkali===1).responseMg=6;assert.equal(calculateWorkedCases(additive).calculations.find(c=>c.id==='C07').rows[4][1],0);
+  const reordered=structuredClone(p);reordered.variation.factorialCells.reverse();assert.deepEqual(calculateWorkedCases(reordered).calculations.find(c=>c.id==='C07').rows,f.rows);
+  const missing=structuredClone(p);missing.variation.factorialCells.pop();assert.throws(()=>calculateWorkedCases(missing),/complete/);
+  const alias=structuredClone(p);alias.variation.factorialCells[1]=alias.variation.factorialCells[0];assert.throws(()=>calculateWorkedCases(alias),/complete/);
+});
+test('sensitivity invariance and bottleneck transfer keep different time metrics distinct',()=>{
+  const p=read('corpus/calculation-inputs.json'),calcs=calculateWorkedCases(p).calculations,grid=calcs.find(c=>c.id==='C08').rows,pipe=calcs.find(c=>c.id==='C09').rows;
+  const equalScale=grid.filter(r=>r[0]===r[1]);for(const r of equalScale)assert.ok(Math.abs(r[2]-equalScale[0][2])<1e-10);
+  assert.deepEqual(pipe.map(r=>r.slice(2)),[[8,17,89],[4,13,49],[4,11,47]]);assert.equal(pipe[2][1],'Inspection/release');
+  const single=structuredClone(p);single.variation.pipeline.batchSize=1;for(const r of calculateWorkedCases(single).calculations.find(c=>c.id==='C09').rows)assert.equal(r[3],r[4]);
+  const bad=structuredClone(p);bad.variation.sensitivityMultipliers[0]=0;assert.throws(()=>calculateWorkedCases(bad),/positive/);
+  const housing=calcs.find(c=>c.id==='C10');assert.ok(Math.abs(housing.rows[1][1]-11385)<1e-8);assert.ok(housing.rows[1][2]>2.13&&housing.rows[1][2]<2.15);
 });

@@ -33,6 +33,16 @@ The full article is an imported Markdown region. Surface composition binds that 
 
 ## Assurance checkpoint
 
+### Variation demonstration, 29 October 2026
+
+**Claim:** the existing worked-step records, calculation adapter, kernel and native UI can demonstrate variation analysis without a parallel scientific interpreter or a new Sourcery lane.
+
+**Evidence:** W04 carries seven atomic outputs through existing operation families. C07–C10 evaluate explicitly assigned factorial responses, the retained depth/flux model, a specified ideal pipeline and the earlier authored Perth package-cost example. A NIST method reference supports confounding terminology; it supplies none of the assigned responses. All vendored modules and algebra contracts remain byte-identical.
+
+**Falsifiers:** a missing factorial cell silently accepted; an additive response reported as interaction; a changed cell order changing the answer; proportional depth/flux changes altering the predicted time; confusing throughput plateau with unchanged first-unit latency; or a demonstration acquiring empirical or ancient-occurrence authority.
+
+**Disposition:** publish after numerical, kernel, link, native-lowering and browser checks. Research uncertainty, natural variability, shared experimental units, constrained mixtures, unmeasured yields and archaeological attribution remain explicit. No physical experiment, causal effect estimate from real data, power calculation, global variance decomposition or numerical value-of-information optimisation is claimed.
+
 ### Worked-investigation extension, 29 October 2026
 
 **Claim:** the existing kernel, joint-input relations, collection grammar, surface compiler and scientific composer can carry populated source assessments and conditional quantity calculations without a new work lane or a change to retained mechanisms.

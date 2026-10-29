@@ -1,7 +1,7 @@
 {
   "protocol": "material-history-worked-investigations/1",
   "date": "2026-10-29",
-  "scope": "Three completed desk investigations: source review, conditional calculations and evidence assessment. No new physical experiment or monument sampling was performed.",
+  "scope": "Four completed desk investigations: sourced assessments, conditional calculations and a synthetic variation-analysis demonstration. No new physical experiment or monument sampling was performed.",
   "studies": [
     {
       "id": "W01",
@@ -16,7 +16,8 @@
         "D10",
         "B11",
         "W02",
-        "W03"
+        "W03",
+        "W04"
       ],
       "conclusion": "The opening chemical model must use identified mineral phases and interfaces. Bulk oxide percentages, hardness and a red colour cannot supply those identities. The sources support a materially varied monument; they do not give us a sampled alteration profile for a named Khufu granite face.",
       "steps": [
@@ -130,7 +131,8 @@
         "B15",
         "B23",
         "W01",
-        "W03"
+        "W03",
+        "W04"
       ],
       "conclusion": "Silicate–alkali chemistry is a credible mechanism to investigate. The available modern results do not establish a removal rate for the quoted 168 °C treatment, efficient quarry-scale production, or use on a named Khufu component. Thermal damage and chemical alteration must be separated experimentally before assigning their contributions.",
       "steps": [
@@ -315,7 +317,8 @@
         "B19",
         "B20",
         "W01",
-        "W02"
+        "W02",
+        "W04"
       ],
       "conclusion": "The reviewed record supports real quarrying, material supply and thermal/mechanical comparators. It does not identify carbonate-assisted working on a named Khufu surface. A surviving joint signature tied to manufacturing chronology would be substantially more useful than either surface shape alone or unspecific sodium detection.",
       "steps": [
@@ -451,6 +454,197 @@
             "B18",
             "B19",
             "B21",
+            "B25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W04",
+      "label": "Vary the factors. Find the bottleneck.",
+      "summary": "A pyramid-centred demonstration of controlled comparisons, interactions, sensitivity and process constraints using the existing algebra. Numerical examples are synthetic or conditional, not experimental findings.",
+      "status": "Worked variation demonstration",
+      "related": [
+        "W01",
+        "W02",
+        "W03",
+        "P03",
+        "P06",
+        "B10",
+        "B15",
+        "B19",
+        "B20",
+        "B23",
+        "B25"
+      ],
+      "conclusion": "Variation analysis distinguishes three outputs: model sensitivity, identifiable treatment contrasts and a process bottleneck under a stated production model. The worked examples expose what the machinery can calculate and what observations it still needs. None attributes an ancient manufacturing process or validates a modern building material.",
+      "steps": [
+        {
+          "id": "W04-S1",
+          "title": "Define the outcome before varying the ingredients",
+          "operation": "O1",
+          "inputs": [
+            "W01",
+            "W02",
+            "B23"
+          ],
+          "output": "A scoped response and factor register",
+          "paragraphs": [
+            "Keep the pyramid question anchored to a named component or quarry comparison. The immediate process question is whether a specified treatment produces useful removal beyond a matched mechanical or thermal comparator. Record at least dissolved mass, detached-solid mass, changed surface volume, crack depth, dimensional accuracy and the condition of the retained stone. Maximum mass loss alone can reward an unusably damaged product.",
+            "Mineral fractions, reagent composition and water content are constrained compositions: fractions sum to a declared total. Raising one fraction changes at least one other. Use declared endmember mixtures or a mixture-design region rather than treating every percentage as an independent factorial knob. Keep carbonate, aqueous hydroxide and molten hydroxide as separately declared regimes.",
+            "Temperature, accessible area, duration and applied mechanical work are process factors. Rock batch, initial crack population, treatment run, operator and measurement session can introduce nuisance variation. Distinguish physical variability between specimens from uncertainty about an unmeasured rate; repeating the same uncertain assumption does not resolve it."
+          ],
+          "matrix": [
+            {
+              "Factor": "Material composition and fabric",
+              "Control": "Phase identification, connected porosity, grain size and initial damage",
+              "Failure to control": "A treatment label can become a proxy for an easier rock batch."
+            },
+            {
+              "Factor": "Thermal and chemical regime",
+              "Control": "Comparable measured thermal histories and defined reagent state",
+              "Failure to control": "Heat damage can be attributed to chemistry, or a phase change can invalidate a rate comparison."
+            },
+            {
+              "Factor": "Mechanical removal",
+              "Control": "A recorded, comparable finishing operation plus a no-finishing comparator",
+              "Failure to control": "Different brushing or impact energy can create the apparent treatment advantage."
+            },
+            {
+              "Factor": "Measurement and specimen history",
+              "Control": "Before/after records, blanks, independent units and traceable calibration",
+              "Failure to control": "Residue, moisture or repeated readings can be mistaken for removed material or independent replication."
+            }
+          ],
+          "evidenceRefs": [
+            "external:worked-nist-doe",
+            "W02-S7"
+          ]
+        },
+        {
+          "id": "W04-S2",
+          "title": "Design the comparison so causes can be separated",
+          "operation": "O6",
+          "inputs": [
+            "W04-S1",
+            "external:worked-nist-doe"
+          ],
+          "output": "A blocked and replicated comparison plan",
+          "paragraphs": [
+            "Within each independently characterised rock batch, cross three factors: lower/higher thermal history, alkali absent/present, and finishing absent/present. This gives eight combinations per batch. Lower and higher are coded design levels, not a temperature prescription; a separate study must establish feasible levels within one declared regime. Include appropriate reagent-background and handling controls, not just an untreated photograph.",
+            "An illustrative pilot could assign three separately treated specimens to each combination: 24 experimental units per batch. Repeated scans of one treated specimen are measurement repeats, not three treatment replicates. To compare composition classes, sample multiple independent batches within each class; one batch per class confounds composition with batch. Pilot variance and the smallest practically useful effect must determine the eventual replication requirement, so this example is not a power calculation.",
+            "Randomise assignment and run order where practical. If specimens share a furnace run or reagent bath, preserve that shared experimental unit and model its grouping; do not count them as fully independent treatments. Block nuisance variation without assigning every treated sample to one day and every control to another. Preserve the alias structure if a fractional design is used. A factorial design can estimate interactions; it does not remove unmeasured confounding by itself."
+          ],
+          "evidenceRefs": [
+            "external:worked-nist-doe",
+            "B20"
+          ]
+        },
+        {
+          "id": "W04-S3",
+          "title": "Execute a factorial contrast on visibly synthetic responses",
+          "operation": "O8",
+          "inputs": [
+            "W04-S2",
+            "C07"
+          ],
+          "output": "Conditional contrasts and an interaction diagnostic",
+          "paragraphs": [
+            "The four assigned teaching responses below hold the finishing procedure fixed and cross heat with alkali. They are invented numbers for an arithmetic demonstration, not measurements of granite, claims from the social post or fitted results from a paper.",
+            "The alkali contrast is 1 mg at lower heat and 7 mg at higher heat. Their average is 4 mg; the difference of differences is 6 mg. The apparent chemical contribution therefore depends on the thermal condition in this synthetic example. Reporting only the diagonal change from 1 to 12 mg would combine heat, chemistry and their interaction into an unexplained 11 mg difference.",
+            "With coded factors ±1, the regression coefficient on the heat×alkali term would be one quarter of the difference-of-differences contrast: 1.5 mg here. Do not silently equate those conventions. Four cell means without independent replication leave no estimate of experimental error for a saturated two-factor model; no p-value or confidence interval is claimed."
+          ],
+          "calculationRef": "C07",
+          "evidenceRefs": [
+            "external:worked-nist-doe",
+            "W02"
+          ]
+        },
+        {
+          "id": "W04-S4",
+          "title": "Propagate assumptions without calling them measured effects",
+          "operation": "O5",
+          "inputs": [
+            "C03",
+            "C08",
+            "W04-S1"
+          ],
+          "output": "A two-factor conditional removal-time surface",
+          "paragraphs": [
+            "Reuse the existing planar-quartz relation time = depth/(J Vₘ). Cross half, equal and double target depth with half, equal and double the selected flux benchmark. At fixed molar volume, doubling depth doubles time, while doubling flux halves it. Their log elasticities are +1 and −1. Changing both by the same factor leaves the calculated time unchanged.",
+            "This is a sensitivity surface for a declared model. It does not show that a specific reagent doubles flux, identify a measured granite rate, or assign probabilities to the scenarios. A sensitivity ranking changes with the chosen parameter range. Global variance-based indices would additionally require a justified joint input distribution and dependence model; none is supplied here.",
+            "The missing measurement remains the treatment-dependent flux or removal rate in the intended regime, together with its variation across specimens and the relation between reactive area and projected surface area. Product barriers, saturation and grain detachment can invalidate a constant planar flux model even when its arithmetic is correct."
+          ],
+          "calculationRef": "C08",
+          "evidenceRefs": [
+            "W02-S5",
+            "W02-S6",
+            "B10"
+          ]
+        },
+        {
+          "id": "W04-S5",
+          "title": "Speed up treatment and watch the bottleneck move",
+          "operation": "O8",
+          "inputs": [
+            "C09",
+            "B15",
+            "W04-S4"
+          ],
+          "output": "A conditional process-capacity assessment",
+          "paragraphs": [
+            "A process needs preparation, treatment, finishing and inspection/release. The assigned station times below model one identical unit passing through each stage, with a separate station for every stage. They are teaching assumptions, not reconstructed Egyptian productivity, actual laboratory timings or a quarry throughput forecast.",
+            "At an 8-hour treatment stage the steady cycle is 8 hours. Reducing treatment to 4 hours moves the constraint to a tie between treatment and inspection/release. Reducing treatment again to 2 hours leaves the steady cycle at 4 hours because inspection/release now limits capacity. First-unit and finite-batch completion time still improve: a throughput plateau does not imply that every time metric is unchanged.",
+            "The example assumes unlimited buffers, identical work, no downtime, no transport/setup delays and full acceptance. If the same crew operates all stages, or treatment occupies several shared resources, this pipeline model does not apply. Track accepted output, not merely processed units: lower yield, unsafe handling or unusable dimensional damage can erase a nominal throughput gain. A real assessment needs observed stage times, crew/equipment sharing, queues and quality yield."
+          ],
+          "calculationRef": "C09",
+          "evidenceRefs": [
+            "W02-S8",
+            "B15",
+            "B23"
+          ]
+        },
+        {
+          "id": "W04-S6",
+          "title": "Transfer the machinery to housing without transferring historical authority",
+          "operation": "O9",
+          "inputs": [
+            "C10",
+            "W04-S5"
+          ],
+          "output": "A bounded modern cost-leverage demonstration",
+          "paragraphs": [
+            "The earlier Perth concept estimate provides an application example: A$532,730 project budget, A$45,000 external-wall package, assumed 15% builder markup and 10% contingency. These are authored planning allowances, not supplier quotations or a measured advantage of a mineral formulation. The table varies only the wall-package reduction and keeps other scope constant.",
+            "A 20% package reduction changes the model budget by A$11,385, about 2.14% of the total. That shows why a material-level saving must be propagated through a complete assembly and project. Added testing, formwork, training, service integration, rejection or delay could offset it. A reduction in the contingency allowance is not a guaranteed saving in final expenditure.",
+            "The same accounting applies to carbon: compare equivalent functional assemblies and service life, include precursor/activator production, processing, transport and curing, and count a process emission only once. No residential carbon reduction is calculated here because matched assembly EPDs and a validated alternative specification are absent. A modern economic or carbon result would not be evidence of ancient use."
+          ],
+          "calculationRef": "C10",
+          "evidenceRefs": [
+            "W04-S5",
+            "B20"
+          ]
+        },
+        {
+          "id": "W04-S7",
+          "title": "Choose the next observation that resolves a live ambiguity",
+          "operation": "O6",
+          "inputs": [
+            "W04-S3",
+            "W04-S4",
+            "W04-S5",
+            "W04-S6",
+            "W03"
+          ],
+          "output": "A prioritised evidence-return decision",
+          "paragraphs": [
+            "If thermal history and chemical treatment still vary together, prioritise the matched comparison that separates them. If chemical assistance is established but engineering feasibility depends on a four-order-of-magnitude rate uncertainty, prioritise a calibrated removal-time and mass-partition record. If treatment is already faster than the next stage, investigate that stage and quality yield before optimising reaction speed again.",
+            "For archaeological attribution, the highest-value record remains a dated, contextual joint signature that distinguishes the candidate process from heat, impact, natural salts and later alteration. Modern feasibility can strengthen a possibility claim while leaving historical attribution unresolved. Preserve that separation in the return packet.",
+            "These priorities follow the declared ambiguities; they are not a numerical expected-value-of-information optimisation. Such an optimisation would need defensible probabilities, measurement costs and decision losses. The present machinery makes the dependencies inspectable and the next comparison explicit without inventing those inputs."
+          ],
+          "evidenceRefs": [
+            "W03-S5",
+            "B19",
+            "B20",
             "B25"
           ]
         }

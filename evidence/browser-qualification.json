@@ -134,5 +134,37 @@
     ],
     "scriptErrors": [],
     "scientificPromotion": false
+  },
+  "variationExtension": {
+    "date": "2026-10-29",
+    "scope": "Local preview W04; deployed path checked separately",
+    "observations": [
+      {
+        "route": "studies/W04/",
+        "steps": 7,
+        "calculations": 4,
+        "result": "Synthetic status visible; native table reports cycles 8, 4, 4 h/unit and batch makespans 89, 49, 47 h; section navigation works."
+      },
+      {
+        "route": "studies/W04/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "result": "No document-level horizontal overflow."
+      },
+      {
+        "route": "studies/W04/",
+        "nominalWidth": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "result": "Four tables scroll inside their own focusable containers; no page overflow."
+      },
+      {
+        "route": "studies/",
+        "result": "Search bottleneck returns exactly W04 among four dossiers."
+      }
+    ],
+    "scriptErrors": [],
+    "empiricalPromotion": false
   }
 }

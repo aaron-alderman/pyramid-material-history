@@ -4,9 +4,11 @@ The public task is to enter through a pyramid question, follow the connecting me
 
 ## Surface responsibilities
 
+W04 uses the same worked-step field renderer, collection controls, section navigation, comparison descriptions and calculation tables as W01–W03. Its seven steps and four calculations receive the unchanged kernel and native lowering. No bespoke browser filter, statistical interpreter or new lane is introduced. The variation inputs remain canonical in `corpus/calculation-inputs.json`; the calculations execute in the existing publication-owned numerical adapter and appear in the existing calculation export.
+
 The worked-investigation collection uses the existing grammar-driven search, paging and navigation. Its record pages render declared research steps, local section navigation, source links, alternative-history description lists and calculation tables through the same native surface compiler. The `worked-steps` field renderer is an explicit publication adapter over the existing node primitives; it introduces no new interpreter or browser control semantics. Table containers scroll locally on narrow screens and retain native table headers and keyboard focus.
 
-The eighteen steps each retain one primary output and an existing operation-family identity. All their inputs remain conjunctive. The three dossiers, eighteen steps and six calculations receive the unchanged twelve-coordinate kernel in the semantic decomposition. Nine added references use the existing source-record path. Numerical code is bound in the source hash and is independently testable. The original atlas is preserved.
+The twenty-five steps each retain one primary output and an existing operation-family identity. All their inputs remain conjunctive. The four dossiers, twenty-five steps and ten calculations receive the unchanged twelve-coordinate kernel in the semantic decomposition. Ten added references use the existing source-record path. Numerical code is bound in the source hash and is independently testable. The original atlas is preserved.
 
 | Surface | Primary responsibility | Source meaning | Existing realization |
 |---|---|---|---|

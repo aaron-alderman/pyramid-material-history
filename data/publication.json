@@ -81,9 +81,9 @@
       "closingTitle": "The interesting work lives between the boxes.",
       "closingDescription": "Chemistry, geology, geophysics and archaeology overlap. The corpus preserves their connecting mechanisms, assumptions, alternatives and tests so another person can continue the work.",
       "closingAction": "Enter the full corpus",
-      "workedEyebrow": "THE NEXT LAYER · THREE WORKED INVESTIGATIONS",
+      "workedEyebrow": "THE NEXT LAYER · WORKED INVESTIGATIONS",
       "workedTitle": "Follow the evidence through the middle.",
-      "workedDescription": "Start with actual source observations. Work through mineral identity, chemical balances, removal rates and competing histories. Each investigation ends with a bounded conclusion and the observation that could change it."
+      "workedDescription": "Follow material identity, chemical balances, competing histories and variation analysis. Inspect the controls, calculations and bottlenecks that connect a claim to its next useful test."
     },
     "article": {
       "title": "The full material history atlas",
@@ -166,7 +166,7 @@
         },
         {
           "title": "Worked evidence and reproducible calculations",
-          "copy": "The next layer adds source-scoped assessments, six conditional calculations and atomic research steps using the same twelve-coordinate kernel. The numerical adapter performs formula accounting and sensitivity calculations; the retained composer checks declared quantity-dimension maps. Neither substitutes for a measured rate or historical evidence.",
+          "copy": "The worked layer adds source-scoped assessments, ten conditional or synthetic calculations and atomic research steps using the same twelve-coordinate kernel. The numerical adapter performs formula accounting, contrasts and scenario calculations; the retained composer checks declared quantity-dimension maps. Neither substitutes for a measured rate or historical evidence.",
           "links": [
             {
               "label": "Read the worked investigations",
@@ -187,6 +187,24 @@
             {
               "label": "Inspect the canonical investigation records",
               "href": "corpus/worked-investigations.json"
+            }
+          ]
+        },
+        {
+          "title": "Variation analysis in action",
+          "copy": "The pyramid-centred demonstration carries constrained compositions, nuisance factors, factorial contrasts, sensitivity surfaces and production bottlenecks through the same research-step and calculation records. Synthetic responses and timings supply no experimental or historical authority.",
+          "links": [
+            {
+              "label": "Follow the variation demonstration",
+              "href": "studies/W04/"
+            },
+            {
+              "label": "Inspect all calculation inputs",
+              "href": "corpus/calculation-inputs.json"
+            },
+            {
+              "label": "Inspect computed contrasts and scenarios",
+              "href": "data/worked-calculations.json"
             }
           ]
         }
@@ -212,9 +230,9 @@
       {
         "id": "studies",
         "route": "studies/",
-        "title": "Three worked investigations",
+        "title": "Worked investigations",
         "eyebrow": "CLAIM → EVIDENCE → MODEL → PREDICTION → ASSESSMENT",
-        "description": "Completed desk investigations with primary-source observations, reproducible conditional calculations and competing explanations. No new laboratory experiment or monument sampling is claimed.",
+        "description": "Source-scoped assessments and a worked variation demonstration: compare controls, inspect conditional calculations, and find the next useful observation. Synthetic teaching responses remain separate from measured evidence.",
         "summaryPaths": [
           [
             "summary"
