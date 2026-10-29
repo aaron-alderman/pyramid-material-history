@@ -1,0 +1,470 @@
+{
+  "protocol": "material-history-evidence-coverage/1",
+  "scope": "Authored coverage assessment for this corpus, not a literature-exhaustiveness claim or scientific truth score",
+  "rows": [
+    {
+      "id": "coverage-B10",
+      "label": "B10 · Surface reactions to a coupled reaction front",
+      "bridgeRefs": [
+        "B10"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W02 reviews relevant reaction-interface literature; no calibrated granite reaction-front series extracted.",
+      "measuredInputs": "No bridge-specific rate dataset transcribed.",
+      "modelRefs": [
+        "C03",
+        "C04",
+        "C08"
+      ],
+      "distinguishingTests": "Proposed mass-partition, time and surface-profile comparison.",
+      "gaps": [
+        "Phase-specific rates, reactive area, saturation and product-layer transport."
+      ],
+      "studyRefs": [
+        "W02",
+        "W04"
+      ]
+    },
+    {
+      "id": "coverage-B11",
+      "label": "B11 · Material processes to mineral and rock history",
+      "bridgeRefs": [
+        "B11"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W01 distinguishes bulk chemistry, mineral phases and rock fabric.",
+      "measuredInputs": "No new monument-specific mineral-mode dataset transcribed.",
+      "modelRefs": [
+        "C06"
+      ],
+      "distinguishingTests": "Proposed matched phase/fabric and source-rock comparison.",
+      "gaps": [
+        "Named component, specimen identity and quantitative phase inventory."
+      ],
+      "studyRefs": [
+        "W01"
+      ]
+    },
+    {
+      "id": "coverage-B15",
+      "label": "B15 · Material capability to a human process protocol",
+      "bridgeRefs": [
+        "B15"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W02 and W04 distinguish chemical possibility from a production operation.",
+      "measuredInputs": "No archaeological production-time or accepted-yield series extracted.",
+      "modelRefs": [
+        "C02",
+        "C09",
+        "C10"
+      ],
+      "distinguishingTests": "Proposed treatment/control throughput and quality comparison.",
+      "gaps": [
+        "Shared resources, setup, losses, fuel/reagent supply and accepted yield."
+      ],
+      "studyRefs": [
+        "W02",
+        "W04"
+      ]
+    },
+    {
+      "id": "coverage-B17",
+      "label": "B17 · Environment to preserved archaeological signature",
+      "bridgeRefs": [
+        "B17"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W03 considers preservation and later overprints; W05 audits spatial context.",
+      "measuredInputs": "Five located Ca/P entries are transcribed for one reported sample context; no survival probabilities estimated.",
+      "modelRefs": [
+        "C05"
+      ],
+      "distinguishingTests": "Proposed profile, background and chronology comparison.",
+      "gaps": [
+        "Trace survival, sampling coverage, contamination history and dating."
+      ],
+      "studyRefs": [
+        "W03",
+        "W05"
+      ]
+    },
+    {
+      "id": "coverage-B18",
+      "label": "B18 · Material archive to calibrated records",
+      "bridgeRefs": [
+        "B18"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W05 audits reported specimen identity and source-to-transcription mapping.",
+      "measuredInputs": "Figure 15 Ca/P entries checked visually; inherited Harrell attribution retained.",
+      "modelRefs": [
+        "C11",
+        "C12"
+      ],
+      "distinguishingTests": "Proposed matched-region measurement and raw-spectrum return.",
+      "gaps": [
+        "Raw spectra, analytical uncertainty, detection limit and exact inset coordinates."
+      ],
+      "studyRefs": [
+        "W05"
+      ]
+    },
+    {
+      "id": "coverage-B19",
+      "label": "B19 · Preserved records to historical alternatives",
+      "bridgeRefs": [
+        "B19"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W03/W05 keep measured features separate from competing histories.",
+      "measuredInputs": "Located chemistry supports a restricted comparison; it does not independently identify an ancient event.",
+      "modelRefs": [
+        "C05",
+        "C12"
+      ],
+      "distinguishingTests": "Proposed co-registered fabric/phase/chronology discriminator.",
+      "gaps": [
+        "Diagnostic specificity, dates and correspondence between analyzed fragments."
+      ],
+      "studyRefs": [
+        "W03",
+        "W05"
+      ]
+    },
+    {
+      "id": "coverage-B20",
+      "label": "B20 · Experimental replication to historical support",
+      "bridgeRefs": [
+        "B20"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W02/W04 separate modern feasibility and controls from historical occurrence.",
+      "measuredInputs": "No new replication experiment and no historical treatment attribution.",
+      "modelRefs": [
+        "C07",
+        "C09"
+      ],
+      "distinguishingTests": "Proposed independently replicated, blocked treatment comparisons.",
+      "gaps": [
+        "Real response data, uncertainty, process feasibility and contextual ancient evidence."
+      ],
+      "studyRefs": [
+        "W02",
+        "W04",
+        "W05"
+      ]
+    },
+    {
+      "id": "coverage-B23",
+      "label": "B23 · Chemical alteration and mechanical work to removal",
+      "bridgeRefs": [
+        "B23"
+      ],
+      "reviewStatus": "Focused review",
+      "observations": "W02 distinguishes dissolution, grain release and thermal damage.",
+      "measuredInputs": "No jointly calibrated dissolved/detached/retained material record extracted.",
+      "modelRefs": [
+        "C01",
+        "C03",
+        "C07"
+      ],
+      "distinguishingTests": "Proposed heat/alkali/mechanical factorial with mass partition.",
+      "gaps": [
+        "Mineral-specific attack, crack evolution and useful removal under equal work."
+      ],
+      "studyRefs": [
+        "W02",
+        "W04"
+      ]
+    },
+    {
+      "id": "coverage-B01",
+      "label": "B01 · Corpus carrier to physical model",
+      "bridgeRefs": [
+        "B01"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B02",
+      "label": "B02 · Model to atomic electronic problem",
+      "bridgeRefs": [
+        "B02"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B03",
+      "label": "B03 · Atomic states to bonded coordination",
+      "bridgeRefs": [
+        "B03"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B04",
+      "label": "B04 · Local electronic model to periodic solid",
+      "bridgeRefs": [
+        "B04"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B05",
+      "label": "B05 · Bloch to Wannier representation",
+      "bridgeRefs": [
+        "B05"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B06",
+      "label": "B06 · Bulk to surface or defect model",
+      "bridgeRefs": [
+        "B06"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B07",
+      "label": "B07 · Electronic forces to lattice response",
+      "bridgeRefs": [
+        "B07"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B08",
+      "label": "B08 · Microscopic states to chemical thermodynamics",
+      "bridgeRefs": [
+        "B08"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B09",
+      "label": "B09 · Thermodynamic admissibility to kinetic history",
+      "bridgeRefs": [
+        "B09"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B12",
+      "label": "B12 · Geological structure to geophysical response",
+      "bridgeRefs": [
+        "B12"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B13",
+      "label": "B13 · Geophysical records to geological estimates",
+      "bridgeRefs": [
+        "B13"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B14",
+      "label": "B14 · Rock to weathering and landscape change",
+      "bridgeRefs": [
+        "B14"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B16",
+      "label": "B16 · Manufacture to use and deposition",
+      "bridgeRefs": [
+        "B16"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B21",
+      "label": "B21 · Dating record to archaeological event",
+      "bridgeRefs": [
+        "B21"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B22",
+      "label": "B22 · Local electronic environment to surface reaction",
+      "bridgeRefs": [
+        "B22"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B24",
+      "label": "B24 · Landscape and field survey to site context",
+      "bridgeRefs": [
+        "B24"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B25",
+      "label": "B25 · Historical uncertainty to a future experiment",
+      "bridgeRefs": [
+        "B25"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    },
+    {
+      "id": "coverage-B26",
+      "label": "B26 · Algebraic lattice and physical crystal boundary",
+      "bridgeRefs": [
+        "B26"
+      ],
+      "reviewStatus": "Not reviewed in this increment",
+      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
+      "measuredInputs": "Not assessed here.",
+      "modelRefs": [],
+      "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
+      "gaps": [
+        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+      ],
+      "studyRefs": []
+    }
+  ]
+}

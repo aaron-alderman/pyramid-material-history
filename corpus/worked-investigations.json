@@ -17,7 +17,8 @@
         "B11",
         "W02",
         "W03",
-        "W04"
+        "W04",
+        "W05"
       ],
       "conclusion": "The opening chemical model must use identified mineral phases and interfaces. Bulk oxide percentages, hardness and a red colour cannot supply those identities. The sources support a materially varied monument; they do not give us a sampled alteration profile for a named Khufu granite face.",
       "steps": [
@@ -318,7 +319,8 @@
         "B20",
         "W01",
         "W02",
-        "W04"
+        "W04",
+        "W05"
       ],
       "conclusion": "The reviewed record supports real quarrying, material supply and thermal/mechanical comparators. It does not identify carbonate-assisted working on a named Khufu surface. A surviving joint signature tied to manufacturing chronology would be substantially more useful than either surface shape alone or unspecific sodium detection.",
       "steps": [
@@ -475,7 +477,8 @@
         "B19",
         "B20",
         "B23",
-        "B25"
+        "B25",
+        "W05"
       ],
       "conclusion": "Variation analysis distinguishes three outputs: model sensitivity, identifiable treatment contrasts and a process bottleneck under a stated production model. The worked examples expose what the machinery can calculate and what observations it still needs. None attributes an ancient manufacturing process or validates a modern building material.",
       "steps": [
@@ -645,6 +648,185 @@
             "W03-S5",
             "B19",
             "B20",
+            "B25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W05",
+      "label": "The Lauer sample: follow the evidence through the disagreement",
+      "summary": "A sample-centred audit of competing interpretations, fragment identity, coating contamination and five published EDS entries, with reproducible arithmetic and explicit evidential limits.",
+      "status": "Worked primary-source audit",
+      "related": [
+        "W01",
+        "W03",
+        "W04",
+        "P01",
+        "P02",
+        "P06",
+        "B17",
+        "B18",
+        "B19",
+        "B20",
+        "coverage-B18",
+        "coverage-B19"
+      ],
+      "conclusion": "The reviewed sources offer competing explanations at different analytical locations. The reproduced phosphorus contrast makes spatial context essential and prevents treating one edge signal as an undifferentiated whole-stone composition. It does not settle all silica/binder arguments, date a coating or establish how a population of pyramid blocks was made.",
+      "steps": [
+        {
+          "id": "W05-S1",
+          "title": "Identity: one reported sample family, several analytical objects",
+          "operation": "O1",
+          "inputs": [
+            "S-LAUER-FAMILY",
+            "S-LAUER-B2006",
+            "S-LAUER-H1993",
+            "S-LAUER-J2007"
+          ],
+          "output": "A source-scoped specimen identity audit",
+          "paragraphs": [
+            "The audit unit is the reported Lauer sample family, not every stone in Khufu’s pyramid. The specimen records separate the 2006 slab, earlier Harrell material and the later analytical pieces. Reported provenance is retained as reported; this desk audit does not authenticate the original extraction location.",
+            "A comparison requires correspondence between chips, preparations and measured locations. Shared naming is insufficient. Keep section orientation, former edges, coatings, impregnation, polishing and storage history attached to each observation. A citation chain is not an independent chain of physical custody.",
+            "The four source-bound identity records can be inspected in the audit export. Unresolved correspondence is a limitation of the comparison rather than a reason to erase either author’s observations."
+          ],
+          "evidenceRefs": [
+            "external:audit-barsoum",
+            "external:audit-jana",
+            "external:audit-harrell"
+          ]
+        },
+        {
+          "id": "W05-S2",
+          "title": "Competing interpretations: preserve the observations and the inference separately",
+          "operation": "O9",
+          "inputs": [
+            "external:audit-barsoum",
+            "external:audit-jana",
+            "external:audit-harrell",
+            "W05-S1"
+          ],
+          "output": "A comparison of scoped scientific positions",
+          "paragraphs": [
+            "Barsoum and colleagues use microscopy and microchemistry to argue for reconstituted material in some examined stones; their proposed Lauer binder is silica-rich, not simply the original sodium–aluminium recipe. Harrell and Penrod’s publisher abstract instead identifies natural limestone. Jana interprets fabrics, comparator materials and spatial chemistry as consistent with natural stone and alteration.",
+            "These are not interchangeable universal claims. A test of one specified binder recipe cannot exclude every possible reconstitution route. Conversely, an unusual microphase does not alone prove that the surrounding block was manufactured. The inference must connect the phase to the fabric, preparation history and a mechanism that distinguishes competing histories."
+          ],
+          "matrix": [
+            {
+              "Position": "Reconstitution interpretation",
+              "Observation": "Reported microconstituent chemistry and morphology",
+              "Inference": "A precipitated binder joining natural grains",
+              "AuditBoundary": "Check whether the phase is spatially continuous and construction-related; preserve specimen and preparation identity."
+            },
+            {
+              "Position": "Natural rock with coating/alteration",
+              "Observation": "Reported geological fabric and spatially localized chemistry",
+              "Inference": "Natural limestone with an overprint",
+              "AuditBoundary": "Check layer relationships, original material comparators and whether this explains the same analytical region."
+            },
+            {
+              "Position": "Remaining disagreement",
+              "Observation": "Studies use differing pieces, regions and analytical methods",
+              "Inference": "Some apparently conflicting claims may address different objects",
+              "AuditBoundary": "Neither force agreement nor count inherited data as independent confirmation."
+            }
+          ],
+          "evidenceRefs": [
+            "external:audit-barsoum",
+            "external:audit-jana",
+            "external:audit-harrell"
+          ]
+        },
+        {
+          "id": "W05-S3",
+          "title": "Observation: transcribe a published measurement without inventing a new experiment",
+          "operation": "O7",
+          "inputs": [
+            "S-LAUER-H1993",
+            "M-LAUER-COAT1",
+            "M-LAUER-COAT2",
+            "M-LAUER-COAT3",
+            "M-LAUER-NEAR",
+            "M-LAUER-INTERIOR",
+            "C11"
+          ],
+          "output": "A visually checked source-reported measurement transcription",
+          "paragraphs": [
+            "Figure 15 in Jana’s proceedings paper reproduces earlier Harrell material. The five Ca/P entries below were checked against a locally rendered PDF page. Their source and inherited attribution are retained; this is a transcription, not a new SEM investigation.",
+            "The labels locate the entries qualitatively. They do not provide exact coordinates for a fitted distance profile. Only two elements are transcribed. Do not force their sum to 100, interpret atomic percentages as bulk mass percentages, or treat three printed coating columns as a demonstrated independent replicate design. Instrument spectra, quantification settings and analytical uncertainties are not reconstructed from the figure."
+          ],
+          "calculationRef": "C11",
+          "evidenceRefs": [
+            "external:audit-jana",
+            "external:audit-harrell"
+          ]
+        },
+        {
+          "id": "W05-S4",
+          "title": "Reproduction: calculate the located contrast and expose its limits",
+          "operation": "O8",
+          "inputs": [
+            "M-LAUER-NEAR",
+            "M-LAUER-INTERIOR",
+            "C12"
+          ],
+          "output": "A reproducible ratio from reported observations",
+          "paragraphs": [
+            "The calculation uses the printed limestone-inset values, preserving their units. It separates an atomic-percentage-point difference from a dimensionless concentration ratio and from the P/Ca atomic ratios. The downloadable source records retain the original decimal strings.",
+            "The approximately 15.3-fold P contrast is a comparison between reported locations. It is not a population effect size, a calibrated diffusion profile, a treatment rate or an estimate of the fraction of cast material. A small denominator makes knowledge of analytical uncertainty and detection limits particularly important.",
+            "The extra interval assumes only rounding to the nearest hundredth. It is deliberately labelled rounding-only: it excludes specimen heterogeneity, EDS matrix effects and measurement error. Since those uncertainties are not supplied for the selected entries, this audit reports no confidence interval or statistical significance."
+          ],
+          "calculationRef": "C12",
+          "evidenceRefs": [
+            "external:audit-jana"
+          ]
+        },
+        {
+          "id": "W05-S5",
+          "title": "Discriminator: compare the same region under competing predictions",
+          "operation": "O6",
+          "inputs": [
+            "W05-S1",
+            "W05-S2",
+            "W05-S3",
+            "W05-S4",
+            "W03-S5"
+          ],
+          "output": "A spatially matched evidence-return plan",
+          "paragraphs": [
+            "The next useful comparison is a registered map tying phase identification and fabric to the same named section, with edge orientation, preparation and custody recorded. Distinguish a cross-cutting surface overprint from an intergranular phase that belongs to the formation of the stone body. Test the best version of each explanation against that shared object.",
+            "Use independently identified geological comparators and relevant artificial-material controls. Record all analyzed regions, including negative results, rather than selecting only unusual particles. An alleged binder needs its continuity and relationship to grains demonstrated; an alteration explanation needs a transport/pathway and layer relationship consistent with the observations.",
+            "A dated construction-related phase could materially change historical inference. An undated concentration contrast cannot supply that date. This is a proposed discriminator using authorized records or specimens; no new monument sampling is assumed."
+          ],
+          "evidenceRefs": [
+            "B17",
+            "B18",
+            "B19",
+            "B20",
+            "W03"
+          ]
+        },
+        {
+          "id": "W05-S6",
+          "title": "Disposition: one argument constrained, a wider claim still requires evidence",
+          "operation": "O9",
+          "inputs": [
+            "W05-S2",
+            "W05-S4",
+            "W05-S5",
+            "coverage-B18",
+            "coverage-B19"
+          ],
+          "output": "A bounded evidence assessment and coverage update",
+          "paragraphs": [
+            "This audit constrains a particular shortcut: an edge-associated chemical signal cannot simply stand in for the original composition of a whole block. It does not adjudicate every microstructural claim in the reconstitution debate. A measured contrast is stronger than a synthetic teaching example for its own stated question, while remaining much narrower than a construction history.",
+            "The coverage view now distinguishes source summaries, a located numerical transcription, executed conditional arithmetic, proposed discriminators and unreviewed bridges. A green-looking completion score would collapse those different evidential roles, so no numerical truth score or automatic historical admission is produced.",
+            "Open work includes physical fragment correspondence, raw analytical uncertainty, spatially matched phase/fabric comparison, additional responses to the published studies and chronology. The next contributor can supply one of those records without having to recreate the framework."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "W04",
+            "B19",
             "B25"
           ]
         }

@@ -18,6 +18,10 @@
         "href": "studies/"
       },
       {
+        "label": "Evidence coverage",
+        "href": "coverage/"
+      },
+      {
         "label": "Investigate",
         "href": "investigations/"
       },
@@ -83,7 +87,7 @@
       "closingAction": "Enter the full corpus",
       "workedEyebrow": "THE NEXT LAYER · WORKED INVESTIGATIONS",
       "workedTitle": "Follow the evidence through the middle.",
-      "workedDescription": "Follow material identity, chemical balances, competing histories and variation analysis. Inspect the controls, calculations and bottlenecks that connect a claim to its next useful test."
+      "workedDescription": "Follow material identity, chemistry, competing histories, variation analysis and a primary-source sample audit. Inspect reported measurements, reproducible calculations and the gaps that remain."
     },
     "article": {
       "title": "The full material history atlas",
@@ -166,7 +170,7 @@
         },
         {
           "title": "Worked evidence and reproducible calculations",
-          "copy": "The worked layer adds source-scoped assessments, ten conditional or synthetic calculations and atomic research steps using the same twelve-coordinate kernel. The numerical adapter performs formula accounting, contrasts and scenario calculations; the retained composer checks declared quantity-dimension maps. Neither substitutes for a measured rate or historical evidence.",
+          "copy": "The worked layer distinguishes synthetic scenarios, conditional calculations, source-reported measurement transcriptions and arithmetic derived from those measurements. All use the existing twelve-coordinate kernel. No result supplies unmeasured rates, analytical uncertainty or historical dates.",
           "links": [
             {
               "label": "Read the worked investigations",
@@ -205,6 +209,24 @@
             {
               "label": "Inspect computed contrasts and scenarios",
               "href": "data/worked-calculations.json"
+            }
+          ]
+        },
+        {
+          "title": "A source-to-calculation audit",
+          "copy": "The Lauer dossier preserves source-reported specimen identities and five located SEM–EDS entries. Arithmetic on printed values is reproducible; raw spectra, measurement errors and historical dates are not manufactured. Coverage is assessed on separate axes rather than collapsed into a readiness score.",
+          "links": [
+            {
+              "label": "Read the sample audit",
+              "href": "studies/W05/"
+            },
+            {
+              "label": "Inspect the transcription and provenance",
+              "href": "corpus/evidence-audit.json"
+            },
+            {
+              "label": "Inspect bridge coverage",
+              "href": "coverage/"
             }
           ]
         }
@@ -586,6 +608,14 @@
               "sha256"
             ],
             "optional": true
+          },
+          {
+            "label": "Inspected public copy",
+            "path": [
+              "observedUrl"
+            ],
+            "kind": "url",
+            "optional": true
           }
         ],
         "searchLabel": "Search sources",
@@ -652,6 +682,86 @@
         "actionDescription": "Open the exact record, its conditions and its evidence.",
         "detailEyebrow": "NEGATIVE CONSTRAINTS",
         "backLabel": "Back to what a connection cannot establish"
+      },
+      {
+        "id": "coverage",
+        "route": "coverage/",
+        "title": "Where the evidence reaches—and where it stops",
+        "eyebrow": "COVERAGE OF THE 26 DECLARED BRIDGES",
+        "description": "Inspect source observations, measured inputs, executed models, distinguishing tests and open gaps separately. Unreviewed means not assessed in this increment. It is not evidence of absence, and no truth score is calculated.",
+        "summaryPaths": [
+          [
+            "observations"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Bridge under review",
+            "path": [
+              "bridgeRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Review scope",
+            "path": [
+              "reviewStatus"
+            ]
+          },
+          {
+            "label": "Source observations",
+            "path": [
+              "observations"
+            ]
+          },
+          {
+            "label": "Measured input coverage",
+            "path": [
+              "measuredInputs"
+            ]
+          },
+          {
+            "label": "Executed models and calculations",
+            "path": [
+              "modelRefs"
+            ],
+            "kind": "references",
+            "emptyText": "No executed model linked in this review."
+          },
+          {
+            "label": "Distinguishing comparisons",
+            "path": [
+              "distinguishingTests"
+            ]
+          },
+          {
+            "label": "Open gaps",
+            "path": [
+              "gaps"
+            ]
+          },
+          {
+            "label": "Worked investigations",
+            "path": [
+              "studyRefs"
+            ],
+            "kind": "references",
+            "emptyText": "No worked investigation linked in this increment."
+          }
+        ],
+        "filter": {
+          "path": [
+            "reviewStatus"
+          ],
+          "label": "Review scope",
+          "emptyLabel": "All bridges"
+        },
+        "searchLabel": "Search evidence coverage",
+        "searchPlaceholder": "Search observations, rates, samples or missing evidence…",
+        "actionLabel": "Inspect coverage",
+        "actionDescription": "Inspect the evidence roles and remaining gaps for this bridge.",
+        "detailEyebrow": "EVIDENCE COVERAGE",
+        "backLabel": "All bridge coverage"
       }
     ]
   }

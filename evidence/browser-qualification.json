@@ -166,5 +166,39 @@
     ],
     "scriptErrors": [],
     "empiricalPromotion": false
+  },
+  "primaryAuditExtension": {
+    "date": "2026-10-29",
+    "scope": "Local preview; published path verified separately",
+    "observations": [
+      {
+        "route": "studies/W05/",
+        "result": "Six steps, two tables; printed Ca/P decimal strings retained; ratio 15.2857 shown with rounding-only bounds."
+      },
+      {
+        "route": "coverage/",
+        "result": "26 rows; Focused review filters to 8. Searching B18 returns one entry."
+      },
+      {
+        "route": "coverage/coverage-B18/",
+        "result": "Source role, measured coverage, gaps and calculation links visible; link opens W05-S4."
+      },
+      {
+        "route": "studies/W05/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "result": "No document-level horizontal overflow."
+      },
+      {
+        "route": "studies/W05/",
+        "nominalWidth": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "result": "Tables scroll inside their containers; no page overflow."
+      }
+    ],
+    "scriptErrors": [],
+    "newMeasurements": false
   }
 }

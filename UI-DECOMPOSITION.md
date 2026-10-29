@@ -4,11 +4,13 @@ The public task is to enter through a pyramid question, follow the connecting me
 
 ## Surface responsibilities
 
+The evidence-coverage collection is another declaration for the retained search/filter/paging receiver. Its 26 bridge records separate source observations, measured inputs, executed models, proposed tests and residual gaps. No readiness or truth score is inferred. Calculation links resolve to the corresponding worked step. W05 uses the existing native worked-step renderer for the audit, its located data and arithmetic. Four specimen and five measurement records are inspectable in the source export and carry separate kernel identities in the semantic decomposition. Original PDF imagery is not embedded.
+
 W04 uses the same worked-step field renderer, collection controls, section navigation, comparison descriptions and calculation tables as W01–W03. Its seven steps and four calculations receive the unchanged kernel and native lowering. No bespoke browser filter, statistical interpreter or new lane is introduced. The variation inputs remain canonical in `corpus/calculation-inputs.json`; the calculations execute in the existing publication-owned numerical adapter and appear in the existing calculation export.
 
 The worked-investigation collection uses the existing grammar-driven search, paging and navigation. Its record pages render declared research steps, local section navigation, source links, alternative-history description lists and calculation tables through the same native surface compiler. The `worked-steps` field renderer is an explicit publication adapter over the existing node primitives; it introduces no new interpreter or browser control semantics. Table containers scroll locally on narrow screens and retain native table headers and keyboard focus.
 
-The twenty-five steps each retain one primary output and an existing operation-family identity. All their inputs remain conjunctive. The four dossiers, twenty-five steps and ten calculations receive the unchanged twelve-coordinate kernel in the semantic decomposition. Ten added references use the existing source-record path. Numerical code is bound in the source hash and is independently testable. The original atlas is preserved.
+The thirty-one steps each retain one primary output and an existing operation-family identity. All their inputs remain conjunctive. The five dossiers, thirty-one steps and twelve calculation/transcription views receive the unchanged twelve-coordinate kernel in the semantic decomposition. Thirteen added references use the existing source-record path. Numerical code is bound in the source hash and is independently testable. The original atlas is preserved.
 
 | Surface | Primary responsibility | Source meaning | Existing realization |
 |---|---|---|---|

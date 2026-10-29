@@ -334,6 +334,34 @@
       "supports": "Explains that confounded design terms cannot be estimated separately. Method reference; supplies no granite responses or productivity measurements.",
       "access": "Public handbook section and related indexed factorial/blocking guidance",
       "reviewed": "2026-10-29"
+    },
+    {
+      "id": "audit-barsoum",
+      "label": "Reconstitution interpretation — Barsoum et al., 2006",
+      "url": "https://doi.org/10.1111/j.1551-2916.2006.01308.x",
+      "citation": "M. W. Barsoum, A. Ganguly and G. Hug, Journal of the American Ceramic Society 89(12), 3788–3796 (2006)",
+      "supports": "Microscopy-based reconstitution argument; specimen and binder interpretations must retain their particular scope.",
+      "access": "Full primary paper read from a public mirror; Table I specimen listing checked in extracted text; canonical metadata checked against Drexel repository.",
+      "reviewed": "2026-10-29",
+      "observedUrl": "https://goldseiten-forum.com/wcf/attachment/244220-microstructural-evidence-of-reconstitute20160925-6990-m3bo54-pdf/"
+    },
+    {
+      "id": "audit-jana",
+      "label": "Spatial petrographic counterargument — Jana, 2007",
+      "url": "https://www.cmc-concrete.com/_files/ugd/df6185_e52af1375c3c4b878f0278b1817be426.pdf",
+      "citation": "Dipayan Jana, The Great Pyramid Debate, Proceedings of the 29th Conference on Cement Microscopy (2007), pp. 207–266",
+      "supports": "Natural-stone/alteration interpretation and located EDS entries; Figure 15 attributes earlier Harrell material.",
+      "access": "Primary full PDF reviewed selectively: specimen descriptions, comparison arguments and Figure 15; figure rendered locally for visual transcription. Raw spectra not available in this audit.",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "audit-harrell",
+      "label": "Lauer natural-limestone interpretation — Harrell and Penrod, 1993",
+      "url": "https://doi.org/10.5408/0022-1368-41.4.358",
+      "citation": "J. A. Harrell and B. E. Penrod, Journal of Geological Education 41(4), 358–363 (1993)",
+      "supports": "Publisher abstract concludes that the examined Lauer sample is natural limestone.",
+      "access": "Publisher-indexed abstract inspected; full original paper unavailable here. Figure/data attributed to Harrell in Jana is not treated as full-text access to this paper.",
+      "reviewed": "2026-10-29"
     }
   ],
   "sourceReport": {

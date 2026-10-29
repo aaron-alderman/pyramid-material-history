@@ -33,6 +33,16 @@ The full article is an imported Markdown region. Surface composition binds that 
 
 ## Assurance checkpoint
 
+### Primary-source audit and coverage, 29 October 2026
+
+**Claim:** existing research-step, native UI, collection and kernel contracts can distinguish measured source reports from synthetic examples while reproducing bounded arithmetic.
+
+**Evidence:** W05 retains four reported specimen identities and five visually checked Ca/P entries from Jana Figure 15, including the figure's inherited Harrell attribution. C11 transcribes; C12 computes located contrasts and conditional rounding bounds. The audit supplies no spectra, analytical errors, exact profile coordinates or dates. A 26-row coverage assessment uses the existing generic collection controls. Each specimen, observation and assessment receives the unchanged kernel. Retained mechanisms remain exact.
+
+**Falsifiers:** a fragment name silently establishing physical identity; inherited data counted as independent experiments; atomic percentages coerced into bulk mass percentages; rounding bounds labelled confidence intervals; a non-detection or localized signal settling every manufacturing history; unresolved coverage references; or unreviewed bridges labelled unsupported by all literature.
+
+**Disposition:** publish after source, transcription, arithmetic, reference, UI replay and browser qualification. Keep primary PDFs and rendered figures out of the public payload; publish citations, brief original assessments, selected factual numbers and source identities. The temporary checkout disappeared during research; the same public repository was recovered in a durable workspace directory, without creating a new repository or Sourcery lane.
+
 ### Variation demonstration, 29 October 2026
 
 **Claim:** the existing worked-step records, calculation adapter, kernel and native UI can demonstrate variation analysis without a parallel scientific interpreter or a new Sourcery lane.

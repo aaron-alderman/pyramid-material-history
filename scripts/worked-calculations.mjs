@@ -1,5 +1,5 @@
 // Publication-owned numerical adapter. No fitted rates or historical probabilities.
-export function calculateWorkedCases(p) {
+export function calculateWorkedCases(p,audit) {
   const m=p.molarMassGPerMol, density=p.quartzDensityKgPerM3;
   const ratio=m.Na2CO3/m.SiO2, volume=p.areaM2*p.depthM;
   const molarVolumeM3PerMol=(m.SiO2/1000)/density;
@@ -28,5 +28,16 @@ export function calculateWorkedCases(p) {
     const h=v.housing;
     calculations.push({id:'C10',label:'Package savings do not equal whole-project savings',formula:'Project saving = wall-package allowance × reduction × (1 + markup) × (1 + contingency)',scope:'Authored Perth concept-cost analogy, not quoted prices or a validated novel material. Baseline excludes land/garage. Assumes equivalent performance and no added testing, tooling, training or schedule costs. Contingency reduction is a budget allowance change, not guaranteed cash saved.',declaredInputs:{'Project concept budget':h.projectAUD+' AUD','Wall-package allowance':h.wallPackageAUD+' AUD','Builder markup':h.markup,'Contingency':h.contingency,'Wall reductions':h.reductions.join(', ')},columns:['Assumed wall reduction','Budget saving (AUD)','Share of project (%)'],rows:h.reductions.map(r=>{const saving=h.wallPackageAUD*r*(1+h.markup)*(1+h.contingency);return [r,saving,100*saving/h.projectAUD];})});
   }
-  return {protocol:'material-history-worked-calculations/1',assumptions:p.assumptions,calculations,molarVolumeM3PerMol,authority:'Reproducible conditional arithmetic; no experimental measurement or historical attribution'};
+  for(const c of calculations)c.dataClass='conditional-or-synthetic';
+  if(audit){
+    if(audit.measurementContext.units!=='atomic-percent')throw Error('EDS atomic-percent units are required.');
+    const rows=audit.measurements;
+    if(rows.some(r=>!/^\d+\.\d{2}$/.test(r.CaAtPercent)||!/^\d+\.\d{2}$/.test(r.PAtPercent)||Number(r.CaAtPercent)<=0||Number(r.PAtPercent)<=0))throw Error('Invalid printed EDS transcription.');
+    const near=rows.find(r=>r.id==='M-LAUER-NEAR'),interior=rows.find(r=>r.id==='M-LAUER-INTERIOR');
+    if(!near||!interior)throw Error('Both located EDS insets are required.');
+    const a=Number(near.PAtPercent),b=Number(interior.PAtPercent);
+    calculations.push({id:'C11',label:'Published EDS values with their locations',dataClass:'reported-measurement-transcription',formula:'Read printed Ca and P columns without normalization or imputation',scope:audit.measurementContext.locator+'. '+audit.measurementContext.attribution+' No new analyses. Printed precision is retained in source JSON; analytical uncertainty and independent replication are not supplied.',declaredInputs:{'Source':'Jana 2007 Figure 15, earlier Harrell material','Unit':'atomic percent as printed','Coverage':'Ca and P only; other constituents not reconstructed','Uncertainty':'Not supplied for these insets'},columns:['Located entry','Ca (at.%)','P (at.%)'],rows:rows.map(r=>[r.region,r.CaAtPercent,r.PAtPercent])});
+    calculations.push({id:'C12',label:'A located phosphorus contrast, without a date',dataClass:'derived-from-reported-measurements',formula:'P contrast = P(near)/P(interior); bounds assume rounding to nearest 0.01 at.% only',scope:'Arithmetic from the two printed limestone insets; no new spectrum or fitted depth profile. Rounding bounds are NOT analytical uncertainty or a confidence interval. A local concentration contrast does not date a coating or establish casting.',declaredInputs:{'Near P':near.PAtPercent+' at.%','Interior P':interior.PAtPercent+' at.%','Near Ca':near.CaAtPercent+' at.%','Interior Ca':interior.CaAtPercent+' at.%','Rounding half-step assumption':'0.005 at.%'},columns:['Reproduced quantity','Value','Unit / boundary'],rows:[['P difference',a-b,'atomic-percentage points'],['Near / interior P',a/b,'dimensionless concentration ratio'],['Near P / Ca',a/Number(near.CaAtPercent),'atomic ratio'],['Interior P / Ca',b/Number(interior.CaAtPercent),'atomic ratio'],['Lower rounding bound',(a-.005)/(b+.005),'rounding-only assumption'],['Upper rounding bound',(a+.005)/(b-.005),'rounding-only assumption']]});
+  }
+  return {protocol:'material-history-worked-calculations/1',assumptions:p.assumptions,calculations,molarVolumeM3PerMol,authority:'Source-reported observations and reproducible arithmetic; no new experimental measurement or historical attribution'};
 }

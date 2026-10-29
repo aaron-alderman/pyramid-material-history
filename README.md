@@ -15,11 +15,13 @@ The pyramids are the canonical example. Khufu's Great Pyramid is the first named
 
 ## What is here
 
-The next layer is populated: [four worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility, archaeological discrimination and variation analysis. They contain twenty-five atomic research steps, ten additional source records and ten reproducible calculations. These are completed desk investigations and synthetic/conditional demonstrations, not newly performed experiments or monument sampling.
+The next layer is populated: [five worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility, archaeological discrimination, variation analysis and a primary-source sample audit. They contain thirty-one atomic research steps, thirteen additional source records and twelve reproducible calculation/transcription views. These are desk investigations using source-reported observations and explicit scenarios; no new physical experiment or monument sampling was performed.
 
 Start with [the canonical investigation records](corpus/worked-investigations.json), [calculation inputs](corpus/calculation-inputs.json) and [the numerical adapter](scripts/worked-calculations.mjs). The build publishes every calculation, its assumptions and the retained composer's quantity-dimension checks. Source access limits are visible on individual source pages. Proposed controls and unmeasured rates retain their scope.
 
 [Vary the factors. Find the bottleneck.](https://aaron-alderman.github.io/pyramid-material-history/studies/W04/) demonstrates conditional factorial contrasts, an interaction diagnostic, a depth–flux sensitivity grid, bottleneck transfer and whole-project cost leverage. Assigned responses and stage times are visibly synthetic; there are no fitted granite effects, reconstructed ancient productivity, statistical significance claims or historical promotion.
+
+[The Lauer sample audit](https://aaron-alderman.github.io/pyramid-material-history/studies/W05/) follows competing scientific interpretations, reported fragment identity and five printed SEM–EDS entries. It reproduces a located numerical contrast while preserving source attribution, missing uncertainty and chronology. [Evidence coverage](https://aaron-alderman.github.io/pyramid-material-history/coverage/) separates observations, measured inputs, models, proposed discriminators and gaps for all 26 declared bridges. Eight receive a focused assessment in this increment; unreviewed entries are not claims of absent evidence.
 
 The corpus contains nine operation families, seventeen domain stations, twenty-six candidate bridges, seven pyramid investigations, negative constraints, retained unknowns and source references. The operation families provide the scoped MECE partition. Disciplines remain overlapping annotations.
 

@@ -15,7 +15,7 @@ test('retained implementations keep their exact source identities',()=>{
   for(const r of read('data/reuse-lock.json').sources)assert.equal(hash(fs.readFileSync(path.join(root,r.path))),r.retainedHash,r.path);
 });
 test('every decomposed corpus object preserves the twelve-coordinate kernel',()=>{
-  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,157);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
+  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,204);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
   for(const o of model.objects)assert.deepEqual(Object.keys(o.kernel).sort(),[...profiles.kernel.coordinates].sort(),o.id);assert.equal(model.conjunctiveInputs,true);
 });
 test('joint inputs alternatives and the pyramid case remain distinct',()=>{
@@ -23,7 +23,7 @@ test('joint inputs alternatives and the pyramid case remain distinct',()=>{
   assert.equal(atlas.workedCase.id,'pyramids-material-history');assert.equal(atlas.workedCase.subcases[0].id,'granite-alkali-history');assert.equal(new Set(atlas.operations.map(x=>x.exclusiveOutput)).size,9);
 });
 test('all native page compositions and lowerings replay through the retained mechanisms',()=>{
-  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,133);
+  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,164);
   for(const r of receipt.uiEvidence){const p=built('data/ui/'+(r.route.replaceAll('/','-')||'home')+'.json');assert.equal(verifyUiSurfaceComposition(p.composition).passed,true,r.route);assert.equal(verifyNativeSurfaceCompositionLowering(p).passed,true,r.route);assert.equal(p.adoption.nativeEscapes.length,0);assert.equal(p.adoption.mappings.length,p.facts.filter(f=>f.p==='isa'&&f.o==='DomNode').length);}
 });
 test('renderer leakage and changed native realization fail closed',()=>{
@@ -51,14 +51,14 @@ test('publication carries no new runtime lane or empirical admission claim',()=>
 });
 test('worked investigations retain atomic outputs conjunctive inputs and resolved evidence',()=>{
   const work=read('corpus/worked-investigations.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
-  assert.equal(work.studies.length,4);assert.equal(work.studies.flatMap(s=>s.steps).length,25);
+  assert.equal(work.studies.length,5);assert.equal(work.studies.flatMap(s=>s.steps).length,31);
   for(const s of work.studies)for(const step of s.steps){assert.ok(atlas.operations.some(o=>o.id===step.operation));assert.ok(step.output);assert.ok(step.paragraphs.every(p=>p.trim().length>0));assert.deepEqual(objects.find(o=>o.id===step.id).inputs,step.inputs);for(const id of [...step.inputs,...step.evidenceRefs])assert.ok(ids.has(id),step.id+' unresolved '+id);}
   assert.equal(work.studies[2].steps.find(s=>s.matrix).matrix.length,5);
-  for(const s of work.studies){const html=fs.readFileSync(path.join(site,'studies',s.id,'index.html'),'utf8');for(const step of s.steps)assert.ok(html.includes('id="'+step.id+'"'));assert.ok(!html.includes('Not supplied'));}
-  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:4,steps:25,calculations:10,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
+  for(const s of work.studies){const html=fs.readFileSync(path.join(site,'studies',s.id,'index.html'),'utf8');for(const step of s.steps)assert.ok(html.includes('id="'+step.id+'"'));assert.ok(!html.includes('Not supplied in this record.'));}
+  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:5,steps:31,calculations:12,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
 });
 test('worked arithmetic conserves formula mass and exposes rate and detection assumptions',()=>{
-  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input),c=id=>output.calculations.find(c=>c.id===id);
+  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input,read('corpus/evidence-audit.json')),c=id=>output.calculations.find(c=>c.id===id);
   assert.equal(c('C02').rows[0][1],0.001);assert.equal(c('C02').rows[1][1],2.65);
   assert.ok(c('C01').rows[0][1]>1.763&&c('C01').rows[0][1]<1.765);
   // Independent product-side formula accounting for the carbonate balance.
@@ -91,4 +91,21 @@ test('sensitivity invariance and bottleneck transfer keep different time metrics
   const single=structuredClone(p);single.variation.pipeline.batchSize=1;for(const r of calculateWorkedCases(single).calculations.find(c=>c.id==='C09').rows)assert.equal(r[3],r[4]);
   const bad=structuredClone(p);bad.variation.sensitivityMultipliers[0]=0;assert.throws(()=>calculateWorkedCases(bad),/positive/);
   const housing=calcs.find(c=>c.id==='C10');assert.ok(Math.abs(housing.rows[1][1]-11385)<1e-8);assert.ok(housing.rows[1][2]>2.13&&housing.rows[1][2]<2.15);
+});
+test('source-reported EDS entries preserve location units precision and inherited provenance',()=>{
+  const audit=read('corpus/evidence-audit.json'),calcs=calculateWorkedCases(read('corpus/calculation-inputs.json'),audit).calculations;
+  assert.equal(audit.measurements.length,5);assert.equal(new Set(audit.measurements.map(m=>m.id)).size,5);
+  assert.equal(audit.measurements.find(m=>m.id==='M-LAUER-NEAR').PAtPercent,'3.21');assert.equal(audit.measurements.find(m=>m.id==='M-LAUER-INTERIOR').PAtPercent,'0.21');
+  assert.equal(audit.measurementContext.reportedAnalyticalUncertainty,null);assert.equal(audit.measurementContext.exactInsetDepthCoordinatesMm,null);assert.equal(audit.measurementContext.allElementsTranscribed,false);assert.equal(audit.measurementContext.independentReplicateDesignEstablished,false);
+  const c=calcs.find(c=>c.id==='C12');assert.equal(c.rows[0][1],3);assert.ok(Math.abs(c.rows[1][1]-107/7)<1e-12);assert.ok(c.rows[4][1]<c.rows[1][1]&&c.rows[5][1]>c.rows[1][1]);assert.equal(c.dataClass,'derived-from-reported-measurements');assert.equal(calcs.find(c=>c.id==='C11').dataClass,'reported-measurement-transcription');
+  const wrong=structuredClone(audit);wrong.measurements.find(m=>m.id==='M-LAUER-INTERIOR').PAtPercent='0.00';assert.throws(()=>calculateWorkedCases(read('corpus/calculation-inputs.json'),wrong),/transcription/);
+  const missing=structuredClone(audit);missing.measurements=missing.measurements.filter(m=>m.id!=='M-LAUER-NEAR');assert.throws(()=>calculateWorkedCases(read('corpus/calculation-inputs.json'),missing),/located/);
+  const wrongUnits=structuredClone(audit);wrongUnits.measurementContext.units='mass-percent';assert.throws(()=>calculateWorkedCases(read('corpus/calculation-inputs.json'),wrongUnits),/units/);
+});
+test('coverage spans every bridge without converting review scope into a truth score',()=>{
+  const rows=read('corpus/evidence-coverage.json').rows,ids=new Set(built('data/semantic-decomposition.json').objects.map(o=>o.id));
+  assert.deepEqual(rows.flatMap(r=>r.bridgeRefs).sort(),atlas.bridges.map(b=>b.id).sort());assert.equal(rows.filter(r=>r.reviewStatus==='Focused review').length,8);
+  for(const row of rows){assert.ok(row.gaps.length);assert.equal(row.score,undefined);for(const id of [...row.bridgeRefs,...row.modelRefs,...row.studyRefs])assert.ok(ids.has(id),id);}
+  const receipt=built('data/publication-receipt.json');assert.deepEqual(receipt.evidenceAudit,{reportedSpecimens:4,transcribedEntries:5,coverageBridges:26,rawSpectraInspected:false,newMeasurements:false});
+  assert.equal(built('data/semantic-decomposition.json').objects.find(o=>o.id==='C11').inputs.length,5);
 });
