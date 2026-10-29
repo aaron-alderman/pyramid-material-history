@@ -1,0 +1,527 @@
+{
+  "protocol": "sourcery/presentation-grammar/common-algebra-1",
+  "scope": "Static research publication; no MCP business or execution authority",
+  "program": [
+    {
+      "let": "result",
+      "value": "$model.presentation"
+    }
+  ],
+  "presentation": {
+    "brand": "The Missing Middle",
+    "description": "Physics to archaeology through the pyramids. A connected research corpus on matter, mechanisms, material histories and surviving evidence.",
+    "repository": "https://github.com/aaron-alderman/pyramid-material-history",
+    "canonical": "https://aaron-alderman.github.io/pyramid-material-history/",
+    "navigation": [
+      {
+        "label": "Investigate",
+        "href": "investigations/"
+      },
+      {
+        "label": "The bridges",
+        "href": "bridges/"
+      },
+      {
+        "label": "Read the atlas",
+        "href": "read/"
+      },
+      {
+        "label": "Algebra and evidence",
+        "href": "algebra/"
+      }
+    ],
+    "footer": "A living research corpus by Aaron Alderman and contributors. The pyramids invite attention; evidence carries the conclusions.",
+    "footerLinks": [
+      {
+        "label": "Source repository",
+        "href": "https://github.com/aaron-alderman/pyramid-material-history"
+      },
+      {
+        "label": "Contribution guide",
+        "href": "CONTRIBUTING.md"
+      },
+      {
+        "label": "Algebra and UI decomposition",
+        "href": "algebra/"
+      }
+    ],
+    "home": {
+      "title": "Physics to archaeology through the pyramids",
+      "eyebrow": "A CONNECTED RESEARCH CORPUS",
+      "headline": "A pyramid is a meeting of worlds.",
+      "deck": "Electronic states shape bonds. Minerals form stone. People transform materials. Time changes the traces. Follow the missing middles that connect them.",
+      "actions": [
+        {
+          "label": "Choose an investigation",
+          "href": "investigations/"
+        },
+        {
+          "label": "Read the full atlas",
+          "href": "read/"
+        }
+      ],
+      "note": "The Great Pyramid of Khufu is our first anchor. Every monument, material and claim keeps its own identity.",
+      "imageAlt": "Schematic pyramid cutaway showing the connecting layers of material, process, surviving trace and historical inference. It is an illustration, not a reconstruction.",
+      "orientation": "One familiar monument opens a much larger question: how do we connect what matter permits, what people could do, and what the surviving evidence lets us conclude?",
+      "questionsEyebrow": "BEGIN WITH SOMETHING CONCRETE",
+      "questionsTitle": "Which part draws you in?",
+      "spineEyebrow": "THEN FOLLOW THE CONNECTIONS",
+      "spineTitle": "All the way down. All the way back.",
+      "spineDescription": "Descend from the monument to the physical mechanism. Return through predictions, measurements and preserved traces. Each change of description has to account for what it keeps and what it loses.",
+      "exampleEyebrow": "A REAL DETECTOR TO STRUCTURE BRIDGE",
+      "exampleTitle": "Seeing a corridor is one question. Explaining it is another.",
+      "exampleDescription": "Muon observations characterized a corridor-shaped structure in Khufu’s Pyramid. A geometric record can be strong while questions about construction sequence and function still require different evidence.",
+      "exampleAction": "Inspect the bridge register",
+      "exampleSourceLabel": "Read the primary muography study",
+      "exampleSource": "https://doi.org/10.1038/s41467-023-36351-0",
+      "closingTitle": "The interesting work lives between the boxes.",
+      "closingDescription": "Chemistry, geology, geophysics and archaeology overlap. The corpus preserves their connecting mechanisms, assumptions, alternatives and tests so another person can continue the work.",
+      "closingAction": "Enter the full corpus"
+    },
+    "article": {
+      "title": "The full material history atlas",
+      "eyebrow": "THE CANONICAL RESEARCH TEXT",
+      "description": "The complete decomposition, connecting spine, symmetry descent, computational bridges and pyramid investigations.",
+      "downloadLabel": "Download the canonical Markdown"
+    },
+    "algebra": {
+      "title": "A corpus you can inspect",
+      "eyebrow": "ALGEBRA OWNED CONTENT AND PRESENTATION",
+      "description": "The research records, the UI decomposition and the publication evidence stay connected. Explore the exact declarations and the limits of each check.",
+      "sections": [
+        {
+          "title": "The scientific objects",
+          "copy": "The existing twelve-coordinate kernel, typed candidate relations, joint inputs, negative constraints and unresolved questions remain explicit. A grammatical connection does not establish a physical or historical claim.",
+          "links": [
+            {
+              "label": "Inspect the semantic decomposition",
+              "href": "data/semantic-decomposition.json"
+            },
+            {
+              "label": "Read the atlas data",
+              "href": "corpus/atlas.json"
+            },
+            {
+              "label": "Inspect the inherited profiles",
+              "href": "data/programme-profiles.json"
+            }
+          ]
+        },
+        {
+          "title": "The interface is decomposed too",
+          "copy": "Every generated native page is checked by the retained Sourcery surface-composition and native-lowering mechanisms. Controls come from a declared collection grammar. The prose region is imported Markdown and retains an explicit rendering boundary.",
+          "links": [
+            {
+              "label": "Inspect the publication receipt",
+              "href": "data/publication-receipt.json"
+            },
+            {
+              "label": "Inspect the home surface decomposition",
+              "href": "data/ui/home.json"
+            },
+            {
+              "label": "Read the UI decomposition contract",
+              "href": "UI-DECOMPOSITION.md"
+            },
+            {
+              "label": "Inspect representative browser checks",
+              "href": "data/browser-qualification.json"
+            }
+          ]
+        },
+        {
+          "title": "The existing mechanisms are retained",
+          "copy": "This publication reuses the common-algebra interpreter, component library, collection controls, native lowering and static serializer. Source hashes identify the retained bytes and the serializer extraction.",
+          "links": [
+            {
+              "label": "Inspect the reuse lock",
+              "href": "data/reuse-lock.json"
+            },
+            {
+              "label": "Read the reuse and authority decisions",
+              "href": "REUSE.md"
+            }
+          ]
+        },
+        {
+          "title": "Composition has an authority ceiling",
+          "copy": "A record-level path can carry types, assumptions, losses and evidence into a reading projection. The attempted jump from publication to a confirmed ancient process is rejected by the retained composer.",
+          "links": [
+            {
+              "label": "Inspect the common-algebra composition and refusal",
+              "href": "data/record-composition.json"
+            },
+            {
+              "label": "Read the contribution contract",
+              "href": "CONTRIBUTING.md"
+            }
+          ]
+        }
+      ]
+    },
+    "collectionDefaults": {
+      "pagination": {
+        "defaultSize": 6,
+        "sizes": [
+          6,
+          12,
+          30
+        ],
+        "label": "Per page",
+        "previous": "Previous",
+        "next": "Next",
+        "pageTemplate": "Page {page} of {pages}"
+      },
+      "countTemplate": "Showing {start}–{end} of {filtered} matching · {total} records",
+      "emptyTemplate": "No matching records · {total} available"
+    },
+    "collections": [
+      {
+        "id": "investigations",
+        "route": "investigations/",
+        "title": "Seven ways into the pyramids",
+        "eyebrow": "THE CANONICAL EXAMPLE",
+        "description": "Start with a material or historical question. Each investigation opens the physics, chemistry, geology and evidence needed to pursue it.",
+        "summaryPaths": [
+          [
+            "record"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "What would distinguish the histories",
+            "path": [
+              "record"
+            ]
+          },
+          {
+            "label": "Follow the domain stations",
+            "path": [
+              "stations"
+            ],
+            "kind": "references"
+          }
+        ],
+        "searchLabel": "Search investigations",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "THE CANONICAL EXAMPLE",
+        "backLabel": "Back to seven ways into the pyramids"
+      },
+      {
+        "id": "stations",
+        "route": "stations/",
+        "title": "From physics to archaeology",
+        "eyebrow": "THE CONNECTING SPINE",
+        "description": "Seventeen stations connect the material to its history. Follow the carriers and the missing information between scales.",
+        "summaryPaths": [
+          [
+            "carrier"
+          ]
+        ],
+        "filter": {
+          "label": "Description family",
+          "path": [
+            "profile"
+          ],
+          "emptyLabel": "All families",
+          "labels": {
+            "mathematics": "Mathematics",
+            "physics": "Physical models",
+            "quantum-calculation": "Quantum calculations",
+            "material-state": "Material states",
+            "reaction-process": "Reaction processes",
+            "earth-history": "Earth histories",
+            "human-process": "Human processes",
+            "experiment": "Observation and experiment",
+            "archaeological-context": "Archaeological context"
+          }
+        },
+        "fields": [
+          {
+            "label": "The physical or historical carrier",
+            "path": [
+              "carrier"
+            ]
+          },
+          {
+            "label": "Available connecting ports",
+            "path": [
+              "ports"
+            ]
+          },
+          {
+            "label": "Current scope",
+            "path": [
+              "scientificStatus"
+            ]
+          },
+          {
+            "label": "Twelve-coordinate object signature",
+            "path": [
+              "kernel"
+            ]
+          }
+        ],
+        "searchLabel": "Search stations",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "THE CONNECTING SPINE",
+        "backLabel": "Back to from physics to archaeology"
+      },
+      {
+        "id": "bridges",
+        "route": "bridges/",
+        "title": "Inspect the missing middles",
+        "eyebrow": "THE BRIDGE REGISTER",
+        "description": "A connection earns its place by saying what transfers, what is lost, and what observation could distinguish the alternatives.",
+        "summaryPaths": [
+          [
+            "from"
+          ],
+          [
+            "to"
+          ],
+          [
+            "map"
+          ]
+        ],
+        "filter": {
+          "label": "Kind of passage",
+          "path": [
+            "passage"
+          ],
+          "emptyLabel": "All passages",
+          "labels": {
+            "domain-translation": "Connecting descriptions",
+            "evidential-selection": "Comparing evidence",
+            "exact-representation": "Equivalent representations",
+            "explicit-physical-reduction": "Physical symmetry reduction",
+            "information-reduction": "Information reduction",
+            "open-system": "Open systems"
+          }
+        },
+        "fields": [
+          {
+            "label": "Source stations",
+            "path": [
+              "from"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Target station",
+            "path": [
+              "to"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "The connecting operation",
+            "path": [
+              "map"
+            ]
+          },
+          {
+            "label": "What must already be supplied",
+            "path": [
+              "assumptions"
+            ]
+          },
+          {
+            "label": "What survives the passage",
+            "path": [
+              "invariant"
+            ]
+          },
+          {
+            "label": "What this description loses",
+            "path": [
+              "losses"
+            ]
+          },
+          {
+            "label": "The distinguishing test",
+            "path": [
+              "discriminator"
+            ]
+          },
+          {
+            "label": "What does not follow",
+            "path": [
+              "nonImplication"
+            ]
+          },
+          {
+            "label": "Sources and evidence",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Mathematical physical and historical status",
+            "path": [
+              "status"
+            ]
+          },
+          {
+            "label": "Quantity and normalization gate",
+            "path": [
+              "quantityGate"
+            ]
+          }
+        ],
+        "searchLabel": "Search bridges",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "THE BRIDGE REGISTER",
+        "backLabel": "Back to inspect the missing middles"
+      },
+      {
+        "id": "operations",
+        "route": "operations/",
+        "title": "Nine different jobs",
+        "eyebrow": "THE MECE DECOMPOSITION",
+        "description": "Fields of study overlap. Individual work items are separated by the output they produce, from a constraint to a historical assessment.",
+        "summaryPaths": [
+          [
+            "exclusiveOutput"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Operation family",
+            "path": [
+              "label"
+            ]
+          },
+          {
+            "label": "Exclusive primary output",
+            "path": [
+              "exclusiveOutput"
+            ]
+          }
+        ],
+        "searchLabel": "Search operations",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "THE MECE DECOMPOSITION",
+        "backLabel": "Back to nine different jobs"
+      },
+      {
+        "id": "sources",
+        "route": "sources/",
+        "title": "Follow the evidence",
+        "eyebrow": "SOURCE IDENTITIES AND REFERENCES",
+        "description": "Inspect the source behind a connection. A reference records provenance; its relevance and scientific scope still have to be established.",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "What this reference supports",
+            "path": [
+              "supports"
+            ]
+          },
+          {
+            "label": "Observed identity",
+            "path": [
+              "identity"
+            ]
+          },
+          {
+            "label": "Source location",
+            "path": [
+              "url"
+            ],
+            "kind": "url"
+          },
+          {
+            "label": "Originating source path",
+            "path": [
+              "path"
+            ]
+          },
+          {
+            "label": "Exact observed byte hash",
+            "path": [
+              "sha256"
+            ]
+          }
+        ],
+        "searchLabel": "Search sources",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "SOURCE IDENTITIES AND REFERENCES",
+        "backLabel": "Back to follow the evidence"
+      },
+      {
+        "id": "residuals",
+        "route": "open-questions/",
+        "title": "Where the map stays open",
+        "eyebrow": "RETAINED UNKNOWNS",
+        "description": "Unanswered questions stay visible. Each has a condition to investigate and a bounded next move.",
+        "summaryPaths": [
+          [
+            "condition"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "The unresolved condition",
+            "path": [
+              "condition"
+            ]
+          },
+          {
+            "label": "The next useful action",
+            "path": [
+              "action"
+            ]
+          }
+        ],
+        "searchLabel": "Search residuals",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "RETAINED UNKNOWNS",
+        "backLabel": "Back to where the map stays open"
+      },
+      {
+        "id": "negatives",
+        "route": "boundaries/",
+        "title": "What a connection cannot establish",
+        "eyebrow": "NEGATIVE CONSTRAINTS",
+        "description": "These boundaries keep a useful mathematical analogy, laboratory result or detector record within the evidence it actually carries.",
+        "summaryPaths": [
+          [
+            "claim"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "The retained boundary",
+            "path": [
+              "claim"
+            ]
+          }
+        ],
+        "searchLabel": "Search negatives",
+        "searchPlaceholder": "Search questions, mechanisms, tests or sources…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its conditions and its evidence.",
+        "detailEyebrow": "NEGATIVE CONSTRAINTS",
+        "backLabel": "Back to what a connection cannot establish"
+      }
+    ]
+  }
+}

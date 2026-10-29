@@ -1,0 +1,89 @@
+{
+  "protocol": "pyramid-material-history/browser-qualification/1",
+  "scope": "Representative local browser observations; not a formal browser proof or scientific confirmation",
+  "sourceHashes": {
+    "corpus/atlas.json": "fd4abba3945b759ce157e7b5985d2640d6b96ae44d1b21f288fe60085bb0c98f",
+    "corpus/atlas.md": "3249a17ccab396d2d835a865c5e2ac43876ead49490ff09e59ae761d1f924d4a",
+    "corpus/sources.json": "33ffb3189d37856ddee5598e27b842585d088f6e22970c32a3690b65cd2be2c5",
+    "data/publication.json": "a3c89378b358af4720321a60354aef349af2c24559abac856066a89e43ef5f17",
+    "data/reuse-lock.json": "ced2be4c91043052b21d4218089122f1c6c3a5a088b5ea5cd7219f137d2b323c",
+    "scripts/build.mjs": "119454e32267eecc4302070c8fb18832db068e25b80887a0a4d375978daeb9b2",
+    "web/mount.mjs": "de4e55cf8c41488c915288374956768de7fa89951b7f442a3f9b324b87f5b68c",
+    "web/theme.css": "7ceed07ba10e43d69302877c39d8023b985889bfc415c6b882237e508003bddb",
+    "assets/pyramid-section.svg": "a1431901aa1881eae8882b4547bd287ee7a19708ba6cfa0155243d56b97915dc",
+    "assets/social.png": "24e670844c15bb366d07c8951dd2234d75984f41fa4829e7ac3ad4f38de86240"
+  },
+  "browser": "Codex in-app browser",
+  "observations": [
+    {
+      "surface": "landing",
+      "width": 1280,
+      "publicationReady": true,
+      "horizontalOverflow": false,
+      "nativeAdoptedElements": 121
+    },
+    {
+      "surface": "landing",
+      "width": 390,
+      "publicationReady": true,
+      "horizontalOverflow": false,
+      "headerHeightPx": 130.5625
+    },
+    {
+      "surface": "bridges",
+      "check": "Search Wannier",
+      "matchingRecords": 2,
+      "totalRecords": 26
+    },
+    {
+      "surface": "bridges",
+      "check": "Unmatched query",
+      "matchingRecords": 0,
+      "totalRecords": 26
+    },
+    {
+      "surface": "bridges",
+      "check": "Page size changed to 12",
+      "visibleRange": "1–12",
+      "totalRecords": 26
+    },
+    {
+      "surface": "bridges",
+      "check": "Equivalent representations filter",
+      "matchingRecords": 1,
+      "selectedRecord": "B05"
+    },
+    {
+      "surface": "record B05",
+      "width": 390,
+      "publicationReady": true,
+      "horizontalOverflow": false,
+      "descriptionLists": 2
+    },
+    {
+      "surface": "full article",
+      "width": 390,
+      "publicationReady": true,
+      "horizontalOverflow": false,
+      "displayMathExpressions": 10,
+      "nativeAdoptedElements": 1756
+    },
+    {
+      "surface": "full article",
+      "width": 320,
+      "horizontalOverflow": false
+    },
+    {
+      "surface": "algebra",
+      "publicationReady": true,
+      "evidenceLinksResolvedByBuildChecks": true
+    }
+  ],
+  "browserErrors": [],
+  "correction": {
+    "predecessor": "Full article initially overflowed the narrow viewport.",
+    "change": "Constrain imported prose and native article width to the available content width.",
+    "retest": "390 and 320 pixels have no horizontal page overflow."
+  },
+  "authority": "UI observation only; no scientific or historical promotion"
+}

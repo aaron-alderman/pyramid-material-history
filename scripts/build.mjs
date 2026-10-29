@@ -1,0 +1,143 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {marked} from '../vendor/marked/marked.mjs';
+import katex from '../vendor/katex/katex.mjs';
+import {executeProcess} from '../vendor/sourcery/process/surface-async-process.mjs';
+import {prepareUiSurfaceComposition, verifyUiSurfaceComposition} from '../vendor/sourcery/ui/surface-composition.mjs';
+import {prepareNativeSurfaceRealization, lowerNativeSurfaceComposition, verifyNativeSurfaceCompositionLowering} from '../vendor/sourcery/ui/native-surface-composition-lowerer.mjs';
+import {assessUiApplicationAdoption, renderUiApplicationAdoptionRel} from '../vendor/sourcery/ui/component-library-adoption.mjs';
+import {serializeAuthoredDomNode} from '../vendor/sourcery/dom/static-serializer.mjs';
+
+export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+export const read = p => JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+export const hash = value => crypto.createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
+const escape = v => String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const write = (p,value) => {fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');};
+const n = (tag,copy,children=[],props={}) => ({tag,...(copy==null?{}:{copy:String(copy)}),children:children.filter(Boolean),props});
+const link = (label,href) => n('a',label,[],{href});
+const component = tag => ({main:'ApplicationShell',header:'Header',footer:'Footer',nav:'NavigationList',h1:'Heading',h2:'Heading',h3:'Heading',p:'Text',a:'Link',ul:'List',li:'ListItem',dl:'DescriptionList',dt:'Label',dd:'Text',section:'Box',article:'Prose',figure:'Visualization',img:'Visualization',details:'Details',summary:'Label',pre:'Code',code:'Code',span:'Text',strong:'Text',div:'Box'}[tag] || 'Box');
+const regionTags = new Set(['main','header','footer','section','article','aside','nav','figure','form','div','h1','h2','h3','h4','h5','h6','p','span','strong','small','output','ol','ul','li','dl','dt','dd','details','summary','table','thead','tbody','tfoot','tr','th','td','caption','a','svg']);
+let serial = 0;
+function treeFacts(tree) {
+  const facts=[];const regions=[];const realization=[];const assignments=[];
+  const fact=(s,p,o)=>facts.push({s,p,o:String(o)});
+  function visit(node,parent,order,semanticParent) {
+    const id='node.publication.n'+(++serial);node.nodeId=id;
+    fact(id,'isa','DomNode');fact(id,'tag',node.tag);if(node.copy!=null)fact(id,'text',node.copy);
+    if(parent){const edge='child.publication.n'+serial;fact(edge,'isa','DomChild');fact(edge,'parent',parent);fact(edge,'child',id);fact(edge,'order',order);}
+    for(const [name,value]of Object.entries(node.props||{})){const aid='attr.publication.n'+serial+'.'+name.replaceAll(/[^a-z0-9]/gi,'.');fact(aid,'isa','DomAttr');fact(aid,'node',id);fact(aid,'name',name);fact(aid,'value',value);}
+    const rid='region.n'+serial;
+    if(regionTags.has(node.tag)) {
+      regions.push({id:rid,...(semanticParent?{parentId:semanticParent}:{}),order:regions.length+1,purpose:node.copy?.slice(0,400)||node.props['aria-label']||'Present the declared '+component(node.tag)+' content.',priority:node.tag==='h1'?'critical':'normal',responsibilityIds:['responsibility.read'],bindings:[{id:'binding.n'+serial,role:node.tag==='a'?'action':'subject',target:'content.n'+serial,invariants:['source-content-retained','no-evidence-promotion']}]});
+      realization.push({regionId:rid,representation:'semantic-html',tag:node.tag,component:component(node.tag),label:node.copy?.slice(0,400)||node.props['aria-label']||component(node.tag),existingNode:id,acceptedLoss:[]});
+      assignments.push({regionId:rid,layoutRole:node.props['data-layout']||'supporting',colorRole:'neutral',typographyRole:/^h/.test(node.tag)?'heading':'body',geometry:'flat'});
+      semanticParent=rid;
+    }
+    for(let i=0;i<node.children.length;i++)visit(node.children[i],id,i+1,semanticParent);
+  }
+  visit(tree,null,1,null);fact('document.publication','isa','DomDocument');fact('document.publication','root',tree.nodeId);
+  return {facts,regions,realization,assignments};
+}
+function toHtml(tree,attributeMap) {
+  const props={...tree.props,...attributeMap.get(tree.nodeId)};
+  const children=[...(tree.copy==null?[]:[{text:tree.copy}]),...tree.children.map(c=>toHtml(c,attributeMap))];
+  return {tag:tree.tag,props,children};
+}
+function decompose(tree,route,sourceHash,sourceAssetHashes=[]) {
+  const {facts,regions,realization,assignments}=treeFacts(tree);
+  const relationships=regions.filter(r=>r.parentId).map(r=>({id:'contains.'+r.id,kind:'contains',from:r.parentId,to:r.id}));
+  const composition=prepareUiSurfaceComposition({surfaceId:'surface.publication',route,purpose:'Read and inspect the declared research corpus.',stateFamily:'static.read-only',sourceDesignHash:sourceHash,sourceAssetHashes,regions,relationships,responsiveRules:[{id:'responsive.narrow',when:'narrow',adaptation:'stack',regionIds:[regions[0].id],preserves:['reading-order','source-links','claim-status']}],rendererBoundaries:[{id:'boundary.native',regionId:regions[0].id,provider:'provider.sourcery.nativeBrowser',semanticCoverage:['responsibility.read'],acceptedLoss:[]}],visualExpression:{theme:'light',character:'editorial',density:'comfortable',measure:'wide',regions:assignments,invariants:['source-content-retained','no-evidence-promotion']},invariants:['source-content-retained','read-only-publication','no-evidence-promotion']});
+  const native=prepareNativeSurfaceRealization({composition,namespace:'publication',regions:realization,proofObligations:['every-semantic-region-lowered','every-native-node-adoption-assessed','declared-source-preserved'],facts});
+  const lowering=lowerNativeSurfaceComposition({composition,realization:native,facts});
+  if(!verifyUiSurfaceComposition(composition).passed||!verifyNativeSurfaceCompositionLowering({composition,realization:native,lowering,facts}).passed)throw Error('UI composition or lowering failed.');
+  const allFacts=[...facts,...lowering.facts];
+  const adoption=assessUiApplicationAdoption(allFacts,{application:'app.pyramidMaterialHistory',namespace:'pyramidMaterialHistory',experienceMode:'spa',provisionAdministration:false});
+  if(adoption.nativeEscapes?.length)throw Error('Unaccounted native UI escape.');
+  const attrRecords=new Map();for(const f of allFacts){if(f.pol==='is-not')continue;if(!attrRecords.has(f.s))attrRecords.set(f.s,{});attrRecords.get(f.s)[f.p]=f.o;}
+  const attrs=new Map();for(const v of attrRecords.values())if(v.isa==='DomAttr'){if(!attrs.has(v.node))attrs.set(v.node,{});attrs.get(v.node)[v.name]=v.value;}
+  return {html:serializeAuthoredDomNode(toHtml(tree,attrs)),facts,composition,native,lowering,adoption,adoptionRel:renderUiApplicationAdoptionRel(adoption),nativeNodeCount:allFacts.filter(f=>f.p==='isa'&&f.o==='DomNode').length};
+}
+function fieldValue(record,field,base,indices) {
+  const value=field.path.reduce((v,k)=>v?.[k],record);
+  if(value==null)return n('p','Not supplied in this record.');
+  if(field.kind==='url')return n('p',null,[link(String(value),String(value))]);
+  if(field.kind==='references')return n('ul',null,(Array.isArray(value)?value:[value]).map(v=>n('li',null,[link(indices.get(v)?.label||v,base+(indices.get(v)?.href||'sources/'))])));
+  if(Array.isArray(value))return n('ul',null,value.map(v=>n('li',typeof v==='object'?JSON.stringify(v):String(v))));
+  if(typeof value==='object')return n('dl',null,Object.entries(value).flatMap(([key,v])=>[n('dt',key.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/^./,c=>c.toUpperCase())),n('dd',typeof v==='string'?v.replaceAll('-',' '):JSON.stringify(v))]));
+  return n('p',String(value));
+}
+function collectionDefinition(spec,defaults) {
+  return {...defaults,id:spec.id,source:{tool:'static.publication.records',path:[spec.id]},title:spec.title,itemLabel:['label'],itemSummary:[['summary']],filters:[{id:'query',kind:'search',label:spec.searchLabel,placeholder:spec.searchPlaceholder,path:['search'],operator:'contains-folded',default:''},...(spec.filter? [{id:'category',kind:'select',label:spec.filter.label,path:['category'],operator:'equal',emptyLabel:spec.filter.emptyLabel,options:'distinct-values',default:''}]:[])],actions:[{label:spec.actionLabel,description:spec.actionDescription,tool:'navigate',arguments:{href:{itemPath:['href']}}}]};
+}
+export async function build() {
+  serial=0;
+  const atlas=read('corpus/atlas.json'),sources=read('corpus/sources.json'),model=read('data/publication.json'),reuse=read('data/reuse-lock.json');
+  const sourceHashes=Object.fromEntries(['corpus/atlas.json','corpus/atlas.md','corpus/sources.json','data/publication.json','data/reuse-lock.json','scripts/build.mjs','web/mount.mjs','web/theme.css','assets/pyramid-section.svg','assets/social.png'].map(p=>[p,hash(fs.readFileSync(path.join(root,p)))]));
+  for(const source of reuse.sources){if(hash(fs.readFileSync(path.join(root,source.path)))!==source.retainedHash)throw Error('Retained mechanism changed: '+source.path);}
+  const {result:presentation}=await executeProcess(model.program,{model},{compute:{},ports:{}});
+  if(presentation!==model.presentation)throw Error('Presentation grammar did not return its authored declarations.');
+  const site=path.resolve(root,'_site');if(path.dirname(site)!==root||path.basename(site)!=='_site')throw Error('Refuse an output path outside the publication.');fs.rmSync(site,{recursive:true,force:true});fs.mkdirSync(site,{recursive:true});
+  for(const p of ['vendor','web','assets','corpus','data','legal'])fs.cpSync(path.join(root,p),path.join(site,p),{recursive:true});
+  for(const file of ['README.md','CONTRIBUTING.md','FOR_AGENTS.md','LICENSE.md','REUSE.md','UI-DECOMPOSITION.md'])if(fs.existsSync(path.join(root,file)))fs.copyFileSync(path.join(root,file),path.join(site,file));
+  const datasets={stations:atlas.stations,bridges:atlas.bridges,operations:atlas.operations,investigations:atlas.workedCase.investigationLanes,residuals:atlas.residuals,negatives:atlas.negativeConstraints,sources:[...sources.local.map(s=>({...s,id:'local:'+s.id,label:s.id,summary:s.identity})),...sources.external.map(s=>({...s,id:'external:'+s.id,label:s.id,summary:s.supports}))]};
+  const indices=new Map(),collections=[];
+  for(const spec of presentation.collections){const items=datasets[spec.id].map(row=>{const label=row.label||row.title||row.id;const summary=spec.summaryPaths.map(p=>p.reduce((v,k)=>v?.[k],row)).filter(Boolean).map(v=>Array.isArray(v)?v.join(' + '):v).join(' · ');const key=row.id.replaceAll(':','-');const category=spec.filter?spec.filter.path.reduce((v,k)=>v?.[k],row)||'Unclassified':'';return {...row,label,summary,category:spec.filter?.labels?.[category]||category,search:JSON.stringify(row),href:spec.route+key+'/'};});for(const item of items)indices.set(item.id,item);collections.push({spec,items});}
+  const pages=[],receipts=[];
+  const navigation=base=>n('nav',null,presentation.navigation.map(x=>link(x.label,base+x.href)),{'aria-label':'Main navigation'});
+  function publish(route,title,body,options={}) {
+    const depth=route.split('/').filter(Boolean).length,base='../'.repeat(depth)||'./';
+    const tree=n('main',null,[n('header',null,[link(presentation.brand,base),navigation(base)],{'data-layout':'masthead'}),...body(base),n('footer',null,[n('p',presentation.footer),...presentation.footerLinks.map(x=>link(x.label,/^https?:/.test(x.href)?x.href:base+x.href))],{'data-layout':'boundary'})],{'aria-label':title});
+    const checked=decompose(tree,'/'+route,hash({sourceHashes,route}),[sourceHashes['assets/pyramid-section.svg'],sourceHashes['assets/social.png']]);
+    const url=presentation.canonical+route;
+    const imports={imports:{'/collection-model.js':base+'vendor/sourcery/collection-model.mjs'}};
+    const html='<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+escape(title+' · '+presentation.brand)+'</title><meta name="description" content="'+escape(options.description||presentation.description)+'"><link rel="canonical" href="'+url+'"><meta property="og:title" content="'+escape(title)+'"><meta property="og:description" content="'+escape(presentation.description)+'"><meta property="og:image" content="'+presentation.canonical+'assets/pyramid-section.svg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="'+base+'assets/favicon.svg"><link rel="stylesheet" href="'+base+'vendor/katex/katex.min.css"><link rel="stylesheet" href="'+base+'web/theme.css"><script type="importmap">'+JSON.stringify(imports)+'</script><script type="module" src="'+base+'web/mount.mjs"></script></head><body>'+checked.html+(options.raw||'')+'</body></html>';
+    write(path.join(site,route,'index.html'),html);pages.push({route,title,sourceHash:hash(html),nativeNodes:checked.nativeNodeCount});
+    const evidenceKey=route.replaceAll('/','-')||'home';write(path.join(site,'data/ui',evidenceKey+'.json'),{facts:checked.facts,composition:checked.composition,realization:checked.native,lowering:checked.lowering,adoption:checked.adoption});
+    write(path.join(site,'data/ui',evidenceKey+'.rel'),checked.adoptionRel);
+    receipts.push({route,compositionHash:checked.composition.compositionHash,loweringHash:checked.lowering.receiptHash,regionCount:checked.composition.regions.length,nativeNodeCount:checked.nativeNodeCount,adoptionMappings:checked.adoption.mappings.length,nativeEscapes:checked.adoption.nativeEscapes?.length||0});
+  }
+  publish('',presentation.home.title,base=>[
+    n('section',null,[n('div',null,[n('p',presentation.home.eyebrow,[],{class:'eyebrow'}),n('h1',presentation.home.headline),n('p',presentation.home.deck,[],{class:'lede'}),n('div',null,presentation.home.actions.map(x=>link(x.label,base+x.href)),{class:'hero-actions'}),n('p',presentation.home.note,[],{class:'caption'})]),n('figure',null,[n('img',null,[],{src:base+'assets/pyramid-section.svg',alt:presentation.home.imageAlt,width:'840',height:'720'})])],{class:'hero','data-layout':'hero'}),
+    n('section',null,[n('p',presentation.home.orientation),n('div',null,[n('p',atlas.workedCase.investigationLanes.length+' investigations'),n('p',atlas.stations.length+' domain stations'),n('p',atlas.bridges.length+' bridges'),n('p',atlas.operations.length+' operation families')],{class:'scope-line'})],{class:'orientation'}),
+    n('section',null,[n('p',presentation.home.questionsEyebrow,[],{class:'eyebrow'}),n('h2',presentation.home.questionsTitle),n('div',null,collections.find(c=>c.spec.id==='investigations').items.map(item=>n('article',null,[n('p',item.id,[],{class:'record-id'}),n('h3',null,[link(item.label,base+item.href)]),n('p',item.record)],{class:'investigation'})),{class:'investigation-grid'})],{id:'questions'}),
+    n('section',null,[n('p',presentation.home.spineEyebrow,[],{class:'eyebrow'}),n('h2',presentation.home.spineTitle),n('p',presentation.home.spineDescription),n('ol',null,collections.find(c=>c.spec.id==='stations').items.map(item=>n('li',null,[link(item.id+' / '+item.label,base+item.href)])),{class:'spine'})]),
+    n('section',null,[n('p',presentation.home.exampleEyebrow,[],{class:'eyebrow'}),n('h2',presentation.home.exampleTitle),n('p',presentation.home.exampleDescription),link(presentation.home.exampleAction,base+'bridges/'),link(presentation.home.exampleSourceLabel,presentation.home.exampleSource)],{class:'evidence-feature'}),
+    n('section',null,[n('h2',presentation.home.closingTitle),n('p',presentation.home.closingDescription),link(presentation.home.closingAction,base+'read/')],{class:'closing'})
+  ]);
+  for(const {spec,items}of collections){
+    const def=collectionDefinition(spec,presentation.collectionDefaults),payload=JSON.stringify({definition:def,items:items.map(i=>({...i,href:'../'+i.href}))}).replaceAll('<','\\u003c');
+    publish(spec.route,spec.title,base=>[n('section',null,[n('p',spec.eyebrow,[],{class:'eyebrow'}),n('h1',spec.title),n('p',spec.description,[],{class:'lede'}),n('div',null,[n('ul',null,items.map(i=>n('li',null,[link(i.label,base+i.href),n('p',i.summary)])))],{'data-collection-source':'collection-data'})])],{raw:'<script type="application/json" id="collection-data">'+payload+'</script>'});
+    for(const item of items)publish(item.href,item.label,base=>[n('article',null,[n('p',spec.detailEyebrow+' / '+item.id,[],{class:'eyebrow'}),n('h1',item.label),n('p',item.summary,[],{class:'lede'}),...spec.fields.map(field=>n('section',null,[n('h2',field.label),fieldValue(item,field,base,indices)])),n('p',null,[link(spec.backLabel,base+spec.route)])],{class:'record'})]);
+  }
+  const maths=(value,displayMode)=>katex.renderToString(value.trim(),{displayMode,throwOnError:true,strict:'ignore'});
+  const articleSource=fs.readFileSync(path.join(root,'corpus/atlas.md'),'utf8').replace(/\\\[([\s\S]*?)\\\]/g,(_m,value)=>'\n<div class="math">'+maths(value,true)+'</div>\n').replace(/\\\(([\s\S]*?)\\\)/g,(_m,value)=>maths(value,false));
+  const article=marked.parse(articleSource);
+  publish('read/',presentation.article.title,base=>[n('section',null,[n('p',presentation.article.eyebrow,[],{class:'eyebrow'}),n('h1',presentation.article.title),n('p',presentation.article.description,[],{class:'lede'}),link(presentation.article.downloadLabel,base+'corpus/atlas.md')]),n('article',null,[],{id:'corpus-prose',class:'prose'})],{raw:''});
+  const readPath=path.join(site,'read/index.html');let readHtml=fs.readFileSync(readPath,'utf8');readHtml=readHtml.replace(/(<article[^>]*id="corpus-prose"[^>]*>)(<\/article>)/,(_m,start,end)=>start+article+end);write(readPath,readHtml);pages.find(p=>p.route==='read/').sourceHash=hash(readHtml);
+  publish('algebra/',presentation.algebra.title,base=>[n('section',null,[n('p',presentation.algebra.eyebrow,[],{class:'eyebrow'}),n('h1',presentation.algebra.title),n('p',presentation.algebra.description,[],{class:'lede'}),...presentation.algebra.sections.map(s=>n('section',null,[n('h2',s.title),n('p',s.copy),...s.links.map(l=>link(l.label,base+l.href))]))])]);
+  const profiles=read('data/programme-profiles.json');
+  const zero={mass:0,length:0,time:0,current:0,temperature:0,amount:0,luminousIntensity:0};
+  const authority={proposalOnly:true,entails:false,empiricalAuthority:false};
+  const signature=(domain,support)=>({domain,rank:1,variance:'record',basis:'authored-record-identity',regime:'static-publication',order:'metadata-only',scheme:'common-algebra-2',symmetry:'no-physical-symmetry-claim',cp:'not-applied-to-record',support});
+  const objects=['source-records','typed-records','loss-preserving-projection','published-reading','ancient-process-confirmed'].map(id=>({id,signature:signature('publication-record',id),dimension:{...zero}}));
+  const rule=(id,from,to,analogyOnly=false)=>{const x=objects.find(o=>o.id===from),y=objects.find(o=>o.id===to);return {id,kind:'record-projection',from,to,fromSignature:x.signature,toSignature:y.signature,fromDimension:x.dimension,toDimension:y.dimension,dimensionRule:'si-base-exponent-delta',dimensionDelta:zero,changes:['support'],assumptions:['Source records and metadata are not physical quantities.'],losses:['A reading projection does not establish the truth of its scientific subjects.'],evidenceRefs:['corpus/atlas.json#sha256='+hash(atlas)],removes:[],analogyOnly,authority};};
+  const graph={objects,transformations:[rule('type-retained-records','source-records','typed-records'),rule('retain-assumptions-and-losses','typed-records','loss-preserving-projection'),rule('publish-read-only-projection','loss-preserving-projection','published-reading'),rule('refused-occurrence-promotion','published-reading','ancient-process-confirmed',true)]};
+  const process=read('data/scientific-derivation-process.json');
+  const run=async request=>(await executeProcess(process.program,{model:process,request},{compute:{},ports:{}})).result;
+  const positive=await run({graph,query:{source:'source-records',target:'published-reading',maxDepth:4}});
+  const historical=await run({graph,query:{source:'source-records',target:'ancient-process-confirmed',maxDepth:5}});
+  if(positive.candidates.length!==1||historical.candidates.length!==0)throw Error('Record-level algebra authority boundary failed.');
+  const recordKernel=(v,kind)=>({kind,domain:'pyramid-material-history',role:'source-bound-corpus-record',context:'material-history-atlas/1',form:'JSON record',status:'authored declaration; subject authority remains separate',governingScheme:'programme-algebra epistemic-object-signature',equivalence:'stable source record identity and exact content',admissibility:'identity resolves and domain profile is explicit; quantity admission is separate',support:['corpus/atlas.json#'+v.id],authority:'proposal-only; no new scientific entailment or empirical authority',time:'2026-10-29 record version; physical and geological times remain separate'});
+  const wrapped=(values,kind)=>values.map(v=>({...v,kernel:recordKernel(v,kind)}));
+  const semanticObjects=[...atlas.stations.map(v=>({id:v.id,kernel:v.kernel,profile:v.profile})),...wrapped(atlas.bridges.map(v=>({id:v.id,kind:'joint-input-candidate-relation',inputs:v.from,output:v.to,operation:v.operation,passage:v.passage,assumptions:v.assumptions,losses:v.losses,evidenceRefs:v.evidenceRefs,authority:v.authority})),'candidate-relation'),...wrapped(atlas.operations,'operation-family'),...wrapped(atlas.workedCase.investigationLanes,'investigation'),...wrapped(atlas.negativeConstraints,'negative-constraint'),...wrapped(atlas.residuals,'unresolved-frontier'),...wrapped(datasets.sources,'source-reference')];
+  const receipt={protocol:'pyramid-material-history/publication-receipt/1',sourceHashes,counts:{stations:atlas.stations.length,bridges:atlas.bridges.length,operationFamilies:atlas.operations.length,investigationLanes:atlas.workedCase.investigationLanes.length,pages:pages.length,nativeRegions:receipts.reduce((s,r)=>s+r.regionCount,0),nativeNodes:receipts.reduce((s,r)=>s+r.nativeNodeCount,0)},kernelCoordinates:profiles.kernel.coordinates,scientificAuthority:'candidate map only; no newly admitted physical or historical claims',uiEvidence:receipts,recordComposition:{positiveCandidates:positive.candidates.length,historicalPromotionCandidates:historical.candidates.length,authorityCeiling:'proposal-only; non-entailing; no empirical authority'},boundaries:['Generic collection controls are interpreted from the retained collection grammar.','Article prose is an imported Markdown rendering region; its internal DOM is covered by native adoption in the browser, not individual surface-composition regions.','Static HTML serialization and publication packaging are explicit adapters, not Sourcery runtime activation.','No new Sourcery lane, registry, scheduler or interpreter.']};
+  write(path.join(site,'data/semantic-decomposition.json'),{protocol:'pyramid-material-history/semantic-decomposition/1',objects:semanticObjects,profileContract:profiles,conjunctiveInputs:true});
+  write(path.join(site,'data/record-composition.json'),{graph,positive,historical});write(path.join(site,'data/publication-receipt.json'),receipt);write(path.join(site,'data/pages.json'),pages);write(path.join(site,'.nojekyll'),'');
+  if(fs.existsSync(path.join(root,'evidence/browser-qualification.json')))fs.copyFileSync(path.join(root,'evidence/browser-qualification.json'),path.join(site,'data/browser-qualification.json'));
+  write(path.join(root,'evidence/latest-build.json'),{...receipt,uiEvidence:receipt.uiEvidence.map(r=>({route:r.route,compositionHash:r.compositionHash,loweringHash:r.loweringHash,regionCount:r.regionCount,nativeEscapes:r.nativeEscapes}))});
+  console.log(JSON.stringify({passed:true,...receipt.counts,recordComposition:receipt.recordComposition}));
+  return receipt;
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))await build();
