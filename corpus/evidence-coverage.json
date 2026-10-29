@@ -9,20 +9,24 @@
         "B10"
       ],
       "reviewStatus": "Focused review",
-      "observations": "W02 reviews relevant reaction-interface literature; no calibrated granite reaction-front series extracted.",
-      "measuredInputs": "No bridge-specific rate dataset transcribed.",
+      "observations": "W06 preserves a hydrothermal bulk-rate range with its regime; no calibrated phase-specific reaction-front series.",
+      "measuredInputs": "Reported core mass-loss range; no measured dissolved/particulate split.",
       "modelRefs": [
         "C03",
         "C04",
-        "C08"
+        "C08",
+        "C13",
+        "C14"
       ],
       "distinguishingTests": "Proposed mass-partition, time and surface-profile comparison.",
       "gaps": [
-        "Phase-specific rates, reactive area, saturation and product-layer transport."
+        "Phase-specific rates, reactive area, saturation and product-layer transport.",
+        "Trial-level uncertainty, evolving reactive area, saturation and precipitation."
       ],
       "studyRefs": [
         "W02",
-        "W04"
+        "W04",
+        "W06"
       ]
     },
     {
@@ -32,17 +36,21 @@
         "B11"
       ],
       "reviewStatus": "Focused review",
-      "observations": "W01 distinguishes bulk chemistry, mineral phases and rock fabric.",
-      "measuredInputs": "No new monument-specific mineral-mode dataset transcribed.",
+      "observations": "W06 transcribes static powder residue XRD and demonstrates the changing denominator.",
+      "measuredInputs": "Four normalized phase-composition rows; no monument-specific phase inventory.",
       "modelRefs": [
-        "C06"
+        "C06",
+        "C15",
+        "C16"
       ],
       "distinguishingTests": "Proposed matched phase/fabric and source-rock comparison.",
       "gaps": [
-        "Named component, specimen identity and quantitative phase inventory."
+        "Named component, specimen identity and quantitative phase inventory.",
+        "Compatible absolute residue yield and phase basis; gross dissolution versus reprecipitation."
       ],
       "studyRefs": [
-        "W01"
+        "W01",
+        "W06"
       ]
     },
     {
@@ -52,20 +60,23 @@
         "B15"
       ],
       "reviewStatus": "Focused review",
-      "observations": "W02 and W04 distinguish chemical possibility from a production operation.",
-      "measuredInputs": "No archaeological production-time or accepted-yield series extracted.",
+      "observations": "W06 distinguishes chemical assistance from accepted shape and retained strength.",
+      "measuredInputs": "Modern laboratory rate context; no accepted shaping-yield or archaeological productivity series.",
       "modelRefs": [
         "C02",
         "C09",
-        "C10"
+        "C10",
+        "C14"
       ],
       "distinguishingTests": "Proposed treatment/control throughput and quality comparison.",
       "gaps": [
-        "Shared resources, setup, losses, fuel/reagent supply and accepted yield."
+        "Shared resources, setup, losses, fuel/reagent supply and accepted yield.",
+        "Matched thermal/mechanical baseline, mass closure, surface quality and retained strength."
       ],
       "studyRefs": [
         "W02",
-        "W04"
+        "W04",
+        "W06"
       ]
     },
     {
@@ -162,20 +173,24 @@
         "B23"
       ],
       "reviewStatus": "Focused review",
-      "observations": "W02 distinguishes dissolution, grain release and thermal damage.",
-      "measuredInputs": "No jointly calibrated dissolved/detached/retained material record extracted.",
+      "observations": "W06 defines material, energy and accepted-output ledgers for process comparison.",
+      "measuredInputs": "No complete measured process inventory, building saving or abatement estimate.",
       "modelRefs": [
         "C01",
         "C03",
-        "C07"
+        "C07",
+        "C14",
+        "C16"
       ],
       "distinguishingTests": "Proposed heat/alkali/mechanical factorial with mass partition.",
       "gaps": [
-        "Mineral-specific attack, crack evolution and useful removal under equal work."
+        "Mineral-specific attack, crack evolution and useful removal under equal work.",
+        "Reagent recovery, equipment, heating/pumping, waste, local comparator and accepted yield."
       ],
       "studyRefs": [
         "W02",
-        "W04"
+        "W04",
+        "W06"
       ]
     },
     {

@@ -362,6 +362,34 @@
       "supports": "Publisher abstract concludes that the examined Lauer sample is natural limestone.",
       "access": "Publisher-indexed abstract inspected; full original paper unavailable here. Figure/data attributed to Harrell in Jana is not treated as full-text access to this paper.",
       "reviewed": "2026-10-29"
+    },
+    {
+      "id": "removal-hillson",
+      "label": "Hydrothermal granite mass-loss rate — Hillson and Tester, 2015",
+      "url": "https://pangea.stanford.edu/ERE/db/IGAstandard/record_detail.php?id=20524",
+      "citation": "S. D. Hillson and J. W. Tester, Heat Transfer Properties and Dissolution Behavior of Barre Granite as Applied to Hydrothermal Jet Drilling with Chemical Enhancement, Stanford Geothermal Workshop, SGP-TR-204 (2015)",
+      "supports": "Bulk mass-loss range and operating context; geometric-area definition in Section 4.2, Eq. 4.",
+      "access": "Primary PDF abstract and Sections 4.1–4.2 read; abstract rendered for visual check. No matched raw trial series extracted.",
+      "observedUrl": "https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2015/Hillson.pdf",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "removal-cui",
+      "label": "Granite residue composition — Cui et al., 2022",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.893969/full",
+      "citation": "Z. Cui et al., Experimental Study on the Effect and Mechanism of Chemical Stimulation on Deep High-Temperature Granite, Frontiers in Earth Science 10, 893969 (2022)",
+      "supports": "Static powder treatment context and Table 3 normalized phase compositions. No absolute phase loss inferred from percentages alone.",
+      "access": "Primary full article and PDF methods/table read; Table 3, PDF p. 9, rendered and visually checked. Dashes retained; quantitative mass basis and paired residue yield not established for the selected transcription.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "removal-beentjes",
+      "label": "Hydrothermal spallation and partition limits — Beentjes et al., 2018",
+      "url": "https://pangea.stanford.edu/ERE/pdf/IGAstandard/SGW/2018/Beentjes.pdf",
+      "citation": "I. Beentjes, J. T. Bender, S. D. Hillson and J. W. Tester, Hydrothermal Spallation Of Barre Granite Using Supercritical Water Jets, Stanford Geothermal Workshop, SGP-TR-213 (2018)",
+      "supports": "Coupled alteration, particulate removal and precipitation motivate separate stream measurements.",
+      "access": "Primary PDF, especially Section 6, reviewed selectively. Diluted-effluent concentrations not measured; no numerical conditions extracted for the comparison.",
+      "reviewed": "2026-10-30"
     }
   ],
   "sourceReport": {

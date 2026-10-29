@@ -47,3 +47,7 @@ The executable common-algebra demonstration composes dimensionless records about
 The additional worked-quantity receipt separately instantiates actual SI exponent signatures for a conditional silica-to-carbonate mass map and a molar-flux-to-recession-speed map. It declares the dimensionless stoichiometric coefficient and the molar-volume coefficient with dimension m³/mol. The retained composer verifies dimension deltas and signature changes; the numerical adapter evaluates the arithmetic. Neither check verifies the mechanism's applicability or supplies a measured surface flux. A corrupted molar-volume dimension is rejected in qualification.
 
 The generated `data/publication-receipt.json`, `data/semantic-decomposition.json`, `data/record-composition.json` and per-route `data/ui/` files supply the inspectable result. They are reading and qualification projections; the research and presentation sources retain authority.
+
+The W06 extension uses the same declared study sections and calculation-table rendering. Source transcriptions and conditional transformations retain distinct data classes, visible assumptions, linked record identities and output scopes. No new renderer or runtime lane is introduced.
+
+The inverse-density quantity map adds mass-flux → equivalent recession with coefficient dimension m³/kg and explicit g-to-kg scaling. The existing composer rejects a corrupted mass exponent; numerical tests separately check conservation and area/density sensitivity.

@@ -15,7 +15,7 @@ The pyramids are the canonical example. Khufu's Great Pyramid is the first named
 
 ## What is here
 
-The next layer is populated: [five worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility, archaeological discrimination, variation analysis and a primary-source sample audit. They contain thirty-one atomic research steps, thirteen additional source records and twelve reproducible calculation/transcription views. These are desk investigations using source-reported observations and explicit scenarios; no new physical experiment or monument sampling was performed.
+The next layer is populated: [six worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility, archaeological discrimination, variation analysis a primary-source sample audit and useful-removal analysis. They contain thirty-eight atomic research steps, sixteen additional source records and sixteen reproducible calculation/transcription views. These are desk investigations using source-reported observations and explicit scenarios; no new physical experiment or monument sampling was performed.
 
 Start with [the canonical investigation records](corpus/worked-investigations.json), [calculation inputs](corpus/calculation-inputs.json) and [the numerical adapter](scripts/worked-calculations.mjs). The build publishes every calculation, its assumptions and the retained composer's quantity-dimension checks. Source access limits are visible on individual source pages. Proposed controls and unmeasured rates retain their scope.
 
@@ -54,3 +54,5 @@ GitHub Actions rebuilds and qualifies the publication before deploying it to Git
 ## Licenses
 
 Research and documentation are CC BY-SA 4.0. Software is GPL-3.0-or-later; identified third-party material retains its own terms. See [LICENSE.md](LICENSE.md).
+
+[From selective reaction to useful removal](https://aaron-alderman.github.io/pyramid-material-history/studies/W06/) preserves published high-pressure granite rates and normalized residue compositions. Its conditional conversions expose geometry and denominator assumptions. [Source records](corpus/removal-evidence.json) retain units, precision, source hashes and missing data. No atmospheric shaping rate, archaeological attribution or building-cost/CO₂ saving is inferred.

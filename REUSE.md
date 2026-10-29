@@ -72,3 +72,13 @@ The full article is an imported Markdown region. Surface composition binds that 
 **Evidence:** the build emits exact per-page composition and lowering receipts, source hashes and native adoption mappings. Focused tests exercise source drift, dimensional mutation, historical promotion refusal, hyperedge preservation and publication integrity. Browser qualification separately checks actual controls and layout.
 
 **Disposition:** publish the scoped reading corpus when those checks pass. Physical mechanisms, ancient occurrence and interpretation remain governed by their scientific evidence. UI qualification, software tests and attention do not promote them.
+
+## Useful-removal extension · 2026-10-30
+
+**Claim:** source-reported bulk removal and residue composition can enter the existing corpus without becoming archaeological proof.
+
+**Evidence:** W06 contains seven atomic steps, seven laboratory records, three primary references and four transcription/scenario views. All use the existing twelve-coordinate kernel, operation families, collection grammar and UI lowering. Primary PDFs and figures are not published.
+
+**Falsifiers:** invented trial pairings; rate/unit drift; dashes imputed as zero; percentages treated as absolute stock without a compatible yield; atmospheric or ancient use inferred from hydrothermal rates; cost or CO₂ savings without a process inventory.
+
+**Disposition:** publish after numerical, retained-source, semantic, native UI and browser checks. Modern process performance and historical occurrence retain separate evidence requirements.

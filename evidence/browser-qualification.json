@@ -200,5 +200,39 @@
     ],
     "scriptErrors": [],
     "newMeasurements": false
+  },
+  "usefulRemovalExtension": {
+    "date": "2026-10-30",
+    "scope": "Local W06 preview; deployed path checked separately",
+    "observations": [
+      {
+        "route": "studies/W06/",
+        "result": "Seven sections, four tables; reported regime, conditional recession and residue scenarios visible. Section navigation works."
+      },
+      {
+        "route": "studies/W06/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "result": "Four tables scroll inside their containers."
+      },
+      {
+        "route": "studies/W06/",
+        "nominalWidth": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "result": "No document-level horizontal overflow."
+      },
+      {
+        "route": "studies/",
+        "result": "Six studies; search selective includes W06 and its declared action opens the study."
+      },
+      {
+        "route": "coverage/coverage-B10/",
+        "result": "Reported bulk-rate scope, mass-partition gap and linked W06 calculations visible."
+      }
+    ],
+    "newMeasurements": false,
+    "historicalPromotion": false
   }
 }

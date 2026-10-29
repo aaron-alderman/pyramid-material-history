@@ -1,7 +1,7 @@
 {
   "protocol": "material-history-worked-investigations/1",
-  "date": "2026-10-29",
-  "scope": "Four completed desk investigations: sourced assessments, conditional calculations and a synthetic variation-analysis demonstration. No new physical experiment or monument sampling was performed.",
+  "date": "2026-10-30",
+  "scope": "Six desk investigations using source-reported observations, conditional calculations and a synthetic variation demonstration. No new physical experiment or monument sampling.",
   "studies": [
     {
       "id": "W01",
@@ -18,7 +18,8 @@
         "W02",
         "W03",
         "W04",
-        "W05"
+        "W05",
+        "W06"
       ],
       "conclusion": "The opening chemical model must use identified mineral phases and interfaces. Bulk oxide percentages, hardness and a red colour cannot supply those identities. The sources support a materially varied monument; they do not give us a sampled alteration profile for a named Khufu granite face.",
       "steps": [
@@ -133,7 +134,8 @@
         "B23",
         "W01",
         "W03",
-        "W04"
+        "W04",
+        "W06"
       ],
       "conclusion": "Silicate–alkali chemistry is a credible mechanism to investigate. The available modern results do not establish a removal rate for the quoted 168 °C treatment, efficient quarry-scale production, or use on a named Khufu component. Thermal damage and chemical alteration must be separated experimentally before assigning their contributions.",
       "steps": [
@@ -478,7 +480,8 @@
         "B20",
         "B23",
         "B25",
-        "W05"
+        "W05",
+        "W06"
       ],
       "conclusion": "Variation analysis distinguishes three outputs: model sensitivity, identifiable treatment contrasts and a process bottleneck under a stated production model. The worked examples expose what the machinery can calculate and what observations it still needs. None attributes an ancient manufacturing process or validates a modern building material.",
       "steps": [
@@ -828,6 +831,166 @@
             "W04",
             "B19",
             "B25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W06",
+      "label": "From selective reaction to useful removal",
+      "summary": "Published granite mass-loss rates, residue composition and the missing denominators between chemical change and productive shaping.",
+      "status": "Source-backed process assessment",
+      "related": [
+        "W01",
+        "W02",
+        "W04",
+        "B10",
+        "B11",
+        "B15",
+        "B23"
+      ],
+      "conclusion": "Modern hydrothermal chemical assistance has reported quantitative evidence. Useful low-temperature shaping, its economics and any ancient application require different measurements. Normalized mineral percentages cannot identify absolute removal without a compatible mass balance.",
+      "steps": [
+        {
+          "id": "W06-S1",
+          "title": "Claim: define the output that would count as useful removal",
+          "operation": "O1",
+          "inputs": [
+            "W02",
+            "W04"
+          ],
+          "output": "A process question with separate response variables",
+          "paragraphs": [
+            "For a named stone, useful removal means achieving a target shape and surface while preserving acceptable material. Record dissolved rock, detached grains, damage, dimensional accuracy, retained strength, accepted yield, time and resource demand separately. A chemically altered surface is only one possible intermediate.",
+            "The pyramid question needs a second bridge: even a productive modern process does not establish ancient use. First test the modern operation under its stated conditions; then ask which securely located material traces and archaeological records distinguish that history."
+          ],
+          "evidenceRefs": [
+            "B15",
+            "B23",
+            "W03"
+          ]
+        },
+        {
+          "id": "W06-S2",
+          "title": "Observation: keep a measured rate attached to its regime",
+          "operation": "O7",
+          "inputs": [
+            "M-HILLSON-RATE",
+            "R-HILLSON-2015",
+            "C13"
+          ],
+          "output": "A source-reported bulk rate and its operating context",
+          "paragraphs": [
+            "Hillson and Tester report a bulk granite rate range of 0.05–0.1 g m⁻² s⁻¹ in a hydrothermal NaOH jet study. Their definition divides core mass loss by geometric exposed area and exposure time. The contexts below preserve pressure, jet temperature and estimated impinged-face temperature separately.",
+            "These are high-pressure laboratory conditions. The range endpoints are not assigned to individual contexts here. No matched trial-level series, uncertainty or independently quantified dissolved-versus-detached partition is extracted. The printed reagent notation is retained without converting it to a weight percentage."
+          ],
+          "evidenceRefs": [
+            "external:removal-hillson"
+          ],
+          "calculationRef": "C13"
+        },
+        {
+          "id": "W06-S3",
+          "title": "Model: convert mass flux into equivalent thickness",
+          "operation": "O5",
+          "inputs": [
+            "W06-S2",
+            "C14"
+          ],
+          "output": "An explicitly conditional geometry conversion",
+          "paragraphs": [
+            "Using an assumed density of 2700 kg/m³ and equal exposed and projected area converts the reported endpoints to about 0.067–0.133 mm/h. A one-millimetre equivalent layer would take 7.5–15 hours if those rates persisted. This makes the scale legible without inventing a measured cutting speed.",
+            "Roughness, evolving area, flow access, precipitation and grain release can change the relation between core mass loss and local surface recession. The duration is an arithmetic scenario, not a confidence interval or an atmospheric-pressure prediction. It supplies no evidence for the transcript’s 168 °C treatment or ancient operation."
+          ],
+          "evidenceRefs": [
+            "external:removal-hillson",
+            "B10"
+          ],
+          "calculationRef": "C14"
+        },
+        {
+          "id": "W06-S4",
+          "title": "Observation: retain the denominator of a mineral analysis",
+          "operation": "O7",
+          "inputs": [
+            "R-CUI-2022",
+            "M-CUI-ORIGINAL",
+            "M-CUI-S1",
+            "M-CUI-S2",
+            "M-CUI-S3",
+            "C15"
+          ],
+          "output": "A located residue-composition transcription",
+          "paragraphs": [
+            "Cui and colleagues report XRD residue compositions after static powder treatments at 150 °C and 10 MPa for 12 hours. The table preserves the phase percentages and source dashes. These powder residues are distinct from the paper’s dynamic fractured-core experiments.",
+            "Changing relative phase proportions can reflect selective dissolution, secondary precipitation and a changing total residue. The table alone does not identify an absolute mineral loss. A dash is left unspecified rather than silently turned into zero."
+          ],
+          "evidenceRefs": [
+            "external:removal-cui"
+          ],
+          "calculationRef": "C15"
+        },
+        {
+          "id": "W06-S5",
+          "title": "Reproduction: show how a percentage can rise while stock falls",
+          "operation": "O8",
+          "inputs": [
+            "W06-S4",
+            "C16"
+          ],
+          "output": "A denominator sensitivity demonstration",
+          "paragraphs": [
+            "The S2 K-feldspar share rises from 30% to 51%. If only 40% of the initial whole-rock mass remained, its final stock would be 0.204 kg per initial kilogram, below the initial 0.300 kg. At 60% retention it would be 0.306 kg. The unchanged-stock threshold is about 58.8% retention. For the S3 quartz change from 20% to 40%, the threshold is 50%.",
+            "Those are chosen residue-yield scenarios, assuming compatible dry-mass phase fractions. They do not reconstruct the actual yield of either treatment. Even a measured net phase increase would not separate primary-mineral survival from precipitation of the same phase. Absolute stock, gross dissolution and normalized composition answer different questions."
+          ],
+          "evidenceRefs": [
+            "external:removal-cui",
+            "B11"
+          ],
+          "calculationRef": "C16"
+        },
+        {
+          "id": "W06-S6",
+          "title": "Discriminator: close material and energy ledgers on accepted output",
+          "operation": "O6",
+          "inputs": [
+            "W06-S2",
+            "W06-S4",
+            "W04-S1"
+          ],
+          "output": "A matched process comparison with explicit missing measurements",
+          "paragraphs": [
+            "For each conserved element, initial solid inventory plus cumulative inflow must equal final solid inventory plus dissolved outflow, particulate outflow and any other recovered or stored terms. Use the same elemental basis throughout. Reagent-derived sodium is not dissolved rock; dry core mass loss does not identify how much left as dissolved species.",
+            "Beentjes and colleagues describe hydrothermal spallation with coupled chemical alteration, collected solids and precipitation. Their unmeasured diluted-effluent concentrations limit partitioning. That supports measuring the streams separately; it supplies no complete removal ledger.",
+            "Compare heat/flow controls and chemical treatments on matched rock, geometry, measured surface temperature and exposure. Capture synchronized mass, dissolved-element, particle-size and surface-profile measurements, then test retained strength and accepted shape. Close heater, pump, reagent-production, recovery and waste-treatment demands per accepted output. Costs and CO₂ require those inventories and a defined local comparator; these papers do not supply a residential-building saving."
+          ],
+          "evidenceRefs": [
+            "external:removal-beentjes",
+            "W04",
+            "B15",
+            "B23"
+          ]
+        },
+        {
+          "id": "W06-S7",
+          "title": "Disposition: a credible modern mechanism with a bounded next test",
+          "operation": "O9",
+          "inputs": [
+            "W06-S3",
+            "W06-S5",
+            "W06-S6",
+            "coverage-B10",
+            "coverage-B23"
+          ],
+          "output": "A scoped conclusion and evidence-return target",
+          "paragraphs": [
+            "There is a worthwhile thread left: determine when selective reaction improves accepted removal over the matched thermal and mechanical baseline. The present records support investigating modern hydrothermal chemical assistance. They do not establish practical atmospheric treatment, economical residential construction or a lost pyramid-building technique.",
+            "The highest-value return is a synchronized trial record with mass closure, energy and shape-quality outputs. Such a record could test productivity and lifecycle implications directly. Archaeological attribution would still require the component identity, process-specific traces and chronology developed in W03 and W05."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "W05",
+            "B23"
           ]
         }
       ]
