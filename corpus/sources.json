@@ -498,6 +498,60 @@
       "supports": "Station climatology distinguishes seasonal temperature and rainfall inputs.",
       "access": "Official monthly statistics inspected 30 October 2026. Climate averages are not site wind, bushfire, flood or drainage design values.",
       "reviewed": "2026-10-30"
+    },
+    {
+      "id": "interface-giza",
+      "label": "Giza joining mortars — Hemeda and Sonbol, 2020",
+      "url": "https://doi.org/10.1186/s40494-020-0356-9",
+      "citation": "S. Hemeda and A. Sonbol, Sustainability problems of the Giza pyramids, Heritage Science 8,8 (2020)",
+      "supports": "Mortar grouping and selected Table 17 aggregate entries.",
+      "access": "Primary paper read from a public PDF mirror; Table 17 rendered and visually checked. No new specimen custody or joint chronology established.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "interface-pompeii",
+      "label": "Pompeii construction-site preparation — 2025",
+      "url": "https://doi.org/10.1038/s41467-025-66634-7",
+      "citation": "An unfinished Pompeian construction site reveals ancient Roman building technology, Nature Communications (2025)",
+      "supports": "Preparation interpretation connects raw material, unfinished construction and repair contexts.",
+      "access": "Primary article JATS full text read through Europe PMC (PMC12690119); no raw spectra or numerical isotope values transcribed.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "interface-midland",
+      "label": "WA clay-products EPD — Midland Brick, 2026",
+      "url": "https://www.environdec.com/library/epd31378",
+      "citation": "Midland Brick, EPD-IES-0031378:001, version 30 June 2026",
+      "supports": "Production-average declared GWP-total by lifecycle module.",
+      "access": "Primary EPD PDF Table 10 visually checked; registry observed valid. Missing modules are not treated as zero.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "interface-hardie",
+      "label": "6 mm fibre-cement EPD — James Hardie, 2023",
+      "url": "https://www.jameshardie.com.au/ContentfulCMS/Technical-Library/Environmental_Product_Declaration.pdf",
+      "citation": "James Hardie Australia, S-P-02052, version 17 July 2023",
+      "supports": "Declared unit, physical mass and 6 mm product GWP-total module results.",
+      "access": "Primary PDF declared-unit/product tables and p.40 results read; GWP rows visually checked. Listed expiry 17 July 2028; exact current product/registration requires project verification.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "interface-maxibrick",
+      "label": "Maxibrick public product data and price",
+      "url": "https://www.midlandbrick.com.au/product/maxibrick",
+      "citation": "Midland Brick, Maxibrick manufacturer page, observed 30 October 2026",
+      "supports": "Approximate mass and coverage, selected pack configuration and direct-page GST-inclusive material price.",
+      "access": "Direct page body and technical table inspected. Search snippet price differed and was excluded. No delivered quote, stock confirmation or purchase.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "interface-insulation",
+      "label": "Approximate wall thermal guidance — YourHome",
+      "url": "https://www.yourhome.gov.au/passive-design/insulation",
+      "citation": "Australian Government YourHome, Insulation",
+      "supports": "Typical uninsulated wall R-values; whole-wall design has additional constraints.",
+      "access": "Official guidance inspected; values are not measured or certified performance of the benchmark assemblies.",
+      "reviewed": "2026-10-30"
     }
   ],
   "sourceReport": {

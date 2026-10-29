@@ -92,3 +92,13 @@ The full article is an imported Markdown region. Surface composition binds that 
 **Falsifiers:** gross volume reported as net imported stone; synthetic resource inputs called ancient measurements; old organic material automatically dating construction; scalar opacity replacing a full detector model; apparent activation energy called an elementary orbital barrier; package cost scenarios called current quotes; carbon assumptions called verified abatement; unresolved source references; or reference readiness promoted to scientific truth.
 
 **Disposition:** publish the desk extension after unit, conservation, reference, retained-module, UI and browser checks. Actual experiments, raw detector reanalysis, quantum calculations, supplier quotes and certified project designs remain explicitly unperformed. No new Sourcery lane, registry or execution authority.
+
+## Interface and assembly extension · 30 October 2026
+
+**Claim:** the retained substrate can compare preparation histories and source-declared product contributions while preserving unit, context and completeness boundaries.
+
+**Evidence:** W16–W18 add sixteen atomic outputs, six calculation views, selected visually checked mortar/EPD entries, source-bound Roman contexts and a dated direct-page product listing. Nine source records and three assembly cases use the unchanged kernel and collection/UI machinery. Primary documents and figures are not published.
+
+**Falsifiers:** a printed mixture ratio silently treated as a mass recipe; hydration water called all mixing water; theoretical carbonation recapture called net abatement; LCA declarations labelled new measurements; undeclared modules filled with zero; module D silently deducted; unlike PCR/product scopes used to rank walls; a stale search price replacing the direct page; or unknown assembly totals promoted to quotes.
+
+**Disposition:** publish after formula balance, unit/indicator/missing-value, reference, retained-source, native UI and browser checks. New sampling, performance tests, site delivery, equivalent assembly design and installed quotes remain unperformed.

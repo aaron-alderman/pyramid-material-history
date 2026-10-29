@@ -42,17 +42,21 @@
       "modelRefs": [
         "C06",
         "C15",
-        "C16"
+        "C16",
+        "C27",
+        "C28"
       ],
       "distinguishingTests": "Proposed matched phase/fabric and source-rock comparison.",
       "gaps": [
         "Named component, specimen identity and quantitative phase inventory.",
-        "Compatible absolute residue yield and phase basis; gross dissolution versus reprecipitation."
+        "Compatible absolute residue yield and phase basis; gross dissolution versus reprecipitation.",
+        "Selected joint-mortar entries do not identify preparation history or adjacent block manufacture."
       ],
       "studyRefs": [
         "W01",
         "W06",
-        "W07"
+        "W07",
+        "W16"
       ]
     },
     {
@@ -68,12 +72,15 @@
         "C02",
         "C09",
         "C10",
-        "C14"
+        "C14",
+        "C29",
+        "C31"
       ],
       "distinguishingTests": "Proposed treatment/control throughput and quality comparison.",
       "gaps": [
         "Shared resources, setup, losses, fuel/reagent supply and accepted yield.",
-        "Matched thermal/mechanical baseline, mass closure, surface quality and retained strength."
+        "Matched thermal/mechanical baseline, mass closure, surface quality and retained strength.",
+        "Roman preparation context and modern product declarations do not establish Egyptian transfer or full Perth assembly performance."
       ],
       "studyRefs": [
         "W02",
@@ -81,7 +88,10 @@
         "W06",
         "W08",
         "W09",
-        "W10"
+        "W10",
+        "W16",
+        "W17",
+        "W18"
       ]
     },
     {
@@ -103,7 +113,8 @@
       "studyRefs": [
         "W03",
         "W05",
-        "W11"
+        "W11",
+        "W16"
       ]
     },
     {
@@ -125,7 +136,9 @@
       ],
       "studyRefs": [
         "W05",
-        "W12"
+        "W12",
+        "W16",
+        "W17"
       ]
     },
     {
@@ -149,7 +162,8 @@
         "W03",
         "W05",
         "W08",
-        "W15"
+        "W15",
+        "W17"
       ]
     },
     {
@@ -173,7 +187,8 @@
         "W02",
         "W04",
         "W05",
-        "W09"
+        "W09",
+        "W17"
       ]
     },
     {
@@ -203,7 +218,8 @@
         "W06",
         "W10",
         "W13",
-        "W14"
+        "W14",
+        "W18"
       ]
     },
     {
@@ -523,7 +539,8 @@
         "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
       "studyRefs": [
-        "W15"
+        "W15",
+        "W18"
       ]
     },
     {

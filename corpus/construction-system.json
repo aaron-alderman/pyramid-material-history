@@ -101,7 +101,9 @@
         "H01",
         "H03",
         "H04",
-        "H05"
+        "H05",
+        "W16",
+        "W17"
       ],
       "status": "Component-scoped source assessment"
     },
@@ -652,7 +654,8 @@
         "BLD-PERTH-180"
       ],
       "related": [
-        "W14"
+        "W14",
+        "W18"
       ],
       "requiredEvidence": [
         "Comparable compliant assembly quotes, product declarations and service-life evidence"

@@ -7,7 +7,7 @@ import {executeProcess} from '../vendor/sourcery/process/surface-async-process.m
 import {prepareUiSurfaceComposition,verifyUiSurfaceComposition} from '../vendor/sourcery/ui/surface-composition.mjs';
 import {verifyNativeSurfaceCompositionLowering} from '../vendor/sourcery/ui/native-surface-composition-lowerer.mjs';
 import {filterItems,pageItems,bindArguments,declarationFor} from '../vendor/sourcery/collection-model.mjs';
-import {calculateWorkedCases,calculateSystemCases} from './worked-calculations.mjs';
+import {calculateWorkedCases,calculateSystemCases,calculateInterfaceCases,assessAssemblyBenchmarks} from './worked-calculations.mjs';
 const site=path.join(root,'_site');
 const built=p=>JSON.parse(fs.readFileSync(path.join(site,p),'utf8'));
 const atlas=read('corpus/atlas.json'),profiles=read('data/programme-profiles.json');
@@ -15,7 +15,7 @@ test('retained implementations keep their exact source identities',()=>{
   for(const r of read('data/reuse-lock.json').sources)assert.equal(hash(fs.readFileSync(path.join(root,r.path))),r.retainedHash,r.path);
 });
 test('every decomposed corpus object preserves the twelve-coordinate kernel',()=>{
-  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,318);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
+  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,361);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
   for(const o of model.objects)assert.deepEqual(Object.keys(o.kernel).sort(),[...profiles.kernel.coordinates].sort(),o.id);assert.equal(model.conjunctiveInputs,true);
 });
 test('joint inputs alternatives and the pyramid case remain distinct',()=>{
@@ -23,7 +23,7 @@ test('joint inputs alternatives and the pyramid case remain distinct',()=>{
   assert.equal(atlas.workedCase.id,'pyramids-material-history');assert.equal(atlas.workedCase.subcases[0].id,'granite-alkali-history');assert.equal(new Set(atlas.operations.map(x=>x.exclusiveOutput)).size,9);
 });
 test('all native page compositions and lowerings replay through the retained mechanisms',()=>{
-  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,211);
+  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,224);
   for(const r of receipt.uiEvidence){const p=built('data/ui/'+(r.route.replaceAll('/','-')||'home')+'.json');assert.equal(verifyUiSurfaceComposition(p.composition).passed,true,r.route);assert.equal(verifyNativeSurfaceCompositionLowering(p).passed,true,r.route);assert.equal(p.adoption.nativeEscapes.length,0);assert.equal(p.adoption.mappings.length,p.facts.filter(f=>f.p==='isa'&&f.o==='DomNode').length);}
 });
 test('renderer leakage and changed native realization fail closed',()=>{
@@ -51,14 +51,14 @@ test('publication carries no new runtime lane or empirical admission claim',()=>
 });
 test('worked investigations retain atomic outputs conjunctive inputs and resolved evidence',()=>{
   const work=read('corpus/worked-investigations.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
-  assert.equal(work.studies.length,15);assert.equal(work.studies.flatMap(s=>s.steps).length,76);
+  assert.equal(work.studies.length,18);assert.equal(work.studies.flatMap(s=>s.steps).length,92);
   for(const s of work.studies)for(const step of s.steps){assert.ok(atlas.operations.some(o=>o.id===step.operation));assert.ok(step.output);assert.ok(step.paragraphs.every(p=>p.trim().length>0));assert.deepEqual(objects.find(o=>o.id===step.id).inputs,step.inputs);for(const id of [...step.inputs,...step.evidenceRefs])assert.ok(ids.has(id),step.id+' unresolved '+id);}
   assert.equal(work.studies[2].steps.find(s=>s.matrix).matrix.length,5);
   for(const s of work.studies){const html=fs.readFileSync(path.join(site,'studies',s.id,'index.html'),'utf8');for(const step of s.steps)assert.ok(html.includes('id="'+step.id+'"'));assert.ok(!html.includes('Not supplied in this record.'));}
-  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:15,steps:76,calculations:26,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
+  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:18,steps:92,calculations:32,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
 });
 test('worked arithmetic conserves formula mass and exposes rate and detection assumptions',()=>{
-  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input,read('corpus/evidence-audit.json'),read('corpus/removal-evidence.json'),read('corpus/construction-system.json')),c=id=>output.calculations.find(c=>c.id===id);
+  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input,read('corpus/evidence-audit.json'),read('corpus/removal-evidence.json'),read('corpus/construction-system.json'),read('corpus/interface-evidence.json')),c=id=>output.calculations.find(c=>c.id===id);
   assert.equal(c('C02').rows[0][1],0.001);assert.equal(c('C02').rows[1][1],2.65);
   assert.ok(c('C01').rows[0][1]>1.763&&c('C01').rows[0][1]<1.765);
   // Independent product-side formula accounting for the carbonate balance.
@@ -220,4 +220,49 @@ test('all new dimensional maps reject undeclared physical rulers',async()=>{
     const response=await executeProcess(process.program,{model:process,request:{graph,query:{source:edge.from,target:edge.to,maxDepth:1}}},{compute:{},ports:{}});
     assert.equal(response.result.candidates.length,0,id);
   }
+});
+
+test('interface evidence preserves source roles context and unresolved assemblies',()=>{
+  const e=read('corpus/interface-evidence.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
+  assert.equal(e.records.length,9);assert.equal(e.assemblies.length,3);assert.equal(e.primaryDocumentsPublished,false);
+  for(const v of [...e.records,...e.assemblies])for(const ref of [...v.evidenceRefs,...(v.related||[])])assert.ok(ids.has(ref),v.id+' → '+ref);
+  assert.equal(e.records.find(v=>v.id==='M-GIZA-T17').rows[2][2],'1:2.1');
+  assert.equal(objects.find(v=>v.id==='C30').kind,'source-reported-product-declaration');
+  assert.deepEqual(built('data/assembly-assessment.json').records,assessAssemblyBenchmarks(e));
+  for(const result of assessAssemblyBenchmarks(e)){assert.equal(result.wholeAssemblyCostAUD,null);assert.equal(result.wholeLifeGwpKgCO2e,null);assert.equal(result.eligibleForWholeAssemblyRanking,false);assert.ok(result.missing.length);}
+  const zero=structuredClone(e);zero.assemblyInventory['ASM-M2'].wholeAssemblyCostAUD=0;assert.throws(()=>assessAssemblyBenchmarks(zero),/Missing assembly totals/);
+  const ranked=structuredClone(e);ranked.comparability.wholeAssemblyRankingAllowed=true;assert.throws(()=>assessAssemblyBenchmarks(ranked),/withhold ranking/);
+});
+
+test('hydration and lime-cycle balances conserve the declared physical species',()=>{
+  const e=read('corpus/interface-evidence.json'),s=read('corpus/construction-system.json'),cs=calculateInterfaceCases(e,s),m=e.chemistry.molarMassGPerMol;
+  assert.ok(Math.abs(m.CaO+m.H2O-m.CaOH2)<1e-10);assert.ok(Math.abs(m.CaO+m.CO2-m.CaCO3)<1e-10);
+  const hydration=cs.find(c=>c.id==='C28');for(const row of hydration.rows)assert.ok(Math.abs(row[2]-row[1]-1)<1e-12);
+  assert.ok(hydration.rows[0][1]>.18&&hydration.rows[0][1]<.19);
+  const cycle=cs.find(c=>c.id==='C29');assert.ok(Math.abs(cycle.rows[1][1]+cycle.rows[2][1]-1)<1e-12);assert.equal(cycle.rows[2][1],cycle.rows[3][1]);assert.equal(cycle.rows[4][1],0);assert.ok(cycle.scope.includes('No net carbon removal'));
+});
+
+test('EPD declarations retain missing modules indicator and incompatible bases',()=>{
+  const e=read('corpus/interface-evidence.json'),s=read('corpus/construction-system.json'),c=calculateInterfaceCases(e,s).find(c=>c.id==='C30');
+  assert.equal(c.rows.find(r=>r[0].startsWith('Midland')&&r[2]==='A4')[3],'ND');
+  assert.equal(c.rows.find(r=>r[0].startsWith('Hardie')&&r[2]==='C3')[3],'0.00E+00');
+  assert.equal(c.rows.find(r=>r[0].startsWith('Midland')&&r[2]==='D')[3],'-7.05E+00');
+  assert.equal(c.dataClass,'reported-product-declaration');
+  const unit=structuredClone(e);unit.records.find(v=>v.id==='P-MIDLAND-EPD').declaredUnit='1 kg';assert.throws(()=>calculateInterfaceCases(unit,s),/declared units/);
+  const indicator=structuredClone(e);indicator.records.find(v=>v.id==='P-HARDIE6').indicator='GWP-GHG';assert.throws(()=>calculateInterfaceCases(indicator,s),/GWP-total/);
+});
+
+test('purchased packs use the dated GST-inclusive price without inventing installed costs',()=>{
+  const e=read('corpus/interface-evidence.json'),s=read('corpus/construction-system.json'),calc=(v,sys=s)=>calculateInterfaceCases(v,sys).find(c=>c.id==='C31'),get=(c,name)=>c.rows.find(r=>r[0]===name)[1],c=calc(e);
+  assert.equal(get(c,'Masonry 1 leaf · selected whole packs'),17);assert.equal(get(c,'Masonry 2 leaf · selected whole packs'),33);
+  assert.equal(get(c,'Masonry 1 leaf · listed material purchase'),'5427.08');assert.equal(get(c,'Masonry 2 leaf · listed material purchase'),'10534.92');assert.equal(get(c,'Masonry 1 leaf · ordered units'),2346);
+  const mass=get(c,'Masonry 1 leaf · installed mass lower'),gwp=get(c,'Masonry 1 leaf · installed product A1-A3 lower');assert.ok(Math.abs(gwp/mass-.198)<1e-12);
+  const bigger=structuredClone(s);bigger.housing.lengthM*=2;bigger.housing.widthM*=2;const doubled=calc(e,bigger);assert.ok(Math.abs(get(doubled,'Masonry 1 leaf · installed equivalent units')-2*get(c,'Masonry 1 leaf · installed equivalent units'))<1e-8);
+  const bad=structuredClone(e);bad.records.find(v=>v.id==='P-MAXIBRICK').selectedPackUnits=0;assert.throws(()=>calc(bad),/pack inputs/);
+});
+
+test('thermal guide paths remain conditional and obey inverse resistance scaling',()=>{
+  const e=read('corpus/interface-evidence.json'),s=read('corpus/construction-system.json'),calc=v=>calculateInterfaceCases(v,s).find(c=>c.id==='C32');
+  for(const row of calc(e).rows){assert.ok(Math.abs(row[2]*row[3]-1)<1e-12);assert.ok(Math.abs(row[4]*row[2]-1166.4)<1e-8);}
+  const more=structuredClone(e);more.assumptions.idealInsulationR*=2;assert.ok(calc(more).rows[0][4]<calc(e).rows[0][4]);assert.ok(calc(e).scope.includes('Not measured'));
 });

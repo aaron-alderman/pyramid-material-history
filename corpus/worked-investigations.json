@@ -1,7 +1,7 @@
 {
   "protocol": "material-history-worked-investigations/1",
   "date": "2026-10-30",
-  "scope": "Fifteen desk investigations spanning source-scoped material and historical assessments, executed conditional models, a synthetic variation example and a construction/engineering decision system. No new physical experiment, excavation, DFT run or certified design.",
+  "scope": "Eighteen desk investigations with source measurements, product declarations, context audits and explicit conditional calculations. No new physical experiments, certified designs or delivered supplier quotations.",
   "studies": [
     {
       "id": "W01",
@@ -22,7 +22,9 @@
         "W06",
         "W07",
         "W13",
-        "W14"
+        "W14",
+        "W16",
+        "W17"
       ],
       "conclusion": "The opening chemical model must use identified mineral phases and interfaces. Bulk oxide percentages, hardness and a red colour cannot supply those identities. The sources support a materially varied monument; they do not give us a sampled alteration profile for a named Khufu granite face.",
       "steps": [
@@ -686,7 +688,9 @@
         "coverage-B18",
         "coverage-B19",
         "W08",
-        "W15"
+        "W15",
+        "W16",
+        "W17"
       ],
       "conclusion": "The reviewed sources offer competing explanations at different analytical locations. The reproduced phosphorus contrast makes spatial context essential and prevents treating one edge signal as an undifferentiated whole-stone composition. It does not settle all silica/binder arguments, date a coating or establish how a population of pyramid blocks was made.",
       "steps": [
@@ -1461,7 +1465,9 @@
         "B14",
         "B16",
         "B17",
-        "B21"
+        "B21",
+        "W16",
+        "W17"
       ],
       "conclusion": "A date or chemical gradient must be connected to the event being inferred. Inbuilt age, reuse and later overprints remain distinct uncertainty sources.",
       "steps": [
@@ -1744,7 +1750,8 @@
         "K03",
         "K04",
         "DCS05",
-        "BLD-PERTH-180"
+        "BLD-PERTH-180",
+        "W18"
       ],
       "conclusion": "The executed budget and carbon models are conditional planning scenarios, not market quotes or verified savings. Alternative wall materials must compete as complete performance-equivalent building assemblies.",
       "steps": [
@@ -1985,6 +1992,377 @@
             "DCS03",
             "DCS04",
             "DCS05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W16",
+      "label": "Mortar is an interface with a history",
+      "summary": "Source-backed Giza joining-mortar observations, hydration balances and a testable interface model.",
+      "status": "Worked interface and assembly assessment",
+      "related": [
+        "P02",
+        "K04",
+        "K06",
+        "M-GIZA-JOINT",
+        "M-GIZA-T17",
+        "W01",
+        "W05",
+        "W11",
+        "W17"
+      ],
+      "conclusion": "The selected evidence concerns joining mortar, not the formation of every adjacent block. Phase identity, preparation, interface fabric and alteration must be connected on the same material.",
+      "steps": [
+        {
+          "id": "W16-S1",
+          "title": "Constraint: distinguish the joint from the stone body",
+          "operation": "O1",
+          "inputs": [
+            "K04",
+            "K06",
+            "M-GIZA-JOINT"
+          ],
+          "output": "An interface-scoped material question",
+          "paragraphs": [
+            "A joint can provide bedding, gap filling, contact redistribution or adhesion. Its composition alone does not establish which function dominated. Keep the stone body, binder matrix, aggregate, contact boundary and later coating as distinct objects.",
+            "The cited conservation study groups the examined Cheops/Chephren joining mortars as gypsum-based and Mykerinos material as lime-based. That is a scoped source assessment. It does not establish a universal recipe, exact original processing temperature or manufacture of adjacent blocks."
+          ],
+          "evidenceRefs": [
+            "external:interface-giza",
+            "W05"
+          ]
+        },
+        {
+          "id": "W16-S2",
+          "title": "Measurement: preserve selected aggregate entries and their limits",
+          "operation": "O7",
+          "inputs": [
+            "M-GIZA-T17",
+            "C27"
+          ],
+          "output": "A visually verified partial table transcription",
+          "paragraphs": [
+            "The first three Cheops rows are retained in their printed order. Numeric strings preserve source precision. They are selected entries rather than a full sample census; no individual specimen identifiers are invented.",
+            "The mortar-to-aggregate ratio remains a string because its mass/volume and operational basis are not established in this extraction. These entries do not support an independent-replicate analysis, infer binder fraction uniquely or quantify whole-pyramid mortar demand."
+          ],
+          "evidenceRefs": [
+            "external:interface-giza"
+          ],
+          "calculationRef": "C27"
+        },
+        {
+          "id": "W16-S3",
+          "title": "Evolution: separate hydration, drying and carbonation",
+          "operation": "O5",
+          "inputs": [
+            "C28",
+            "C29"
+          ],
+          "output": "Pure-phase balance benchmarks with process limits",
+          "paragraphs": [
+            "Hydration binds water into a solid phase, drying removes free water, and carbonation exchanges material with a CO₂-bearing environment. Each can alter mass or pore structure. None is interchangeable with a measured gain in strength.",
+            "The ideal balances below calculate chemically bound water for pure hemihydrate/anhydrite and quicklime, and distinguish carbonate decomposition from later uptake. Real aggregate, impurities, incomplete conversion, transport and free mixing water require separate inventories. These are accounting examples, not production instructions or reconstructed ancient recipes."
+          ],
+          "evidenceRefs": [
+            "W17",
+            "W06"
+          ],
+          "calculationRef": "C28"
+        },
+        {
+          "id": "W16-S4",
+          "title": "Intervention: measure interface behaviour on matched materials",
+          "operation": "O6",
+          "inputs": [
+            "W16-S1",
+            "W16-S2",
+            "W16-S3"
+          ],
+          "output": "A joint/interface evidence-return protocol",
+          "paragraphs": [
+            "Co-register substrate mineralogy, binder phases, pores, cracks, surface roughness and contact geometry. Compare preparation and moisture histories under matched loading. Measure interfacial failure, cohesive binder failure and stone failure separately.",
+            "Include bedding thickness, curing, shrinkage, wetting/drying, salts and later treatments. A chemically similar matrix can have different contact and transport behaviour. Test the proposed function rather than assigning every joint an adhesive role."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "W11"
+          ]
+        },
+        {
+          "id": "W16-S5",
+          "title": "Disposition: require a preparation-to-interface chain",
+          "operation": "O9",
+          "inputs": [
+            "W16-S1",
+            "W16-S4",
+            "DCS01"
+          ],
+          "output": "A bounded mortar interpretation",
+          "paragraphs": [
+            "The next discriminating return is a located interface map joined to phase identification, preparation controls and mechanical or transport response. Source phase labels provide a starting constraint, while original processing and later change remain separate hypotheses.",
+            "The Roman comparison illustrates how preserved preparation context can strengthen an inference. It supplies no proof of technology transfer or an Egyptian lime recipe. The housing comparison likewise needs its own tested joint and assembly performance."
+          ],
+          "evidenceRefs": [
+            "W17",
+            "W18",
+            "DCS01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W17",
+      "label": "Hot mixing: connect preparation to surviving evidence",
+      "summary": "A Pompeian preparation-context audit, chemical mass accounting and explicit limits on modern transfer.",
+      "status": "Worked interface and assembly assessment",
+      "related": [
+        "S-ROMAN-PM",
+        "S-ROMAN-W1",
+        "S-ROMAN-MR",
+        "W03",
+        "W11",
+        "W16",
+        "W18"
+      ],
+      "conclusion": "The selected Pompeian study supports a site-specific preparation interpretation through combined context and characterization. It does not establish one recipe for all Roman materials, an Egyptian connection or modern housing performance.",
+      "steps": [
+        {
+          "id": "W17-S1",
+          "title": "Measurement: preserve the preparation and use contexts",
+          "operation": "O7",
+          "inputs": [
+            "S-ROMAN-PM",
+            "S-ROMAN-W1",
+            "S-ROMAN-MR"
+          ],
+          "output": "A source-context comparison",
+          "paragraphs": [
+            "At Domus IX 10,1 the published study connects premixed dry material, unfinished wall mortar and repair material. These contexts make the preparation question more constrained than isolated chemical composition.",
+            "Keep PM, W1 and MR distinct, and retain the difference between a source observation and the authors’ interpretation. No new sampling or raw analytical-data reanalysis was performed here."
+          ],
+          "evidenceRefs": [
+            "external:interface-pompeii"
+          ]
+        },
+        {
+          "id": "W17-S2",
+          "title": "Inference: combine observations without double-counting them",
+          "operation": "O8",
+          "inputs": [
+            "S-ROMAN-PM",
+            "S-ROMAN-W1",
+            "S-ROMAN-MR"
+          ],
+          "output": "A preparation-history argument with rivals",
+          "paragraphs": [
+            "The authors combine location, microstructure, phase and isotope analyses in their quicklime/slaked-lime interpretation. Several methods on one specimen improve characterization; they do not automatically provide several independent historical replications.",
+            "Compare quicklime incorporation, pre-slaked preparation, poorly dispersed lime and later dissolution/carbonation using predictions for the same regions. Distinguishing features must be assessed jointly with preservation and preparation context. A lime-rich inclusion by itself is insufficient."
+          ],
+          "evidenceRefs": [
+            "external:interface-pompeii",
+            "W05"
+          ]
+        },
+        {
+          "id": "W17-S3",
+          "title": "Evolution: account for uptake across the whole lime cycle",
+          "operation": "O5",
+          "inputs": [
+            "C29"
+          ],
+          "output": "A theoretical carbon balance separated from abatement",
+          "paragraphs": [
+            "For ideal calcium carbonate decomposition, process CO₂ release and later complete carbonation uptake have equal stoichiometric magnitudes on the same calcium basis. That upper-bound recapture does not remove kiln fuel, electricity, transport or other emissions.",
+            "Actual uptake depends on phase availability, exposure, moisture, transport and time. Products may also react through pozzolanic pathways. Count measured uptake and upstream inputs on a matched lifecycle boundary; do not equate a crack-filling observation with net carbon removal."
+          ],
+          "evidenceRefs": [
+            "W16",
+            "external:system-lca"
+          ],
+          "calculationRef": "C29"
+        },
+        {
+          "id": "W17-S4",
+          "title": "Intervention: test the modern consequence independently",
+          "operation": "O6",
+          "inputs": [
+            "W17-S2",
+            "W17-S3",
+            "DCS02",
+            "DCS05"
+          ],
+          "output": "A modern comparator protocol",
+          "paragraphs": [
+            "For a candidate mortar or binder, specify raw materials, mixing history, curing and test age. Compare accepted strength, bond, cracking, moisture transport, repeated damage and resource demand against a matched baseline. Recovery of water tightness, visual crack filling and recovery of structural capacity are separate responses.",
+            "Freeze the intended application and service environment. Include labour, handling, compatibility, maintenance and quality control. Historical interpretation motivates a test but does not certify the modern material or make it suitable for a Perth wall."
+          ],
+          "evidenceRefs": [
+            "W16",
+            "W18"
+          ]
+        },
+        {
+          "id": "W17-S5",
+          "title": "Disposition: transfer the question and method with bounded claims",
+          "operation": "O9",
+          "inputs": [
+            "W17-S1",
+            "W17-S2",
+            "W17-S4"
+          ],
+          "output": "A scoped archaeological-to-engineering bridge",
+          "paragraphs": [
+            "The useful bridge is a preparation hypothesis joined to context-specific predictions and an independent modern performance comparison. Universal historical recipes, technology transfer and lifecycle superiority remain outside the evidence established here.",
+            "A new return can change one of those conclusions without rewriting the others: additional archaeological contexts test prevalence, controlled material tests assess performance, and a complete inventory assesses cost and emissions."
+          ],
+          "evidenceRefs": [
+            "W16",
+            "W18",
+            "W15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W18",
+      "label": "Perth assemblies: replace assumptions with declared data",
+      "summary": "WA product data, module-preserving EPD transcriptions, pack rounding and an incomplete-assembly comparison ledger.",
+      "status": "Worked interface and assembly assessment",
+      "related": [
+        "BLD-PERTH-180",
+        "ASM-M2",
+        "ASM-M1",
+        "ASM-FC",
+        "P-MIDLAND-EPD",
+        "P-MAXIBRICK",
+        "P-HARDIE6",
+        "W14",
+        "W16",
+        "W17",
+        "DCS05"
+      ],
+      "conclusion": "Published product data now constrain quantities, material-only prices and selected LCA contributions. Complete assembly totals and rankings remain unresolved until missing inventories and equivalent performance are established.",
+      "steps": [
+        {
+          "id": "W18-S1",
+          "title": "Constraint: compare complete services on the same house",
+          "operation": "O1",
+          "inputs": [
+            "BLD-PERTH-180",
+            "ASM-M2",
+            "ASM-M1",
+            "ASM-FC"
+          ],
+          "output": "Three explicit assembly quantity cases",
+          "paragraphs": [
+            "Use the existing 180 m² house geometry and net external wall area. The masonry cases use one or two equivalent utility-brick leaves for quantity arithmetic. They are not an approved external facade or a claim that utility brick replaces every facing product. The cladding case represents one declared 6 mm sheet layer.",
+            "The structural frame, insulation, linings, coatings, ties, openings, services and performance evidence remain separate. A common floor area does not make these incomplete assemblies functionally equivalent."
+          ],
+          "evidenceRefs": [
+            "W14",
+            "DCS05"
+          ]
+        },
+        {
+          "id": "W18-S2",
+          "title": "Measurement: retain declared units, modules and PCR versions",
+          "operation": "O7",
+          "inputs": [
+            "P-MIDLAND-EPD",
+            "P-HARDIE6",
+            "C30"
+          ],
+          "output": "Product-declared LCA values with a comparison boundary",
+          "paragraphs": [
+            "The WA clay-products EPD reports a production average per tonne; the fibre-cement declaration uses an installed product square metre over its reference life. GWP-total values are retained by lifecycle module. They are modelled product declarations, not new field emissions measurements.",
+            "PCR versions, datasets, allocation and module coverage differ. Undeclared modules stay missing. Module D remains separate, and GWP-total is not silently exchanged with GWP-GHG. This transcription does not license a cross-product whole-wall ranking."
+          ],
+          "evidenceRefs": [
+            "external:interface-midland",
+            "external:interface-hardie"
+          ],
+          "calculationRef": "C30"
+        },
+        {
+          "id": "W18-S3",
+          "title": "Inference: scale product quantities and round an actual pack case",
+          "operation": "O8",
+          "inputs": [
+            "P-MAXIBRICK",
+            "P-MIDLAND-EPD",
+            "P-HARDIE6",
+            "C31"
+          ],
+          "output": "A product-only benchmark with order and installed bases separated",
+          "paragraphs": [
+            "Coverage and approximate unit-mass bounds come from the current manufacturer table. The calculation distinguishes installed equivalent units, chosen order allowance, whole-unit rounding, pack rounding and surplus. Surplus is not automatically waste sent to landfill.",
+            "Use the directly opened, dated pack price including GST and excluding cartage; the earlier search snippet showed a different price. The brick EPD average is a proxy for this unit. Sheet production contribution is calculated on its own product-area basis. Neither subtotal includes every wall material or installed cost."
+          ],
+          "evidenceRefs": [
+            "external:interface-maxibrick",
+            "external:interface-midland",
+            "external:interface-hardie"
+          ],
+          "calculationRef": "C31"
+        },
+        {
+          "id": "W18-S4",
+          "title": "Reduction: thermal resistance needs a wall model",
+          "operation": "O3",
+          "inputs": [
+            "R-YOURHOME",
+            "C32"
+          ],
+          "output": "A bounded insulation-path illustration",
+          "paragraphs": [
+            "The official guidance gives approximate uninsulated brick-veneer and weatherboard R-values. Adding a chosen R2.5 layer in series illustrates ideal path conductance; it is not a tested result for the candidate assemblies.",
+            "Framing and junctions introduce parallel heat paths. Gaps, compression, moisture, orientation, mass and transient conditions affect whole-building performance. A one-dimensional steady heat-flow example cannot establish NatHERS compliance or annual operational savings."
+          ],
+          "evidenceRefs": [
+            "external:interface-insulation"
+          ],
+          "calculationRef": "C32"
+        },
+        {
+          "id": "W18-S5",
+          "title": "Inference: retain missing costs and lifecycle terms as unknown",
+          "operation": "O8",
+          "inputs": [
+            "ASM-M2",
+            "ASM-M1",
+            "ASM-FC"
+          ],
+          "output": "An incomplete-assembly ledger that withholds a winner",
+          "paragraphs": [
+            "The benchmark records show known product contributions, missing items and performance requirements. Whole-assembly cost and whole-life GWP remain null. They cannot be calculated by replacing the missing frame, insulation, labour, transport and maintenance terms with zero.",
+            "Request matched assembly specifications and current scope-identical quotations before choosing a cost winner. For emissions, reconcile PCR, indicators, service life, quantities, delivery, installation, use, replacement and end of life. Keep any beyond-boundary benefit separate."
+          ],
+          "evidenceRefs": [
+            "DCS05",
+            "external:system-lca"
+          ]
+        },
+        {
+          "id": "W18-S6",
+          "title": "Disposition: advance from product data to an equivalent assembly",
+          "operation": "O9",
+          "inputs": [
+            "W18-S2",
+            "W18-S3",
+            "W18-S4",
+            "W18-S5",
+            "DCS05"
+          ],
+          "output": "A specific next evidence return for Perth",
+          "paragraphs": [
+            "This extension replaces several assigned inputs with traceable published values while retaining their uncertainty and basis. The remaining return is concrete: complete layer and connection inventories, tested performance, installation productivity, delivered quotes and compatible lifecycle scenarios.",
+            "Ancient mortar insights can suggest a modern test. Selection of a residential system depends on that system’s own evidence, local supply and whole-project consequences. No supplier was contacted and no purchase, certification or new material test was performed."
+          ],
+          "evidenceRefs": [
+            "W16",
+            "W17",
+            "W14"
           ]
         }
       ]

@@ -22,6 +22,10 @@
         "href": "components/"
       },
       {
+        "label": "Assembly benchmarks",
+        "href": "assemblies/"
+      },
+      {
         "label": "Decisions",
         "href": "decisions/"
       },
@@ -99,7 +103,7 @@
       "closingAction": "Enter the full corpus",
       "workedEyebrow": "THE NEXT LAYER · WORKED INVESTIGATIONS",
       "workedTitle": "Follow the evidence through the middle.",
-      "workedDescription": "Fifteen worked studies connect material identity, competing construction histories, production, chronology, detectors and the Perth building comparison. Reported observations and conditional models remain separately scoped."
+      "workedDescription": "Eighteen worked studies connect pyramid materials and construction histories to preparation chemistry, Roman mortar evidence and a product-grounded Perth assembly benchmark. Source observations, product declarations and conditional calculations retain their separate roles."
     },
     "article": {
       "title": "The full material history atlas",
@@ -257,6 +261,24 @@
             {
               "label": "Decision board",
               "href": "decisions/"
+            }
+          ]
+        },
+        {
+          "title": "Interfaces and product-declaration boundaries",
+          "copy": "Source phase assessments, Roman preparation contexts and product LCA declarations retain different record kinds. Pure-phase mass balances concern physical species; GWP-total is a characterized lifecycle indicator, not conserved CO₂ mass. Missing assembly totals remain null and module D stays separate. No new runtime or scientific admission is added.",
+          "links": [
+            {
+              "label": "Interface and product source records",
+              "href": "corpus/interface-evidence.json"
+            },
+            {
+              "label": "Assembly inventory assessment",
+              "href": "data/assembly-assessment.json"
+            },
+            {
+              "label": "Assembly benchmarks",
+              "href": "assemblies/"
             }
           ]
         }
@@ -1026,6 +1048,83 @@
         "actionDescription": "Open the exact record, its scope and linked evidence.",
         "detailEyebrow": "DECISIONS",
         "backLabel": "All decisions"
+      },
+      {
+        "id": "assemblies",
+        "route": "assemblies/",
+        "title": "Perth assembly benchmarks: known products, open systems",
+        "eyebrow": "PRODUCT DATA → ASSEMBLY → BUILDING",
+        "description": "Inspect source-grounded product quantities and prices alongside the missing frame, insulation, installation and performance records. Whole-wall totals and rankings remain unresolved.",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Known product contributions",
+            "path": [
+              "known"
+            ]
+          },
+          {
+            "label": "Missing assembly inventory",
+            "path": [
+              "missing"
+            ]
+          },
+          {
+            "label": "Cost status",
+            "path": [
+              "costStatus"
+            ]
+          },
+          {
+            "label": "Performance status",
+            "path": [
+              "performanceStatus"
+            ]
+          },
+          {
+            "label": "Comparison boundary",
+            "path": [
+              "comparisonStatus"
+            ]
+          },
+          {
+            "label": "Source products",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Connected anchor, studies and decision",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Qualifications",
+            "path": [
+              "qualifications"
+            ]
+          }
+        ],
+        "filter": {
+          "path": [
+            "category"
+          ],
+          "label": "Quantity case",
+          "emptyLabel": "All cases"
+        },
+        "searchLabel": "Search assembly benchmarks",
+        "searchPlaceholder": "Search products, missing costs or performance evidence…",
+        "actionLabel": "Inspect benchmark",
+        "actionDescription": "Open the product scope, missing inventory and linked calculations.",
+        "detailEyebrow": "ASSEMBLY BENCHMARK",
+        "backLabel": "All assembly benchmarks"
       }
     ]
   }

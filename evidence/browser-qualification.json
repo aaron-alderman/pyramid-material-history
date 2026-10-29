@@ -288,5 +288,55 @@
       "scripts/build.mjs": "146b4ebf887217d6d687b3ed1062b0240b4b384e2e1af1a9cc8dc89e6efdc8d1",
       "scripts/worked-calculations.mjs": "68adac22ada12eb07ea6696cee576e1f0a701bc375870fc4fa0fccfd04c50ec3"
     }
+  },
+  "interfaceAssemblyExtension": {
+    "checkedAt": "2026-10-30",
+    "environment": "Local preview in in-app browser",
+    "checks": [
+      {
+        "route": "assemblies/",
+        "result": "Three records; category selection narrows to one cladding/frame proxy and opens its record."
+      },
+      {
+        "route": "assemblies/ASM-FC/",
+        "result": "Missing inventory, unavailable whole-wall cost and unverified performance remain visible; ranking withheld."
+      },
+      {
+        "route": "studies/W16/",
+        "result": "Search returns one mortar study; source table renders three selected rows with 42.21, 31.15 and 40.22 percent fines; hydration table and W17 link visible."
+      },
+      {
+        "route": "studies/W17/",
+        "result": "PM, W1 and MR contexts remain distinct; ideal lime cycle and bounded modern comparator visible."
+      },
+      {
+        "route": "studies/W18/",
+        "result": "Three tables; ND remains distinct from printed zero; material purchases render 5427.08 and 10534.92 AUD including GST."
+      },
+      {
+        "route": "studies/W18/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "result": "No document-level horizontal overflow."
+      },
+      {
+        "route": "studies/W18/",
+        "nominalWidth": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "result": "No document-level horizontal overflow; viewport reset after checks."
+      }
+    ],
+    "newPhysicalTests": false,
+    "deliveredQuotes": false,
+    "wholeAssemblyRanking": false,
+    "sourceHashes": {
+      "corpus/interface-evidence.json": "adc5d818f867bfb16af26a0d726b8a903e823e73074572cc46de940f0bd9ad1b",
+      "corpus/worked-investigations.json": "d69544f5d8b02999b567044d0868374f59811a4dd9a7c6c9c1263791222052aa",
+      "data/publication.json": "5498609d25c4bf43435c6389ea466be1939dd46233ca9c832e9465200f02ebaa",
+      "scripts/build.mjs": "7196394f60afe4cd793a1be690901f589aac4f9d1aa69b86e9728b59f715e583",
+      "scripts/worked-calculations.mjs": "a6b98fa6787cf0a682e6c22ea96702897e683f0910a7a561f03590e63a6cd091"
+    }
   }
 }
