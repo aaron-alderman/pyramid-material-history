@@ -1,7 +1,7 @@
 {
   "protocol": "material-history-worked-investigations/1",
   "date": "2026-10-30",
-  "scope": "Six desk investigations using source-reported observations, conditional calculations and a synthetic variation demonstration. No new physical experiment or monument sampling.",
+  "scope": "Fifteen desk investigations spanning source-scoped material and historical assessments, executed conditional models, a synthetic variation example and a construction/engineering decision system. No new physical experiment, excavation, DFT run or certified design.",
   "studies": [
     {
       "id": "W01",
@@ -19,7 +19,10 @@
         "W03",
         "W04",
         "W05",
-        "W06"
+        "W06",
+        "W07",
+        "W13",
+        "W14"
       ],
       "conclusion": "The opening chemical model must use identified mineral phases and interfaces. Bulk oxide percentages, hardness and a red colour cannot supply those identities. The sources support a materially varied monument; they do not give us a sampled alteration profile for a named Khufu granite face.",
       "steps": [
@@ -135,7 +138,10 @@
         "W01",
         "W03",
         "W04",
-        "W06"
+        "W06",
+        "W07",
+        "W13",
+        "W14"
       ],
       "conclusion": "Silicate–alkali chemistry is a credible mechanism to investigate. The available modern results do not establish a removal rate for the quoted 168 °C treatment, efficient quarry-scale production, or use on a named Khufu component. Thermal damage and chemical alteration must be separated experimentally before assigning their contributions.",
       "steps": [
@@ -322,7 +328,9 @@
         "W01",
         "W02",
         "W04",
-        "W05"
+        "W05",
+        "W08",
+        "W15"
       ],
       "conclusion": "The reviewed record supports real quarrying, material supply and thermal/mechanical comparators. It does not identify carbonate-assisted working on a named Khufu surface. A surviving joint signature tied to manufacturing chronology would be substantially more useful than either surface shape alone or unspecific sodium detection.",
       "steps": [
@@ -481,7 +489,10 @@
         "B23",
         "B25",
         "W05",
-        "W06"
+        "W06",
+        "W07",
+        "W13",
+        "W14"
       ],
       "conclusion": "Variation analysis distinguishes three outputs: model sensitivity, identifiable treatment contrasts and a process bottleneck under a stated production model. The worked examples expose what the machinery can calculate and what observations it still needs. None attributes an ancient manufacturing process or validates a modern building material.",
       "steps": [
@@ -673,7 +684,9 @@
         "B19",
         "B20",
         "coverage-B18",
-        "coverage-B19"
+        "coverage-B19",
+        "W08",
+        "W15"
       ],
       "conclusion": "The reviewed sources offer competing explanations at different analytical locations. The reproduced phosphorus contrast makes spatial context essential and prevents treating one edge signal as an undifferentiated whole-stone composition. It does not settle all silica/binder arguments, date a coating or establish how a population of pyramid blocks was made.",
       "steps": [
@@ -847,7 +860,10 @@
         "B10",
         "B11",
         "B15",
-        "B23"
+        "B23",
+        "W07",
+        "W13",
+        "W14"
       ],
       "conclusion": "Modern hydrothermal chemical assistance has reported quantitative evidence. Useful low-temperature shaping, its economics and any ancient application require different measurements. Normalized mineral percentages cannot identify absolute removal without a compatible mass balance.",
       "steps": [
@@ -991,6 +1007,984 @@
             "W03",
             "W05",
             "B23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W07",
+      "label": "Name the components. Close the geometry.",
+      "summary": "A component inventory and a bounded quantity model of Khufu’s pyramid.",
+      "status": "Worked system assessment",
+      "related": [
+        "P01",
+        "P04",
+        "P05",
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "W08",
+        "W10"
+      ],
+      "conclusion": "The geometric envelope is a useful demand bound, not a census of imported blocks. Component, void, bedrock and joint quantities still require registered measurements.",
+      "steps": [
+        {
+          "id": "W07-S1",
+          "title": "Constraint: bind every quantity to a component",
+          "operation": "O1",
+          "inputs": [
+            "K01",
+            "K02",
+            "K03",
+            "K04",
+            "K05",
+            "K06",
+            "K07"
+          ],
+          "output": "A component-scoped quantity domain",
+          "paragraphs": [
+            "A material volume must identify its monument, component, coordinate frame and reconstruction date. The component register separates masonry bodies, joints, bedrock, voids and later additions so that the same volume cannot silently enter two material accounts.",
+            "Material names are source-scoped summaries, not a complete assay. The modern house will use a separate geometry and performance object; pyramid materials do not transfer automatically into a residential specification."
+          ],
+          "evidenceRefs": [
+            "W01",
+            "W14"
+          ]
+        },
+        {
+          "id": "W07-S2",
+          "title": "Measurement: retain casing and platform as different survey objects",
+          "operation": "O7",
+          "inputs": [
+            "OBS-SURVEY",
+            "C17"
+          ],
+          "output": "A visually checked survey transcription",
+          "paragraphs": [
+            "The survey’s casing-base table gives estimated minimum, mean and maximum side lengths. The source also reports a distinct platform table. Using the platform dimensions as the casing base would change the object being estimated.",
+            "Four side estimates do not establish four independent replicates. Their joint geometric uncertainty and correlations have not been reconstructed here. The printed mean is retained as a modelling anchor, while a square-base envelope is an explicit reduction."
+          ],
+          "evidenceRefs": [
+            "external:system-survey"
+          ],
+          "calculationRef": "C17"
+        },
+        {
+          "id": "W07-S3",
+          "title": "Reduction: calculate an envelope without inventing a material census",
+          "operation": "O3",
+          "inputs": [
+            "OBS-SURVEY",
+            "C18"
+          ],
+          "output": "A geometric envelope and loss ledger",
+          "paragraphs": [
+            "The model uses the source mean base and a chosen approximate height. It computes square-pyramid volume, lateral area and two hypothetical homothetic outer shells. The shell parameter is a linear scale ratio, not a measured casing thickness.",
+            "Converting that envelope to mass assumes a uniform benchmark density. Bedrock, passages, voids, joints and material differences have not been deducted. This is therefore neither a net imported-stone mass nor a block count. A sharper model must replace these terms with a reconciled survey inventory."
+          ],
+          "evidenceRefs": [
+            "K01",
+            "K02",
+            "K04",
+            "K05",
+            "K07"
+          ],
+          "calculationRef": "C18"
+        },
+        {
+          "id": "W07-S4",
+          "title": "Disposition: carry quantity bounds into production",
+          "operation": "O9",
+          "inputs": [
+            "W07-S1",
+            "W07-S2",
+            "W07-S3",
+            "DCS03"
+          ],
+          "output": "A quantity record with explicit unresolved terms",
+          "paragraphs": [
+            "The useful outcome is an auditable interface to resource modelling: gross geometry is available, component allocation remains open, and deductions must preserve uncertainty and provenance. A precise numerical result does not remove uncertainty in the model boundary.",
+            "Future updates should supply registered solids or meshes, identify original versus surviving geometry, and report reconciliation residuals. Freeze the quantity definition before comparing production histories."
+          ],
+          "evidenceRefs": [
+            "W08",
+            "W10",
+            "DCS03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W08",
+      "label": "Compare complete construction histories",
+      "summary": "Five explicit histories connect material selection, working, transport, placement and later change.",
+      "status": "Worked system assessment",
+      "related": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "W07",
+        "W09",
+        "W15"
+      ],
+      "conclusion": "Histories must explain the same component and observations. Feasibility, diagnostic traces and chronology remain separate conjunctive requirements.",
+      "steps": [
+        {
+          "id": "W08-S1",
+          "title": "Constraint: select one shared target before comparing histories",
+          "operation": "O1",
+          "inputs": [
+            "W07",
+            "H01",
+            "H02",
+            "H03",
+            "H04",
+            "H05"
+          ],
+          "output": "A matched historical-comparison domain",
+          "paragraphs": [
+            "Compare a named component, its interior fabric, surfaces, joints, geometry and context. H01 is the quarried-body baseline; H02 adds chemical assistance; H03 concerns specified reconstituted bodies; H04 freezes a mixed assignment; H05 describes a later overprint. These are structured alternatives and compatible layers, not five mutually exclusive universal stories.",
+            "A late surface alteration and an original mechanical construction can both be true. Conversely, a mixed history must declare component assignments before inspecting the results; it cannot keep changing to absorb every contradiction."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "W05"
+          ]
+        },
+        {
+          "id": "W08-S2",
+          "title": "Evolution: preserve the order and resources of each process chain",
+          "operation": "O5",
+          "inputs": [
+            "H01",
+            "H02",
+            "H03",
+            "H04",
+            "H05"
+          ],
+          "output": "Ordered candidate process chains",
+          "paragraphs": [
+            "Each history record lists the required sequence, predicted traces and qualifications. Chemical assistance inherits extraction, transport and placement demands while adding treatment and recovery. Casting inherits aggregate, binder, mixing, support, curing and quality demands.",
+            "A diagram of compatible steps is not evidence that they occurred. A missing mandatory step is an open dependency. Shared resources must be joined into one account rather than credited separately to each stage."
+          ],
+          "evidenceRefs": [
+            "W10",
+            "W11"
+          ]
+        },
+        {
+          "id": "W08-S3",
+          "title": "Inference: compare predictions against the same observations",
+          "operation": "O8",
+          "inputs": [
+            "H01",
+            "H02",
+            "H03",
+            "H04",
+            "H05",
+            "W05"
+          ],
+          "output": "A prediction-and-counterevidence matrix",
+          "paragraphs": [
+            "A geological fabric, a continuous intergranular binder, a superficial reaction layer, a tool trace and a transport record constrain different parts of a history. Record the observation once and link each interpretation to its precise scope.",
+            "Do not give all histories equal evidential weight merely because they are listed. Published geological and documentary evidence constrains quarried-body accounts; a proposed alternative must explain that evidence and supply distinguishing support for its additional steps."
+          ],
+          "evidenceRefs": [
+            "external:worked-campbell",
+            "external:system-merer",
+            "external:audit-barsoum",
+            "external:audit-jana"
+          ],
+          "matrix": [
+            {
+              "History": "H01 mechanical baseline",
+              "Discriminator": "Body fabric, tool/abrasive traces and source/transport context",
+              "Open": "Exact operation, rate and placement sequence"
+            },
+            {
+              "History": "H02 chemical assistance",
+              "Discriminator": "Added accepted output plus formation-related treatment traces",
+              "Open": "Regime, recovery and chronological association"
+            },
+            {
+              "History": "H03 specified casting",
+              "Discriminator": "Binder/aggregate fabric joined to curing and original construction",
+              "Open": "Representativeness, recipe and whole-process supply"
+            },
+            {
+              "History": "H04 mixed assignment",
+              "Discriminator": "Frozen component assignments and interface sequence",
+              "Open": "Additional flexibility must not hide failed predictions"
+            },
+            {
+              "History": "H05 later overprint",
+              "Discriminator": "Exposure/depth/layer relationships",
+              "Open": "Same-region mechanism and timing"
+            }
+          ]
+        },
+        {
+          "id": "W08-S4",
+          "title": "Disposition: require both capability and historical association",
+          "operation": "O9",
+          "inputs": [
+            "W08-S2",
+            "W08-S3",
+            "DCS01",
+            "DCS03"
+          ],
+          "output": "A non-promoting historical assessment",
+          "paragraphs": [
+            "The current corpus has stronger support for some component-scoped propositions than for others. It does not compute a posterior probability for an entire construction history. No numerical prior or likelihood is invented to fill the missing detector and preservation information.",
+            "A candidate advances when its required process can meet the component constraints and its discriminating traces are historically associated. Modern capability alone cannot supply that association."
+          ],
+          "evidenceRefs": [
+            "W09",
+            "W11",
+            "W12",
+            "W15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W09",
+      "label": "Give the mechanical baseline equal scrutiny",
+      "summary": "Source-backed drilling, hauling and documentary transport comparisons, with their boundaries.",
+      "status": "Worked system assessment",
+      "related": [
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "OBS-MERER",
+        "OBS-FRICTION",
+        "W08",
+        "W10"
+      ],
+      "conclusion": "Mechanical and transport mechanisms deserve explicit models and limits. A successful replication establishes a capability for its tested setup; identifying ancient use needs object and contextual evidence.",
+      "steps": [
+        {
+          "id": "W09-S1",
+          "title": "Measurement: a logbook constrains transport without describing every craft",
+          "operation": "O7",
+          "inputs": [
+            "OBS-MERER"
+          ],
+          "output": "A located documentary constraint",
+          "paragraphs": [
+            "Papyrus B I records stone-related work at Tura South and journeys towards Akhet-Khufu with named overnight stops. The published English annex retains missing and uncertain text. Its author explicitly distinguishes this transport account from a description of construction techniques.",
+            "This is evidence relevant to a supply chain. It is not a complete manifest of block masses, a whole-project throughput record or a universal account of which component received every shipment."
+          ],
+          "evidenceRefs": [
+            "external:system-merer"
+          ]
+        },
+        {
+          "id": "W09-S2",
+          "title": "Inference: abrasive working needs tool, medium and object identity",
+          "operation": "O8",
+          "inputs": [
+            "H01",
+            "K03"
+          ],
+          "output": "A bounded mechanical-working comparison",
+          "paragraphs": [
+            "Gorelick and Gwinnett report preliminary experiments addressing drilling traces on a particular granite sarcophagus lid. Their comparisons concern abrasive conditions and concentric marks; they do not settle every stoneworking operation.",
+            "The carrier metal, abrasive, grain replenishment, load, motion and lubrication form one working system. A metal-hardness comparison alone does not describe that system. Conversely, producing a similar mark does not uniquely identify the abrasive or date an operation. Source interpretation and modern replication remain separately recorded."
+          ],
+          "evidenceRefs": [
+            "external:system-drilling",
+            "W03"
+          ]
+        },
+        {
+          "id": "W09-S3",
+          "title": "Evolution: contact mechanics changes haulage demand",
+          "operation": "O5",
+          "inputs": [
+            "OBS-FRICTION",
+            "C19"
+          ],
+          "output": "A hauling and throughput sensitivity boundary",
+          "paragraphs": [
+            "Fall and colleagues measured sand-dependent friction changes in a laboratory sled system. The reported reductions differ across their tested sands. Their study supports investigating granular contact conditions; it does not supply a measured ancient route coefficient.",
+            "The resource calculation below uses assigned capacities and intensities. Mechanical force, practical power, route condition, loading, return journeys and congestion must be measured or bounded separately before inferring crews or schedules. An improvement in friction does not guarantee the same proportional improvement in delivered daily volume."
+          ],
+          "evidenceRefs": [
+            "external:system-friction",
+            "W10"
+          ],
+          "calculationRef": "C19"
+        },
+        {
+          "id": "W09-S4",
+          "title": "Disposition: compare the strongest matched baseline",
+          "operation": "O9",
+          "inputs": [
+            "W09-S1",
+            "W09-S2",
+            "W09-S3",
+            "H02"
+          ],
+          "output": "A baseline specification for treatment comparisons",
+          "paragraphs": [
+            "Chemical assistance should be compared with a competent baseline using specified tools, abrasives, moisture, temperature and work. Preserve operator experience and material variation through blocking or matched specimens. Record tool replacement, finish and waste as well as removed mass.",
+            "The current source audit supports particular mechanical and transport capabilities and documentary constraints. It leaves a component-by-component productivity reconstruction open. A candidate process earns an advantage only on measured accepted output and total resources."
+          ],
+          "evidenceRefs": [
+            "W04",
+            "W06",
+            "DCS02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W10",
+      "label": "Close the construction resource account",
+      "summary": "Demand, parallel stages, shared resources and seasonal availability in one conditional model.",
+      "status": "Worked system assessment",
+      "related": [
+        "P03",
+        "P04",
+        "P07",
+        "W07",
+        "W08",
+        "W09",
+        "DCS03"
+      ],
+      "conclusion": "No complete ancient resource inventory is reconstructed. The executed model exposes bottlenecks and missing quantities instead of supplying an unsupported workforce or completion date.",
+      "steps": [
+        {
+          "id": "W10-S1",
+          "title": "Constraint: declare demand and every account boundary",
+          "operation": "O1",
+          "inputs": [
+            "W07",
+            "H01",
+            "H02",
+            "H03",
+            "H04"
+          ],
+          "output": "A common resource ledger",
+          "paragraphs": [
+            "Track accepted material, removed waste, water, reagents, fuel, tools, transport, labour, workspace and provisions on a shared time axis. Keep stock, daily flow, energy and money in their own units. Recycled flows cross internal boundaries but are not fresh supply twice.",
+            "AERA’s provisioning research demonstrates why food and fuel belong in a construction account. This corpus has not extracted a complete calibrated inventory from it. Assigned scenario intensities below are not Egyptian consumption measurements."
+          ],
+          "evidenceRefs": [
+            "external:system-provision"
+          ]
+        },
+        {
+          "id": "W10-S2",
+          "title": "Evolution: solve the limiting stage under explicit availability",
+          "operation": "O5",
+          "inputs": [
+            "C19",
+            "W07-S3"
+          ],
+          "output": "A capacity and inventory sensitivity result",
+          "paragraphs": [
+            "For parallel stages with buffers and compatible material units, throughput cannot exceed the slowest capacity. Availability scales productive capacity; it is not a license to count every worker or every calendar day as productive. The model calculates a throughput lower bound on duration, not a detailed first-unit or finite-batch schedule.",
+            "The chosen stage rates and operating calendar are illustrative. A full schedule needs precedence, ramp-up, buffers, setup, breakdowns, movement and shared crews. A single resource serving several stages must satisfy their summed demand; the simple minimum-capacity calculation can otherwise overestimate output."
+          ],
+          "evidenceRefs": [
+            "W04",
+            "W09"
+          ],
+          "calculationRef": "C19"
+        },
+        {
+          "id": "W10-S3",
+          "title": "Intervention: freeze a resource comparison before measuring",
+          "operation": "O6",
+          "inputs": [
+            "H01",
+            "H02",
+            "H03",
+            "W10-S2"
+          ],
+          "output": "A resource-return protocol",
+          "paragraphs": [
+            "For each competing chain, record fresh input, internal recovery, waste and accepted output; identify meters, weighing points, durations and responsible stages. Report usable output and rework so that increased production is not obtained by changing quality.",
+            "Resolve data by material and operation. A reagent-per-volume scenario must state whether volume means treated face, removed material, manufactured body or final accepted assembly. Temperature and pressure belong to the process record, while equipment life and upstream manufacture belong to the lifecycle boundary."
+          ],
+          "evidenceRefs": [
+            "W06",
+            "W14"
+          ]
+        },
+        {
+          "id": "W10-S4",
+          "title": "Disposition: reject only the schedule that fails its bound",
+          "operation": "O9",
+          "inputs": [
+            "W10-S1",
+            "W10-S2",
+            "W10-S3",
+            "DCS03"
+          ],
+          "output": "A production feasibility boundary",
+          "paragraphs": [
+            "If a required resource cannot meet demand under its stated upper bound, the proposed schedule fails. That does not by itself exclude every variant of a construction history. If the bounds are merely unmeasured, the result remains unknown.",
+            "The next useful records are registered component quantities and matched accepted-output capacities, followed by route, calendar and shared-resource constraints. The model is ready to consume those records without changing the algebra."
+          ],
+          "evidenceRefs": [
+            "W07",
+            "W15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W11",
+      "label": "Date the event, not just the material",
+      "summary": "A chronology and alteration model separates formation, construction, exposure, repair and sampling.",
+      "status": "Worked system assessment",
+      "related": [
+        "P06",
+        "P07",
+        "H05",
+        "K06",
+        "W05",
+        "B14",
+        "B16",
+        "B17",
+        "B21"
+      ],
+      "conclusion": "A date or chemical gradient must be connected to the event being inferred. Inbuilt age, reuse and later overprints remain distinct uncertainty sources.",
+      "steps": [
+        {
+          "id": "W11-S1",
+          "title": "Constraint: name the dated carrier and target event",
+          "operation": "O1",
+          "inputs": [
+            "K06",
+            "W05"
+          ],
+          "output": "An event-association domain",
+          "paragraphs": [
+            "A mineral’s geological age, carbon fixation in wood, mortar preparation, placement of a body, a repair and a laboratory measurement are different events. Assign each sample and result to the carrier it actually observes before associating it with construction.",
+            "AERA’s dating project discusses calibration and older organic material in monument contexts. It motivates explicit event association; it does not provide a single universal correction that can be subtracted from every pyramid sample."
+          ],
+          "evidenceRefs": [
+            "external:system-dating",
+            "external:oxcal"
+          ]
+        },
+        {
+          "id": "W11-S2",
+          "title": "Evolution: show how inbuilt age changes an apparent association",
+          "operation": "O5",
+          "inputs": [
+            "C20"
+          ],
+          "output": "A synthetic event-time demonstration",
+          "paragraphs": [
+            "The calculation chooses a construction event and several inbuilt ages using astronomical year numbering. Older organic material predates its possible use; a repair is later. This is an ordering demonstration, not a calibration of radiocarbon observations or an estimate of Khufu’s construction date.",
+            "Calibration curves, laboratory errors, reservoir effects and outlier models are not calculated here. Those require assay identifiers, sample selection, context, likelihood and an explicitly justified chronological model."
+          ],
+          "evidenceRefs": [
+            "external:system-dating"
+          ],
+          "calculationRef": "C20"
+        },
+        {
+          "id": "W11-S3",
+          "title": "Intervention: test the spatial sequence of an overprint",
+          "operation": "O6",
+          "inputs": [
+            "H05",
+            "W05-S5"
+          ],
+          "output": "A co-registered alteration comparison",
+          "paragraphs": [
+            "Document original surface orientation and depth, cracks, protected interfaces and treatment history. Compare interior, exposed face, joint and independently identified source rock in the same coordinate frame. Register phase and fabric maps before selecting anomalous regions.",
+            "A surface-associated signal must be tested against ingress, precipitation and conservation alternatives. A proposed original binder needs its formation-related grain relationships demonstrated. Chronology should be supplied by a dated or ordered association rather than inferred from unusual chemistry alone."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "W05"
+          ]
+        },
+        {
+          "id": "W11-S4",
+          "title": "Disposition: preserve ambiguity at the event boundary",
+          "operation": "O9",
+          "inputs": [
+            "W11-S1",
+            "W11-S2",
+            "W11-S3",
+            "DCS01"
+          ],
+          "output": "An event-specific chronological assessment",
+          "paragraphs": [
+            "A dated carrier can constrain a history without dating every process that affected it. Reused old material may give a limit or an offset; a repair may explain a later phase. Neither automatically changes the date of the stone body’s emplacement.",
+            "Return assay and custody identifiers, calibrated distributions where justified, layer relationships and alternative association models. Keep raw age, calibrated age and inferred event separate in the existing claim fields."
+          ],
+          "evidenceRefs": [
+            "B21",
+            "W15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W12",
+      "label": "What can the detector distinguish?",
+      "summary": "A source-backed corridor example and an executed demonstration of line-integral nonuniqueness.",
+      "status": "Worked system assessment",
+      "related": [
+        "P05",
+        "K07",
+        "OBS-CORRIDOR",
+        "B12",
+        "B13",
+        "B18",
+        "DCS04"
+      ],
+      "conclusion": "Muon observations can constrain geometry under a detector and material model. A toy line integral demonstrates ambiguity; it is not a reanalysis of ScanPyramids data or an inference of construction method.",
+      "steps": [
+        {
+          "id": "W12-S1",
+          "title": "Measurement: bind observations to detector and calibration",
+          "operation": "O7",
+          "inputs": [
+            "OBS-CORRIDOR"
+          ],
+          "output": "A detector-scoped source record",
+          "paragraphs": [
+            "The 2023 corridor study joins muon observations with simulation and geometric analysis. Here the primary abstract and indexed figure descriptions establish the example; no raw event counts, detector acceptance or full covariance are fitted.",
+            "A detector record requires exposure, line of sight, energy/angular response, background and calibration. Geometry estimates and their uncertainty belong to the reconstruction model; a historical function is a further inference."
+          ],
+          "evidenceRefs": [
+            "external:pyramid-corridor"
+          ]
+        },
+        {
+          "id": "W12-S2",
+          "title": "Reduction: preserve the information lost in a line integral",
+          "operation": "O3",
+          "inputs": [
+            "C21"
+          ],
+          "output": "A synthetic nonuniqueness example",
+          "paragraphs": [
+            "A single areal-density integral sums density times path length. The displayed synthetic paths have equal integrals but different segment structure. This is the simplest way to show why one integral cannot locate every internal boundary.",
+            "Real muography involves a spectrum, acceptance, scattering and multiple directions; its forward model is not replaced by this scalar sum. Additional views and physical density bounds can remove alternatives. Equal scalar integrals do not imply identical full detector datasets."
+          ],
+          "evidenceRefs": [
+            "K07"
+          ],
+          "calculationRef": "C21"
+        },
+        {
+          "id": "W12-S3",
+          "title": "Inference: separate what was estimated from what was assumed",
+          "operation": "O8",
+          "inputs": [
+            "W12-S1",
+            "W12-S2"
+          ],
+          "output": "A detector-to-property inference ledger",
+          "paragraphs": [
+            "List measured records, forward-model parameters, fixed geometry, estimated geometry and nuisance terms separately. Use independent directions or detectors with their shared uncertainties identified; correlated model assumptions do not disappear when instruments differ.",
+            "A claimed internal feature should survive plausible material and calibration changes. Its presence or geometry does not uniquely determine a construction sequence, religious function or manufacturing chemistry. Those require other observations tied to the same object."
+          ],
+          "evidenceRefs": [
+            "external:pyramid-corridor",
+            "W08"
+          ]
+        },
+        {
+          "id": "W12-S4",
+          "title": "Disposition: make the next measurement discriminate models",
+          "operation": "O9",
+          "inputs": [
+            "DCS04",
+            "W12-S3"
+          ],
+          "output": "A bounded inverse-inference decision",
+          "paragraphs": [
+            "Choose the extra line of sight, independent observation or calibration that separates the surviving alternatives at attainable resolution. Do not request a higher-resolution image without stating which ambiguity it would resolve.",
+            "The current contribution demonstrates the forward/inverse distinction and supplies a real published example. It makes no new discovery inside the pyramid and no claim to have reproduced the original detector analysis."
+          ],
+          "evidenceRefs": [
+            "W15",
+            "B25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W13",
+      "label": "Connect surface kinetics to useful material response",
+      "summary": "An executed reaction–transport bridge with a clear boundary to orbitals, lattices and fracture.",
+      "status": "Worked system assessment",
+      "related": [
+        "P03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B22",
+        "B23",
+        "W02",
+        "W06"
+      ],
+      "conclusion": "A reported apparent thermal sensitivity can be propagated through a conditional transport model. It cannot identify an elementary orbital mechanism or predict granite excavation without more inputs.",
+      "steps": [
+        {
+          "id": "W13-S1",
+          "title": "Reduction: declare what each change of scale preserves",
+          "operation": "O3",
+          "inputs": [
+            "D02",
+            "D03",
+            "D04",
+            "D05",
+            "D06",
+            "B04",
+            "B05",
+            "B06",
+            "B07"
+          ],
+          "output": "A microscopic-to-rock loss ledger",
+          "paragraphs": [
+            "Bloch and Wannier descriptions can be equivalent representations on a declared retained subspace. Truncating that space, creating a surface model, averaging over defects and homogenizing grains are reductions with different losses. They must not be called the same symmetry operation.",
+            "A useful atomistic problem specifies mineral, termination, water/reagent state, defects and boundary conditions. Energies or barriers must be converged and connected to reaction pathways, then tested against observable rates. No quantum, DFT, phonon or fracture simulation is executed in this increment."
+          ],
+          "evidenceRefs": [
+            "external:wannier",
+            "external:qe",
+            "external:phonopy"
+          ]
+        },
+        {
+          "id": "W13-S2",
+          "title": "Evolution: couple a kinetic coefficient to transport",
+          "operation": "O5",
+          "inputs": [
+            "C04",
+            "C22"
+          ],
+          "output": "A conditional cross-scale flux calculation",
+          "paragraphs": [
+            "The model uses the already cited apparent activation energy to change a chosen reference reaction coefficient between 100 and 200 °C. It places reaction and transport resistances in series, multiplies the resulting coefficient by a chosen concentration driving term and converts flux to equivalent quartz recession.",
+            "Every coefficient except the cited apparent activation-energy anchor is declared as an illustrative input. The model is linear, steady, planar and uses an effective concentration difference. It does not reproduce alkaline speciation, surface area evolution, precipitation, fracture or granite mineral mixtures."
+          ],
+          "evidenceRefs": [
+            "external:worked-worley",
+            "W02"
+          ],
+          "calculationRef": "C22"
+        },
+        {
+          "id": "W13-S3",
+          "title": "Inference: identify where microscopic gains stop reaching output",
+          "operation": "O8",
+          "inputs": [
+            "W13-S2",
+            "W06"
+          ],
+          "output": "A bottleneck transfer across scales",
+          "paragraphs": [
+            "In a transport-limited scenario, increasing the reaction coefficient produces a much smaller change in net flux. In a reaction-limited scenario, the same thermal sensitivity has greater influence. This is an executed explanation of why a more reactive surface need not yield a proportionately faster process.",
+            "A fitted apparent activation energy is not an elementary bond-breaking energy or a DFT barrier. A grain-release mechanism also needs crack geometry and mechanical work; equivalent recession is not a cutting-speed measurement. One must establish each bridge rather than multiply labels from unrelated scales."
+          ],
+          "evidenceRefs": [
+            "B09",
+            "B10",
+            "B23"
+          ]
+        },
+        {
+          "id": "W13-S4",
+          "title": "Intervention: select a computation by the observation it could change",
+          "operation": "O6",
+          "inputs": [
+            "W13-S1",
+            "W13-S3",
+            "DCS02"
+          ],
+          "output": "A targeted computation-and-measurement contract",
+          "paragraphs": [
+            "Choose a discriminating observable, such as facet-dependent rate under matched solution conditions or a defect-sensitive spectral feature. Freeze the structure, converged computational setup, expected change, measurement calibration and failure condition. Use the result only within its validated regime.",
+            "If alternative mechanisms give indistinguishable observable predictions at realistic uncertainty, the computation cannot resolve them. The current bounded bridge is mathematical and source-anchored; elementary electronic attribution remains open empirical and computational work."
+          ],
+          "evidenceRefs": [
+            "W15",
+            "B25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W14",
+      "label": "Compare complete Perth building systems",
+      "summary": "Geometry, package costs, climate, compliance, services, training and whole-life emissions for the 180 m² anchor.",
+      "status": "Worked system assessment",
+      "related": [
+        "W04",
+        "W10",
+        "K03",
+        "K04",
+        "DCS05",
+        "BLD-PERTH-180"
+      ],
+      "conclusion": "The executed budget and carbon models are conditional planning scenarios, not market quotes or verified savings. Alternative wall materials must compete as complete performance-equivalent building assemblies.",
+      "steps": [
+        {
+          "id": "W14-S1",
+          "title": "Constraint: define the same house and performance for every option",
+          "operation": "O1",
+          "inputs": [
+            "BLD-PERTH-180"
+          ],
+          "output": "A residential comparison domain",
+          "paragraphs": [
+            "The anchor is a 180 m² single-storey dwelling on a level serviced Perth block. The model uses a 15 by 12 metre rectangle, chosen wall height, openings, partitions, slab thickness, eaves and pitched-roof allowance. It excludes land, finance, demolition, abnormal ground, subdivision and major off-site works.",
+            "Hold usable area, structural service, fire and moisture performance, thermal comfort, accessibility requirements that apply, acoustic needs and service life constant. A low-cost wall or binder cannot substitute for roofing, foundations, windows, plumbing and electrical work."
+          ],
+          "evidenceRefs": [
+            "external:system-lca"
+          ]
+        },
+        {
+          "id": "W14-S2",
+          "title": "Reduction: turn geometry into a consistent quantity basis",
+          "operation": "O3",
+          "inputs": [
+            "C23"
+          ],
+          "output": "A geometric quantity takeoff",
+          "paragraphs": [
+            "The calculation separates floor footprint, gross external wall area, openings, net wall area, internal partition area, planar slab volume and roof cover area. The roof approximation includes eaves, pitch and a separate waste allowance.",
+            "It is not a structural design or bill of all installed materials. Foundations need geotechnical design and thickening; roof trusses, fixings, valleys and openings need layout. Internal wall finish is counted on two faces; the external assembly area is counted once."
+          ],
+          "evidenceRefs": [
+            "W07"
+          ],
+          "calculationRef": "C23"
+        },
+        {
+          "id": "W14-S3",
+          "title": "Inference: expose every budget allowance and excluded cost",
+          "operation": "O8",
+          "inputs": [
+            "C24"
+          ],
+          "output": "An auditable conditional package budget",
+          "paragraphs": [
+            "Direct package allowances are authored in AUD excluding GST. Builder markup, contingency and GST are applied once in the declared order. A low/base/high sensitivity scales the same package scope rather than presenting an unsupported market confidence interval.",
+            "These amounts are assumptions that can be replaced by matched current quotes. They do not establish a Perth market price, finance approval or contractor offer. The earlier W04 budget was a separate illustrative total; this expanded package model has a new explicit tax and scope basis."
+          ],
+          "evidenceRefs": [
+            "W04",
+            "DCS05"
+          ],
+          "calculationRef": "C24"
+        },
+        {
+          "id": "W14-S4",
+          "title": "Constraint: join climate, regulation, materials and services",
+          "operation": "O1",
+          "inputs": [
+            "DCS05"
+          ],
+          "output": "A complete assembly and delivery constraint register",
+          "paragraphs": [
+            "WA’s May 2026 building bulletin records NCC 2025 adoption and WA modifications. Building edition and transition applicability must be fixed for the permit. The plumbing bulletin separately adopts PCA 2025 and AS/NZS 3500 Parts 1, 2 and 4:2025 for regulated work; electrical guidance identifies AS/NZS 3000:2018. No licensed standard’s full text or project certification is reproduced.",
+            "Perth Metro climatology motivates seasonal heat and rain assessment. A specific site still needs orientation, shading, wind exposure, soil, drainage and any applicable fire, corrosion, flood or termite provisions. Average weather is not a design extreme."
+          ],
+          "evidenceRefs": [
+            "external:system-wa-building",
+            "external:system-wa-plumbing",
+            "external:system-wa-electrical",
+            "external:system-perth-climate"
+          ],
+          "matrix": [
+            {
+              "Topic": "Roofing and weather",
+              "Required": "Complete roof structure, cover, drainage, flashings, condensation and attachment design",
+              "Return": "Coordinated drawings and priced assembly; verify compatible interfaces"
+            },
+            {
+              "Topic": "Materials and composition",
+              "Required": "Product composition, strength, moisture response, durability and traceable supply",
+              "Return": "Tests and declarations for the exact product and assembly"
+            },
+            {
+              "Topic": "Shapes and construction ease",
+              "Required": "Corners, openings, spans, tolerances, penetrations and repair methods",
+              "Return": "Representative assembly trial and measured rework"
+            },
+            {
+              "Topic": "Plumbing and electrical",
+              "Required": "Accessible service routes, waterproofing, penetrations and fire/moisture continuity",
+              "Return": "Licensed design/installation scope, verification and connection quotes"
+            },
+            {
+              "Topic": "Training and use",
+              "Required": "Crew learning time, curing/handling, inspection, tooling and quality release",
+              "Return": "Training, supervision and pilot productivity included in cost"
+            },
+            {
+              "Topic": "Available systems",
+              "Required": "Compare locally quoted masonry, framed and candidate cast/binder assemblies",
+              "Return": "Same performance, service life, inclusions, lead time and maintenance scope"
+            }
+          ]
+        },
+        {
+          "id": "W14-S5",
+          "title": "Evolution: test lifecycle break-even rather than assume abatement",
+          "operation": "O5",
+          "inputs": [
+            "C25"
+          ],
+          "output": "A conditional whole-life emissions comparison",
+          "paragraphs": [
+            "The illustrative carbon model compares complete wall assemblies over the chosen building service life. It subtracts added treatment, replacement and operational penalties from the initial embodied advantage. Every emissions factor is chosen; no product EPD or Australian grid factor is claimed.",
+            "A reaction that consumes or emits CO₂ is only one inventory term. Reagent manufacture, process heat, transport, curing, recovery and disposal must be included on a compatible boundary. Cost-saving fractions cannot be reused as carbon-saving fractions."
+          ],
+          "evidenceRefs": [
+            "external:system-lca",
+            "W06"
+          ],
+          "calculationRef": "C25"
+        },
+        {
+          "id": "W14-S6",
+          "title": "Disposition: advance an assembly only when the comparison closes",
+          "operation": "O9",
+          "inputs": [
+            "W14-S2",
+            "W14-S3",
+            "W14-S4",
+            "W14-S5",
+            "DCS05"
+          ],
+          "output": "A residential evidence-return specification",
+          "paragraphs": [
+            "Request equivalent-scope package quotes, exact product and assembly tests, site/permit assumptions, measured pilot productivity, maintenance intervals and lifecycle inventories. Allocate certification, training and interface costs to the candidate rather than hiding them in common costs.",
+            "The useful modern outcome could be a better conventional assembly, a narrowly useful treatment or a new binder. None requires a lost ancient technology claim. The model now shows which records would turn a conditional estimate into a defensible project comparison."
+          ],
+          "evidenceRefs": [
+            "W15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W15",
+      "label": "Choose the next observation that can change a decision",
+      "summary": "A linked decision board exposes evidence roles, dependencies, counterevidence and stopping rules.",
+      "status": "Worked system assessment",
+      "related": [
+        "DCS01",
+        "DCS02",
+        "DCS03",
+        "DCS04",
+        "DCS05",
+        "DCS06",
+        "W08",
+        "W10",
+        "W12",
+        "W14"
+      ],
+      "conclusion": "The corpus can organize actionable comparisons without a truth score. Missing empirical records remain visible; a demonstrated decision method does not supply numerical historical probabilities.",
+      "steps": [
+        {
+          "id": "W15-S1",
+          "title": "Constraint: keep claim identity and evidence lineage explicit",
+          "operation": "O1",
+          "inputs": [
+            "DCS01",
+            "DCS02",
+            "DCS03",
+            "DCS04",
+            "DCS05"
+          ],
+          "output": "A source-dependent claim contract",
+          "paragraphs": [
+            "Reuse the existing epistemic-claim fields: claim version, evidence, counterevidence, qualifications, dependencies, challenges and provenance. The decision board adds source-owned questions, required records, decision and retirement rules to that same kernel. No new authority mechanism is created.",
+            "A repeated citation is not an independent experiment. Jana’s reproduced Harrell-attributed material remains a shared lineage; hydrothermal studies with overlapping authors and material need trial-level independence assessed. Record source families before any synthesis."
+          ],
+          "evidenceRefs": [
+            "W05",
+            "W06"
+          ]
+        },
+        {
+          "id": "W15-S2",
+          "title": "Inference: separate structural readiness from scientific support",
+          "operation": "O8",
+          "inputs": [
+            "DCS06"
+          ],
+          "output": "A decision-specific evidence ledger",
+          "paragraphs": [
+            "The board links decisions to components, histories and studies. It states what observation could change each decision and when to retire or narrow the proposal. Resolved references show that a record exists; they do not show that its scientific claim is established.",
+            "A useful negative result can close a bridge. A missing record is unknown. A contradictory observation must remain linked to the exact prediction it challenges, and a revision should state whether it changed scope, assumptions or the explanation."
+          ],
+          "evidenceRefs": [
+            "W08",
+            "W11",
+            "W12"
+          ]
+        },
+        {
+          "id": "W15-S3",
+          "title": "Inference: demonstrate decision sensitivity without invented probabilities",
+          "operation": "O8",
+          "inputs": [
+            "C26"
+          ],
+          "output": "A synthetic scenario-regret comparison",
+          "paragraphs": [
+            "The small decision example uses assigned costs for two actions in two states. It computes state-wise regret and the action minimizing worst-case regret. Knowing the state can change the preferred action; this makes the information relevant.",
+            "The entries are not historical likelihoods, project prices or experimental effect estimates. A worst-case regret reduction is not expected monetary value of information. Expected value needs justified probabilities, information outcomes and acquisition costs; none are supplied here."
+          ],
+          "evidenceRefs": [
+            "DCS06"
+          ],
+          "calculationRef": "C26"
+        },
+        {
+          "id": "W15-S4",
+          "title": "Disposition: prioritize attainable discriminators and stop unproductive work",
+          "operation": "O9",
+          "inputs": [
+            "DCS06",
+            "W15-S2",
+            "W15-S3"
+          ],
+          "output": "A qualitative research priority and stopping rule",
+          "paragraphs": [
+            "First obtain low-effort records that can resolve object identity, source dependence, quantities or comparator scope. Then select matched observations capable of separating the active histories. A high-cost experiment is justified by a specific decision threshold and attainable uncertainty, not by the popularity of the hypothesis.",
+            "Stop or narrow work when plausible observation outcomes would not change the decision, the proposed detector cannot distinguish the alternatives, or a decisive constraint already defeats the scoped proposal. This is a research-selection rule, not a claim that all 26 bridges are now scientifically closed."
+          ],
+          "evidenceRefs": [
+            "DCS01",
+            "DCS02",
+            "DCS03",
+            "DCS04",
+            "DCS05"
           ]
         }
       ]

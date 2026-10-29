@@ -10,7 +10,7 @@ W04 uses the same worked-step field renderer, collection controls, section navig
 
 The worked-investigation collection uses the existing grammar-driven search, paging and navigation. Its record pages render declared research steps, local section navigation, source links, alternative-history description lists and calculation tables through the same native surface compiler. The `worked-steps` field renderer is an explicit publication adapter over the existing node primitives; it introduces no new interpreter or browser control semantics. Table containers scroll locally on narrow screens and retain native table headers and keyboard focus.
 
-The thirty-one steps each retain one primary output and an existing operation-family identity. All their inputs remain conjunctive. The five dossiers, thirty-one steps and twelve calculation/transcription views receive the unchanged twelve-coordinate kernel in the semantic decomposition. Thirteen added references use the existing source-record path. Numerical code is bound in the source hash and is independently testable. The original atlas is preserved.
+The seventy-six steps retain one primary output and an existing operation-family identity. All required inputs remain conjunctive. Fifteen studies and twenty-six calculation/transcription views receive the unchanged twelve-coordinate kernel. Components, histories, decisions and source observations preserve their own record identities and source support. The original atlas and retained implementations remain unchanged.
 
 | Surface | Primary responsibility | Source meaning | Existing realization |
 |---|---|---|---|
@@ -51,3 +51,5 @@ The generated `data/publication-receipt.json`, `data/semantic-decomposition.json
 The W06 extension uses the same declared study sections and calculation-table rendering. Source transcriptions and conditional transformations retain distinct data classes, visible assumptions, linked record identities and output scopes. No new renderer or runtime lane is introduced.
 
 The inverse-density quantity map adds mass-flux → equivalent recession with coefficient dimension m³/kg and explicit g-to-kg scaling. The existing composer rejects a corrupted mass exponent; numerical tests separately check conservation and area/density sensitivity.
+
+The construction extension adds three source-declared collections: seven pyramid components, a separate modern dwelling anchor, five histories and six decisions. History sequences, predictions, qualifications and counterevidence are separate fields. Context dependencies are navigation and scope requirements, not evidence that every component underwent one process. No scientific truth score, likelihood or workflow executor is added. Existing native sections and tables render the nine new studies. The additional quantity maps declare concentration and thickness dimensions; numerical adapters remain distinct from retained algebra compatibility checks.

@@ -234,5 +234,59 @@
     ],
     "newMeasurements": false,
     "historicalPromotion": false
+  },
+  "constructionSystemExtension": {
+    "date": "2026-10-30",
+    "scope": "Representative local browser checks; live deployment checked separately",
+    "observations": [
+      {
+        "route": "components/",
+        "result": "Seven pyramid components and a modern anchor use the retained collection controls. Next-page navigation and Granite chamber search/action verified."
+      },
+      {
+        "route": "decisions/",
+        "result": "Modern engineering facet returns one decision; action opens its required evidence and retirement rule."
+      },
+      {
+        "route": "histories/H03/",
+        "result": "Ordered process, rival, qualifications, source-scoped counterevidence and connected studies visible; width 320 gives client/scroll 305/305."
+      },
+      {
+        "route": "studies/W14/",
+        "result": "Six steps and three tables; base scenario total 523204 AUD visible; costs visibly authored, not quotes."
+      },
+      {
+        "route": "studies/W14/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "result": "Three table containers scroll locally."
+      },
+      {
+        "route": "studies/W14/",
+        "nominalWidth": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "result": "No document-level horizontal overflow."
+      },
+      {
+        "route": "",
+        "result": "Main hero links to the five-history collection; component and decision navigation visible."
+      },
+      {
+        "route": "studies/W13/",
+        "result": "Study search returns exactly one record; action opens the surface-kinetics study; four reaction/transport rows and source-bound assumptions visible."
+      }
+    ],
+    "newExperiments": false,
+    "certifiedDesign": false,
+    "verifiedAbatement": false,
+    "sourceHashes": {
+      "corpus/construction-system.json": "51c47689356e28a1e211f7b66f9c7007815fa83f3312f3d36c0aebf9113188f2",
+      "corpus/worked-investigations.json": "eeb70ffe3eaf5b376262ac32702df8ac744c2709cfe9bbe70b10355fa86831b2",
+      "data/publication.json": "ae8838d0a9499ff62e353a4c3923e21aa0bff5c59d047d8cf359ac8b1c6e82a3",
+      "scripts/build.mjs": "146b4ebf887217d6d687b3ed1062b0240b4b384e2e1af1a9cc8dc89e6efdc8d1",
+      "scripts/worked-calculations.mjs": "68adac22ada12eb07ea6696cee576e1f0a701bc375870fc4fa0fccfd04c50ec3"
+    }
   }
 }

@@ -390,6 +390,114 @@
       "supports": "Coupled alteration, particulate removal and precipitation motivate separate stream measurements.",
       "access": "Primary PDF, especially Section 6, reviewed selectively. Diluted-effluent concentrations not measured; no numerical conditions extracted for the comparison.",
       "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-survey",
+      "label": "Casing-base survey — Dash, 2015",
+      "url": "https://aeraweb.org/wp-content/uploads/2022/08/aeragram16_2.pdf",
+      "citation": "Glen Dash, AERAGRAM 16-2 (Fall 2015), Great Pyramid survey report, printed pp.8–14",
+      "supports": "Casing-base side estimates; platform distinguished from casing.",
+      "access": "Primary PDF Table 1, printed p.11, locally rendered and visually checked. Selected survey discussion read; covariance not reconstructed.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-merer",
+      "label": "Stone transport logbook — Tallet, 2017",
+      "url": "https://www.ifao.egnet.net/uploads/publications/divers/MIFAO136_ann_01.pdf",
+      "citation": "Pierre Tallet, Les papyrus de la mer Rouge I, English annex translated by Colin Clement (2017), pp.149–152",
+      "supports": "Located transport entries and author interpretation, with textual lacunae and limits.",
+      "access": "Primary English translation, Papyrus B I and summary, read. No whole-project payload or rate inferred.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-friction",
+      "label": "Wet and dry sand friction — Fall et al., 2014",
+      "url": "https://pure.uva.nl/ws/files/2365399/160672_Sliding_Friction_on_Wet_and_Dry_Sand.pdf",
+      "citation": "Fall et al., Physical Review Letters 112, 175502 (2014), DOI 10.1103/PhysRevLett.112.175502",
+      "supports": "Sand-dependent laboratory friction change and capillary/elastic response.",
+      "access": "Primary published paper in university repository, methods and Figure 5 discussion read. No ancient coefficient or route identified.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-drilling",
+      "label": "Stone drilling experiments — Gorelick and Gwinnett, 1983",
+      "url": "https://www.penn.museum/sites/expedition/ancient-egyptian-stone-drilling/",
+      "citation": "Leonard Gorelick and A. John Gwinnett, Ancient Egyptian Stone-Drilling, Expedition (1983)",
+      "supports": "Preliminary object-specific replication and competing abrasive explanations.",
+      "access": "Primary museum article read, including conclusions. Its object-specific interpretation is not promoted to every pyramid operation; erroneous chemical description of corundum is not adopted.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-field",
+      "label": "Giza field recording — AERA/ISAC, 2024–25",
+      "url": "https://isac.uchicago.edu/sites/oi.uchicago.edu/files/uploads/shared/docs/Publications/Annual-Reports/2024-2025/AR2024-25_Giza_Plateau.pdf",
+      "citation": "Giza Plateau Mapping Project, ISAC Annual Report 2024–2025",
+      "supports": "Reported survey recording of worked platform features.",
+      "access": "Primary project report indexed passage inspected; no raw point cloud or productivity series obtained.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-dating",
+      "label": "Pyramid dating and inbuilt age — AERA",
+      "url": "https://aeraweb.org/projects/how-old-are-the-pyramids/",
+      "citation": "AERA, How Old Are the Pyramids? project account",
+      "supports": "Organic-material dating, calibration and older-material interpretations require event association.",
+      "access": "Primary project account read; no dates recalibrated or new chronological posterior calculated.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-provision",
+      "label": "Provisioning and fuel — AERA",
+      "url": "https://aeraweb.org/feeding-pyramid-workers/",
+      "citation": "AERA, Feeding Pyramid Workers",
+      "supports": "Settlement provisioning and fuel belong in the construction system.",
+      "access": "Primary project synthesis inspected; food/fuel quantities not extracted as a calibrated full-project inventory.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-lca",
+      "label": "Comparable building lifecycle boundaries — GSA",
+      "url": "https://www.gsa.gov/governmentwide-initiatives/federal-highperformance-buildings/highperformance-building-clearinghouse/integrative-design-strategies/life-cycle-perspective/life-cycle-assessment-and-buildings",
+      "citation": "US General Services Administration, Life cycle assessment and buildings",
+      "supports": "Functional unit, whole-building coverage and service-life comparison.",
+      "access": "Official methodological guidance read; supplies none of the illustrative Australian cost or emissions factors.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-wa-building",
+      "label": "WA building-code adoption — Industry Bulletin 176",
+      "url": "https://www.wa.gov.au/system/files/2026-05/ib176_modifications_to_bca_2025_bar_no2_2026.pdf",
+      "citation": "WA Building and Energy, Industry Bulletin 176 (May 2026)",
+      "supports": "NCC 2025 adoption from 1 May 2026 and specific WA modifications.",
+      "access": "Official bulletin read; not a complete project-specific compliance assessment or licensed full standards text.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-wa-plumbing",
+      "label": "WA plumbing standards — Industry Bulletin 173",
+      "url": "https://www.wa.gov.au/system/files/2026-04/ib173_adoption_of_the_pca2025_and_standards_update.pdf",
+      "citation": "WA Building and Energy, Industry Bulletin 173 (April 2026)",
+      "supports": "PCA 2025 and referenced AS/NZS 3500 Parts 1,2,4:2025, with WA variations.",
+      "access": "Official bulletin read; building-code transitional choices are not assumed to apply to regulated plumbing work.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-wa-electrical",
+      "label": "WA electrical rules and verification",
+      "url": "https://www.wa.gov.au/government/multi-step-guides/information-electrical-licence-holders/electrical-technical-guidance",
+      "citation": "WA Building and Energy, Electrical technical guidance",
+      "supports": "Electrical installation and verification requirements refer to AS/NZS 3000:2018.",
+      "access": "Official current guidance inspected; no circuit design or electrical compliance certification performed.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "system-perth-climate",
+      "label": "Perth Metro climate observations — BoM",
+      "url": "https://www.bom.gov.au/climate/averages/tables/cw_009225.shtml",
+      "citation": "Bureau of Meteorology, station 009225, Perth Metro",
+      "supports": "Station climatology distinguishes seasonal temperature and rainfall inputs.",
+      "access": "Official monthly statistics inspected 30 October 2026. Climate averages are not site wind, bushfire, flood or drainage design values.",
+      "reviewed": "2026-10-30"
     }
   ],
   "sourceReport": {

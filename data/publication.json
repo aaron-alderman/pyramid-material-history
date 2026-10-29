@@ -18,6 +18,14 @@
         "href": "studies/"
       },
       {
+        "label": "Construction model",
+        "href": "components/"
+      },
+      {
+        "label": "Decisions",
+        "href": "decisions/"
+      },
+      {
         "label": "Evidence coverage",
         "href": "coverage/"
       },
@@ -60,6 +68,10 @@
       "deck": "Electronic states shape bonds. Minerals form stone. People transform materials. Time changes the traces. Follow the missing middles that connect them.",
       "actions": [
         {
+          "label": "Compare the construction histories",
+          "href": "histories/"
+        },
+        {
           "label": "Follow a worked investigation",
           "href": "studies/"
         },
@@ -87,7 +99,7 @@
       "closingAction": "Enter the full corpus",
       "workedEyebrow": "THE NEXT LAYER · WORKED INVESTIGATIONS",
       "workedTitle": "Follow the evidence through the middle.",
-      "workedDescription": "Follow material identity, chemistry, competing histories, variation analysis and a primary-source sample audit. Inspect reported measurements, reproducible calculations and the gaps that remain."
+      "workedDescription": "Fifteen worked studies connect material identity, competing construction histories, production, chronology, detectors and the Perth building comparison. Reported observations and conditional models remain separately scoped."
     },
     "article": {
       "title": "The full material history atlas",
@@ -227,6 +239,24 @@
             {
               "label": "Inspect bridge coverage",
               "href": "coverage/"
+            }
+          ]
+        },
+        {
+          "title": "Construction and decision records",
+          "copy": "Components, histories and decisions reuse the twelve-coordinate kernel, epistemic-claim fields and existing collection grammar. Context dependencies retain their identities; ordered process chains do not automatically acquire empirical authority. The numerical adapter exposes the assumptions and losses of each cross-scale or engineering transformation.",
+          "links": [
+            {
+              "label": "Construction-system source records",
+              "href": "corpus/construction-system.json"
+            },
+            {
+              "label": "Compare histories",
+              "href": "histories/"
+            },
+            {
+              "label": "Decision board",
+              "href": "decisions/"
             }
           ]
         }
@@ -762,6 +792,240 @@
         "actionDescription": "Inspect the evidence roles and remaining gaps for this bridge.",
         "detailEyebrow": "EVIDENCE COVERAGE",
         "backLabel": "All bridge coverage"
+      },
+      {
+        "id": "components",
+        "route": "components/",
+        "title": "Identify the component before comparing its history",
+        "eyebrow": "CONSTRUCTION SYSTEM",
+        "description": "Seven pyramid component classes and a separate modern dwelling anchor keep material, geometry, joints, bedrock, voids and later surfaces distinct. Quantity unknowns remain explicit.",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Material identity",
+            "path": [
+              "material"
+            ]
+          },
+          {
+            "label": "Geometry and quantity boundary",
+            "path": [
+              "geometry"
+            ]
+          },
+          {
+            "label": "Constraints and unknowns",
+            "path": [
+              "constraints"
+            ]
+          },
+          {
+            "label": "Evidence and assessments",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Connected histories and studies",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ],
+        "filter": {
+          "path": [
+            "category"
+          ],
+          "label": "Component role",
+          "emptyLabel": "All records"
+        },
+        "searchLabel": "Search components",
+        "searchPlaceholder": "Search materials, dependencies, predictions or open questions…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its scope and linked evidence.",
+        "detailEyebrow": "COMPONENTS",
+        "backLabel": "All components"
+      },
+      {
+        "id": "histories",
+        "route": "histories/",
+        "title": "Compare complete construction histories",
+        "eyebrow": "CONSTRUCTION SYSTEM",
+        "description": "Ordered candidate chains preserve predictions, required resources, counterarguments and historical limits. Mixed methods and later overprints remain explicit.",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Claim status",
+            "path": [
+              "status"
+            ]
+          },
+          {
+            "label": "Process sequence",
+            "path": [
+              "sequence"
+            ]
+          },
+          {
+            "label": "Predicted observations",
+            "path": [
+              "predictions"
+            ]
+          },
+          {
+            "label": "Qualifications",
+            "path": [
+              "qualifications"
+            ]
+          },
+          {
+            "label": "Strongest rival",
+            "path": [
+              "strongestRival"
+            ]
+          },
+          {
+            "label": "Challenge",
+            "path": [
+              "challenges"
+            ]
+          },
+          {
+            "label": "Retirement or narrowing rule",
+            "path": [
+              "retirementRule"
+            ]
+          },
+          {
+            "label": "Published counterevidence within its sample scope",
+            "path": [
+              "counterevidence"
+            ],
+            "kind": "references",
+            "emptyText": "No separately catalogued counterevidence here; this is not evidence of its absence."
+          },
+          {
+            "label": "Scope of linked components",
+            "path": [
+              "dependencyMeaning"
+            ]
+          },
+          {
+            "label": "Component scope records",
+            "path": [
+              "dependencies"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Evidence and comparisons",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Connected studies",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ],
+        "filter": {
+          "path": [
+            "category"
+          ],
+          "label": "Evidential scope",
+          "emptyLabel": "All records"
+        },
+        "searchLabel": "Search histories",
+        "searchPlaceholder": "Search materials, dependencies, predictions or open questions…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its scope and linked evidence.",
+        "detailEyebrow": "HISTORIES",
+        "backLabel": "All histories"
+      },
+      {
+        "id": "decisions",
+        "route": "decisions/",
+        "title": "Choose evidence that can change a decision",
+        "eyebrow": "CONSTRUCTION SYSTEM",
+        "description": "Inspect the required records, competing dependencies and stopping rules. These are open research and engineering decisions, without scientific truth scores.",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Current status",
+            "path": [
+              "status"
+            ]
+          },
+          {
+            "label": "All required context records",
+            "path": [
+              "dependencies"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Required evidence return",
+            "path": [
+              "requiredEvidence"
+            ]
+          },
+          {
+            "label": "Decision rule",
+            "path": [
+              "decisionRule"
+            ]
+          },
+          {
+            "label": "Retirement or narrowing rule",
+            "path": [
+              "retirementRule"
+            ]
+          },
+          {
+            "label": "Qualifications",
+            "path": [
+              "qualifications"
+            ]
+          },
+          {
+            "label": "Worked comparisons",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ],
+        "filter": {
+          "path": [
+            "category"
+          ],
+          "label": "Decision type",
+          "emptyLabel": "All records"
+        },
+        "searchLabel": "Search decisions",
+        "searchPlaceholder": "Search materials, dependencies, predictions or open questions…",
+        "actionLabel": "Inspect record",
+        "actionDescription": "Open the exact record, its scope and linked evidence.",
+        "detailEyebrow": "DECISIONS",
+        "backLabel": "All decisions"
       }
     ]
   }

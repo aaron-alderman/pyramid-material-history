@@ -15,7 +15,7 @@ The pyramids are the canonical example. Khufu's Great Pyramid is the first named
 
 ## What is here
 
-The next layer is populated: [six worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility, archaeological discrimination, variation analysis a primary-source sample audit and useful-removal analysis. They contain thirty-eight atomic research steps, sixteen additional source records and sixteen reproducible calculation/transcription views. These are desk investigations using source-reported observations and explicit scenarios; no new physical experiment or monument sampling was performed.
+The corpus now has [fifteen worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/), seventy-six atomic steps and twenty-six calculation/transcription views. The comprehensive construction extension connects component geometry, competing process histories, the mechanical baseline, resource closure, chronology, detector inference, reaction–transport scaling and the Perth 180 m² building comparison. Desk delivery is complete for these nine packages; the studies identify the empirical returns still needed. No new physical experiment, excavation, quantum computation, certified design, market quote or verified abatement is claimed.
 
 Start with [the canonical investigation records](corpus/worked-investigations.json), [calculation inputs](corpus/calculation-inputs.json) and [the numerical adapter](scripts/worked-calculations.mjs). The build publishes every calculation, its assumptions and the retained composer's quantity-dimension checks. Source access limits are visible on individual source pages. Proposed controls and unmeasured rates retain their scope.
 
@@ -56,3 +56,9 @@ GitHub Actions rebuilds and qualifies the publication before deploying it to Git
 Research and documentation are CC BY-SA 4.0. Software is GPL-3.0-or-later; identified third-party material retains its own terms. See [LICENSE.md](LICENSE.md).
 
 [From selective reaction to useful removal](https://aaron-alderman.github.io/pyramid-material-history/studies/W06/) preserves published high-pressure granite rates and normalized residue compositions. Its conditional conversions expose geometry and denominator assumptions. [Source records](corpus/removal-evidence.json) retain units, precision, source hashes and missing data. No atmospheric shaping rate, archaeological attribution or building-cost/CO₂ saving is inferred.
+
+## Construction and decision system
+
+Start with the [components](https://aaron-alderman.github.io/pyramid-material-history/components/), [five construction histories](https://aaron-alderman.github.io/pyramid-material-history/histories/) and [decision board](https://aaron-alderman.github.io/pyramid-material-history/decisions/). Their canonical source is [construction-system.json](corpus/construction-system.json). The same retained collection grammar supplies search, declared facets, paging and record navigation.
+
+The survey transcription preserves source precision. All other new numerical models state whether their inputs are source-anchored or assigned. The Perth package budget explicitly separates direct costs, markup, contingency and GST; the emissions model uses chosen scenario factors and cannot establish savings without equivalent-scope inventories.

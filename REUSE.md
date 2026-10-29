@@ -82,3 +82,13 @@ The full article is an imported Markdown region. Surface composition binds that 
 **Falsifiers:** invented trial pairings; rate/unit drift; dashes imputed as zero; percentages treated as absolute stock without a compatible yield; atmospheric or ancient use inferred from hydrothermal rates; cost or CO₂ savings without a process inventory.
 
 **Disposition:** publish after numerical, retained-source, semantic, native UI and browser checks. Modern process performance and historical occurrence retain separate evidence requirements.
+
+## Comprehensive construction extension · 30 October 2026
+
+**Claim:** the same substrate can organize whole construction histories and modern engineering comparisons, with object identity, process order, uncertainty and decision boundaries retained.
+
+**Evidence:** nine added studies, thirty-eight atomic outputs, nineteen component/history/decision records, four source observations, twelve primary/official source records and ten calculation views. Existing epistemic-claim coordinates and the Claimipedia strongest-rival/challenge/retirement pattern informed the authored records; no implementation bytes from additional private modules are published. The relationship algebra preserves joint context; the retained scientific composer checks five declared quantity maps.
+
+**Falsifiers:** gross volume reported as net imported stone; synthetic resource inputs called ancient measurements; old organic material automatically dating construction; scalar opacity replacing a full detector model; apparent activation energy called an elementary orbital barrier; package cost scenarios called current quotes; carbon assumptions called verified abatement; unresolved source references; or reference readiness promoted to scientific truth.
+
+**Disposition:** publish the desk extension after unit, conservation, reference, retained-module, UI and browser checks. Actual experiments, raw detector reanalysis, quantum calculations, supplier quotes and certified project designs remain explicitly unperformed. No new Sourcery lane, registry or execution authority.

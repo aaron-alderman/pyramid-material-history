@@ -1,6 +1,6 @@
 {
   "protocol": "material-history-evidence-coverage/1",
-  "scope": "Authored coverage assessment for this corpus, not a literature-exhaustiveness claim or scientific truth score",
+  "scope": "Source-owned coverage assessments, including focused source audits and scoped desk analyses. Review scope is not bridge closure, a literature-exhaustiveness claim or a truth score.",
   "rows": [
     {
       "id": "coverage-B10",
@@ -26,7 +26,8 @@
       "studyRefs": [
         "W02",
         "W04",
-        "W06"
+        "W06",
+        "W13"
       ]
     },
     {
@@ -50,7 +51,8 @@
       ],
       "studyRefs": [
         "W01",
-        "W06"
+        "W06",
+        "W07"
       ]
     },
     {
@@ -76,7 +78,10 @@
       "studyRefs": [
         "W02",
         "W04",
-        "W06"
+        "W06",
+        "W08",
+        "W09",
+        "W10"
       ]
     },
     {
@@ -97,7 +102,8 @@
       ],
       "studyRefs": [
         "W03",
-        "W05"
+        "W05",
+        "W11"
       ]
     },
     {
@@ -118,7 +124,8 @@
         "Raw spectra, analytical uncertainty, detection limit and exact inset coordinates."
       ],
       "studyRefs": [
-        "W05"
+        "W05",
+        "W12"
       ]
     },
     {
@@ -140,7 +147,9 @@
       ],
       "studyRefs": [
         "W03",
-        "W05"
+        "W05",
+        "W08",
+        "W15"
       ]
     },
     {
@@ -163,7 +172,8 @@
       "studyRefs": [
         "W02",
         "W04",
-        "W05"
+        "W05",
+        "W09"
       ]
     },
     {
@@ -190,7 +200,10 @@
       "studyRefs": [
         "W02",
         "W04",
-        "W06"
+        "W06",
+        "W10",
+        "W13",
+        "W14"
       ]
     },
     {
@@ -247,15 +260,17 @@
       "bridgeRefs": [
         "B04"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 distinguishes a periodic model from finite surfaces and retained-subspace representation.",
+      "measuredInputs": "No new electronic-structure dataset or converged DFT calculation.",
       "modelRefs": [],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B05",
@@ -263,15 +278,17 @@
       "bridgeRefs": [
         "B05"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 preserves the Bloch/Wannier equivalence boundary and separates truncation losses.",
+      "measuredInputs": "No new Wannier transformation or localization calculation.",
       "modelRefs": [],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B06",
@@ -279,15 +296,17 @@
       "bridgeRefs": [
         "B06"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 declares termination, defects, solution state and boundary conditions for a targeted surface model.",
+      "measuredInputs": "No new atomistic surface or defect energy series.",
       "modelRefs": [],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B07",
@@ -295,15 +314,17 @@
       "bridgeRefs": [
         "B07"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 identifies the missing force/defect/fracture bridge to useful grain release.",
+      "measuredInputs": "No new force constants, phonon or fracture simulation.",
       "modelRefs": [],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B08",
@@ -311,15 +332,17 @@
       "bridgeRefs": [
         "B08"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 separates electronic energies, elementary barriers and fitted apparent activation energy.",
+      "measuredInputs": "No new statistical-mechanical free-energy calculation.",
       "modelRefs": [],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B09",
@@ -327,15 +350,19 @@
       "bridgeRefs": [
         "B09"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 executes a source-anchored thermal sensitivity inside an explicitly conditional transport model.",
+      "measuredInputs": "Reported apparent activation-energy anchor only; reference and transport coefficients assigned.",
+      "modelRefs": [
+        "C22"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B12",
@@ -343,15 +370,19 @@
       "bridgeRefs": [
         "B12"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W12 distinguishes a forward detector model from an estimated internal geometry.",
+      "measuredInputs": "Published corridor abstract and indexed figure descriptions; no raw detector data reanalysis.",
+      "modelRefs": [
+        "C21"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W12"
+      ]
     },
     {
       "id": "coverage-B13",
@@ -359,15 +390,19 @@
       "bridgeRefs": [
         "B13"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W12 executes scalar line-integral nonuniqueness and states the multi-view boundary.",
+      "measuredInputs": "Synthetic paths only; no new geometric estimate or muon count fit.",
+      "modelRefs": [
+        "C21"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W12"
+      ]
     },
     {
       "id": "coverage-B14",
@@ -375,15 +410,19 @@
       "bridgeRefs": [
         "B14"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W11 distinguishes exposure/alteration events and proposes a co-registered depth comparison.",
+      "measuredInputs": "No measured weathering trajectory or transport coefficient extracted.",
+      "modelRefs": [
+        "C20"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W11"
+      ]
     },
     {
       "id": "coverage-B16",
@@ -391,15 +430,20 @@
       "bridgeRefs": [
         "B16"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W08 and W11 preserve manufacture, use, reuse, repair and observation as distinct events.",
+      "measuredInputs": "Located documentary and sample assessments; no complete event chronology fitted.",
+      "modelRefs": [
+        "C20"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W08",
+        "W11"
+      ]
     },
     {
       "id": "coverage-B21",
@@ -407,15 +451,19 @@
       "bridgeRefs": [
         "B21"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W11 audits event association and demonstrates inbuilt age with synthetic years.",
+      "measuredInputs": "Primary dating-project account reviewed; no calibrated assay or posterior produced.",
+      "modelRefs": [
+        "C20"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W11"
+      ]
     },
     {
       "id": "coverage-B22",
@@ -423,15 +471,19 @@
       "bridgeRefs": [
         "B22"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 scopes a future electronic calculation by its discriminating observable.",
+      "measuredInputs": "No elementary electronic mechanism identified by the apparent activation-energy anchor.",
+      "modelRefs": [
+        "C22"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     },
     {
       "id": "coverage-B24",
@@ -439,15 +491,20 @@
       "bridgeRefs": [
         "B24"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W07 uses primary casing-side estimates and distinguishes platform from casing.",
+      "measuredInputs": "Four survey estimate rows visually checked; raw point cloud and covariance not reconstructed.",
+      "modelRefs": [
+        "C17",
+        "C18"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W07"
+      ]
     },
     {
       "id": "coverage-B25",
@@ -455,15 +512,19 @@
       "bridgeRefs": [
         "B25"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
-      "modelRefs": [],
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W15 links explicit decisions, evidence returns, dependencies and retirement rules.",
+      "measuredInputs": "Synthetic regret example; no empirical likelihood or expected monetary information value.",
+      "modelRefs": [
+        "C26"
+      ],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W15"
+      ]
     },
     {
       "id": "coverage-B26",
@@ -471,15 +532,17 @@
       "bridgeRefs": [
         "B26"
       ],
-      "reviewStatus": "Not reviewed in this increment",
-      "observations": "No bridge-specific source audit in this increment; this is not a claim that evidence does not exist.",
-      "measuredInputs": "Not assessed here.",
+      "reviewStatus": "Scoped desk assessment",
+      "observations": "W13 retains algebraic/representation structure separately from physical crystal mechanisms.",
+      "measuredInputs": "No physical crystal conclusion inferred from a shared word or algebraic compatibility.",
       "modelRefs": [],
       "distinguishingTests": "See the bridge’s declared test; no new test assessment here.",
       "gaps": [
-        "Bridge-specific sources, models, measurements and their scope still require an explicit audit."
+        "The scoped desk result does not close the physical or historical bridge; return the missing measurement or computation identified in the linked study."
       ],
-      "studyRefs": []
+      "studyRefs": [
+        "W13"
+      ]
     }
   ]
 }

@@ -7,7 +7,7 @@ import {executeProcess} from '../vendor/sourcery/process/surface-async-process.m
 import {prepareUiSurfaceComposition,verifyUiSurfaceComposition} from '../vendor/sourcery/ui/surface-composition.mjs';
 import {verifyNativeSurfaceCompositionLowering} from '../vendor/sourcery/ui/native-surface-composition-lowerer.mjs';
 import {filterItems,pageItems,bindArguments,declarationFor} from '../vendor/sourcery/collection-model.mjs';
-import {calculateWorkedCases} from './worked-calculations.mjs';
+import {calculateWorkedCases,calculateSystemCases} from './worked-calculations.mjs';
 const site=path.join(root,'_site');
 const built=p=>JSON.parse(fs.readFileSync(path.join(site,p),'utf8'));
 const atlas=read('corpus/atlas.json'),profiles=read('data/programme-profiles.json');
@@ -15,7 +15,7 @@ test('retained implementations keep their exact source identities',()=>{
   for(const r of read('data/reuse-lock.json').sources)assert.equal(hash(fs.readFileSync(path.join(root,r.path))),r.retainedHash,r.path);
 });
 test('every decomposed corpus object preserves the twelve-coordinate kernel',()=>{
-  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,226);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
+  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,318);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
   for(const o of model.objects)assert.deepEqual(Object.keys(o.kernel).sort(),[...profiles.kernel.coordinates].sort(),o.id);assert.equal(model.conjunctiveInputs,true);
 });
 test('joint inputs alternatives and the pyramid case remain distinct',()=>{
@@ -23,7 +23,7 @@ test('joint inputs alternatives and the pyramid case remain distinct',()=>{
   assert.equal(atlas.workedCase.id,'pyramids-material-history');assert.equal(atlas.workedCase.subcases[0].id,'granite-alkali-history');assert.equal(new Set(atlas.operations.map(x=>x.exclusiveOutput)).size,9);
 });
 test('all native page compositions and lowerings replay through the retained mechanisms',()=>{
-  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,168);
+  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,211);
   for(const r of receipt.uiEvidence){const p=built('data/ui/'+(r.route.replaceAll('/','-')||'home')+'.json');assert.equal(verifyUiSurfaceComposition(p.composition).passed,true,r.route);assert.equal(verifyNativeSurfaceCompositionLowering(p).passed,true,r.route);assert.equal(p.adoption.nativeEscapes.length,0);assert.equal(p.adoption.mappings.length,p.facts.filter(f=>f.p==='isa'&&f.o==='DomNode').length);}
 });
 test('renderer leakage and changed native realization fail closed',()=>{
@@ -51,14 +51,14 @@ test('publication carries no new runtime lane or empirical admission claim',()=>
 });
 test('worked investigations retain atomic outputs conjunctive inputs and resolved evidence',()=>{
   const work=read('corpus/worked-investigations.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
-  assert.equal(work.studies.length,6);assert.equal(work.studies.flatMap(s=>s.steps).length,38);
+  assert.equal(work.studies.length,15);assert.equal(work.studies.flatMap(s=>s.steps).length,76);
   for(const s of work.studies)for(const step of s.steps){assert.ok(atlas.operations.some(o=>o.id===step.operation));assert.ok(step.output);assert.ok(step.paragraphs.every(p=>p.trim().length>0));assert.deepEqual(objects.find(o=>o.id===step.id).inputs,step.inputs);for(const id of [...step.inputs,...step.evidenceRefs])assert.ok(ids.has(id),step.id+' unresolved '+id);}
   assert.equal(work.studies[2].steps.find(s=>s.matrix).matrix.length,5);
   for(const s of work.studies){const html=fs.readFileSync(path.join(site,'studies',s.id,'index.html'),'utf8');for(const step of s.steps)assert.ok(html.includes('id="'+step.id+'"'));assert.ok(!html.includes('Not supplied in this record.'));}
-  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:6,steps:38,calculations:16,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
+  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:15,steps:76,calculations:26,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
 });
 test('worked arithmetic conserves formula mass and exposes rate and detection assumptions',()=>{
-  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input,read('corpus/evidence-audit.json'),read('corpus/removal-evidence.json')),c=id=>output.calculations.find(c=>c.id===id);
+  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input,read('corpus/evidence-audit.json'),read('corpus/removal-evidence.json'),read('corpus/construction-system.json')),c=id=>output.calculations.find(c=>c.id===id);
   assert.equal(c('C02').rows[0][1],0.001);assert.equal(c('C02').rows[1][1],2.65);
   assert.ok(c('C01').rows[0][1]>1.763&&c('C01').rows[0][1]<1.765);
   // Independent product-side formula accounting for the carbonate balance.
@@ -72,7 +72,7 @@ test('worked arithmetic conserves formula mass and exposes rate and detection as
   assert.deepEqual(built('data/worked-calculations.json'),output);
 });
 test('retained composer checks real quantity dimensions and rejects a corrupted molar-volume map',async()=>{
-  const report=built('data/worked-quantity-composition.json'),process=read('data/scientific-derivation-process.json');assert.equal(report.results.length,3);for(const result of report.results)assert.equal(result.candidates.length,1);
+  const report=built('data/worked-quantity-composition.json'),process=read('data/scientific-derivation-process.json');assert.equal(report.results.length,5);for(const result of report.results)assert.equal(result.candidates.length,1);
   const graph=structuredClone(report.graph);graph.transformations[1].dimensionDelta.amount=0;
   const response=await executeProcess(process.program,{model:process,request:{graph,query:{source:'quartz-molar-flux',target:'quartz-recession-speed',maxDepth:1}}},{compute:{},ports:{}});assert.equal(response.result.candidates.length,0);
   const wrongDensity=structuredClone(report.graph);wrongDensity.transformations.find(t=>t.id==='inverse-density-map').dimensionDelta.mass=0;
@@ -149,4 +149,75 @@ test('a changing denominator permits opposite absolute-stock conclusions',()=>{
   const threshold=structuredClone(r);threshold.conditionalInputs.retainedMassFractions=[.5];
   assert.equal(calc(threshold).find(v=>v[0]==='S3 quartz')[3],0);
   const invalid=structuredClone(r);invalid.conditionalInputs.retainedMassFractions=[1.1];assert.throws(()=>calc(invalid),/retained-mass/);
+});
+
+test('construction packages preserve resolved identities and distinguish context from evidence',()=>{
+  const system=read('corpus/construction-system.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
+  assert.equal(system.workPackages.length,9);assert.equal(new Set(system.workPackages.map(w=>w.study)).size,9);
+  for(const wp of system.workPackages)assert.ok(ids.has(wp.study));
+  for(const o of [...system.components,...system.histories,...system.decisions,...system.observations]){
+    assert.ok(ids.has(o.id));for(const ref of [...(o.evidenceRefs||[]),...(o.related||[]),...(o.dependencies||[]),...(o.counterevidence||[])])assert.ok(ids.has(ref),o.id+' unresolved '+ref);
+  }
+  for(const h of system.histories){assert.ok(h.sequence.length>=5);assert.ok(h.predictions.length);assert.ok(h.qualifications.length);assert.ok(h.dependencyMeaning.includes('does not assert'));assert.deepEqual(objects.find(o=>o.id===h.id).inputs,h.dependencies);}
+  for(const d of system.decisions){assert.ok(d.retirementRule);assert.equal(d.status,'Open empirical decision');assert.equal(d.score,undefined);}
+  assert.equal(system.sourceCapture.surveyTableVisuallyChecked,true);assert.equal(system.sourceCapture.primaryPdfsPublished,false);
+  assert.equal(built('data/publication-receipt.json').constructionSystem.verifiedAbatement,false);
+});
+
+test('geometric demand retains scale and component boundaries',()=>{
+  const system=read('corpus/construction-system.json'),calc=s=>calculateSystemCases(s),c=(s,id)=>calc(s).find(c=>c.id===id);
+  assert.equal(c(system,'C17').rows[0][2],'230.329');
+  const v=c(system,'C18').rows[0][1],twice=structuredClone(system);twice.geometry.heightM*=2;assert.equal(c(twice,'C18').rows[0][1],2*v);
+  for(const row of c(system,'C18').rows.slice(3))assert.ok(row[1]>0&&row[1]<v);
+  const bad=structuredClone(system);bad.geometry.innerLinearScales=[1.1];assert.throws(()=>calc(bad),/inner linear/);
+  const unit=structuredClone(system);unit.observations[0].unit='cm';assert.throws(()=>calc(unit),/metres/);
+  assert.ok(c(system,'C18').scope.includes('not net masonry'));
+});
+
+test('resource bottlenecks and availability constrain the same accepted output',()=>{
+  const s=read('corpus/construction-system.json'),rows=v=>calculateSystemCases(v).find(c=>c.id==='C19').rows,value=(v,label)=>rows(v).find(r=>r[0]===label)[1];
+  assert.equal(value(s,'Availability-adjusted limiting capacity'),3.5);
+  const upstream=structuredClone(s);upstream.resources.stageCapacitiesM3PerDay['Quarry/preparation']*=2;assert.equal(value(upstream,'Batch throughput duration lower bound'),value(s,'Batch throughput duration lower bound'));
+  const half=structuredClone(s);half.resources.availability/=2;assert.equal(value(half,'Batch throughput duration lower bound'),2*value(s,'Batch throughput duration lower bound'));
+  const invalid=structuredClone(s);invalid.resources.availability=1.01;assert.throws(()=>rows(invalid),/availability/);
+});
+
+test('chronology and inverse examples do not identify an event or a full detector record',()=>{
+  const s=read('corpus/construction-system.json'),cs=calculateSystemCases(s),chrono=cs.find(c=>c.id==='C20'),inverse=cs.find(c=>c.id==='C21');
+  assert.deepEqual(chrono.rows.slice(0,3).map(r=>r[1]),[-2550,-2600,-2750]);
+  const opacity=inverse.rows.map(r=>r[2]);for(const x of opacity)assert.ok(Math.abs(x-24000)<1e-8);
+  assert.notDeepEqual(s.inverse.paths[0].segments,s.inverse.paths[1].segments);assert.ok(inverse.scope.includes('No real muon counts'));
+  const bad=structuredClone(s);bad.chronology.repairYear=-3000;assert.throws(()=>calculateSystemCases(bad),/Chronology/);
+});
+
+test('reaction and transport coupling respects limiting coefficients and thermal invariance',()=>{
+  const s=read('corpus/construction-system.json'),rows=v=>calculateSystemCases(v).find(c=>c.id==='C22').rows;
+  for(const row of rows(s)){assert.ok(row[3]<=row[1]);assert.ok(row[3]<=row[2]);assert.ok(row[4]>0);}
+  const flat=structuredClone(s);flat.surface.activationKJPerMol=0;const r=rows(flat);assert.deepEqual(r.slice(0,2).map(v=>v.slice(1)),r.slice(2).map(v=>v.slice(1)));
+  const cold=structuredClone(s);cold.surface.referenceK=0;assert.throws(()=>rows(cold),/Kelvin|regime/);
+});
+
+test('housing takeoff and budget preserve area tax scope and candidate overhead',()=>{
+  const s=read('corpus/construction-system.json'),cs=calculateSystemCases(s),geo=cs.find(c=>c.id==='C23'),cost=cs.find(c=>c.id==='C24'),value=(table,label)=>table.rows.find(r=>r[0]===label)[1];
+  assert.equal(value(geo,'Floor footprint'),180);assert.equal(value(geo,'External perimeter'),54);assert.ok(Math.abs(value(geo,'Net external wall assembly area')-116.64)<1e-10);assert.equal(value(geo,'Planar slab benchmark volume'),18);
+  const direct=value(cost,'Direct package subtotal'),base=value(cost,'Direct-cost multiplier 1 · total');assert.equal(direct,376000);assert.ok(Math.abs(base-523204)<1e-8);
+  assert.ok(value(cost,'Candidate total with 20% assigned wall-package saving plus added direct cost')>base);assert.ok(value(cost,'Candidate total with 50% assigned wall-package saving plus added direct cost')<base);
+  const noTax=structuredClone(s);noTax.housing.gst=0;const untaxed=calculateSystemCases(noTax).find(c=>c.id==='C24');assert.ok(Math.abs(value(untaxed,'Direct-cost multiplier 1 · total')*1.1-base)<1e-8);
+  const wrong=structuredClone(s);wrong.housing.widthM=13;assert.throws(()=>calculateSystemCases(wrong),/floor geometry/);
+});
+
+test('lifecycle penalties and scenario regret retain decision meaning',()=>{
+  const s=read('corpus/construction-system.json'),cs=calculateSystemCases(s),carbon=cs.find(c=>c.id==='C25'),regret=cs.find(c=>c.id==='C26');
+  assert.ok(carbon.rows[0][2]>0);assert.ok(carbon.rows[1][2]<0);assert.equal(carbon.rows[0][2]-carbon.rows[1][2],5000);
+  assert.deepEqual(regret.rows,[['Action A',0,30,30],['Action B',20,0,20]]);assert.equal(regret.declaredInputs['Preferred action'],'Action B');assert.ok(regret.scope.includes('SYNTHETIC'));assert.ok(regret.scope.includes('Not historical probabilities'));
+  const incomplete=structuredClone(s);incomplete.decisionScenario.actions[0].costs.pop();assert.throws(()=>calculateSystemCases(incomplete),/complete/);
+});
+
+test('all new dimensional maps reject undeclared physical rulers',async()=>{
+  const report=built('data/worked-quantity-composition.json'),process=read('data/scientific-derivation-process.json');
+  for(const id of ['concentration-driving-map','slab-thickness-map']){
+    const graph=structuredClone(report.graph),edge=graph.transformations.find(v=>v.id===id);edge.dimensionDelta.current=1;
+    const response=await executeProcess(process.program,{model:process,request:{graph,query:{source:edge.from,target:edge.to,maxDepth:1}}},{compute:{},ports:{}});
+    assert.equal(response.result.candidates.length,0,id);
+  }
 });
