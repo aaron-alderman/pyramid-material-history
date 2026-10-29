@@ -85,5 +85,54 @@
     "change": "Constrain imported prose and native article width to the available content width.",
     "retest": "390 and 320 pixels have no horizontal page overflow."
   },
-  "authority": "UI observation only; no scientific or historical promotion"
+  "authority": "UI observation only; no scientific or historical promotion",
+  "workedExtension": {
+    "date": "2026-10-29",
+    "scope": "Local preview of populated investigations; deployment checked separately",
+    "sourceHashes": {
+      "corpus/atlas.json": "fd4abba3945b759ce157e7b5985d2640d6b96ae44d1b21f288fe60085bb0c98f",
+      "corpus/atlas.md": "3249a17ccab396d2d835a865c5e2ac43876ead49490ff09e59ae761d1f924d4a",
+      "corpus/sources.json": "56071c7355e200f776a70b119900a3bd024859e17bdae3d4656bd7bc8118d312",
+      "corpus/worked-investigations.json": "f3d6ffa326239590fd9b5480086b3fa4752ab3da41d02ce696ee5c1a65a04c57",
+      "corpus/calculation-inputs.json": "7200227f13a51f160900e2f998980fef1392c299e2c8d5746a9eaf8444ce30cd",
+      "scripts/worked-calculations.mjs": "5e53490a6ad60f845dd0083153f8b01208496575c571309d910ad467e2d60cfa",
+      "data/publication.json": "c293d72e92dcdb1d546b28c50ef8409ed5df93a07097eb59a2213ca03ae77a93",
+      "data/reuse-lock.json": "ced2be4c91043052b21d4218089122f1c6c3a5a088b5ea5cd7219f137d2b323c",
+      "scripts/build.mjs": "6b89aae282f532b2c05752a28eddfd1369fdcb156de93ba83b3d38326a0929da",
+      "web/mount.mjs": "de4e55cf8c41488c915288374956768de7fa89951b7f442a3f9b324b87f5b68c",
+      "web/theme.css": "9db5c4ca43db1454a6e18feb89ac188c46b14ecb41cea632fd94ee87a6b5d514",
+      "assets/pyramid-section.svg": "a1431901aa1881eae8882b4547bd287ee7a19708ba6cfa0155243d56b97915dc",
+      "assets/social.png": "24e670844c15bb366d07c8951dd2234d75984f41fa4829e7ac3ad4f38de86240"
+    },
+    "observations": [
+      {
+        "route": "studies/",
+        "result": "All three studies present; selecting Worked process assessment returns exactly W02; existing navigation opens the correct record."
+      },
+      {
+        "route": "sources/external-worked-yi/",
+        "result": "Citation, review date and indexed-excerpt access limit visibly displayed; canonical DOI preserved."
+      },
+      {
+        "route": "studies/W02/",
+        "result": "Eight steps, four numerical tables, section navigation and source links present. Narrow layout uses local table scrolling; no document-level horizontal overflow observed."
+      },
+      {
+        "route": "studies/W03/",
+        "nominalViewportWidth": 390,
+        "documentClientWidth": 375,
+        "documentScrollWidth": 375,
+        "result": "Five research steps and five alternative histories present; preservation section link navigates."
+      },
+      {
+        "route": "studies/W03/",
+        "nominalViewportWidth": 320,
+        "documentClientWidth": 305,
+        "documentScrollWidth": 305,
+        "result": "Page fits; numerical table scrolls within its keyboard-focusable container."
+      }
+    ],
+    "scriptErrors": [],
+    "scientificPromotion": false
+  }
 }

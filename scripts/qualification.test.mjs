@@ -7,6 +7,7 @@ import {executeProcess} from '../vendor/sourcery/process/surface-async-process.m
 import {prepareUiSurfaceComposition,verifyUiSurfaceComposition} from '../vendor/sourcery/ui/surface-composition.mjs';
 import {verifyNativeSurfaceCompositionLowering} from '../vendor/sourcery/ui/native-surface-composition-lowerer.mjs';
 import {filterItems,pageItems,bindArguments,declarationFor} from '../vendor/sourcery/collection-model.mjs';
+import {calculateWorkedCases} from './worked-calculations.mjs';
 const site=path.join(root,'_site');
 const built=p=>JSON.parse(fs.readFileSync(path.join(site,p),'utf8'));
 const atlas=read('corpus/atlas.json'),profiles=read('data/programme-profiles.json');
@@ -14,7 +15,7 @@ test('retained implementations keep their exact source identities',()=>{
   for(const r of read('data/reuse-lock.json').sources)assert.equal(hash(fs.readFileSync(path.join(root,r.path))),r.retainedHash,r.path);
 });
 test('every decomposed corpus object preserves the twelve-coordinate kernel',()=>{
-  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,108);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
+  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,144);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
   for(const o of model.objects)assert.deepEqual(Object.keys(o.kernel).sort(),[...profiles.kernel.coordinates].sort(),o.id);assert.equal(model.conjunctiveInputs,true);
 });
 test('joint inputs alternatives and the pyramid case remain distinct',()=>{
@@ -22,7 +23,7 @@ test('joint inputs alternatives and the pyramid case remain distinct',()=>{
   assert.equal(atlas.workedCase.id,'pyramids-material-history');assert.equal(atlas.workedCase.subcases[0].id,'granite-alkali-history');assert.equal(new Set(atlas.operations.map(x=>x.exclusiveOutput)).size,9);
 });
 test('all native page compositions and lowerings replay through the retained mechanisms',()=>{
-  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,118);
+  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,131);
   for(const r of receipt.uiEvidence){const p=built('data/ui/'+(r.route.replaceAll('/','-')||'home')+'.json');assert.equal(verifyUiSurfaceComposition(p.composition).passed,true,r.route);assert.equal(verifyNativeSurfaceCompositionLowering(p).passed,true,r.route);assert.equal(p.adoption.nativeEscapes.length,0);assert.equal(p.adoption.mappings.length,p.facts.filter(f=>f.p==='isa'&&f.o==='DomNode').length);}
 });
 test('renderer leakage and changed native realization fail closed',()=>{
@@ -47,4 +48,31 @@ test('the full article retains the pyramid case and renders mathematics',()=>{
 });
 test('publication carries no new runtime lane or empirical admission claim',()=>{
   const receipt=built('data/publication-receipt.json');assert.equal(receipt.recordComposition.historicalPromotionCandidates,0);assert.equal(receipt.recordComposition.authorityCeiling,'proposal-only; non-entailing; no empirical authority');assert.ok(receipt.boundaries.includes('No new Sourcery lane, registry, scheduler or interpreter.'));
+});
+test('worked investigations retain atomic outputs conjunctive inputs and resolved evidence',()=>{
+  const work=read('corpus/worked-investigations.json'),objects=built('data/semantic-decomposition.json').objects,ids=new Set(objects.map(o=>o.id));
+  assert.equal(work.studies.length,3);assert.equal(work.studies.flatMap(s=>s.steps).length,18);
+  for(const s of work.studies)for(const step of s.steps){assert.ok(atlas.operations.some(o=>o.id===step.operation));assert.ok(step.output);assert.ok(step.paragraphs.every(p=>p.trim().length>0));assert.deepEqual(objects.find(o=>o.id===step.id).inputs,step.inputs);for(const id of [...step.inputs,...step.evidenceRefs])assert.ok(ids.has(id),step.id+' unresolved '+id);}
+  assert.equal(work.studies[2].steps.find(s=>s.matrix).matrix.length,5);
+  for(const s of work.studies){const html=fs.readFileSync(path.join(site,'studies',s.id,'index.html'),'utf8');for(const step of s.steps)assert.ok(html.includes('id="'+step.id+'"'));assert.ok(!html.includes('Not supplied'));}
+  assert.deepEqual(built('data/publication-receipt.json').workedInvestigations,{studies:3,steps:18,calculations:6,experimentPerformed:false,monumentSampled:false,historicalAttribution:false});
+});
+test('worked arithmetic conserves formula mass and exposes rate and detection assumptions',()=>{
+  const input=read('corpus/calculation-inputs.json'),output=calculateWorkedCases(input),c=id=>output.calculations.find(c=>c.id===id);
+  assert.equal(c('C02').rows[0][1],0.001);assert.equal(c('C02').rows[1][1],2.65);
+  assert.ok(c('C01').rows[0][1]>1.763&&c('C01').rows[0][1]<1.765);
+  // Independent product-side formula accounting for the carbonate balance.
+  const metasilicateMass=2*22.98976928+28.0855+3*15.9994;
+  assert.ok(Math.abs(60.0843+105.9884-metasilicateMass-44.0095)<0.001);
+  for(const row of c('C03').rows)assert.ok(Math.abs(row[1]*row[2]-1000)<1e-8);
+  assert.ok(c('C04').rows[1][1]>134&&c('C04').rows[1][1]<136);
+  const sameT=structuredClone(input);sameT.temperaturesK.high=sameT.temperaturesK.low;assert.equal(calculateWorkedCases(sameT).calculations.find(c=>c.id==='C04').rows[1][1],1);
+  const impossible=structuredClone(input);impossible.detectionScenarios[0].survivalGivenFormation=0;assert.equal(calculateWorkedCases(impossible).calculations.find(c=>c.id==='C05').rows[0][2],1);
+  assert.equal(c('C06').rows[1][1],0);assert.ok(c('C06').rows[0][1]>0.64&&c('C06').rows[0][1]<0.65);
+  assert.deepEqual(built('data/worked-calculations.json'),output);
+});
+test('retained composer checks real quantity dimensions and rejects a corrupted molar-volume map',async()=>{
+  const report=built('data/worked-quantity-composition.json'),process=read('data/scientific-derivation-process.json');assert.equal(report.results.length,2);for(const result of report.results)assert.equal(result.candidates.length,1);
+  const graph=structuredClone(report.graph);graph.transformations[1].dimensionDelta.amount=0;
+  const response=await executeProcess(process.program,{model:process,request:{graph,query:{source:'quartz-molar-flux',target:'quartz-recession-speed',maxDepth:1}}},{compute:{},ports:{}});assert.equal(response.result.candidates.length,0);
 });

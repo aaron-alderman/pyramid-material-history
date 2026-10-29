@@ -15,6 +15,10 @@ The pyramids are the canonical example. Khufu's Great Pyramid is the first named
 
 ## What is here
 
+The next layer is now populated: [three worked investigations](https://aaron-alderman.github.io/pyramid-material-history/studies/) cover material identity, granite–alkali feasibility and archaeological discrimination. They contain eighteen atomic research steps, nine additional source records and six reproducible calculations. These are completed desk investigations, not newly performed experiments or monument sampling.
+
+Start with [the canonical investigation records](corpus/worked-investigations.json), [calculation inputs](corpus/calculation-inputs.json) and [the numerical adapter](scripts/worked-calculations.mjs). The build publishes every calculation, its assumptions and the retained composer's quantity-dimension checks. Source access limits are visible on individual source pages. Proposed controls and unmeasured rates retain their scope.
+
 The corpus contains nine operation families, seventeen domain stations, twenty-six candidate bridges, seven pyramid investigations, negative constraints, retained unknowns and source references. The operation families provide the scoped MECE partition. Disciplines remain overlapping annotations.
 
 The route passes through quantum models, orbitals, bonds, Bloch and Wannier representations, lattices and defects, chemical thermodynamics and kinetics, coupled material processes, geology, geophysics, manufacture, preservation and archaeological inference.

@@ -4,6 +4,10 @@ The public task is to enter through a pyramid question, follow the connecting me
 
 ## Surface responsibilities
 
+The worked-investigation collection uses the existing grammar-driven search, paging and navigation. Its record pages render declared research steps, local section navigation, source links, alternative-history description lists and calculation tables through the same native surface compiler. The `worked-steps` field renderer is an explicit publication adapter over the existing node primitives; it introduces no new interpreter or browser control semantics. Table containers scroll locally on narrow screens and retain native table headers and keyboard focus.
+
+The eighteen steps each retain one primary output and an existing operation-family identity. All their inputs remain conjunctive. The three dossiers, eighteen steps and six calculations receive the unchanged twelve-coordinate kernel in the semantic decomposition. Nine added references use the existing source-record path. Numerical code is bound in the source hash and is independently testable. The original atlas is preserved.
+
 | Surface | Primary responsibility | Source meaning | Existing realization |
 |---|---|---|---|
 | Landing | Orient attention and offer entry questions | Canonical pyramid case and editorial copy | Semantic native regions with source-bound headings links and illustration |
@@ -35,5 +39,7 @@ The browser adopts native controls through the existing component catalogue. Lab
 All decomposed corpus records carry the twelve-coordinate kernel. Joint-input bridges retain all input identities. Representation changes, physical symmetry reductions, information losses, open-system passages and evidential selection remain differently typed.
 
 The executable common-algebra demonstration composes dimensionless records about publication. Its dimensions do not stand for the energies, rates or ages described inside those records. The deliberate attempted promotion to a confirmed ancient process is rejected.
+
+The additional worked-quantity receipt separately instantiates actual SI exponent signatures for a conditional silica-to-carbonate mass map and a molar-flux-to-recession-speed map. It declares the dimensionless stoichiometric coefficient and the molar-volume coefficient with dimension m³/mol. The retained composer verifies dimension deltas and signature changes; the numerical adapter evaluates the arithmetic. Neither check verifies the mechanism's applicability or supplies a measured surface flux. A corrupted molar-volume dimension is rejected in qualification.
 
 The generated `data/publication-receipt.json`, `data/semantic-decomposition.json`, `data/record-composition.json` and per-route `data/ui/` files supply the inspectable result. They are reading and qualification projections; the research and presentation sources retain authority.

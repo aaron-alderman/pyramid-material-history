@@ -3,12 +3,15 @@
   "sourceHashes": {
     "corpus/atlas.json": "fd4abba3945b759ce157e7b5985d2640d6b96ae44d1b21f288fe60085bb0c98f",
     "corpus/atlas.md": "3249a17ccab396d2d835a865c5e2ac43876ead49490ff09e59ae761d1f924d4a",
-    "corpus/sources.json": "33ffb3189d37856ddee5598e27b842585d088f6e22970c32a3690b65cd2be2c5",
-    "data/publication.json": "66920f359426d583de47a8fc1bf7a6a17c0375c8030928e79932bc81c2747be0",
+    "corpus/sources.json": "56071c7355e200f776a70b119900a3bd024859e17bdae3d4656bd7bc8118d312",
+    "corpus/worked-investigations.json": "f3d6ffa326239590fd9b5480086b3fa4752ab3da41d02ce696ee5c1a65a04c57",
+    "corpus/calculation-inputs.json": "7200227f13a51f160900e2f998980fef1392c299e2c8d5746a9eaf8444ce30cd",
+    "scripts/worked-calculations.mjs": "5e53490a6ad60f845dd0083153f8b01208496575c571309d910ad467e2d60cfa",
+    "data/publication.json": "c293d72e92dcdb1d546b28c50ef8409ed5df93a07097eb59a2213ca03ae77a93",
     "data/reuse-lock.json": "ced2be4c91043052b21d4218089122f1c6c3a5a088b5ea5cd7219f137d2b323c",
-    "scripts/build.mjs": "b965b4d0f955c203d7547522c7408cf5e8dda01fa9a53b8fecd0ebe5c559c917",
+    "scripts/build.mjs": "6b89aae282f532b2c05752a28eddfd1369fdcb156de93ba83b3d38326a0929da",
     "web/mount.mjs": "de4e55cf8c41488c915288374956768de7fa89951b7f442a3f9b324b87f5b68c",
-    "web/theme.css": "7ceed07ba10e43d69302877c39d8023b985889bfc415c6b882237e508003bddb",
+    "web/theme.css": "9db5c4ca43db1454a6e18feb89ac188c46b14ecb41cea632fd94ee87a6b5d514",
     "assets/pyramid-section.svg": "a1431901aa1881eae8882b4547bd287ee7a19708ba6cfa0155243d56b97915dc",
     "assets/social.png": "24e670844c15bb366d07c8951dd2234d75984f41fa4829e7ac3ad4f38de86240"
   },
@@ -17,9 +20,9 @@
     "bridges": 26,
     "operationFamilies": 9,
     "investigationLanes": 7,
-    "pages": 118,
-    "nativeRegions": 5758,
-    "nativeNodes": 5759
+    "pages": 131,
+    "nativeRegions": 6706,
+    "nativeNodes": 6707
   },
   "kernelCoordinates": [
     "kind",
@@ -39,828 +42,919 @@
   "uiEvidence": [
     {
       "route": "",
-      "compositionHash": "56ee246223092e9ba74b0e44408946417f0b8ef46432e5eaba16e623c41c4a2c",
-      "loweringHash": "8041030c9e25f591d19ccfec2a9717378d2f48bed0c88dc3c2a32459aef563c3",
-      "regionCount": 118,
+      "compositionHash": "b43fac1dfcaa1eec6ac8b51eb7151f382e621ea5e9d82d133c84d26c53c19297",
+      "loweringHash": "56e1218d0261b67e8620a45a9f3306f4b153a21adf69bec042ca00a8c08c4d9c",
+      "regionCount": 139,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "studies/",
+      "compositionHash": "1490d3e104b0ffb9d9fb08a0987f7b09aa6968c97791e77b48bbbc5dd4d4a9c4",
+      "loweringHash": "1730595ad9f9a93f87b5c09dd5cce878172077eb448517654bf3917ed9c4e3a4",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "studies/W01/",
+      "compositionHash": "44392e86e7eb1e60ab69c05a2d66b2987f0fd1af4c10192804d5a1547d19195d",
+      "loweringHash": "d5fe55e212a0e1312877407228476024c325f7d190cf1bd45b9b3194fdced362",
+      "regionCount": 123,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "studies/W02/",
+      "compositionHash": "f57062aef7c3034a8506cad1e2247e07855c3cdb5921fd049c8f29c54d61db2e",
+      "loweringHash": "327a9f2dd096221999e74bd01e66fe90c0ca3c7b6fac865ff597019dc29e2bc7",
+      "regionCount": 272,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "studies/W03/",
+      "compositionHash": "5c0bdaf67ae1ebec5fd0d0bc8fa62231166976e0e088b25e00935cbbdbfa8dd6",
+      "loweringHash": "dae02646815ad23597c29dd36844dcdbb250cc28cf4161fd16b48a8bf40c0146",
+      "regionCount": 180,
       "nativeEscapes": 0
     },
     {
       "route": "investigations/",
-      "compositionHash": "592e3d0785649707cf45d5f151c7a1ea85b52d6c218a1000b0ac9b237ee6a3b3",
-      "loweringHash": "e348dae85b1a37ff6fd795eb1105f4aeb0129ebb59c17322256fa72a112c8d42",
-      "regionCount": 40,
+      "compositionHash": "d39ce0a77b6f4c9c28fa981cde42987ff826807dfb71234b3a3e2dab2e4da859",
+      "loweringHash": "1406b8618333169f2992620689c6c3ce7a1e46c8a92eafd573f90f8924baa2d5",
+      "regionCount": 41,
       "nativeEscapes": 0
     },
     {
       "route": "investigations/P01/",
-      "compositionHash": "6b55b9cfa05d81eac96ee921a7039883f265dd70c6398da7f4eb6184cc3e4529",
-      "loweringHash": "71c6805615a45f6a7673f81c0a3ce9fb53fe1994d74888d05546b0c122a1844a",
-      "regionCount": 41,
+      "compositionHash": "a8284ed3d30067589d676409bc734ba858aa7f2c7f3a815536da8175f2f8e0a0",
+      "loweringHash": "a4f34f05c2ea5087d073d6cbdd7dae3efec1df7f77eafe806d440eec0ac5f9a5",
+      "regionCount": 47,
       "nativeEscapes": 0
     },
     {
       "route": "investigations/P02/",
-      "compositionHash": "61db6cb43561458c091afaac015d5ed3000539efeccc10fb07d32dd9ecf30f5b",
-      "loweringHash": "96141df78d92c52793e5e216a53292f5dcbb83d5f9b884cfea194eb4dac2860d",
-      "regionCount": 45,
+      "compositionHash": "86314250f8cf975c0071359fbff2a7fd3e7f42ab717c243ee6fbf6c2a30969f3",
+      "loweringHash": "0ffc7d4130e7189596b776fa52644c2c929c52fa4b0e5f20fa10ee96a3afeced",
+      "regionCount": 51,
       "nativeEscapes": 0
     },
     {
       "route": "investigations/P03/",
-      "compositionHash": "51ec2112dbd5cdb7df5d67d2bdc5463aa7ce867b35a5f55cdaa098191f2a18c8",
-      "loweringHash": "f1b8dfcee2daf6d8809ce78ab566a0d4afb1a1581a3263825355b7b4334f1417",
-      "regionCount": 41,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "investigations/P04/",
-      "compositionHash": "5343bd2b2f60db6e7da6ed30197b46ea42491766456df99fdd167d447b3259b7",
-      "loweringHash": "a0e4b49250200f342ebb87d3de5b48c0805054b090739c905b2de25ea1a88102",
-      "regionCount": 39,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "investigations/P05/",
-      "compositionHash": "18767e8d7edc5a79d6d1502c08ca4899fab43b3a312d9e2f4a6b464f51c1cae4",
-      "loweringHash": "eee1518e22fcba2a3ff229da1803dbb55fd0efa7358af7f0ae797ec2a17abeaf",
-      "regionCount": 37,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "investigations/P06/",
-      "compositionHash": "ee5887169a7751bf97cf5d2b4ea7dc3d34efff04758fc70de2c02b3b097c36fa",
-      "loweringHash": "402f1b0500d3fdcc143485faeb77497d69c077aa9e12cf753a6f072bfeff9834",
-      "regionCount": 39,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "investigations/P07/",
-      "compositionHash": "133252ac6c51b4f557425a5a9e90db0d333fc2f14e04d27d8507452bfd8fc1bb",
-      "loweringHash": "47effc89fd9ead785b9283ef59dde09d9f6ab29dd90a100e69845f63d7828d37",
-      "regionCount": 33,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/",
-      "compositionHash": "7d93e7551c0b43b489f86099d8bef340e5fbddf954d4bcc4d1c873f5c8f695f5",
-      "loweringHash": "f1e827d03a7913d7e183df14b8bc99fbe75d34a4a3da03e671c791081ac8dc38",
-      "regionCount": 70,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D00/",
-      "compositionHash": "7bf8a97e4224c487c1e5a86813b16962bdc272141394e93150d49b3a0bde8575",
-      "loweringHash": "80f07abd7a258c8a05522948a1bf828907b7a367cf697e10c51598b4bfe1d113",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D01/",
-      "compositionHash": "af7e4ae2eeba32401b561ea4a56f85523a9b8152e72bcdac5785734e847af0df",
-      "loweringHash": "439b5fca2533ed9757395181c454ced7de720ef77074e599677da1793f95c6b0",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D02/",
-      "compositionHash": "cc4ff067ea27a1e86ef2d426040e2f3fdcf867193aae523698524ef60aeea9e5",
-      "loweringHash": "930ef0f7e0da92aee59c1865dbecc95e17ff78bc1b572e21b15cb0f8f4f294ed",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D03/",
-      "compositionHash": "062658f0352d3cd03a1dc4dfaea27487ede7efb889e20e6546d1a97aac6d9ee4",
-      "loweringHash": "97f7db0ca1fde40dca1b1e8a6526e87df1e11ea53095b1e4b784b0137b5e7216",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D04/",
-      "compositionHash": "dbb2b4699ff4016d9a8907044a78bed9228c07bf7a1a110a5467e973e4245f8e",
-      "loweringHash": "ceec38571c3d1f218f5fd45b17822e5f37f18a9a875ea9bcbf63adfdf41e790a",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D05/",
-      "compositionHash": "f472e67fec06ffeea237921ec54828bfd25aa32eaa10d98b03311040a404b2f9",
-      "loweringHash": "5522ba951d564ddd52d4e735cd8ccc950f9acec07cb4006d59bc243c29e056c9",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D06/",
-      "compositionHash": "6dbd8996a8605b3dc6a6e2e7b4ed56715cb86b95f40a573f93e133e2c49b36d1",
-      "loweringHash": "8bea621ba5c79eec349cb40d0c467f6fec013ec00bbcddb897ae20c36a9bb37f",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D07/",
-      "compositionHash": "34773eb4458e1eb99f8b3e3a16b6e75729bba121a79ed9998dc3700ac29ceede",
-      "loweringHash": "57def6151fb94b00b77613ffaf6e2ad151aedc40936cab142269ad201b3c6709",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D08/",
-      "compositionHash": "5000ce473dc50b7fa28fa70594a1c85b3823a38799228e164fc4156af4455b55",
-      "loweringHash": "147ddfbc1533ecbf5ba14f06f71d2a9d5334bd0e52273d4c381ac5574d0127c2",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D09/",
-      "compositionHash": "acb1aec9acd44e4f8d8274bf2b7d516ba34dfb63f68222622f447acc15e36b50",
-      "loweringHash": "a21a378c0b61aecbc498a7f16e5132b9263f9b6ae5f88e6c97c0f006b5d5306b",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D10/",
-      "compositionHash": "bd88f81b8c766c0aabde3db266bf3c1c76e945b989e266d729583e5e1327792d",
-      "loweringHash": "8c8dd0f760f5641867f54c30f0b9365cb5ce3577345196377abea327a0ac6be3",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D11/",
-      "compositionHash": "57061537b3da174bd7d47a5953f416b350c53dd5017bdfef65f328f2b8abd170",
-      "loweringHash": "ca0c1178840aa9674a4e665d118e64efe459cae76f4179e822f911fc01909353",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D12/",
-      "compositionHash": "0194ee807dd3c506a94ff5a2b3c7b2708473ef6065a8864898bd655f19c5982b",
-      "loweringHash": "d6b1e359f4d6c29f0145fc333f5e5ee4c953c87a1ccfda15c25984123b07266b",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D13/",
-      "compositionHash": "8466b02bd4fbb08bc89e5a1d558e584cf5dbdb863cc9fedf03fd969e6b8cbb6d",
-      "loweringHash": "d81589c04a08fc70d8d5c35fb20f0ad565528ee2b8a4f8e9611e4e2a8cee8e25",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D14/",
-      "compositionHash": "7d885a47ff933e6172311a826d53c5254cf6cca9a5e7760c277ed2b4dd10f972",
-      "loweringHash": "5c2a7de65fdbb6f0ff24d9eb4d50075988039ef70453d23971c2651922ce22dc",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D15/",
-      "compositionHash": "8857e88581cce1791b179b1d53f4aa45e64f6ec1c8912e8a99aa7468aed8de95",
-      "loweringHash": "0eba236ad56e019b30f858f649d763c93382c6d27e5239b23d52f39a0a9a21bb",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "stations/D16/",
-      "compositionHash": "2585bdb0955a70a8824d55d936df317ebbe5a600b70ba401717a8f522850a591",
-      "loweringHash": "8e7915a433be779c0348227ba7ec66952465a11f6572a9fe83ca6ad06792416c",
-      "regionCount": 58,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/",
-      "compositionHash": "35f85e3e446f3b507b5e1fbf1cc3993a1af32f6e23e211f48aa732408472e207",
-      "loweringHash": "f49e5b3bbda7d3541092c0e3c076bf923910772fb6f47096558a0bf96300e3de",
-      "regionCount": 97,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B01/",
-      "compositionHash": "05552525022f38ddda5967047822362d548e0fadcab95437ea7c09bfd01e2f48",
-      "loweringHash": "cb598d97fc84b3b94e652faaaa2d79d520b2c26b123bb803f273d5672a61fa88",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B02/",
-      "compositionHash": "2ffd2de0748234ca1c16e27709fcaf21d49f35de92d62c443396b3fef25f9b61",
-      "loweringHash": "5f4fbc3cb7fc8c990596407810037117e37c79e8867c3f60646e07e183d67280",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B03/",
-      "compositionHash": "3503c7bf5161a1ee97129def66a13988e6c1e58577be4b8db78a54f697d9f97f",
-      "loweringHash": "c0d3d89af974a71fcf9551a8ad1c843be3832dfb0416806769be226e1bf6637f",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B04/",
-      "compositionHash": "0564e9efb366823305cf892e4fed2f7081ed696b44c6d4df68ae9d8afe56437b",
-      "loweringHash": "09e3ce99ab3fbeeb1d54be6e5e5bd21941cb89f28d3bcce7a917207308697774",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B05/",
-      "compositionHash": "49d2cceabcd37df52208f51443b8ee2a80c58812fdbb5e5b7b7a0849f6810596",
-      "loweringHash": "9d6f4aac6e2dd59bd381677d9046c4a0d22eb990698fde8958c2661570c9483a",
-      "regionCount": 79,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B06/",
-      "compositionHash": "df1326f6052f9189144a4dc358311432898cd99ee017977f30d3de3a0bcd8c5a",
-      "loweringHash": "609a2337e4a0bce720a058251dd725a6f17248df41ffeff84b1670bd906f90b0",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B07/",
-      "compositionHash": "768de8b756e228444b1757f7c450f3371b17a9d947599b086e89edc8a9d57d73",
-      "loweringHash": "6772aa63e5ea56ceb9b6f4fd9e0c82ea27ce55f4454150721c7d640416366aea",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B08/",
-      "compositionHash": "5a74a0f2d3100c43d5720c638013b68d2371e4647cc43e04f67ac8d57e63d4d9",
-      "loweringHash": "644f120c542bd138c324c0f41851b0adf9e5cf98f80d8825e6450d1e77f67fb2",
-      "regionCount": 87,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B09/",
-      "compositionHash": "bf4fdcd39e89a42b53979d2f2cbe293378e3bbee49f510acc05c75e636f6d1a3",
-      "loweringHash": "aa7a615903f28ba6f2c762ca33a0c6858d2781f632414b9b18db0ac495ad81ac",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B10/",
-      "compositionHash": "abcd5cd53a0cc95e23e839fda9545c92c45b60f974f248eef77675f654d7b154",
-      "loweringHash": "2bf7d64c5f3ba00c48683c099ea8c6ecc431eeb849f01fcfe57624f2aba88b2b",
-      "regionCount": 85,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B11/",
-      "compositionHash": "d531f26f6be10e0aa09d3b812bb8083d299f23d4e3937cd8265c98bd8e6b3f55",
-      "loweringHash": "b755bd579055076f99dc1cda1cd32cf7b609e28001f1647e8d16a1647a675647",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B12/",
-      "compositionHash": "c4df3e66836030f9106c2c085132bdef721fb7d10696a52214398e8e5d8e08f4",
-      "loweringHash": "d9d758bfc46d607eedfd4df3ee6f4cf953a05516de06c0e94fd8882b31eddfb4",
-      "regionCount": 79,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B13/",
-      "compositionHash": "49b1fccf9e9bb5cc4fc42c5e60139354fb7de7773eef941e107b0fcc6e1101e0",
-      "loweringHash": "453bb26047cdd19dfbc57258413623809ebba00a949915b6fead47d99e9dcc09",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B14/",
-      "compositionHash": "7f52dce21e2d18a3e37a93db0ce65c7b94b4dc7dc58b215cba5df31484eabbff",
-      "loweringHash": "0f73d2224cc90aa72d4e9feb4f4d4a23c96b817fef180ca1e905eef134919672",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B15/",
-      "compositionHash": "3b529f7a59910c2698fd4431675eff9c8351d7e02a577ada5d997338ee9b72a1",
-      "loweringHash": "5e0ba5663756fead9b692823bf1e5dde4e9f9e8ecf6b29f2387769e295ac4c6a",
-      "regionCount": 89,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B16/",
-      "compositionHash": "b3640d64f7ac12162f868dbb1ceb40a7b8049b174f0b17cb3a01faa803e28f56",
-      "loweringHash": "9324cc1373603cecc6bad69f380dc6794c19129994880fa67da76be9048c74c4",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B17/",
-      "compositionHash": "e79399450533a34df0813a358cfafcfc9b5c7912be8e91415e5bfd6b15c1bf3a",
-      "loweringHash": "ff5ab32f4b6e1e7d000187dc13777187784114184e28698d10d71de1e0927d8c",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B18/",
-      "compositionHash": "4c0bea5defdc89a682f4a504b899c79b401531b9ce5ce40a7bf06a1edb069af0",
-      "loweringHash": "2a8e0bb061d6c05d14a171f53e94f732af946cb3c00ab02e08361b03e4e6c9f8",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B19/",
-      "compositionHash": "81b4e25d59ae5c5f7a22da462a81496e5d51749d923d2d4a65f1220bbbf9e442",
-      "loweringHash": "eec2e2653e889ba5d303f6e724783da8e6a484389e43756af44fad49c08377a3",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B20/",
-      "compositionHash": "0d070c72cfb5daa1fbd0f1b0cc2cc4e33804001d9438421f3206c772dc3308c5",
-      "loweringHash": "ed321d2849df729b553b9368f52c2174d85310a0a871e84c63305091e0fcdd8d",
-      "regionCount": 85,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B21/",
-      "compositionHash": "7b8d6f75b0c8d50e388d66a070be7d92e7b1e4c6eba1ea3a74b06079b4bd0857",
-      "loweringHash": "16c2239b46299a9a81c607f6f2cab4ad9edf4fba147267c301d44d69d9fe3564",
-      "regionCount": 79,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B22/",
-      "compositionHash": "8392a5dcf54fb6c65cad8d45d928188b37e3126cab4eedd8c924443c15e36c57",
-      "loweringHash": "5a331a1180f189e91f3eb045d04a8b9857895046b4db686d8713042e036bcfcc",
-      "regionCount": 85,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B23/",
-      "compositionHash": "f7246f9ba0df0eb0b574439da5709d780c5e2becba22b4c70b442dc953735fbe",
-      "loweringHash": "2fefe2ddb4a16646cf4c6850fd3fdf0324a20c357426bfcf587c9dac88023f91",
-      "regionCount": 85,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B24/",
-      "compositionHash": "2ef30f726eba125e087116bf3f37c3c6724f66a7a5591c9e296719b034f34023",
-      "loweringHash": "cc47df4bef928dd189a8a13693699cdbba2b90d0ab053cee9310a0ad6d8d1707",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B25/",
-      "compositionHash": "ba2aaae5f130c3230dfc3c5cc7f1c35aa1961d97855993896ecf8fffafbc5c05",
-      "loweringHash": "9f96a0844a9a9f0d2c214243c2b76f2bf080722e150d3c020e9da68d6b0a1bb4",
-      "regionCount": 81,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "bridges/B26/",
-      "compositionHash": "131765ef1cc7a6c7871b8fcb207c6329e4d6bf5613724f99e611d04188572c11",
-      "loweringHash": "d7dd05c65c04c256e948dfd197ef3dcbd3cee97686afd00063a4dcc546e4e968",
-      "regionCount": 83,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/",
-      "compositionHash": "9f57388ddc952bbe0dde49d2a38e9496b80ce5291dcc1454a3f349c336edb45c",
-      "loweringHash": "09a04097f2ea859d4e66dc400e30f9b8df7c014b3788f2af46f89b079bcdefd4",
-      "regionCount": 46,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O1/",
-      "compositionHash": "c06c1db9c6e4e89213643818920c0cd58bab73da022e00c45a266a03bf9dc65b",
-      "loweringHash": "00e8c558aaa0323c0144ddf7f800a1f43f803d5214b0a4f6e445266f61f3ff57",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O2/",
-      "compositionHash": "a042a037babf3fb6800c90e0497149aec0110f719bd7a0ef1e9f12bccc4bf9a6",
-      "loweringHash": "b51b1eac2e31a9d1dfa83fdd4df9f28392f132928e7dffcad350af92bcaaec39",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O3/",
-      "compositionHash": "7ae5d2cb21fc6a62cc596f95c458bb77bf91f991919f1d30f1f8bf037fe1e86a",
-      "loweringHash": "0caa7339cc88f8770f9b93455643d073620c6d44a76f1fe671971314ff936f39",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O4/",
-      "compositionHash": "c56440db7bbe55b40df3493f53876e4ca84655cf68dfccda32e40f0dbb03506c",
-      "loweringHash": "202a5409b74631beea7ed74d0cfe8dea0f8c3f1a17ffe9343003915e19e6867a",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O5/",
-      "compositionHash": "57f64c7ba6eec8d0e6cb0de53723a1ec6de483b9889e710abb83bcc7f4c062a8",
-      "loweringHash": "3f2a3e7b838a80ba8dd96535c18bd20908926479f9a0250f726515d579577f67",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O6/",
-      "compositionHash": "60d0139d9b3e5d3ad6f1e6a98e4f655d36e1864a619ce8f9d1741f7b447f1b86",
-      "loweringHash": "99c6dd910f8e1847df10ca44a08922d1c5d460a3bfad33f65ceaf679a3dd1880",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O7/",
-      "compositionHash": "0e4d087b386a0b5684e29e8e86bb35f771d66440a475d991ca02d69c17ed3947",
-      "loweringHash": "fdead8c3266c769563c4bd708efcae5c3400326ba396377fc777d132185cb930",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O8/",
-      "compositionHash": "eed3bb78a5c5f14279824853499d68941108c184d4bb89c96c7c16268aada74a",
-      "loweringHash": "fb4d75833348801e9cad40d6c253f89b2fa5446929ee4bb048a8391f489ccc57",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "operations/O9/",
-      "compositionHash": "890ca6df17d7276c976c78e2827cd87ecb146502e1d74dc37254ca38f9524b47",
-      "loweringHash": "36b3a2a693b3194003172a73150c4a63fb826f244c0c2443af2523dc13dce669",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/",
-      "compositionHash": "eda1a646f49e589b9e678a9350a7804f96f3d0c9e7a2c842fe114c6e873cac54",
-      "loweringHash": "45ee27a945d17712ea1aa4df47fc5f190487491975ace9b03d72a546def86da9",
-      "regionCount": 112,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-kernel/",
-      "compositionHash": "78326aa31e3e45f959b248bb1a35071381f2eb684796d5cd3fa9b3496895124a",
-      "loweringHash": "acfd5616cd901aa2f654dba391b2b79736044bb03412caa8cf18150c6bc4e480",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-programme/",
-      "compositionHash": "5cfa1ef3c4a406e9ccc4cdb92c6f67fe9eebf295df96cc07ac09a45fa48a635c",
-      "loweringHash": "39c405d50a81d7376aef44df63d9b2f52b87404ac58e1536adbaf1acb3e74ecc",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-ale/",
-      "compositionHash": "23074e71bec1a9f82a6df555693842a6fd4d6193c33f0a9b187dabbf770abbe3",
-      "loweringHash": "279969087f8c65872e08dbe8e39c59c565e65ff55cab4e98cf7b0a68692588ca",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-relations/",
-      "compositionHash": "7a3f3dbe8157761072a9c2af8ed5109ab6e523efbec8adeecb88c762fb286b1b",
-      "loweringHash": "a4f63765ea86b98eabcc8676f4ba35732084702fedb8ea9334d8c82a083c5164",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-record-units/",
-      "compositionHash": "bd05529415b2c56ee33296aa0b42b5338bf0a8f9c9af4c014fe5153c37efa45e",
-      "loweringHash": "5bd701ce9574d1e00b904bb3e5bb1ed06829dae1a22c2dec44011cdc10b7dde8",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-physical-units/",
-      "compositionHash": "44b4dfc1817747e05335b5a7f50692b33f6586f24ced5dbf3d702a2ff71d9b9b",
-      "loweringHash": "519cac8d76e1708f8ff3a09e6e4eacd613dccca05f05762eca54134931f7bdf3",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-two-rail/",
-      "compositionHash": "74528c32318ee1969e139ae4f5f3177d7251ef5879f238e71360457267da4a6a",
-      "loweringHash": "53c17bc56bf5ecc2c640e84b0a6e3601132c8d25a9d69d098b239c7e8b98ac8a",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-spectral/",
-      "compositionHash": "1b070e0fdad42cd8f0e7ba9f21f77864a790b8df6709abc8f04e652cd6ed9372",
-      "loweringHash": "818423a720b355f9e0c6a2ea72026dfd2cd6958648357a8472cc2648eca1b634",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-capture/",
-      "compositionHash": "7831618235cc1b80df049ea22b406548e0294e3b83016e20313e2cb3a7e9586a",
-      "loweringHash": "b4c3ca99d9eb8a119c328449f147b5fdd2375a57cc4be06c0d893c0d7b8dac9e",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-crystal/",
-      "compositionHash": "e9b8aa3666d6916e3b49483e087b17f9a137abb91b20686ea4c6cda6bca3c30f",
-      "loweringHash": "95c9e3f9488cb2c4d0198b12a4155f63c0930ca54082179f7ff95b3b6b75fedf",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-electrochemical/",
-      "compositionHash": "bf4a380b5540215eaa76b11865a42e4183610375699501d479220a471ccb29ff",
-      "loweringHash": "51d6f8442f11a22ea7e2807341fd773f563bb2d1b330aeec7f1f6619b409bd7f",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-archaeology/",
-      "compositionHash": "d27e0e3051634ed94abef3c896df227f13c8f3a9c3238ea457f3f8bf5dffca8f",
-      "loweringHash": "f9d54464225db1bdeedf966b3e552ccb454ae6b8366692b2de74332610da9a2b",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-composer/",
-      "compositionHash": "5c1a7172ab248cd6db53ca1e3a8378047f58a1f12e5ef25e02aa79dd93d30d08",
-      "loweringHash": "7d67f7c80c02a06231a2286fdb0e2ecb9d4c703cd12db3980cab199eefc8de14",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-claimipedia-response/",
-      "compositionHash": "e8d33c43e0c4c3ce341a80140db5ac0b599ebd361392b3fe59b0d44e9a7a0617",
-      "loweringHash": "ba299e92be2678740da97c7c6c673235f12fd3b1ed5fec93eda0029df4b013cd",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/local-claimipedia-response-schema/",
-      "compositionHash": "7428f84006daf39944eb7aa30894018f0437d20fc97949c2f9af1bceb1b30e16",
-      "loweringHash": "c3a43c1f00adef637f5039446700e7a4173ac89372cce47a4ca16c05f6564118",
-      "regionCount": 34,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-wannier/",
-      "compositionHash": "122254cf771fb270873d15445b75b768c2e29808ca118dec6054be4df647b99c",
-      "loweringHash": "d5c8f8309635f5da7db73502036ae73ce56f6a971df77161c79319256ebd1129",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-qe/",
-      "compositionHash": "964b1fd7933e8259c8b1c45796736c06c1452e1c9a8568f2cdc11f1edd944ef8",
-      "loweringHash": "7b96d2c71f924630cfd3e95019b8cc81658c69b3f8fccdde960371623cc3d906",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-phonopy/",
-      "compositionHash": "4cc61631cf2429c09922bf32a11fac79f2589591aec7e011aba3d14315e89452",
-      "loweringHash": "d34c436d2d677bb7aa68ce8b01a62fc68b13bfdceccd4e92fc261fff4a794de3",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-crn/",
-      "compositionHash": "22c2f2ad7470564ee68247b15c3a8859eda4110ca7225fcd431dfd9013be4224",
-      "loweringHash": "3cf68733083f9b6c0fc5351f4797363e61dff1e5790f0d50fdd639b9e3d465a5",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-driving/",
-      "compositionHash": "dc47ac4c71687e22455e0783332180afd588aa574937a0b7f167e993d08a7d17",
-      "loweringHash": "54621b43d3205445256d897f96656467c29fad9f5600120c4056c82df893bc4b",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-phreeqc/",
-      "compositionHash": "7cb96ad4f25838da544fb4e3f63bf7bbaa82a18e7cee65f0921e82518939cd06",
-      "loweringHash": "370d290a2b030649f61928d01f794cee6a9ba26b9d9488b54ebbdab2e917ccdd",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-granite/",
-      "compositionHash": "f85b1e52145674d9288aea7ea0be7a58acaa274d9df50c856b9ed89030445ede",
-      "loweringHash": "224260a67d46516473085d8a1cfa317233d2880219a133373d215d950d50fe6e",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-geophysics/",
-      "compositionHash": "b568b1c0b8437a65232eb32a617b388a9ba7e8ceaba9e9476ceedc0c6769ac84",
-      "loweringHash": "3942c992ef22c3ed47358a9c3c26156de87684c340967ba5241b3e9f10077c03",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-toolmarks/",
-      "compositionHash": "cf7c98a582dda50a83b5d1953be84fdf311137e59efb9d4bd669b8dfd2ca73fc",
-      "loweringHash": "5479fe477bdc7cf5c7142008f9416641bcb3000bdf36bc5533d0dee1776263ea",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-oxcal/",
-      "compositionHash": "0b55f3d9d05aba6d091d43018eaf342d2329254947ceb187c044e9e0cafbd414",
-      "loweringHash": "31209059644a75c23f153f10e70bab5a14ef3d579823936cbcdcb9f971b6167f",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-silicates/",
-      "compositionHash": "c5315dc29619655531ea1f356c7c4e0ca9f30cdea62b3a429ed19b1ca1bd09e5",
-      "loweringHash": "eda970908fe5b45ae1020211d700a317b83d63fc8acab8fa47b3200a63ae2280",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-eutectic/",
-      "compositionHash": "c87a7f9f10751f54f07b9123c60e0cb6af4e5c9712788c4c0af06ac1d807cc37",
-      "loweringHash": "12ebd57e8a28197c0ec4f314531938b4a63100aecd5dfcc94deb454633a124f7",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-carbonate-kinetics/",
-      "compositionHash": "8f5158dda1e318a9ff9b82b4bc4c7c564831169bc737016ba645943e982c035e",
-      "loweringHash": "6d59a87603a33d195e923d7ff7dadc20040ba13125aae394de686fc51a923b34",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-yi/",
-      "compositionHash": "3a78fc390e631e73b85382a5ee73761ed68731c12bd272c54adfa7d06d7af12c",
-      "loweringHash": "d0d276bb0a23aa5aa099be2691644d6d2928b6d81e69fbceeb8675e617d2b6d8",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-pounding/",
-      "compositionHash": "ac71221b1f77d1fcec7376912b0338ae80733f7ed57ab0c262f8a6b44382563f",
-      "loweringHash": "911ccea629b841ee466b6801f749e27b6ccf23d781e40562fa3d4c640bff1fa1",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "sources/external-pyramid-corridor/",
-      "compositionHash": "8baf0231180e89fc23370f59351eac880e4a91331ddb9bcca1fb4dc66925bd7a",
-      "loweringHash": "e2a298f98b6af0348aef36e7e1d986969dc6992e58d97487ed90a2b16ffaef6b",
-      "regionCount": 35,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/",
-      "compositionHash": "b8564e0f1e777a11c2c3297c27c9c9aa52b645f539fa463b97e3392b4f4b2d8b",
-      "loweringHash": "d21b7a4316f86ec9642b51f3588f56c5d06f9e458bcbbd8d450cbc62337b8991",
-      "regionCount": 43,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R01/",
-      "compositionHash": "78da5ca02748e3455f28c6c64b14e57d59145a2d7cb4b4b9bcc6dfdba1a4e6fb",
-      "loweringHash": "adca65634ffb7a1394d446819bbfa8563d251fc0293bace03f5620a670ed1751",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R02/",
-      "compositionHash": "7bb6932e9e9f8097ca717418c2cd5ce8e21d846d7ffd5efa4e41748c7ee6f38e",
-      "loweringHash": "8ce71af7ee2fe819b73ff3505fa28272d722f742b80de63da2876afc8f77a2b2",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R03/",
-      "compositionHash": "9d5b99d22f86c746efcfe13fa2944c966e5984cfbca50ba485986a23768a463e",
-      "loweringHash": "2c6390dc1435cb8cd8b2902fa75014c879b7cca0d513dab19bd34260a87bed23",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R04/",
-      "compositionHash": "8ed59ae07b2e62dfde22e4b8a6d29966dbb3a3711dc188695ed76d2fdf223f9c",
-      "loweringHash": "b49b754dad273cb1685b32c4ecc269287f5e44f3362e9d5597377587f5c2e919",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R05/",
-      "compositionHash": "b78e64a034da60b13bee8733b2ee49e25ee0f29edb03ea92bbbb3f5379cad4eb",
-      "loweringHash": "d06c67f34b6be2a7ff3052fed261e0b847b8a6ba5dda88b683d8a16ffd58673f",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R06/",
-      "compositionHash": "9c853a8bcac7f5a739f3dfcbf636e1922d69e006c8cbb8de8530a7a80c27eb9d",
-      "loweringHash": "95841759fcca775dbdc0d1f89be5f9175b9e9a67d5d95713f12ad83de97f9f67",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R07/",
-      "compositionHash": "7416f1e30f7978b11c2e8731c7c3fe643ba67d928f6e384a8c4c9136177bb707",
-      "loweringHash": "0ebc4b159de2d25ecf8ae8ce3d694fcaa1ae7a22ff6c181216bfa5292872d4aa",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "open-questions/R08/",
-      "compositionHash": "99dc934f7ac3c728ab7969315dc56b39c502f8bb6fc900a41b4b33b63ccddbc8",
-      "loweringHash": "4fb7bfad69a4e9ae452aa4a07544a0f9a9a66f33820dd7b166f4e9ef76187b84",
-      "regionCount": 25,
-      "nativeEscapes": 0
-    },
-    {
-      "route": "boundaries/",
-      "compositionHash": "d7ec22302147e7eb19bd961957ca6f2be5dabf6045804c9e1957a8aeb14a3fdb",
-      "loweringHash": "610271e809f999059c5a051341c54f7d0788aad6bb8c7ee4787582a26db17654",
+      "compositionHash": "47f46bf22ef52dba90420e3f478b1e382c6c4065bbfed7bb2b0a1467a0bcbea7",
+      "loweringHash": "f3de9f6308cf910f2c3151b85f35314451ffb603f667eec68774ba95914d3643",
       "regionCount": 49,
       "nativeEscapes": 0
     },
     {
+      "route": "investigations/P04/",
+      "compositionHash": "9a4e066d0b41766aa8b5a2aafa47c765400e2e7981eb0fc3d470b97cb63d865b",
+      "loweringHash": "a9f0ac4d587de64f735bf33d1e307ce132b78021d40cbe04e4ce3c1f7133ba9f",
+      "regionCount": 43,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "investigations/P05/",
+      "compositionHash": "71bbe2ca9f27b91ad7d730b427120e71442e4b9d41db425def7d9d24c0e60d36",
+      "loweringHash": "a0bdb8ab1f4454479337922887cff0ad53af2624c5f5cb34b9cdf002f8c46d02",
+      "regionCount": 41,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "investigations/P06/",
+      "compositionHash": "88cc1ffbf92280b168110757cdd4888e27e75d1eb60c60d9b5d90a754e4ba97f",
+      "loweringHash": "5947efd92c75f530b9e4f3bba0c90dd5081e1b54691d0e9ce2f9fdd75ac015a9",
+      "regionCount": 45,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "investigations/P07/",
+      "compositionHash": "c4eff0e5110399f897dfd0bc5eb6bbbc69bc50cded985153974ec315a47bbdfb",
+      "loweringHash": "9d378b8af4785d414cb622603fd9661a952886c50401a5e4f88203164bf3a67c",
+      "regionCount": 39,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/",
+      "compositionHash": "2d6c11210ac63c99be093224e6f92eef1fe0ad31d092d8d46cda9a679bbfa394",
+      "loweringHash": "42c0239ac72bb634bf9dda5f12ffc5303003fdec2992c4b96f4c8c6e06ea4c11",
+      "regionCount": 71,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D00/",
+      "compositionHash": "485623880d57f1eb68333b581b6cd921a5214c7376acc5c86ce360d23a773c2f",
+      "loweringHash": "319c95f648e19e0df4cded130c4fcac4dd874c5bed47f6f814ffc37bdb396960",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D01/",
+      "compositionHash": "ea493011c05234a4acb2371a2df46822670082f87b7016cc9c10689184daf339",
+      "loweringHash": "179531bb0bbdf15c8757516977e623296b2cfe4c671c15dc4054d0af6eb1bfbd",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D02/",
+      "compositionHash": "7220e4f839952a5c7da8a6b75c6d2e164649b707bc8ccb5a145ef21845f7c896",
+      "loweringHash": "d95d30ca60be15df9eefa708e21bdfab0bdc9f32116c93dd07db1f306a925bd3",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D03/",
+      "compositionHash": "03bf65475670e4005b0bb42420108e1fdd0123dd612a1983e1394de8f24421a6",
+      "loweringHash": "2711ca096e5ea8448b4a202704f3c72cf88dbf6c7b7aaa0bd05f94d09a712406",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D04/",
+      "compositionHash": "acf065a16ce1b48e3b0f7e91fc8942aee83c1553dc94f633993b1748f624fdf6",
+      "loweringHash": "75ff1e44221f35a93161252b3f514abeb60e65c47afbe5c2bb996c4c4bf2b35c",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D05/",
+      "compositionHash": "a86c66dcbdcb8aa2f035c1ac85b464731219005df86da4a0a01132ced2e0818c",
+      "loweringHash": "4e824e8a4fbdd1e21be18c9f8229068946992ffbfa2d0df7df78168bee5f6036",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D06/",
+      "compositionHash": "4c9f1823c89935fb9b4f8fe6a6242b26a7069201d3cb90502b3d7eea9914e991",
+      "loweringHash": "f77a9dd40ac933804a9f1ff780a741a0be3e5efdb0d382896d6c3f7879928087",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D07/",
+      "compositionHash": "49f22ac5d98f853ff1da8da49b62d7022ab7d5581cda4721c0c54649e90593c8",
+      "loweringHash": "edf9c7afb67b5e440fc5b5630793b2fb7cffe73968003f4b247f7e6b76004e63",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D08/",
+      "compositionHash": "7799620816a961abb9874a56c6b5d62775b65641d084bfae86760c65a7008ba9",
+      "loweringHash": "4d5f493afa5ed015d22c2877cf779ed3319a07f31d54f757260db8c0541d652a",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D09/",
+      "compositionHash": "8faba0ca5d69fcadccd083fc47b9fd86781eff1e580c3cae8657a9f3d8d3982e",
+      "loweringHash": "4478b78368a981df05808af5a09993f44d8b6ffa69f8d4f1421204ea6bac1b84",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D10/",
+      "compositionHash": "ed2276a96ca5d6f4e538c9c0128dfbb0a00bedf1cdf6476c9fdda185e9e58ea9",
+      "loweringHash": "2e4c4417d167d8e3795a6b94fc221532d82887e9ecd20ab35972f5b80a415554",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D11/",
+      "compositionHash": "204ed720dff95720dc67f1f27ef3b99aa3669b70ea0b38fe246f77f2463c3c23",
+      "loweringHash": "5a5ce9287894bbcc6784f89656fd752e9885c1d33aa6601061be95c737458545",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D12/",
+      "compositionHash": "4f25ff192c035db72492a9d643d8ab10187d933c3cba202dced646f724057b2b",
+      "loweringHash": "f4f7ee555b021143767dc25bf0126d2e20e7ca1e9adc8467307e6a5804c64ce9",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D13/",
+      "compositionHash": "51b47d466e8a3bdc4d5a80b9ea62bf9885602314a1a011a10437b8eac76c507d",
+      "loweringHash": "907cb03b8d8455426f65dd66e49db17519c8bab45baaa8ff7410a53b3a90c2bc",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D14/",
+      "compositionHash": "5ca76c4ba09dfda5a85b8ed55ae36c8bd0331a0878afad1da7f116c7687e0d0c",
+      "loweringHash": "f627008bbefff2f183b8a670957819f38124e77f08fad5f523f4fe340284a148",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D15/",
+      "compositionHash": "95c3e029f0d622d539a3457d994cd8a6d2b7e1bdc1a5e0da7885d4676da981ed",
+      "loweringHash": "28e70153a4e879a561268dc9e35145939955d11317a3b65b8b426d0ae040b5ca",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "stations/D16/",
+      "compositionHash": "fd40e0cf8299a6ccf2c8232a1a9727b59c97919e6a1d19ed7041e963ff36b69d",
+      "loweringHash": "abae49e73d0ac7f89f7b5075af208ac9003fc1f49068d3888f5361f366f1c948",
+      "regionCount": 59,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/",
+      "compositionHash": "f12432044e403942816347565d6ef7dc5513303abdbb96465d0d212559b2e626",
+      "loweringHash": "fc2ffa236fc6c6055f83884635dfa739a9a2fe2331873b2b791ef548ddf6593c",
+      "regionCount": 98,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B01/",
+      "compositionHash": "e7b7634e2cf605269b206368156ede0b335800b4b6a1d6a98cd910448d1b9597",
+      "loweringHash": "ae81c64a2678cd27665300e6b8d2de96cb51a65342d5ec6d06541d72b191ec90",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B02/",
+      "compositionHash": "5c6f6b1f352d68a916711f17d3626937c696e4c20a901efff5890503f55e9d2b",
+      "loweringHash": "6149c4e57269e4ec18c2dcb592b156a742fc7a4a7eb230b331d9ba2db965b3bd",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B03/",
+      "compositionHash": "d906983dc7b8e2d36e66a6a78fce2d944019b9880934a7a5b9dbd0826bb287fc",
+      "loweringHash": "3a90741fc809b675f14373e5303c10dbe342d6d5f72ee78d9119fb025740db23",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B04/",
+      "compositionHash": "7b248069e03df251c6a5193e5616bde056076320101065d512c372084863ff4e",
+      "loweringHash": "7e31a2ca94be7b62faf95ff6ebc5554e94a5e44f7cbda63ef502295043881642",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B05/",
+      "compositionHash": "ffb4971e3b9a18712bc71ec8b5158d937b8d27585a1af711a76e0367af3d6f5c",
+      "loweringHash": "bccf7bd8eb6005bd708d728bebfbcb9c2808798bf4f3a3cc678ef0f54e1a097a",
+      "regionCount": 80,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B06/",
+      "compositionHash": "b96ac294edf88e90103147ffbeac7debca5321aa6d9e1df0bc0f29ac937445e7",
+      "loweringHash": "0ef1f71cd4091263607a83a893bedb5af4385b22a75331f9253c38b0e40abf38",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B07/",
+      "compositionHash": "051bb3415c22548c00265e21b641cc27c88c497e4f51f3b495aa4f7bdb8e332e",
+      "loweringHash": "a65ec0c862f6d9ac22c21fcbd16b6a3f40ed376705055d3346e0040a9644660a",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B08/",
+      "compositionHash": "bf3fd391bf1a54d2af4a3d20d0aea69d2db0c4bbbbfb300a027a694c5e9903ea",
+      "loweringHash": "ba46b97054f4b5c2c831e233d529d973edc2ea9e85b5e04a77c2cb6a0aba20e0",
+      "regionCount": 88,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B09/",
+      "compositionHash": "21677fa26ac7d04e81611d885f2f5fa571653390124bfa851e656777c9f1674a",
+      "loweringHash": "2e52ec746813dfa665f039bc3d8df91469fad859776e40f2748e6c972ceae7b0",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B10/",
+      "compositionHash": "80822793e82cd65109ac8eff047ab8d3fb39f69c202f00ec13c9197810f66ace",
+      "loweringHash": "54a2f804b749bdee05698766ecc0dd8eccc0a188b2127b8713b98958f2c0fa23",
+      "regionCount": 86,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B11/",
+      "compositionHash": "9923c6dda889bff84cc69062125306282ab811a55605f7f258340a58ac233b89",
+      "loweringHash": "93a83dbabb9228cb6f0a53a18834e0433950c74b631bac0a8ea24858a4a7d381",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B12/",
+      "compositionHash": "6c38d07d2033b23acccd09c36fcc702987063ca60f6e48f7d46666a0e4d9032b",
+      "loweringHash": "d3656b56d5375d3c50702b788a86ce7d28a468c41357d3fe5683520c98a8d05a",
+      "regionCount": 80,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B13/",
+      "compositionHash": "f646c763d47666f04166b0acba0d287339e57b0a8ddb4faea8c64f5e90add58e",
+      "loweringHash": "cc44840bedf8207eaea8a8f28787bfd96d47f170d0f98ab7b8a12a1d6810a64f",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B14/",
+      "compositionHash": "a175858a0b039369a1d759f844e56dff2916201e2827f647b6923c7fe2e6e74e",
+      "loweringHash": "211e7e373a811ccb4a213f96554030898ddbc0bf2e15df330207ab75f42c9a48",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B15/",
+      "compositionHash": "325752e303979bd08f653f07741886e9d3e1477e2ab4cebf0129498a1dd7800e",
+      "loweringHash": "74a29d0e8aa63752602b756d0012a59af9132f7cb16f6c5e4b6d3374e23bd6da",
+      "regionCount": 90,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B16/",
+      "compositionHash": "2895e2f3288338cfa0cc0f9fa8526794cbcb03a5a1926f14a55e84b2a596c9cc",
+      "loweringHash": "09b4718a73dde48aa75236d5fe7007deb15c04cc462db612f915b0cc4303cead",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B17/",
+      "compositionHash": "ccd86ce0a6698168b2e80a632dd7596d225c02ea06c6992c31ece16ec8fb3502",
+      "loweringHash": "73a09fcf970235a7a98e23b39d6492d2362b62d6c94e902aad0af983a47fcb9e",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B18/",
+      "compositionHash": "c230c7fb275ede1e7906c196465d7365805c2b71c724a8ec8ea7a0356293bfa5",
+      "loweringHash": "86556d1b414dda17f36d4df8c8bbebea56bb9df846a5ebc44dbe8702c5be0f4d",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B19/",
+      "compositionHash": "93cddc3bfaeea80bdf7d43b1527fc5c1c88b80eb1533e1cdf9a331c5250b8fb5",
+      "loweringHash": "e84215c214182dc6f593404da506b2746ce240a2417f7bebdaa9f7d601c33bb4",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B20/",
+      "compositionHash": "94fcd571567f0b944677a2276971667538548f9af64d545b6f1d2cc13dac3624",
+      "loweringHash": "121e0d28b5107b1abf1fefcde89a0e9db41bce73de62377e7bb9ef3178faae38",
+      "regionCount": 86,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B21/",
+      "compositionHash": "08e7135bc595d4187dd716f0f24de09d651bc3747b3b9c2d1b6bdd3a78939a87",
+      "loweringHash": "6429154cb11f44ca32e8deb686048ab73cbf3d4e49620d3a9e469a026ef9802d",
+      "regionCount": 80,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B22/",
+      "compositionHash": "9a4a919a8cea006a89e1a6a6c0a170769fafeb70d3d9c2e8c1bf5c6b676f6e87",
+      "loweringHash": "076d1844fa5e888795201af52d0e52cca8beba30b3f43086c2b0be48575bb5f1",
+      "regionCount": 86,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B23/",
+      "compositionHash": "6988fd3006f197ee2ba821fa803eb17b8a60443119d36e2a6ece6fcac5f7f578",
+      "loweringHash": "29244145d3423acc4eb19f4f09dfe2cb802a1526427b29e2942e0d226cef92ba",
+      "regionCount": 86,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B24/",
+      "compositionHash": "2387e3558b63fee9a1fd957d69e6b55389ee7a525479816dadf651270a923f05",
+      "loweringHash": "b900eba52ffa01506eebace62fb64797eac501b6748b683bba20eff20bca4e62",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B25/",
+      "compositionHash": "e018b420625a9c53524dc4628d5aaa846ebfea35486fe4a9920deded570fb540",
+      "loweringHash": "ded4cc76e89d071cfa1f952c8f043b9b2a45faeffcedf8c4d63af3c1e3f9d669",
+      "regionCount": 82,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "bridges/B26/",
+      "compositionHash": "c903359d2732c57fc9bc6b0620e387cc5e445c2d901690a37e0f9580e7b50153",
+      "loweringHash": "c5d44e2fa2fcad648c7e301ff28ecd0cc9df60da1b94f9de3962398c18bde188",
+      "regionCount": 84,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/",
+      "compositionHash": "3b197126496c28bcdef493414363b82d49201eb6ba806dd1ee06bb082d463823",
+      "loweringHash": "def66ef3a20dc6190cece1e7ace17f201530e0f7a45137aa43d52d5b6cee825c",
+      "regionCount": 47,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O1/",
+      "compositionHash": "3dbdd7de30f8b9d9a190555ff26a79cb8755c37ef0176f642041be346a6659ba",
+      "loweringHash": "546649b6c730d55aa2f01b6f050f8770f0725272183fb3ecace6a38ca7250dd7",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O2/",
+      "compositionHash": "6428d1a1a14328732a236ed05af2d32cb0b69db36c17ff017e2be9923b8a0865",
+      "loweringHash": "8943ed949459f5d471a19fa498f103ff0c2aaaa5b3cb98a8496bee3dd327dbbc",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O3/",
+      "compositionHash": "02d383632772e59cf8f846eb5ef2fb9fcdc4b5f683df1f0b833e317daa602562",
+      "loweringHash": "d6f3385935d33c48ae5b0e984f4407d4edeba990835a8865dffea17878167c5a",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O4/",
+      "compositionHash": "b3996cad154a5582db2bc125adc2d0a8b389107349995a2859a8d7db073e9aa6",
+      "loweringHash": "635df27a01b71bb8273453fd67dce1f9bf82ff99eb8020d32e59e68a9428ece0",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O5/",
+      "compositionHash": "91834c36f16b7705708eb19f7e504b09b539e8f608fbb4f8d57a2feab22b145c",
+      "loweringHash": "4c517802a53735c48922736e52e9882726207247d5f2e1366fa0ca43ac7bc53b",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O6/",
+      "compositionHash": "71e786ab9a23678d1dd5bcc40be3b622fc77860b943fe18282b297d27d7f5d0a",
+      "loweringHash": "5c121536fcb2b291a41157cfc6ebdf7b7ae7c14a42c26fca3d30c63df6af2dca",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O7/",
+      "compositionHash": "1b24004ac755e433be577fc45a8bee17dcfe01f25037b970628288b70a8e0e4e",
+      "loweringHash": "df9fd57a9c531ad4849b82c624f288ca5d312a39a6bcad32c8e6e0e24f7fa0ed",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O8/",
+      "compositionHash": "310c1ca094114e4e0f4013c591384f41e13099be3e38d38fd3fb655d4050de55",
+      "loweringHash": "276a9ddecece2542282ab1fb6c84049155b4ad58f512ae796afb181b73585863",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "operations/O9/",
+      "compositionHash": "587078ae2f38930e60e13555cc6c580f66d68b7c99551e202d1dda5a97da8d80",
+      "loweringHash": "ec42a7f0eb226f23cc30e52357a222d07f16ee32e7c020d4609f677e3996a0e8",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/",
+      "compositionHash": "a015faa18b917ecd7495f634e733c3641b5006073b95ab77a617ada02b61cbd8",
+      "loweringHash": "b2d1aa28b4e0930300208c5dd6d43567c6044d37c95898e3569a566649679b2f",
+      "regionCount": 140,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-kernel/",
+      "compositionHash": "190a2d17823fc335571d9aa7ff567277e7edd22eb6b86c8eff8847aec1f2f6bb",
+      "loweringHash": "7a74a10b31683eeb01f2029aeb69118a0b6389ef309e8158edbf4f5046db4999",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-programme/",
+      "compositionHash": "0f2cfd419bbebc5dfaf6ab1b564eb274d90e30b32704167bd07c32230dabae79",
+      "loweringHash": "95e054d9501c6fc1bbadcf79b257925cac30eaaf23dfc062a4277c46493f4538",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-ale/",
+      "compositionHash": "e6ecd48c58091ceb8e6543845f70d79d3f22d2b620907b3783085e43527fc2bc",
+      "loweringHash": "3a824cdbfca24588b4dd92fd1f0d6bd67d3a159254c10bd74ba06b91da703fa8",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-relations/",
+      "compositionHash": "941d62e16eff455925ff093db611cd82f23ff3633fdd572b9e4b391fcbd28c29",
+      "loweringHash": "952028547b0904b8ad62257099aa0791aeb5b3f72c887e365ebe57f0d9e94b05",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-record-units/",
+      "compositionHash": "bf9349c7d0a7033714676c2090d81829e1a5ac75ef7452bc48277b7d5c457dcc",
+      "loweringHash": "57c6872dc05609bb10173efbf95f37aea4b44471d687d1c7d0c6f11faece68de",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-physical-units/",
+      "compositionHash": "f5afa57d8102a98717bbabb105deffb75560972d72c622b3fc3872bf0149b1d2",
+      "loweringHash": "ba00a3cd4c44d5a097d78ae0b2ec028a05ed3db7df0177b2bf90a7f6ea2ae871",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-two-rail/",
+      "compositionHash": "f60719b66242e7c6f0bb47e2dd7bbcd8578fbd44fbde437482bc18454acb94c1",
+      "loweringHash": "fec0685abfbe080c0eac4bb17e726354efaa4d277178c228612cc84829846179",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-spectral/",
+      "compositionHash": "44e7cb04e94ec4ff8cf0ca9790523a6d68b37221008d65519480ec9ed3781c81",
+      "loweringHash": "3a6eec21bebc8bf2b16db15a32e7b5f8f427477b601f0d11955b8978713f2ab2",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-capture/",
+      "compositionHash": "c79521e84b6c2becae2c8cafeeb759d9f14b57e1562c073fa952128287256691",
+      "loweringHash": "c82a348c2758646e5b5ff052ed1dba1f36106e6b0f7d8115f5760c6f510a535f",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-crystal/",
+      "compositionHash": "8b6f7ebc35a1c0dd6ae7e5791681e813056a46194debfaf4cb5458b2477fdadf",
+      "loweringHash": "3a5240dd29137b8e23ee73482efa4a3837fdc0f93ba3bde7c18d510bfcbfae02",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-electrochemical/",
+      "compositionHash": "3121c4572dccd10b0b6e8d663df893e3ffa14456950cc855349dcaab8521d8b2",
+      "loweringHash": "371a628a2da02bc9d41d100d97875c55c3b8d40eba54656e719f2c4d8589415f",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-archaeology/",
+      "compositionHash": "d10a2125b2b571859e1f0e5086800e681e59b10a03d04ecd67dabdfcd72c7241",
+      "loweringHash": "ffc175910864f0a267e28ecc528e78f9694f4c4f8191b380d1b48f0a9ad733db",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-composer/",
+      "compositionHash": "e1e61c19db172bd3411895c7e39b617c1a6d19c925cb66cd2f4e29893ab35ac9",
+      "loweringHash": "1cb144c47c5cf2072eea344b4b76a1ee7f8dc1877f7dede202bf690bcc670210",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-claimipedia-response/",
+      "compositionHash": "34fbbf5beda80c8423c2bc686ecdd22085adc5ba5f94d7439420496c9489b2b4",
+      "loweringHash": "089ffe8e4ee793989e8b4734bd556452112fcdea96cebc20c06227f9a4f46cb1",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/local-claimipedia-response-schema/",
+      "compositionHash": "34a8d7431424b3c3e27f6c5fc1a231bda906bc2183f8ed0fa490a12a980da388",
+      "loweringHash": "fefc7bcf2005da70102966635f867e07223711ff0b0e73b2c9aaedb1d15ebe7d",
+      "regionCount": 29,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-wannier/",
+      "compositionHash": "23f59fdbe9659ee2cd3f1d31cb28cc182ebe030b45766e77ef93ca78351035fe",
+      "loweringHash": "43ab5f27e6425632ba3c99f8f076cf2742551dd0c253ba60617fa68015eca73f",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-qe/",
+      "compositionHash": "c54c23ec06ec6d1401a6d1e1f32f851f2732fcc9a590bd903e376fa3082a3480",
+      "loweringHash": "a9f062aa4a0dcf2502a6676e356e554cb49519457c2cd8886ca1d038143ea177",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-phonopy/",
+      "compositionHash": "019691af6e08ce0b9400d247486499d53a4c6144340ff15501f6997f9cbcf850",
+      "loweringHash": "1e1042596d47c5cbaaca35bb1e8f546a164709c20b27a34cb45a0133491a6764",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-crn/",
+      "compositionHash": "183c27072a3237f86c0ac42f94b4409a34722abaab81f8b2b5dfbea8133315ad",
+      "loweringHash": "2e0d61310364b8be60aa2c0a7e5b19ee8d18bafd143d02c923d96ae298408e66",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-driving/",
+      "compositionHash": "af2195974afd6375457220f462cfbe44907f5f628e8dfd90bc4636bd125408c8",
+      "loweringHash": "55eea39c10b1a324177951da3a42c6784b0f93d71ce40f427e855fc9788511a0",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-phreeqc/",
+      "compositionHash": "8ccc20de5e966d0d2583a92b09edd4779f6f59ca992f8bc15d11828138eea19d",
+      "loweringHash": "a1ba8207b81eaf60b5683b0878a536edef01e35f80f0f4452fb8dca12a156ad2",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-granite/",
+      "compositionHash": "6b826e2f9d4fe453dc0d2df2ceb0e9a7e1c1ec11061cfbb9cce9dd55ba748819",
+      "loweringHash": "8336ff818ee06bd77bb2fa9a5cde0e653096ade3bb97d75e761960cbd3fd1331",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-geophysics/",
+      "compositionHash": "9f2e4d49608512c680296cc5c5842f10761016af592f4ceed97eac6589dd46c8",
+      "loweringHash": "88d81c6fd7c30bd7997577fffa1747fed633d19d82402247af3f69c8c637b590",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-toolmarks/",
+      "compositionHash": "fa1f787c21b2c0757898dceb63c40f707e27aa6d05eb19562e98acb62afbe14c",
+      "loweringHash": "a36af5cb0f2c12a9357bb12671c92c7e49651f4d609a34545471d3332de9ccc5",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-oxcal/",
+      "compositionHash": "f60a248db0e0f78d5ed014a87baaa3bcc508d6fb75ceb0852ff7602a6a972255",
+      "loweringHash": "548db229a98d8d6c57883983ed81a2239474c6f02f10a4aff64ff242ab467720",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-silicates/",
+      "compositionHash": "6db132e11b08ffa1db119e789ed2d01b87ad1271f20332d1c1024468fbd29ffe",
+      "loweringHash": "d24e8043d996ed1fa1e3b2213f625fc3707daa038a8c3bb54fd0b4b474e6fcf4",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-eutectic/",
+      "compositionHash": "de3901735c50f1482b07237056174c9dbc18d287bf82f3bb2204bc58586f42df",
+      "loweringHash": "c67b930007a316460d67b8d226b50e8b5781b747ccd3a3733ab9d2b0c640770f",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-carbonate-kinetics/",
+      "compositionHash": "4267d3c34324f7775c02e6f2fb06e08bd95e5794611ba9b79cea3a397e2384c6",
+      "loweringHash": "80f4968402cf975930f12530a0c7678e724d7a85e9c064ed9ecd0089e9f54426",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-yi/",
+      "compositionHash": "62c2b0e8ab9a8265dc736845fdc5bbf3d350877b123824fb5a9ec433934af4d0",
+      "loweringHash": "e3948616b69f2793e5c2804eaf8ccc5936e23709288f65a9f0d5e6a9e9d0e0af",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-pounding/",
+      "compositionHash": "2af3c4262d18d3df8f4d113ad00db60af04f1facebbf5ba98d88461341a83e9c",
+      "loweringHash": "c6132fd0605dd5e0b97834e76cd3cb0527431b54cd1a9b4c5b0b71de7c7a67f7",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-pyramid-corridor/",
+      "compositionHash": "73545e9d186ff1de4210dc998ff71453f308588cd698b442663288bc9c26cab2",
+      "loweringHash": "0f421caeea84e574cbaf20b8332941a76572b9adb406b29eafbeef89f944ee61",
+      "regionCount": 30,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-usgs/",
+      "compositionHash": "b2730afddbf195358c8142de2331a4b56762f666703b95f536006eda24711bde",
+      "loweringHash": "e6468e5c9c586514cf2ecc53756de61861eaa3c37b920bdfd7b2e593a25fa8fc",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-lehner/",
+      "compositionHash": "ef1d4346d5d9fbaaea39bea6effc200affe85387a50514aef9dee85f12142a2a",
+      "loweringHash": "c061c2f2273578874229836029f22563adf6b2d24faf6eb3a296e2d0ee2e8528",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-campbell/",
+      "compositionHash": "75483de041d64d2e6b920ea2e3f7558b4b10445f99c54e8075fe29423c499503",
+      "loweringHash": "aa0af6c7a49a8dbbf53701863ff8297533f176559e200de38bdb45787412481a",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-yi/",
+      "compositionHash": "2ab6c53c8e8c00fe8cc8a80570e99ede4cdaa6fe12ff95d89cd53263b47afa82",
+      "loweringHash": "a5c871427d6203b060b4376f89f7503c1939c1eddd17a239269028e82dd1c9ca",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-nmr/",
+      "compositionHash": "b5fcc614e13357c85491d646ffe4aabe5ac39caf5f94f0ee1548702525c8013c",
+      "loweringHash": "28e6842613a1b410730a5537c54dcc5e39d3734d1396e93caaf4419dd8bc883f",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-worley/",
+      "compositionHash": "3ac1fc20b3f0bfa88a3fe66499a694da9aa330bcfbe3cee41745cf6bd64efbf6",
+      "loweringHash": "cccf3f89e91f56a4963322210a9ea8529375acefe8ff95844eb01f210f40b577",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-firesetting/",
+      "compositionHash": "7e6a72d7d616a0ee5c0911b783ae508ab04b8a761284101b93793f6dc7ce8cc3",
+      "loweringHash": "5c9ea6fef9d9730d76ccc9ead188f5646196025d00b2ab1fa83af4280f8c4eb6",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-natron/",
+      "compositionHash": "c22ba7a12ca247e6ff7ef525d7d384cf8caaaf5f8ea1d7f76b2e8f6c2110f53c",
+      "loweringHash": "a0c0cf973b0855aa1c005a0eedbae8874ecce263b6a8e7ebc581bd938feca82c",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "sources/external-worked-nist/",
+      "compositionHash": "be5326e4629cbd9929feffa6dcb96d1ffb38ed9a179f653ddde8c765525649f2",
+      "loweringHash": "abda9e1175066f5c3a734760759f70558817889d0d4071d61dca9704b8f2e491",
+      "regionCount": 36,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/",
+      "compositionHash": "22a37350eec0334b419d47c05aac5d70faeb60c5e01b86565cd4ba21e63a93ac",
+      "loweringHash": "e10a242a7cfbcad8a0159ca09f2b37a28f372f7fa710e2f814fd37073398af66",
+      "regionCount": 44,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R01/",
+      "compositionHash": "e0c2b49c383d086204c16c427ad1af8e2f8899af00bf93d4a1b0dba1f7ca4907",
+      "loweringHash": "7857d51c7cd4e99ee614266eeffbdad9a97daf0e0b3166eeb5b62139cfa2e7ce",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R02/",
+      "compositionHash": "d1fa1fe2e66b9a445e21b3311c8fdedbd4efa7925daf599f211abe8e8cb67c76",
+      "loweringHash": "e52531210693c7826d294d9b76a7f09e68e881a5c479ea2136246d11acc5cbf9",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R03/",
+      "compositionHash": "ce8afba3e1ab89aa360e7e8458c7e40c4df5da71bc9c74a99cea8cb55df54ace",
+      "loweringHash": "9c0c955845c696235b455d600afb905fa48c04d27b71e114a65e443c80280a30",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R04/",
+      "compositionHash": "49a2b7c30fea97930f58eb97b5ca7a833aa9a1168e5e009f6436e8518b4fcbe0",
+      "loweringHash": "368ca86bd2de343f6607412c9953bf31907648466bc75f7e4fb147b2e33c12eb",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R05/",
+      "compositionHash": "bd8de5ad2eb64aef4bd3ea078404de7e9b16b73e9db78da6ed621831d52ddbf0",
+      "loweringHash": "d05e39ba1eb982ca4890c33e989568c32d66f8d2a9b44c887db79bdd2d87fc91",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R06/",
+      "compositionHash": "d53a4cae2fa28e2ea9ee9bdc5d7f9d496b5097e6ada904c0c2cb405a9c902cc9",
+      "loweringHash": "8af472066ca4a0acb5d508eafad0ff5bc7fc0cba5de53945ad96b907d8b309f1",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R07/",
+      "compositionHash": "a3934c52fd7307588722933b76be3728863a491208d95431f49a3896cdae7a19",
+      "loweringHash": "78e331c3aea4bce995a0a98a4aec13679bfc14436ae4a5392cc9760a731f824a",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "open-questions/R08/",
+      "compositionHash": "660a543218a0dec92f8ac89306ee40ac127bbba5b370169bf0d2aa55599dd58d",
+      "loweringHash": "8171d5b8bf8286cda674b56291d876e738ddbe26ac9d19ae9c87a3c1d5e8a7bd",
+      "regionCount": 26,
+      "nativeEscapes": 0
+    },
+    {
+      "route": "boundaries/",
+      "compositionHash": "cb329562392d813fb2a85d145e7423a99ceb3d093bc466f0614fe10636b53df2",
+      "loweringHash": "8238d1725fe2e9c4c5287c82933eeeeb5611b710b779986df5bf918909d38d5f",
+      "regionCount": 50,
+      "nativeEscapes": 0
+    },
+    {
       "route": "boundaries/N01/",
-      "compositionHash": "1267f15f83fbdffb8b24ca04035e9391e5a0b8e36e3d8aacbd2337804f999c08",
-      "loweringHash": "4a6c786d4500c27a853dfbbeb253a9b920d94c12c95ad448f3eefbf47674a8f9",
-      "regionCount": 22,
+      "compositionHash": "8b3c51384d5efd1ba6b20136cf4ebaf2bc0430bf3dfe2ac0dd08b9c26c68b04a",
+      "loweringHash": "33991d625980bcb247b5994d4c5e354c62d7df5df57a729257dd17272d6ff9c8",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N02/",
-      "compositionHash": "1740f0f38050940dd60771231bb87534c50eff50043cc16539eb59cd9e389074",
-      "loweringHash": "16737d6e4da4a94f0ffc64649d8fc3197d2df0092e488dffff2ca186938ec5a0",
-      "regionCount": 22,
+      "compositionHash": "33ed14219544b7d4228efd3ff3d050422124d41a0483df4a86580d9905e95cd0",
+      "loweringHash": "b746ae5c86facbfa17ac0cfd850a55b1b4be70c4d7ecbfbe45872bc2a5afb2c8",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N03/",
-      "compositionHash": "4b2e6e003bfcadb831b9d605953769b0a85bb06829b3edd083cacb39846d23a5",
-      "loweringHash": "2b014b8af38591af8105c3db7560b862987948973f6544879d5cd06efe9604ec",
-      "regionCount": 22,
+      "compositionHash": "37b2e5a8ca7bea23ef0152ed41be9904cf6bef98eadf0069ab3d374681b2bd16",
+      "loweringHash": "ff170c61b5c91dbbe20c68589bd64d3387754265bbf5bc8f51da7095bb774346",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N04/",
-      "compositionHash": "325870953350fa00bdebfdd156c46104bd0fa1b85258acaf543582799a463c50",
-      "loweringHash": "ade897b546e8f755f5ee6b2a1aa8a9c4f098a99706062650888280b52ffaf23c",
-      "regionCount": 22,
+      "compositionHash": "a96155834b818af8b049ce15b64c7b43f297dfbeedd262c6ce86957f47434331",
+      "loweringHash": "4b323b16d92b06af57be4238e67d15b7eec5ff90d7139f29080a75c16df4488e",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N05/",
-      "compositionHash": "00c553ad7f7252b38ea9062b38cbf0336cdc68e2a31cdc446cd6476cdd376512",
-      "loweringHash": "80e58b8b44f5f54833beed1ebbf0ec586610e96ab563b0cb54e46ab5b8123b11",
-      "regionCount": 22,
+      "compositionHash": "b4a4fb691b187485e9d2cf90ccbc856c58fe2d31e926c9337c3ded42a1abaeae",
+      "loweringHash": "6062c61f8438b40d9acd1d77212fcc56ed680e08001d6573caa67c8a73a9658b",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N06/",
-      "compositionHash": "1b4899df7214bffa89eb60f04b3e0cefac33dfd9d64c38a2ab4a224f26f381e7",
-      "loweringHash": "5cd987c9e6c2fc0eae346bbef32a13f2b8fa4fd24472511af376502a05f59977",
-      "regionCount": 22,
+      "compositionHash": "32b0671feb93eb80139f485f54b2918ffd27c533eafdc3ac650e23924cebc7b9",
+      "loweringHash": "6ccd7a006fa6643fa469d440ab032f4023cb89dcceab7304221497cec891eeba",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N07/",
-      "compositionHash": "bdf1dbefec8c5e369f3ea15bdab3d05530ea959cd1f95e89cd3fac81af484360",
-      "loweringHash": "39e64936f5dbad740433e7fddd7c0bc23cdedb43b57b9e098400eb328d2b7ff2",
-      "regionCount": 22,
+      "compositionHash": "c87eee326112e437d1580a4288363bfe60a25e3d33c87f91dc165de3458b9d66",
+      "loweringHash": "6d4b0189a021c2b189e7ad79ab87e35fefe4ffa44b030a9d4c41c3c54d394798",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N08/",
-      "compositionHash": "ebdae86998548219f75a6cb4990d1f957556a824c111d20bfe7090106ed6da25",
-      "loweringHash": "a0bace2fc27abde9f4b04416c1b9365c7589af13cab3a86e2ecab88f00de203f",
-      "regionCount": 22,
+      "compositionHash": "0212713a6a64dd0f6237aa8b2b5f4c5e578ef7ac3b9873a3571c6814addeae14",
+      "loweringHash": "93b8065b3d57014932e10d49528ed4824fa7e466a9da5be4c089ec63c2bc58fb",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N09/",
-      "compositionHash": "ae6c892cf79a12d3b8fba6a1b5f96e70b87d06f55a27741f4eda08accefcba92",
-      "loweringHash": "ccc4d1e87e3a03429e67d974870a483ae2bdabfdfaf0ba16813679326a0574fa",
-      "regionCount": 22,
+      "compositionHash": "3725a420a514df1c9e1aff79b8bc16f32b10d694720f4d382ffdfa56537597af",
+      "loweringHash": "012977bf45497b8b31fabc0f802db41dfd6cc8d0019c0d14e9a53b616cba583b",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "boundaries/N10/",
-      "compositionHash": "115feae5f6b382e13279f0cbb6bb9e0b1470e29cd6120b5d3d3a89b22303aca4",
-      "loweringHash": "02ba56e28d5e0202e7fd238c031dee29bc09f5f14f6d127222731301f3585628",
-      "regionCount": 22,
+      "compositionHash": "e4314d0df9bd62dc6f3b5c2c46e4e0e32970c76d8f7bbd1a188bb35573c97df7",
+      "loweringHash": "534700e54aea8e7a306ad1058ccb6daa1b040583279297206cdb188151b10bdc",
+      "regionCount": 23,
       "nativeEscapes": 0
     },
     {
       "route": "read/",
-      "compositionHash": "b41336c64a3baa8654a7e131765ca12ef5f03b670316f1a2c75af7539f42ab4f",
-      "loweringHash": "67e331fb90b0814063a3e85d2d7842498535824a08dd956d1471c3618fb40638",
-      "regionCount": 19,
+      "compositionHash": "aef3f5ac750e9594cab3a4bf0c6ad12d83e1acd5794184c0e51e226e36f7bfa7",
+      "loweringHash": "dd78d75ddae62eae2f89ae378c9678f0155f74b9ea3f2848bff0e3e7b7fdd513",
+      "regionCount": 20,
       "nativeEscapes": 0
     },
     {
       "route": "algebra/",
-      "compositionHash": "0528cf163f3358a94971132f814460bc51d4cabeceba498d14d830ba6acff924",
-      "loweringHash": "34eb990482772763f796c6043c9f6e2ad0e32242370360973870ace4f2dca516",
-      "regionCount": 40,
+      "compositionHash": "845519a0ca044bea31e5ced83e7e70b35e16a883907eb851a68ef153a3107ad1",
+      "loweringHash": "ea844c762be0a898fea5dd429228ad5200ccb014e2532f358afe1e5b2250bad7",
+      "regionCount": 49,
       "nativeEscapes": 0
     }
   ],
@@ -874,5 +968,13 @@
     "Article prose is an imported Markdown rendering region; its internal DOM is covered by native adoption in the browser, not individual surface-composition regions.",
     "Static HTML serialization and publication packaging are explicit adapters, not Sourcery runtime activation.",
     "No new Sourcery lane, registry, scheduler or interpreter."
-  ]
+  ],
+  "workedInvestigations": {
+    "studies": 3,
+    "steps": 18,
+    "calculations": 6,
+    "experimentPerformed": false,
+    "monumentSampled": false,
+    "historicalAttribution": false
+  }
 }

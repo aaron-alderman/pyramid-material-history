@@ -235,6 +235,96 @@
       "supports": "Bounded muography-based characterization of a corridor-shaped structure in Khufu pyramid; not a unique construction or function inference",
       "identity": "citation and bounded source reading; no immutable full-text byte capture",
       "accessDate": "2026-10-29"
+    },
+    {
+      "id": "worked-usgs",
+      "label": "Bulk silica and mineral proportions — USGS",
+      "url": "https://www.usgs.gov/media/images/components-igneous-rocks",
+      "citation": "USGS Volcano Hazards Program, Components of Igneous Rocks",
+      "supports": "An illustrative granite composition distinguishes bulk SiO₂ from mineral proportions. It is not an Egyptian sample.",
+      "access": "Full page and indexed description",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-lehner",
+      "label": "Giza stone supply — Mark Lehner",
+      "url": "https://gizamedia.rc.fas.harvard.edu/documents/lehner_treasures_032-045.pdf",
+      "citation": "Mark Lehner, The Treasures of the Pyramids, pp. 32–45",
+      "supports": "Archaeological description of local core limestone, imported fine casing limestone and Aswan granite. Supply description is not a specimen assay.",
+      "access": "Indexed primary-author PDF",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-campbell",
+      "label": "Pyramid petrography — Campbell and Folk, 1991",
+      "url": "https://www.concrete.org/publications/internationalconcreteabstractsportal.aspx?ID=3624&m=details",
+      "citation": "D. H. Campbell and R. L. Folk, Ancient Egyptian Pyramids—Concrete or Rock, Concrete International 13(8), 28, 30–39 (1991)",
+      "supports": "Reports geological fabrics and absence of proposed geopolymer fabric in examined material. Preserve sample scope.",
+      "access": "Publisher abstract; full paper not inspected",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-yi",
+      "label": "Granite and molten carbonate — Yi, 2026",
+      "url": "https://doi.org/10.1038/s40494-026-02315-y",
+      "citation": "Xiang Yi, npj Heritage Science 14, 51 (2026), published 22 January 2026",
+      "supports": "Modern thermal/carbonate experiments; short-contact cracking is attributed mainly to thermal shock. Does not establish a Khufu manufacturing history.",
+      "access": "Publisher-indexed Methods, Results and Discussion; direct page retrieval redirected to an inaccessible identity endpoint",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-nmr",
+      "label": "Reaction interfaces — Winter et al., 2005",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16851498/",
+      "citation": "R. Winter et al., Tracing the reactive melting of glass-forming silicate batches by in situ 23Na NMR, DOI 10.1021/jp045705s",
+      "supports": "Primary powder-batch NMR evidence for metasilicate formation and changing interface-controlled kinetics. Massive-rock scaling requires additional inputs.",
+      "access": "Primary research abstract indexed in PubMed; publisher full text inaccessible",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-worley",
+      "label": "Aqueous quartz kinetics — Worley et al., 1996",
+      "url": "https://doi.org/10.1002/aic.690421214",
+      "citation": "W. G. Worley, J. W. Tester and C. O. Grigsby, AIChE Journal 42, 3442–3457 (1996)",
+      "supports": "Aqueous 100–200 °C quartz kinetics; apparent activation energy 72 ± 6 kJ/mol in the stated NaOH/NaCl regime. No molten-salt extrapolation.",
+      "access": "Publisher abstract and indexed original paper at https://electronicsandbooks.com/edt/manual/Magazine/A/AIChE%20Journal%20US/1996%20v.42/12%20%283301-3570%29/3442-3457.pdf",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-firesetting",
+      "label": "Firesetting field evidence — Storemyr, 2014",
+      "url": "https://per-storemyr.net/2014/09/30/fire-on-the-rocks-new-paper-on-firesetting-in-ancient-egyptian-stone-quarrying/",
+      "citation": "Per Storemyr, field-author account of Heldal et al., DOI 10.1007/978-3-319-09048-1_56",
+      "supports": "Quarry-context observations and experiments provide thermal/mechanical comparators. Their site and date do not transfer automatically to Khufu.",
+      "access": "Full author account; linked chapter not independently reanalysed",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-natron",
+      "label": "Natron composition — Raman study, 2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17404715/",
+      "citation": "Raman spectroscopy of natron: shedding light on ancient Egyptian mummification (2007)",
+      "supports": "Natural deposits contain carbonate, bicarbonate and chloride/sulfate impurities; composition must be specified rather than equated with a hydroxide reagent.",
+      "access": "Primary research abstract",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
+    },
+    {
+      "id": "worked-nist",
+      "label": "Carbonate formula mass — NIST WebBook",
+      "url": "https://webbook.nist.gov/cgi/formula?ID=C497198&Units=CAL",
+      "citation": "NIST Chemistry WebBook, sodium carbonate",
+      "supports": "Na₂CO₃ molecular weight 105.9884; reference for the rounded formula-mass arithmetic. Other formula masses are declared calculation constants.",
+      "access": "Indexed reference entry",
+      "reviewed": "2026-10-29",
+      "status": "cited external evidence; scope retained"
     }
   ],
   "sourceReport": {

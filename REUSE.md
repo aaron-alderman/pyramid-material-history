@@ -33,6 +33,18 @@ The full article is an imported Markdown region. Surface composition binds that 
 
 ## Assurance checkpoint
 
+### Worked-investigation extension, 29 October 2026
+
+**Claim:** the existing kernel, joint-input relations, collection grammar, surface compiler and scientific composer can carry populated source assessments and conditional quantity calculations without a new work lane or a change to retained mechanisms.
+
+**Evidence:** three dossiers, eighteen one-output research steps and six numerical calculations are source-owned declarations/adapters. Nine references identify their publication and what was actually inspected, including abstract-only and indexed-excerpt limits. Every new page runs through retained native composition and adoption. Quantity maps use the existing SI exponent-delta contract; calculation and corrupted-dimension tests are distinct from historical attribution.
+
+**Falsifiers:** an unresolved source/input, loss of a joint input, replacement of source observations with proposed predictions, hidden measured-rate assumptions, a quantity map accepted with an incorrect molar-volume dimension, a copied vendored implementation, or an ancient-occurrence claim derived from desk calculations.
+
+**Boundary:** the review performs no new physical experiment, sampling, DFT simulation, rate fitting or Bayesian posterior estimation. It provides source-scoped conclusions, explicit benchmark arithmetic and discriminating comparisons. Missing rates, preservation estimates and secure process attribution remain empirical work.
+
+**Disposition:** publish the next layer after source, numerical, composition and browser checks. All retained implementation hashes remain unchanged.
+
 **Claim:** a portable static corpus can retain the existing algebra and UI mechanisms while supplying source-owned research and presentation declarations.
 
 **Falsifiers:** altered retained module bytes; a missing or duplicated kernel coordinate; flattened joint inputs; controls surviving absent declarations; labels requiring edits to the collection renderer; native surface drift; incompatible record units; or a composed publication path acquiring historical authority.

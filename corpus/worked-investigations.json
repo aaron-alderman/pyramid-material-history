@@ -1,0 +1,460 @@
+{
+  "protocol": "material-history-worked-investigations/1",
+  "date": "2026-10-29",
+  "scope": "Three completed desk investigations: source review, conditional calculations and evidence assessment. No new physical experiment or monument sampling was performed.",
+  "studies": [
+    {
+      "id": "W01",
+      "label": "First identify the stone",
+      "summary": "Why a silica analysis is not a quartz inventory, and why the pyramid needs a component-by-component material history.",
+      "status": "Worked material assessment",
+      "related": [
+        "P01",
+        "P02",
+        "D02",
+        "D03",
+        "D10",
+        "B11",
+        "W02",
+        "W03"
+      ],
+      "conclusion": "The opening chemical model must use identified mineral phases and interfaces. Bulk oxide percentages, hardness and a red colour cannot supply those identities. The sources support a materially varied monument; they do not give us a sampled alteration profile for a named Khufu granite face.",
+      "steps": [
+        {
+          "id": "W01-S1",
+          "title": "Claim → name the material before explaining its treatment",
+          "operation": "O1",
+          "inputs": [
+            "P01",
+            "P02"
+          ],
+          "output": "A component-scoped material question",
+          "paragraphs": [
+            "The useful question is not whether stone can be changed. It is whether a specified operation can account for a specified component's present fabric, dimensions and context. Keep Khufu's core masonry, fine casing, granite chamber components and joint mortar as different subjects. A result on one is not a result on the others.",
+            "Lehner describes local limestone for the bulk core, eastern-quarry fine limestone for casing and Aswan granite for selected components. This is an archaeological supply model, not a chemical assay of every block. The present dossier compares published descriptions; it introduces no new specimen from the monument."
+          ],
+          "evidenceRefs": [
+            "external:worked-lehner"
+          ]
+        },
+        {
+          "id": "W01-S2",
+          "title": "Evidence → bulk chemistry and mineral mode answer different questions",
+          "operation": "O8",
+          "inputs": [
+            "external:worked-usgs",
+            "D10"
+          ],
+          "output": "A correction to the silica-equals-quartz premise",
+          "paragraphs": [
+            "A USGS example pairs 70% bulk SiO₂ with 22% quartz, 38% alkali feldspar, 28% plagioclase and 12% biotite. Its role here is a counterexample to treating the silica number as the quartz number; it is not the composition of Egyptian granite.",
+            "A bulk assay reports chemical constituents in an oxide convention. Mineral identification asks how atoms are arranged into phases. Silicon also belongs to feldspar and mica structures. Describing the remainder as loose metal oxides discards the bonding and lattice information that controls which interfaces react and which grains remain."
+          ],
+          "evidenceRefs": [
+            "external:worked-usgs"
+          ]
+        },
+        {
+          "id": "W01-S3",
+          "title": "Model → one feldspar can contain silica equivalent without quartz",
+          "operation": "O4",
+          "inputs": [
+            "W01-S2",
+            "C06"
+          ],
+          "output": "Formula-level composition accounting",
+          "paragraphs": [
+            "Use the ideal formula KAlSi₃O₈. Reporting its silicon as three SiO₂ equivalents gives the fraction below. The ideal single-phase example still contains no separate quartz. This is a small calculation with a large consequence: a whole-rock silica percentage cannot be inserted into a quartz-only reaction equation as a phase inventory.",
+            "At the orbital scale, a mineral model describes electronic states at specified nuclear positions. At the rock scale, we need phase abundance, grain size, boundaries, cracks and connected pores. A calculation on an isolated molecule or perfect lattice loses those features. No DFT calculation was performed here; the existing orbitals, periodic-solid and surface-model bridges identify what a later atomistic calculation must actually represent.",
+            "The result is about 64.8% silica equivalent by mass and zero quartz in this ideal single-phase example. That is enough to defeat the proposed identification of bulk silica with quartz, without needing to decide how much quartz any particular granite contains."
+          ],
+          "calculationRef": "C06",
+          "evidenceRefs": [
+            "D02",
+            "D03",
+            "B04",
+            "B06",
+            "B22"
+          ]
+        },
+        {
+          "id": "W01-S4",
+          "title": "Observation → retain fabric and sampling scope",
+          "operation": "O9",
+          "inputs": [
+            "external:worked-campbell",
+            "W01-S2"
+          ],
+          "output": "A bounded reading of published petrographic evidence",
+          "paragraphs": [
+            "Campbell and Folk report sedimentary structures and a lithological match between quarry and pyramid stones; they did not find the proposed geopolymer fabric in their examined sample. That supports a quarried-rock interpretation for the material examined. It does not warrant a universal statement about every block, repair or binder.",
+            "Our comparison therefore preserves two objects: the stone body and the material between bodies. A binder can be manufactured while an adjacent block preserves a natural geological fabric. Finding gypsum in a joint cannot by itself turn the block into cast stone; finding natural calcite grains alone cannot exclude a binder made using crushed limestone."
+          ],
+          "evidenceRefs": [
+            "external:worked-campbell"
+          ]
+        },
+        {
+          "id": "W01-S5",
+          "title": "Prediction → what would change this assessment?",
+          "operation": "O6",
+          "inputs": [
+            "W01-S1",
+            "W01-S4"
+          ],
+          "output": "A discriminating material-identification comparison",
+          "paragraphs": [
+            "For a future authorized specimen, first bind location, face orientation, layer depth, collection history and conservation history to the record. Compare polished sections and phase identification across fresh interior, altered surface, mortar and candidate source rock. Keep the quarry comparator independently identified.",
+            "A continuous sedimentary fabric through a block, a discrete binder around aggregate, a reaction rim and a late conservation coating are different observations. The first useful outcome is a spatially resolved fabric-and-phase description, with uncertainty and detection limits. Bulk chemistry alone is insufficient to choose between those histories."
+          ],
+          "evidenceRefs": [
+            "B18",
+            "B19",
+            "W03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "label": "Can alkali make granite workable?",
+      "summary": "A worked check of the reaction claim, reagent demand, removal rate and the boundary between a modern result and an ancient process.",
+      "status": "Worked process assessment",
+      "related": [
+        "P03",
+        "D07",
+        "D08",
+        "D09",
+        "B09",
+        "B10",
+        "B15",
+        "B23",
+        "W01",
+        "W03"
+      ],
+      "conclusion": "Silicate–alkali chemistry is a credible mechanism to investigate. The available modern results do not establish a removal rate for the quoted 168 °C treatment, efficient quarry-scale production, or use on a named Khufu component. Thermal damage and chemical alteration must be separated experimentally before assigning their contributions.",
+      "steps": [
+        {
+          "id": "W02-S1",
+          "title": "Claim → split the social post into testable statements",
+          "operation": "O1",
+          "inputs": [
+            "P03",
+            "W01"
+          ],
+          "output": "Five claims with separate evidence obligations",
+          "paragraphs": [
+            "The user-supplied post joins five propositions: alkali reacts with silica; a granite specimen loses cohesion; this can occur at the quoted temperatures; the operation can shape useful volumes; and ancient scooped surfaces record that operation. Each requires different evidence. The quotation is a report to investigate, with no measured time series, specimen mineralogy or raw product analysis supplied to this corpus.",
+            "Keep carbonate fusion, aqueous hydroxide attack and a hydroxide mixture as different regimes. Natural natron deposits contain carbonate, bicarbonate and other salts; they are not specified-purity NaOH or KOH. A mixture's liquidus temperature says when liquid becomes available, not how rapidly the rock retreats. The 168 °C statement remains an unverified specimen-specific report here."
+          ],
+          "evidenceRefs": [
+            "external:worked-natron"
+          ]
+        },
+        {
+          "id": "W02-S2",
+          "title": "Evidence → what has actually been reported?",
+          "operation": "O9",
+          "inputs": [
+            "external:worked-yi",
+            "external:worked-nmr",
+            "external:worked-worley"
+          ],
+          "output": "A scoped laboratory evidence assessment",
+          "paragraphs": [
+            "Yi's 2026 study reports three high-temperature experiments. In the short-contact test, 22 g of molten carbonate was applied to 12 g of granite, followed by cooling and wooden-handle impacts. The paper attributes the cracking mainly to thermal shock, with possible interfacial reaction. Product assignments rely on reaction behaviour; the study does not validate the quoted hydroxide-mixture treatment.",
+            "Winter and colleagues used in-situ ²³Na NMR on quartz–carbonate powder batches. They observed initial metasilicate formation controlled by interfacial sodium diffusion and slowing as the interface thickened. Powder-batch evidence establishes a mechanism in that regime, not a constant etch rate for a massive granite face.",
+            "Worley and colleagues studied quartz in aqueous solutions at 100–200 °C. Their reported apparent activation energy of 72 ± 6 kJ/mol in a specified NaOH/NaCl regime supplies the bounded temperature sensitivity below. It supplies no rate for a molten hydroxide mixture."
+          ],
+          "evidenceRefs": [
+            "external:worked-yi",
+            "external:worked-nmr",
+            "external:worked-worley"
+          ]
+        },
+        {
+          "id": "W02-S3",
+          "title": "Model → balance the reaction before scaling it",
+          "operation": "O4",
+          "inputs": [
+            "W01-S2",
+            "W02-S1",
+            "C01"
+          ],
+          "output": "Conditional reagent and gas demand",
+          "paragraphs": [
+            "Idealized balances are SiO₂ + Na₂CO₃ → Na₂SiO₃ + CO₂ and SiO₂ + 2NaOH → Na₂SiO₃ + H₂O. They conserve atoms. Actual solutions can contain multiple silicate species, and real rocks supply other reacting phases. Neither balance states a rate, penetration depth, product strength or final phase assemblage.",
+            "The following mass ratios are reproducible formula accounting for complete conversion of silica. They are not a universal consumption bound for stone removal: if reaction at a few boundaries releases mostly unreacted grains, much less silica may need conversion. Conversely, excess reagent, side reactions and loss may raise practical consumption.",
+            "For each kilogram of silica converted by these balances, the arithmetic gives about 1.764 kg of anhydrous carbonate or 1.331 kg of NaOH; the carbonate route releases about 0.732 kg of CO₂. These are different reagent balances, not interchangeable recipes."
+          ],
+          "calculationRef": "C01",
+          "evidenceRefs": [
+            "external:worked-nist",
+            "external:worked-nmr"
+          ]
+        },
+        {
+          "id": "W02-S4",
+          "title": "Scale → what does one millimetre mean?",
+          "operation": "O4",
+          "inputs": [
+            "C01",
+            "C02"
+          ],
+          "output": "A geometric material-demand benchmark",
+          "paragraphs": [
+            "Take a hypothetical pure-quartz layer one square metre in area and one millimetre thick, using the declared density benchmark. Compute its volume, mass and carbonate demand. This makes the resource question concrete without pretending that a granite surface is pure quartz or that all removed rock must dissolve.",
+            "To turn this benchmark into a quarry process, a model would also need heated volume, heat capacity, reaction enthalpy, evaporation, heat loss, contact duration, fuel efficiency, reagent recovery and waste removal. Those inputs have not been measured here. A low liquidus temperature alone cannot answer that energy-and-throughput question.",
+            "The benchmark layer weighs 2.65 kg and its complete conversion corresponds to about 4.675 kg of anhydrous carbonate. Those numbers make explicit the difference between surface etching, grain release and converting the whole removed volume."
+          ],
+          "calculationRef": "C02",
+          "evidenceRefs": [
+            "W02-S3",
+            "B15",
+            "B23"
+          ]
+        },
+        {
+          "id": "W02-S5",
+          "title": "Rate → a reaction equation is not an excavation speed",
+          "operation": "O5",
+          "inputs": [
+            "C03",
+            "D08",
+            "B10"
+          ],
+          "output": "Conditional surface-recession sensitivity",
+          "paragraphs": [
+            "For a planar quartz interface, molar surface flux J becomes recession speed v through v = J Vₘ. Use the three explicitly chosen fluxes below to see how strongly the engineering conclusion depends on rate. None is a measurement from the post or a prediction for its mixture.",
+            "A rough or cracked surface has a different reactive area from its projected area. An altered layer may impede transport; a flowing liquid may change saturation; a surface film may be removed mechanically. A photograph of powder after brushing cannot separate dissolved mass, detached unreacted grains and pre-existing thermal cracks. Measure dissolved elements and recovered solids alongside profile change.",
+            "At the middle chosen flux, the model gives about 7.16 µm per year and roughly 140 years for one millimetre. Raising the assumed flux one hundredfold reduces that time one hundredfold. No implication about the actual treatment rate follows until a flux is measured in the relevant regime."
+          ],
+          "calculationRef": "C03",
+          "evidenceRefs": [
+            "external:worked-nmr",
+            "B10",
+            "B23"
+          ]
+        },
+        {
+          "id": "W02-S6",
+          "title": "Temperature → quantify a sensitivity without crossing regimes",
+          "operation": "O5",
+          "inputs": [
+            "external:worked-worley",
+            "C04"
+          ],
+          "output": "An aqueous Arrhenius ratio with explicit limits",
+          "paragraphs": [
+            "The calculation applies the reported activation-energy interval only between 100 and 200 °C with the same assumed mechanism and solution conditions. Its result is a ratio, not an absolute rate. Knowing that a process accelerates strongly with temperature still leaves its starting rate unknown.",
+            "Extrapolating that fit to a dry carbonate melt, a mixed hydroxide melt, a different mineral or a different product layer would require new evidence. Likewise, a eutectic phase diagram is thermodynamic information about a mixture; it cannot replace the interfacial kinetic measurement.",
+            "The central energy gives a rate ratio near 135, with about 90–203 across the energy interval. This dramatic ratio still cannot tell us whether either absolute rate is useful for shaping stone."
+          ],
+          "calculationRef": "C04",
+          "evidenceRefs": [
+            "external:worked-worley",
+            "D07",
+            "D08"
+          ]
+        },
+        {
+          "id": "W02-S7",
+          "title": "Prediction → separate heating, chemistry and brushing",
+          "operation": "O6",
+          "inputs": [
+            "W02-S2",
+            "W02-S5",
+            "W02-S6"
+          ],
+          "output": "A controlled comparison capable of identifying a contribution",
+          "paragraphs": [
+            "A useful research comparison has mineralogically matched specimens and separate untreated, mechanical-only, temperature-matched heat-only and alkali-plus-heat conditions. Record the full surface and interior temperature history; a nominal furnace setting is insufficient. Compare a hydroxide treatment within its own regime rather than treating it as carbonate replication.",
+            "Before any brushing, record three-dimensional topography and crack distribution. Then quantify dissolved Si, Al, Na and K, residual phases, detached-grain size and mass, and the same fixed mechanical removal step. Chemical assistance predicts a treatment-dependent alteration front or dissolution signal beyond the heat-only comparator. A similar fracture-and-removal result in the heat-only control weakens a claim of a necessary chemical contribution. These are proposed discriminators, not experiments we have performed."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "B20",
+            "B23"
+          ]
+        },
+        {
+          "id": "W02-S8",
+          "title": "Assessment → possible chemistry, unresolved process history",
+          "operation": "O9",
+          "inputs": [
+            "W02-S2",
+            "W02-S3",
+            "W02-S5",
+            "W02-S7"
+          ],
+          "output": "A bounded feasibility disposition",
+          "paragraphs": [
+            "The bridge from silicate chemistry to a candidate process is worth keeping. The specific low-temperature report needs product identification, time, measured removal and controls. The bridge from a process to ancient occurrence needs a dated and contextual material signature. The present evidence does not traverse both bridges.",
+            "This result neither dismisses the chemical possibility nor uses possibility as attribution. It specifies what would move the question: a treatment-dependent removal advantage with an identified mechanism, followed by independent archaeological discrimination on a named material context."
+          ],
+          "evidenceRefs": [
+            "W03",
+            "B19",
+            "B20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W03",
+      "label": "Which history would leave this trace?",
+      "summary": "Compare abrasion, heating, chemical assistance, casting and later alteration without treating a scoop mark or salt signal as a unique fingerprint.",
+      "status": "Worked archaeological discrimination",
+      "related": [
+        "P03",
+        "P06",
+        "P07",
+        "B16",
+        "B17",
+        "B18",
+        "B19",
+        "B20",
+        "W01",
+        "W02"
+      ],
+      "conclusion": "The reviewed record supports real quarrying, material supply and thermal/mechanical comparators. It does not identify carbonate-assisted working on a named Khufu surface. A surviving joint signature tied to manufacturing chronology would be substantially more useful than either surface shape alone or unspecific sodium detection.",
+      "steps": [
+        {
+          "id": "W03-S1",
+          "title": "Observation → separate Giza from the Aswan comparator",
+          "operation": "O1",
+          "inputs": [
+            "external:worked-lehner",
+            "external:worked-firesetting",
+            "P03"
+          ],
+          "output": "A contextual comparison with no monument substitution",
+          "paragraphs": [
+            "The question concerns Khufu, but much familiar granite quarry imagery comes from Aswan and other periods. Storemyr reports field evidence and experimental work on firesetting, including likely heated-and-poundered trenches and charcoal at the Unfinished Obelisk quarry. That is a relevant process comparator. It is not a Fourth Dynasty treatment record for Khufu's chamber blocks.",
+            "A visually similar depression can arise through different combinations of fracture, impact, abrasion and weathering. Its outline is an observation; naming the generating process is an inference. Keep location, date, rock type, surface history and associated waste attached to the comparison rather than carrying only the photograph across sites."
+          ],
+          "evidenceRefs": [
+            "external:worked-firesetting",
+            "external:worked-lehner"
+          ]
+        },
+        {
+          "id": "W03-S2",
+          "title": "Alternatives → compare joint signatures",
+          "operation": "O8",
+          "inputs": [
+            "W01",
+            "W02",
+            "W03-S1"
+          ],
+          "output": "A five-history discrimination matrix",
+          "paragraphs": [
+            "The matrix below contains model predictions and confounders, not newly observed pyramid measurements. The alternatives can combine sequentially: heat can precede pounding; a chemical film can follow weathering; conservation can overprint both. Test a sequence when a single-process story fails."
+          ],
+          "matrix": [
+            {
+              "History": "Impact and abrasive removal",
+              "Predicted joint signature": "Localized impact damage or directional grooves; mechanically comminuted waste; tool or abrasive wear associated with the operation.",
+              "Confounder": "Subsequent abrasion can erase earlier textures; loose grit may be natural contamination.",
+              "Distinguishing comparison": "Matched-tool replication plus three-dimensional texture and waste petrography, with documented contact conditions."
+            },
+            {
+              "History": "Heat-assisted mechanical removal",
+              "Predicted joint signature": "Crack geometry and depth related to thermal history; changed grain-boundary damage; removal after a standardized impact.",
+              "Confounder": "Later fire or environmental damage may produce thermal evidence unrelated to manufacture.",
+              "Distinguishing comparison": "Temperature-matched experiments and chronology linking affected layer, waste and worked surface."
+            },
+            {
+              "History": "Alkali-assisted removal",
+              "Predicted joint signature": "Spatially coupled reaction front, mineral-selective depletion or products, and a removal advantage beyond matched heating and mechanics.",
+              "Confounder": "Natural salts, mortar, cleaning or conservation can supply alkalis; weathering can remove original products.",
+              "Distinguishing comparison": "Depth-resolved phase and element maps with untreated, heat-only and contamination comparators."
+            },
+            {
+              "History": "Reconstituted or cast material",
+              "Predicted joint signature": "A binder–aggregate fabric and interfaces attributable to preparation and setting, evaluated across the specimen.",
+              "Confounder": "Natural sedimentary cement, crushed natural grains and later repair can resemble parts of that signature.",
+              "Distinguishing comparison": "Interior microstructure, phase distributions, quarry matches and securely documented sample history."
+            },
+            {
+              "History": "Weathering or conservation overprint",
+              "Predicted joint signature": "Alteration related to exposure, pores, salt transport or a known treatment layer rather than an original work front.",
+              "Confounder": "An overprint can coexist with and obscure an earlier manufacturing signature.",
+              "Distinguishing comparison": "Sheltered/exposed profiles, environmental controls, archived treatment records and cross-cutting layer relationships."
+            }
+          ],
+          "evidenceRefs": [
+            "B17",
+            "B19",
+            "B20",
+            "B23"
+          ]
+        },
+        {
+          "id": "W03-S3",
+          "title": "Evidence → what the published observations discriminate",
+          "operation": "O9",
+          "inputs": [
+            "external:worked-campbell",
+            "external:worked-firesetting",
+            "external:worked-yi"
+          ],
+          "output": "An evidence-weighted disposition with scope limits",
+          "paragraphs": [
+            "The petrographic study reviewed in W01 supplies observations relevant to quarried versus cast material in its examined sample. The firesetting work supplies a thermal/mechanical comparator in its documented quarry contexts. The modern carbonate study supplies a possible treatment mechanism. These answer different questions and are not three independent confirmations of one ancient chemical process.",
+            "For the present corpus, no sampled Khufu granite work front has been linked to a carbonate-assisted operation with a secure manufacturing date and contamination controls. That is the boundary of this review, not a claim that no relevant sample or publication could exist. A later source can change the disposition by supplying that missing link."
+          ],
+          "evidenceRefs": [
+            "external:worked-campbell",
+            "external:worked-firesetting",
+            "external:worked-yi"
+          ]
+        },
+        {
+          "id": "W03-S4",
+          "title": "Preservation → compute what absence can and cannot tell us",
+          "operation": "O8",
+          "inputs": [
+            "C05",
+            "B17",
+            "B18"
+          ],
+          "output": "A conditional non-detection model",
+          "paragraphs": [
+            "An original process must form a diagnostic trace; that trace must survive; sampling must intersect it; the assay must detect it. Write those as sequential conditional probabilities. The table uses deliberately hypothetical values to show why a non-detection can be informative in one survey and almost uninformative in another.",
+            "Ten measurements on the same contaminated or erased surface are not automatically ten independent tests. The repeated-context column assumes independent, equivalent contexts, an additional condition unlikely to hold without a sampling model. We do not infer posterior odds for ancient alkali use: those would require competing-history likelihoods and prior information not supplied here.",
+            "In the good-survival example, missing a trace once still has probability about 0.384 even if the process occurred. In the poor-survival example it is about 0.991. The contrast explains why a preservation and coverage model belongs inside the inference rather than being added after an inconvenient result."
+          ],
+          "calculationRef": "C05",
+          "evidenceRefs": [
+            "B17",
+            "B18",
+            "B19"
+          ]
+        },
+        {
+          "id": "W03-S5",
+          "title": "Next observation → choose information, not spectacle",
+          "operation": "O6",
+          "inputs": [
+            "W03-S2",
+            "W03-S3",
+            "W03-S4"
+          ],
+          "output": "A ranked archaeological return packet",
+          "paragraphs": [
+            "The highest-value next record would join a documented worked surface to a depth-resolved alteration profile, adjacent untreated material, associated waste, conservation history and dating context. Prefer already authorized archived specimens and records before proposing new monument sampling. Identify blanks, detection limits and the possible sources of alkalis.",
+            "A positive alkali signal matters more if it follows a mineral-selective work front, predates a later weathering or repair layer, and matches controlled treatment products while differing from local salt and mortar backgrounds. A negative signal matters only after estimating preservation and coverage. Either can revise the conclusion; neither should be preselected to rescue a preferred story."
+          ],
+          "evidenceRefs": [
+            "W02-S7",
+            "B18",
+            "B19",
+            "B21",
+            "B25"
+          ]
+        }
+      ]
+    }
+  ]
+}

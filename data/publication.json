@@ -14,6 +14,10 @@
     "canonical": "https://aaron-alderman.github.io/pyramid-material-history/",
     "navigation": [
       {
+        "label": "Worked cases",
+        "href": "studies/"
+      },
+      {
         "label": "Investigate",
         "href": "investigations/"
       },
@@ -52,8 +56,8 @@
       "deck": "Electronic states shape bonds. Minerals form stone. People transform materials. Time changes the traces. Follow the missing middles that connect them.",
       "actions": [
         {
-          "label": "Choose an investigation",
-          "href": "investigations/"
+          "label": "Follow a worked investigation",
+          "href": "studies/"
         },
         {
           "label": "Read the full atlas",
@@ -76,7 +80,10 @@
       "exampleSource": "https://doi.org/10.1038/s41467-023-36351-0",
       "closingTitle": "The interesting work lives between the boxes.",
       "closingDescription": "Chemistry, geology, geophysics and archaeology overlap. The corpus preserves their connecting mechanisms, assumptions, alternatives and tests so another person can continue the work.",
-      "closingAction": "Enter the full corpus"
+      "closingAction": "Enter the full corpus",
+      "workedEyebrow": "THE NEXT LAYER · THREE WORKED INVESTIGATIONS",
+      "workedTitle": "Follow the evidence through the middle.",
+      "workedDescription": "Start with actual source observations. Work through mineral identity, chemical balances, removal rates and competing histories. Each investigation ends with a bounded conclusion and the observation that could change it."
     },
     "article": {
       "title": "The full material history atlas",
@@ -156,6 +163,32 @@
               "href": "CONTRIBUTING.md"
             }
           ]
+        },
+        {
+          "title": "Worked evidence and reproducible calculations",
+          "copy": "The next layer adds source-scoped assessments, six conditional calculations and atomic research steps using the same twelve-coordinate kernel. The numerical adapter performs formula accounting and sensitivity calculations; the retained composer checks declared quantity-dimension maps. Neither substitutes for a measured rate or historical evidence.",
+          "links": [
+            {
+              "label": "Read the worked investigations",
+              "href": "studies/"
+            },
+            {
+              "label": "Inspect calculation inputs",
+              "href": "corpus/calculation-inputs.json"
+            },
+            {
+              "label": "Inspect calculation results",
+              "href": "data/worked-calculations.json"
+            },
+            {
+              "label": "Inspect quantity-map composition",
+              "href": "data/worked-quantity-composition.json"
+            },
+            {
+              "label": "Inspect the canonical investigation records",
+              "href": "corpus/worked-investigations.json"
+            }
+          ]
         }
       ]
     },
@@ -177,6 +210,53 @@
     },
     "collections": [
       {
+        "id": "studies",
+        "route": "studies/",
+        "title": "Three worked investigations",
+        "eyebrow": "CLAIM → EVIDENCE → MODEL → PREDICTION → ASSESSMENT",
+        "description": "Completed desk investigations with primary-source observations, reproducible conditional calculations and competing explanations. No new laboratory experiment or monument sampling is claimed.",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "fields": [
+          {
+            "label": "Current conclusion",
+            "path": [
+              "conclusion"
+            ]
+          },
+          {
+            "label": "Follow the investigation",
+            "path": [
+              "steps"
+            ],
+            "kind": "worked-steps"
+          },
+          {
+            "label": "Connected corpus records",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ],
+        "searchLabel": "Search worked investigations",
+        "searchPlaceholder": "Search mineralogy, alkali, rates, residues or alternatives…",
+        "actionLabel": "Follow investigation",
+        "actionDescription": "Read the sources, calculations, comparisons and conclusion.",
+        "detailEyebrow": "WORKED INVESTIGATION",
+        "backLabel": "All worked investigations",
+        "filter": {
+          "path": [
+            "status"
+          ],
+          "label": "Investigation",
+          "emptyLabel": "All investigations"
+        }
+      },
+      {
         "id": "investigations",
         "route": "investigations/",
         "title": "Seven ways into the pyramids",
@@ -188,6 +268,13 @@
           ]
         ],
         "fields": [
+          {
+            "label": "Worked investigations",
+            "path": [
+              "workedStudies"
+            ],
+            "kind": "references"
+          },
           {
             "label": "What would distinguish the histories",
             "path": [
@@ -426,35 +513,61 @@
         ],
         "fields": [
           {
+            "label": "Citation",
+            "path": [
+              "citation"
+            ],
+            "optional": true
+          },
+          {
+            "label": "What was inspected",
+            "path": [
+              "access"
+            ],
+            "optional": true
+          },
+          {
+            "label": "Review date",
+            "path": [
+              "reviewed"
+            ],
+            "optional": true
+          },
+          {
             "label": "What this reference supports",
             "path": [
               "supports"
-            ]
+            ],
+            "optional": true
           },
           {
             "label": "Observed identity",
             "path": [
               "identity"
-            ]
+            ],
+            "optional": true
           },
           {
             "label": "Source location",
             "path": [
               "url"
             ],
-            "kind": "url"
+            "kind": "url",
+            "optional": true
           },
           {
             "label": "Originating source path",
             "path": [
               "path"
-            ]
+            ],
+            "optional": true
           },
           {
             "label": "Exact observed byte hash",
             "path": [
               "sha256"
-            ]
+            ],
+            "optional": true
           }
         ],
         "searchLabel": "Search sources",
