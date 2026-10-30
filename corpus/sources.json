@@ -552,6 +552,42 @@
       "supports": "Typical uninsulated wall R-values; whole-wall design has additional constraints.",
       "access": "Official guidance inspected; values are not measured or certified performance of the benchmark assemblies.",
       "reviewed": "2026-10-30"
+    },
+    {
+      "id": "traversal-usgs",
+      "label": "Rock and mineral identity — USGS",
+      "url": "https://www.usgs.gov/faqs/what-difference-between-a-rock-and-a-mineral",
+      "citation": "Rock and mineral identity — USGS",
+      "supports": "Definition-level distinction between minerals and rocks; common examples only.",
+      "access": "Official source opened and inspected. Used for bounded catalogue orientation; no figures or full text reproduced.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "traversal-bgs",
+      "label": "Rock families and mineral mixtures — BGS",
+      "url": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+      "citation": "Rock families and mineral mixtures — BGS",
+      "supports": "Rock formation families and mineral-mixture/fabric distinctions; no exact specimen compositions or reaction rates.",
+      "access": "Official source opened and inspected. Used for bounded catalogue orientation; no figures or full text reproduced.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "traversal-yourhome",
+      "label": "Whole construction-system scope — YourHome",
+      "url": "https://www.yourhome.gov.au/materials/construction-systems",
+      "citation": "Whole construction-system scope — YourHome",
+      "supports": "Roof/wall/floor and on/off-site system scope; climate, durability and lifecycle comparison requirements, not a certified candidate design.",
+      "access": "Official source opened and inspected. Used for bounded catalogue orientation; no figures or full text reproduced.",
+      "reviewed": "2026-10-30"
+    },
+    {
+      "id": "traversal-aera",
+      "label": "Giza fieldwork context — AERA",
+      "url": "https://aeraweb.org/projects/",
+      "citation": "Giza fieldwork context — AERA",
+      "supports": "Named excavation, settlement, survey and provisioning contexts as evidence entry points; not a universal pyramid construction explanation.",
+      "access": "Official source opened and inspected. Used for bounded catalogue orientation; no figures or full text reproduced.",
+      "reviewed": "2026-10-30"
     }
   ],
   "sourceReport": {

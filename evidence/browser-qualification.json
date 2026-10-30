@@ -338,5 +338,63 @@
       "scripts/build.mjs": "7196394f60afe4cd793a1be690901f589aac4f9d1aa69b86e9728b59f715e583",
       "scripts/worked-calculations.mjs": "a6b98fa6787cf0a682e6c22ea96702897e683f0910a7a561f03590e63a6cd091"
     }
+  },
+  "traversalGraphExtension": {
+    "checkedAt": "2026-10-30",
+    "environment": "Local preview in existing in-app browser tab",
+    "checks": [
+      {
+        "route": "traverse/",
+        "result": "Three region entry links, six traversal links, catalogue navigation and stop dispositions visible."
+      },
+      {
+        "route": "paths/PATH-01/",
+        "result": "Eight ordered port-to-port steps, status and all additional prerequisites visible; links open chemistry axis and granite record."
+      },
+      {
+        "route": "design-space/AX-CH-01/",
+        "result": "Feedstock option families, residual, confound, evidence, connected relations and material entries visible."
+      },
+      {
+        "route": "materials/MAT-GRANITE/",
+        "result": "Mineral mixture identity, phase-selective research question and bounded official/worked source links visible."
+      },
+      {
+        "route": "paths/PATH-04/",
+        "result": "Two-step route ends in rejected implication, with scoped reason and reopening path."
+      },
+      {
+        "route": "design-space/",
+        "result": "Housing region filter returns twelve axes; plumbing search narrows to one."
+      },
+      {
+        "route": "design-space/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      {
+        "route": "traverse/",
+        "nominalWidth": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      {
+        "route": "paths/PATH-01/",
+        "nominalWidth": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "result": "Eight steps; no document horizontal overflow. Viewport reset."
+      }
+    ],
+    "automaticScientificTraversal": false,
+    "noveltyEstablished": false,
+    "newPhysicalTests": false,
+    "sourceHashes": {
+      "corpus/traversal-graph.json": "977bc9f9da2828f234d5f6c12041ba5db820a0167cfd9795e57b7c47624a92ad",
+      "data/publication.json": "62d1f371c7b64e27f853b1e5cc8b0a4995346c0cf7632d743ae622f5ccd5ef53",
+      "scripts/build.mjs": "e9851632c6db46743d1116119a7503215f3a4372ea438ae3d34ec229578b51e0",
+      "scripts/traversal-projection.mjs": "deda4ad51995bea51b6c5ccdb0db43c38843935dd154965688237ab19282a69b"
+    }
   }
 }

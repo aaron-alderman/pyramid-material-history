@@ -102,3 +102,13 @@ The full article is an imported Markdown region. Surface composition binds that 
 **Falsifiers:** a printed mixture ratio silently treated as a mass recipe; hydration water called all mixing water; theoretical carbonation recapture called net abatement; LCA declarations labelled new measurements; undeclared modules filled with zero; module D silently deducted; unlike PCR/product scopes used to rank walls; a stale search price replacing the direct page; or unknown assembly totals promoted to quotes.
 
 **Disposition:** publish after formula balance, unit/indicator/missing-value, reference, retained-source, native UI and browser checks. New sampling, performance tests, site delivery, equivalent assembly design and installed quotes remain unperformed.
+
+## Missing-middle traversal graph · 30 October 2026
+
+**Claim:** the existing substrate can organise a general search across pyramids, chemistry and housing while distinguishing catalogues, relations, generated questions and ordered traversals.
+
+**Evidence:** 97 graph records use the unchanged twelve-coordinate kernel. The existing relationship algebra supplies typed multi-input relations; the ALE account distinguishes ordered paths from accumulated assumptions/losses/evidence. Existing native nodes and collection grammar render seven added collections and a traversal hub. The publication-owned integrity adapter checks declared references, ports, route continuity, terminal dispositions and bounded authority. It performs no scientific path search, satisfies no prerequisite and computes no novelty score.
+
+**Falsifiers:** flattened joint prerequisites; reverse requirements presented as inverse physics; repeated sources counted as independent confirmations; an absent edge called impossible or globally novel; an untested candidate called a discovery; a rejected implication used to reject every variant; or a navigation route promoted to scientific derivation.
+
+**Disposition:** publish after retained-source, identity, route-order, terminal-rule, native UI and browser checks. Existing studies remain the grounded examples. Coverage and generated candidates require further domain-specific evidence; this extension does not claim a complete empirical atlas or qualified novel housing design.

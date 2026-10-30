@@ -9,3 +9,6 @@ Keep mathematical compatibility, numerical results, measured material response a
 Preserve the nine operation families, seventeen stations, twenty-six candidate bridges, joint inputs, negative constraints and explicit residuals. Extend them with exact evidence and scoped status. Never silently flatten a multi-input relation into independent binary edges.
 
 The required return packet is in `CONTRIBUTING.md`. A useful contribution may be a verified map, a replicated conventional mechanism, a distinguishing detector, an improved uncertainty model or a clean rejection of a proposed bridge.
+
+
+The broader search map is `corpus/traversal-graph.json`. Pyramids, chemistry and housing are the initial regions, not exclusive disciplines or a claim of universal completeness. Preserve joint connection inputs, ordered route direction, explicit residuals and scoped terminal dispositions. New candidate questions require rivals, defeat conditions and prior-art boundaries. Do not turn reading-path continuity into scientific feasibility or a missing edge into a novelty claim. The integrity adapter owns only validation and read-model projection; the existing composer, relationship semantics and UI mechanisms retain their owners.

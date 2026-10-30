@@ -8,6 +8,32 @@ import {prepareUiSurfaceComposition,verifyUiSurfaceComposition} from '../vendor/
 import {verifyNativeSurfaceCompositionLowering} from '../vendor/sourcery/ui/native-surface-composition-lowerer.mjs';
 import {filterItems,pageItems,bindArguments,declarationFor} from '../vendor/sourcery/collection-model.mjs';
 import {calculateWorkedCases,calculateSystemCases,calculateInterfaceCases,assessAssemblyBenchmarks} from './worked-calculations.mjs';
+import {projectTraversal,traversalCollections} from './traversal-projection.mjs';
+test('traversal records resolve through the retained kernel with scoped catalogue coverage',()=>{
+  const g=read('corpus/traversal-graph.json'),objects=built('data/semantic-decomposition.json').objects;
+  const projection=projectTraversal(g,new Set(objects.map(o=>o.id)),new Set(atlas.operations.map(o=>o.id)));
+  assert.deepEqual(projection,built('data/traversal-projection.json'));
+  assert.deepEqual(projection.counts,{regions:3,facets:36,materials:18,ports:11,connections:17,candidates:6,traversals:6});
+  for(const r of g.regions){assert.equal(r.axes.length,12);assert.ok(r.residuals.length>0);assert.match(r.scope,/not all/);}
+  for(const k of traversalCollections)for(const r of g[k])assert.equal(objects.find(o=>o.id===r.id).kernel.context,g.protocol);
+  for(const e of g.connections){const o=objects.find(o=>o.id===e.id);assert.deepEqual(o.inputs,e.inputs);assert.deepEqual(o.outputs,e.outputs);assert.equal(e.independenceEstablished,false);}
+});
+test('ordered routes retain prerequisites and terminate rejected shortcuts',()=>{
+  const g=read('corpus/traversal-graph.json'),known=new Set(built('data/semantic-decomposition.json').objects.map(o=>o.id)),ops=new Set(atlas.operations.map(o=>o.id));
+  const p=projectTraversal(g,known,ops),forward=p.routes.find(r=>r.id==='PATH-01');assert.equal(forward.steps.length,8);assert.equal(forward.end,'R-DECISION');assert.equal(forward.eligibleScientificConclusion,false);
+  assert.deepEqual(forward.steps[0].additionalPrerequisites,['AX-PY-01','AX-PY-03','AX-PY-11','AX-CH-01']);
+  const terminal=p.routes.find(r=>r.id==='PATH-04');assert.equal(terminal.steps.at(-1).status,'Rejected implication');
+  const broken=structuredClone(g);broken.traversals[0].connections.reverse();assert.throws(()=>projectTraversal(broken,known,ops),/Disconnected/);
+  const overrun=structuredClone(g);overrun.traversals[3].connections.push('EDGE-11');assert.throws(()=>projectTraversal(overrun,known,ops),/terminate/);
+  const flattened=structuredClone(g);flattened.connections[0].inputs=['P-OBS'];assert.throws(()=>projectTraversal(flattened,known,ops),/joint prerequisites/);
+  const authority=structuredClone(g);authority.authority.noveltyEstablished=true;assert.throws(()=>projectTraversal(authority,known,ops),/authority/);
+});
+test('candidate and axis contracts reject erased rivals and residuals',()=>{
+  const g=read('corpus/traversal-graph.json'),known=new Set(built('data/semantic-decomposition.json').objects.map(o=>o.id)),ops=new Set(atlas.operations.map(o=>o.id));
+  const rival=structuredClone(g);rival.candidates[0].strongestRival='';assert.throws(()=>projectTraversal(rival,known,ops),/rival/);
+  const residual=structuredClone(g);residual.facets[0].options.pop();assert.throws(()=>projectTraversal(residual,known,ops),/residual/);
+  const unresolved=structuredClone(g);unresolved.connections[0].inputs.push('invented-input');assert.throws(()=>projectTraversal(unresolved,known,ops),/Unresolved/);
+});
 const site=path.join(root,'_site');
 const built=p=>JSON.parse(fs.readFileSync(path.join(site,p),'utf8'));
 const atlas=read('corpus/atlas.json'),profiles=read('data/programme-profiles.json');
@@ -15,7 +41,7 @@ test('retained implementations keep their exact source identities',()=>{
   for(const r of read('data/reuse-lock.json').sources)assert.equal(hash(fs.readFileSync(path.join(root,r.path))),r.retainedHash,r.path);
 });
 test('every decomposed corpus object preserves the twelve-coordinate kernel',()=>{
-  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,361);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
+  const model=built('data/semantic-decomposition.json');assert.equal(model.objects.length,462);assert.equal(new Set(model.objects.map(x=>x.id)).size,model.objects.length);
   for(const o of model.objects)assert.deepEqual(Object.keys(o.kernel).sort(),[...profiles.kernel.coordinates].sort(),o.id);assert.equal(model.conjunctiveInputs,true);
 });
 test('joint inputs alternatives and the pyramid case remain distinct',()=>{
@@ -23,7 +49,7 @@ test('joint inputs alternatives and the pyramid case remain distinct',()=>{
   assert.equal(atlas.workedCase.id,'pyramids-material-history');assert.equal(atlas.workedCase.subcases[0].id,'granite-alkali-history');assert.equal(new Set(atlas.operations.map(x=>x.exclusiveOutput)).size,9);
 });
 test('all native page compositions and lowerings replay through the retained mechanisms',()=>{
-  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,224);
+  const receipt=built('data/publication-receipt.json');assert.equal(receipt.uiEvidence.length,333);
   for(const r of receipt.uiEvidence){const p=built('data/ui/'+(r.route.replaceAll('/','-')||'home')+'.json');assert.equal(verifyUiSurfaceComposition(p.composition).passed,true,r.route);assert.equal(verifyNativeSurfaceCompositionLowering(p).passed,true,r.route);assert.equal(p.adoption.nativeEscapes.length,0);assert.equal(p.adoption.mappings.length,p.facts.filter(f=>f.p==='isa'&&f.o==='DomNode').length);}
 });
 test('renderer leakage and changed native realization fail closed',()=>{

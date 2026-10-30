@@ -9,10 +9,14 @@
   ],
   "presentation": {
     "brand": "The Missing Middle",
-    "description": "Physics to archaeology through the pyramids. A connected research corpus on matter, mechanisms, material histories and surviving evidence.",
+    "description": "A missing-middle traversal graph through pyramids, chemistry and housing: catalogues, conditional connections, evidence gaps and scoped stopping decisions.",
     "repository": "https://github.com/aaron-alderman/pyramid-material-history",
     "canonical": "https://aaron-alderman.github.io/pyramid-material-history/",
     "navigation": [
+      {
+        "label": "Traverse",
+        "href": "traverse/"
+      },
       {
         "label": "Worked cases",
         "href": "studies/"
@@ -66,27 +70,27 @@
       }
     ],
     "home": {
-      "title": "Physics to archaeology through the pyramids",
-      "eyebrow": "A CONNECTED RESEARCH CORPUS",
-      "headline": "A pyramid is a meeting of worlds.",
-      "deck": "Electronic states shape bonds. Minerals form stone. People transform materials. Time changes the traces. Follow the missing middles that connect them.",
+      "title": "The Missing Middle: pyramids, chemistry and housing",
+      "eyebrow": "A TRAVERSAL GRAPH OF MISSING MIDDLES",
+      "headline": "Follow the missing middle.",
+      "deck": "Begin with a pyramid observation, a material or a housing need. Chart the possibilities, inspect the connections, and find where evidence opens a path—or tells us to stop.",
       "actions": [
         {
-          "label": "Compare the construction histories",
-          "href": "histories/"
+          "label": "Explore the traversal graph",
+          "href": "traverse/"
+        },
+        {
+          "label": "Browse the three atlases",
+          "href": "regions/"
         },
         {
           "label": "Follow a worked investigation",
           "href": "studies/"
-        },
-        {
-          "label": "Read the full atlas",
-          "href": "read/"
         }
       ],
-      "note": "The Great Pyramid of Khufu is our first anchor. Every monument, material and claim keeps its own identity.",
+      "note": "The pyramids remain our canonical starting example. A useful modern process can survive the rejection of its proposed ancient use.",
       "imageAlt": "Schematic pyramid cutaway showing the connecting layers of material, process, surviving trace and historical inference. It is an illustration, not a reconstruction.",
-      "orientation": "One familiar monument opens a much larger question: how do we connect what matter permits, what people could do, and what the surviving evidence lets us conclude?",
+      "orientation": "Pyramids, chemistry and housing are the first three regions of a broader search. Their catalogues expose options and gaps; each connection keeps its conditions, evidence, strongest rival and stopping rule.",
       "questionsEyebrow": "BEGIN WITH SOMETHING CONCRETE",
       "questionsTitle": "Which part draws you in?",
       "spineEyebrow": "THEN FOLLOW THE CONNECTIONS",
@@ -103,7 +107,7 @@
       "closingAction": "Enter the full corpus",
       "workedEyebrow": "THE NEXT LAYER · WORKED INVESTIGATIONS",
       "workedTitle": "Follow the evidence through the middle.",
-      "workedDescription": "Eighteen worked studies connect pyramid materials and construction histories to preparation chemistry, Roman mortar evidence and a product-grounded Perth assembly benchmark. Source observations, product declarations and conditional calculations retain their separate roles."
+      "workedDescription": "Eighteen worked studies ground selected parts of the graph. They retain source observations, conditional calculations and unresolved decisions; they do not exhaust the design space."
     },
     "article": {
       "title": "The full material history atlas",
@@ -281,6 +285,24 @@
               "href": "assemblies/"
             }
           ]
+        },
+        {
+          "title": "Traversal graph and finite search atlases",
+          "copy": "Atlas axes are overlapping facets. Atomic work retains the original O1–O9 partition and every graph record receives the unchanged twelve-coordinate kernel. Relations preserve conjunctive prerequisites. Ordered routes are source-authored reading paths, not a new solver or physical derivation; connection status never satisfies a missing prerequisite.",
+          "links": [
+            {
+              "label": "Traversal graph source",
+              "href": "corpus/traversal-graph.json"
+            },
+            {
+              "label": "Integrity and route projection",
+              "href": "data/traversal-projection.json"
+            },
+            {
+              "label": "Explore the graph",
+              "href": "traverse/"
+            }
+          ]
         }
       ]
     },
@@ -332,6 +354,14 @@
               "related"
             ],
             "kind": "references"
+          },
+          {
+            "label": "Connections in the traversal graph",
+            "path": [
+              "traversalLinks"
+            ],
+            "kind": "references",
+            "optional": true
           }
         ],
         "searchLabel": "Search worked investigations",
@@ -1125,7 +1155,698 @@
         "actionDescription": "Open the product scope, missing inventory and linked calculations.",
         "detailEyebrow": "ASSEMBLY BENCHMARK",
         "backLabel": "All assembly benchmarks"
+      },
+      {
+        "id": "regions",
+        "route": "regions/",
+        "title": "Three regions, one traversal graph",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "Inspect the scope, twelve axes, material entries, traversals and residuals.",
+        "searchLabel": "Search atlas regions",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Atlas region",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All atlas regions"
+        },
+        "actionLabel": "Open atlas",
+        "actionDescription": "Inspect the scope, twelve axes, material entries, traversals and residuals.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to three regions, one traversal graph",
+        "fields": [
+          {
+            "label": "Scope and completeness boundary",
+            "path": [
+              "scope"
+            ]
+          },
+          {
+            "label": "Search axes",
+            "path": [
+              "axes"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Material catalogue entries",
+            "path": [
+              "materials"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Paths through this region",
+            "path": [
+              "traversals"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Partition discipline",
+            "path": [
+              "partition"
+            ]
+          },
+          {
+            "label": "How to generate candidates",
+            "path": [
+              "generation"
+            ]
+          },
+          {
+            "label": "Coverage",
+            "path": [
+              "coverage"
+            ]
+          },
+          {
+            "label": "Residuals",
+            "path": [
+              "residuals"
+            ]
+          },
+          {
+            "label": "Source and worked-study anchors",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          }
+        ]
+      },
+      {
+        "id": "facets",
+        "route": "design-space/",
+        "title": "Design-space axes",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "Vary one axis, inspect coupling and follow its connections.",
+        "searchLabel": "Search design-space axes",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Region",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All regions"
+        },
+        "actionLabel": "Inspect axis",
+        "actionDescription": "Vary one axis, inspect coupling and follow its connections.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to design-space axes",
+        "fields": [
+          {
+            "label": "Atlas region",
+            "path": [
+              "region"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Question",
+            "path": [
+              "question"
+            ]
+          },
+          {
+            "label": "Option families and explicit residual",
+            "path": [
+              "options"
+            ]
+          },
+          {
+            "label": "Partition rule",
+            "path": [
+              "partition"
+            ]
+          },
+          {
+            "label": "Required evidence",
+            "path": [
+              "requiredEvidence"
+            ]
+          },
+          {
+            "label": "Confounding shortcut",
+            "path": [
+              "confound"
+            ]
+          },
+          {
+            "label": "Variation strategy",
+            "path": [
+              "variation"
+            ]
+          },
+          {
+            "label": "Coverage limit",
+            "path": [
+              "coverage"
+            ]
+          },
+          {
+            "label": "Connected relations",
+            "path": [
+              "connections"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Material entries",
+            "path": [
+              "materials"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Stop and residual rules",
+            "path": [
+              "stopRule"
+            ]
+          },
+          {
+            "label": "Residual",
+            "path": [
+              "residual"
+            ]
+          },
+          {
+            "label": "Worked evidence anchors",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Related corpus records",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ]
+      },
+      {
+        "id": "materials",
+        "route": "materials/",
+        "title": "Materials and feedstock catalogue",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "Inspect identity, variability and the next chemical question.",
+        "searchLabel": "Search materials and feedstocks",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Stock family",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All stock familys"
+        },
+        "actionLabel": "Inspect material",
+        "actionDescription": "Inspect identity, variability and the next chemical question.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to materials and feedstock catalogue",
+        "fields": [
+          {
+            "label": "Identity boundary",
+            "path": [
+              "identity"
+            ]
+          },
+          {
+            "label": "Search question",
+            "path": [
+              "searchQuestion"
+            ]
+          },
+          {
+            "label": "Required characterization",
+            "path": [
+              "requiredEvidence"
+            ]
+          },
+          {
+            "label": "Coverage and qualification",
+            "path": [
+              "coverage"
+            ]
+          },
+          {
+            "label": "Source scope",
+            "path": [
+              "sourceScope"
+            ]
+          },
+          {
+            "label": "Worked and official anchors",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Related axes and regions",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ]
+      },
+      {
+        "id": "ports",
+        "route": "ports/",
+        "title": "Typed traversal ports",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "Inspect what must be known at this point in a traversal.",
+        "searchLabel": "Search traversal ports",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Region",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All regions"
+        },
+        "actionLabel": "Inspect port",
+        "actionDescription": "Inspect what must be known at this point in a traversal.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to typed traversal ports",
+        "fields": [
+          {
+            "label": "Required meaning",
+            "path": [
+              "meaning"
+            ]
+          },
+          {
+            "label": "Packet status",
+            "path": [
+              "coverage"
+            ]
+          },
+          {
+            "label": "Arrive through these relations",
+            "path": [
+              "incoming"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Continue through these relations",
+            "path": [
+              "outgoing"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Related atlas",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ]
+      },
+      {
+        "id": "connections",
+        "route": "connections/",
+        "title": "Connections, gaps and rejected implications",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "All required inputs stay together; status is a scoped review disposition.",
+        "searchLabel": "Search graph connections",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Disposition",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All dispositions"
+        },
+        "actionLabel": "Inspect connection",
+        "actionDescription": "All required inputs stay together; status is a scoped review disposition.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to connections, gaps and rejected implications",
+        "fields": [
+          {
+            "label": "All joint prerequisites",
+            "path": [
+              "inputs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Output port",
+            "path": [
+              "outputs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Primary operation",
+            "path": [
+              "operation"
+            ]
+          },
+          {
+            "label": "Relation family",
+            "path": [
+              "relationFamily"
+            ]
+          },
+          {
+            "label": "Disposition",
+            "path": [
+              "status"
+            ]
+          },
+          {
+            "label": "Connecting mechanism or question",
+            "path": [
+              "mechanism"
+            ]
+          },
+          {
+            "label": "Required conditions",
+            "path": [
+              "conditions"
+            ]
+          },
+          {
+            "label": "Information losses",
+            "path": [
+              "losses"
+            ]
+          },
+          {
+            "label": "Strongest alternative",
+            "path": [
+              "alternative"
+            ]
+          },
+          {
+            "label": "Discriminating test",
+            "path": [
+              "discriminatingTest"
+            ]
+          },
+          {
+            "label": "Stopping rule",
+            "path": [
+              "stopRule"
+            ]
+          },
+          {
+            "label": "Reopening trigger",
+            "path": [
+              "reopen"
+            ]
+          },
+          {
+            "label": "Timescale",
+            "path": [
+              "timescale"
+            ]
+          },
+          {
+            "label": "Carrier",
+            "path": [
+              "carrier"
+            ]
+          },
+          {
+            "label": "Evidence anchors",
+            "path": [
+              "evidenceRefs"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Underlying source anchors — not independent replications",
+            "path": [
+              "sourceAnchors"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Evidence scope and dependence",
+            "path": [
+              "evidenceScope"
+            ]
+          },
+          {
+            "label": "Authority boundary",
+            "path": [
+              "authority"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "candidates",
+        "route": "candidates/",
+        "title": "Candidate questions: what might have been missed?",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "Generated hypotheses have explicit rivals and defeat conditions; novelty remains unestablished.",
+        "searchLabel": "Search candidate questions",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Region crossing",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All region crossings"
+        },
+        "actionLabel": "Inspect candidate",
+        "actionDescription": "Generated hypotheses have explicit rivals and defeat conditions; novelty remains unestablished.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to candidate questions: what might have been missed?",
+        "fields": [
+          {
+            "label": "Generation rule",
+            "path": [
+              "generationRule"
+            ]
+          },
+          {
+            "label": "Hypothesis",
+            "path": [
+              "hypothesis"
+            ]
+          },
+          {
+            "label": "Strongest rival",
+            "path": [
+              "strongestRival"
+            ]
+          },
+          {
+            "label": "Required observations",
+            "path": [
+              "requiredEvidence"
+            ]
+          },
+          {
+            "label": "Defeat condition",
+            "path": [
+              "defeat"
+            ]
+          },
+          {
+            "label": "Novelty and prior-art boundary",
+            "path": [
+              "novelty"
+            ]
+          },
+          {
+            "label": "Current status",
+            "path": [
+              "status"
+            ]
+          },
+          {
+            "label": "Next action",
+            "path": [
+              "nextAction"
+            ]
+          },
+          {
+            "label": "Connections to inspect",
+            "path": [
+              "connections"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Related material and design axes",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Authority",
+            "path": [
+              "authority"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "traversals",
+        "route": "paths/",
+        "title": "Ordered traversals and terminal investigations",
+        "eyebrow": "THE MISSING MIDDLE / TRAVERSAL GRAPH",
+        "description": "Follow the declared order; arrival never silently satisfies an unresolved prerequisite.",
+        "searchLabel": "Search ordered traversals",
+        "searchPlaceholder": "Search questions, conditions, evidence and gaps",
+        "summaryPaths": [
+          [
+            "summary"
+          ]
+        ],
+        "filter": {
+          "label": "Direction / purpose",
+          "path": [
+            "category"
+          ],
+          "emptyLabel": "All direction / purposes"
+        },
+        "actionLabel": "Follow path",
+        "actionDescription": "Follow the declared order; arrival never silently satisfies an unresolved prerequisite.",
+        "detailEyebrow": "TRAVERSAL RECORD",
+        "backLabel": "Back to ordered traversals and terminal investigations",
+        "fields": [
+          {
+            "label": "Starting port",
+            "path": [
+              "start"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Question",
+            "path": [
+              "question"
+            ]
+          },
+          {
+            "label": "Connection sequence — read in order",
+            "path": [
+              "resolvedConnections"
+            ],
+            "kind": "connection-steps"
+          },
+          {
+            "label": "Current disposition",
+            "path": [
+              "status"
+            ]
+          },
+          {
+            "label": "Reading rule",
+            "path": [
+              "readingRule"
+            ]
+          },
+          {
+            "label": "Candidate branches",
+            "path": [
+              "candidates"
+            ],
+            "kind": "references"
+          },
+          {
+            "label": "Stopping rule",
+            "path": [
+              "stopRule"
+            ]
+          },
+          {
+            "label": "Required return packet",
+            "path": [
+              "returnPacket"
+            ]
+          },
+          {
+            "label": "Related decisions",
+            "path": [
+              "related"
+            ],
+            "kind": "references"
+          }
+        ]
       }
-    ]
+    ],
+    "traversalHub": {
+      "title": "A traversal graph of missing middles",
+      "eyebrow": "PYRAMIDS ↔ CHEMISTRY ↔ HOUSING",
+      "deck": "Begin anywhere. Chart the possibilities, inspect each connecting step, and follow the evidence to a useful next question or a scoped stopping point.",
+      "boundary": "This is a finite search map with grounded examples and explicit gaps. A missing edge means not catalogued here. A generated candidate is not a discovery. No path automatically establishes a scientific or engineering conclusion.",
+      "regionTitle": "Three deep catalogues",
+      "pathsTitle": "Choose a traversal",
+      "connectionsTitle": "Inspect the middle, not just the endpoints",
+      "catalogues": [
+        {
+          "label": "Design-space axes",
+          "href": "design-space/"
+        },
+        {
+          "label": "Materials and feedstocks",
+          "href": "materials/"
+        },
+        {
+          "label": "Typed ports",
+          "href": "ports/"
+        },
+        {
+          "label": "Connections and gaps",
+          "href": "connections/"
+        },
+        {
+          "label": "Candidate questions",
+          "href": "candidates/"
+        }
+      ],
+      "stopTitle": "Know when to stop",
+      "dispositions": [
+        "Advance only within the supported conditions.",
+        "Seek the observation that can distinguish the strongest rivals.",
+        "Hold alternatives that current evidence cannot distinguish.",
+        "Reject a scoped implication or process variant, with a reason.",
+        "Stop an investigation whose attainable outcomes cannot change the decision.",
+        "Open another missing middle when a new coupling or unresolved carrier appears."
+      ]
+    }
   }
 }
