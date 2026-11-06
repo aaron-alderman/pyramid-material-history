@@ -78,3 +78,5 @@ The canonical source is [traversal-graph.json](corpus/traversal-graph.json). Eac
 MECE applies to atomic primary outputs through the original nine operation families. Design axes overlap as facets and explicitly retain residuals. The catalogues are finite search maps, not exhaustive knowledge of all pyramids, chemistry or housing. Missing connections are catalogue gaps, not claims of global novelty. Candidate questions require prior-art review and independent qualification.
 
 The direct inference from chemical possibility to ancient use terminates as a rejected implication. Other paths remain open through material traces, chronology, production feasibility and modern engineering tests. A modern use and a proposed ancient occurrence keep separate evidence and dispositions.
+
+Repository care: [licensing](LICENSE.md), [Christian stewardship covenant](CHRISTIAN_STEWARDSHIP_COVENANT.md), and [source/evidence hygiene](STEWARDSHIP.md).

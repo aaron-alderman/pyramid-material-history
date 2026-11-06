@@ -7,3 +7,5 @@ Attribution: *The Missing Middle: Pyramid Material History*, Aaron Alderman and 
 The Sourcery/Claimipedia mechanisms are retained from the owner's existing source under the owner's instruction to reuse them for this publication; their source identities and unchanged or extracted boundaries remain explicit. Third-party parsers, fonts and mathematical rendering retain their bundled notices. Marked is distributed under its included MIT license. KaTeX and its font notices are retained in `vendor/katex/`.
 
 Linked papers, quotations and external data are not relicensed by this repository. Their original terms apply.
+
+The [Christian Stewardship Covenant](CHRISTIAN_STEWARDSHIP_COVENANT.md) is a voluntary statement of purpose. It adds no licence condition or restriction.
